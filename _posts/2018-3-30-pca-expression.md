@@ -136,9 +136,44 @@ text3D(pca_rot$PC1, pca_rot$PC2, pca_rot$PC3,  labels = rownames(pca_rot), add =
 ![screenshot]({{ "/myfiles/pca_3d.png" | absolute_url }})
 
 *<span style="color:#696969">Fig 2: Scatterplot of variables (A to R) with respect to top three PCs, which explains
-maximum (~77%) of the total variance. Color scale represents the rotation of PC1.. </span>*
+maximum (~77%) of the total variance. Color scale represents the rotation of PC1. </span>*
 
 Interpretation: From above PCA analysis, it can be concluded that all variables except M, O, and Q has similar gene expression
 profiles and form one cluster. Variables M, O and Q has high gene expression changes with respect to other variables
 and form an individual cluster. From the 18 variables, it will be important to focus on M, O and Q variables.
 
+**R and package version information used in the analysis**
+```r
+> sessionInfo()
+R version 3.3.1 (2016-06-21)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 7 x64 (build 7601) Service Pack 1
+
+locale:
+[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                           LC_TIME=English_United States.1252
+
+attached base packages:
+[1] grid      parallel  stats     graphics  grDevices utils     datasets  methods   base
+
+other attached packages:
+ [1] plot3D_1.1.1        factoextra_1.0.5    ggplot2_2.2.1       knitr_1.17          kableExtra_0.7.0
+ [6] gplots_3.0.1        Vennerable_3.0      xtable_1.8-2        gtools_3.5.0        reshape_0.8.6
+[11] RColorBrewer_1.1-2  RBGL_1.50.0         graph_1.52.0        SeqGSEA_1.14.0      DESeq_1.26.0
+[16] lattice_0.20-34     locfit_1.5-9.1      doParallel_1.0.10   iterators_1.0.8     foreach_1.4.3
+[21] Biobase_2.34.0      BiocGenerics_0.20.0
+
+loaded via a namespace (and not attached):
+ [1] ggrepel_0.7.0        Rcpp_0.12.7          assertthat_0.1       rprojroot_1.3-2      digest_0.6.12
+ [6] R6_2.2.0             plyr_1.8.4           backports_1.1.2      stats4_3.3.1         RSQLite_1.0.0
+[11] evaluate_0.10.1      httr_1.2.1           highr_0.6            pillar_1.1.0         rlang_0.1.6
+[16] misc3d_0.8-4         lazyeval_0.2.0       annotate_1.52.0      gdata_2.17.0         S4Vectors_0.12.0
+[21] Matrix_1.2-7.1       rmarkdown_1.9        labeling_0.3         splines_3.3.1        readr_1.1.1
+[26] geneplotter_1.52.0   stringr_1.3.0        RCurl_1.95-4.8       biomaRt_2.30.0       munsell_0.4.3
+[31] pkgconfig_2.0.1      htmltools_0.3.6      tibble_1.4.2         IRanges_2.8.1        codetools_0.2-15
+[36] XML_3.98-1.4         viridisLite_0.2.0    dplyr_0.7.4          ggpubr_0.1.6         bitops_1.0-6
+[41] gtable_0.2.0         DBI_0.8              magrittr_1.5         scales_0.4.1         KernSmooth_2.23-15
+[46] stringi_1.1.7        genefilter_1.56.0    bindrcpp_0.2         xml2_1.2.0           tools_3.3.1
+[51] glue_1.2.0           hms_0.4.2            survival_2.39-5      AnnotationDbi_1.36.0 colorspace_1.3-2
+[56] caTools_1.17.1       rvest_0.3.2          bindr_0.1
+```
