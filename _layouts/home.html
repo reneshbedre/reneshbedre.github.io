@@ -2,22 +2,97 @@
 layout: page
 ---
 
+<style xmlns="http://www.w3.org/1999/html">
+    .photo{
+    width:25%;
+    margin-right:5%;
+    float: left;
+    left: 950px;
+    }
+    .photo iframe{
+        width:100%;
+    }
+    .para {
+        width:70%;
+        float: left;
+    }
+    .clearfix{
+        clear:both
+    }
+    .button {
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+}
+</style>
+
+<!--
 <h1 style="color:#093145;text-align:center;margin-bottom: 0.08cm;""><b>Renesh Bedre, Ph.D.</b></h1>
-<p style="color:#093145;text-align:center">(Bioinformatics data scientist)</p>
-<img src="{{"/myfiles/me.png" | absolute_url}}" style="float: right; class="img-rounded" alt="Cinque Terre"
-width="200" height="200">
-<h4 style="color:#1496BB">About Me</h4>
-     <p>Renesh Bedre is a Bioinformatics, biology, and data scientist having 7 years of experience in <b>Bioinformatics,
-        plant biology, genetics, and statistics</b>.<br>
+<p style="color:#093145;text-align:center">(Bioinformatics data scientist)</p>-->
+
+<div class="photo">
+      <img src="{{"/myfiles/me.png" | absolute_url}}" style="float: right; border-radius: 50%; class="img-rounded"
+    alt="Cinque Terre" width="200" height="200" />
+    <p style="position: relative; top:10px;"><b>Renesh Bedre, Ph.D.</b> </p>
+    <p style="font-size:15px; color: grey; text-align: center;">Bioinformatics data scientist</p>
+    <p style="font-size:15px; text-align: center;"><a href="https://www.tamu.edu/" target="_blank"> Texas A&M University</a></p>
+    <p style="text-align: center;"><a href={{"/myfiles/Bedre_CV.pdf" | absolute_url }} class="button" target="_blank" style="color:white;">Read CV</a></p>
+    <h4 style="position: relative; color:#1496BB; top:130px; text-align: right;">Interests</h4>
+    <h4 style="position: relative; color:#1496BB; top:410px; text-align: right;">Education</h4>
+
+</div>
+
+<div class="para">
+       <h4 style="color:#1496BB">Biography</h4>
+       <p>Dr. Renesh Bedre is a Bioinformatics, biology, and data scientist having 7 years of experience in <b>Bioinformatics,
+        plant biology, genetics, and statistics</b>.<br><br>
         He received <b>Ph.D.</b> from Louisiana State University at Baton Rouge, USA in 2016. Currently, He is working as
-        postdoctoral research associate and Bioinformatics data scientists at Texas A&M University.<br>
+        postdoctoral research associate and Bioinformatics data scientists at Texas A&M University.<br><br>
         He has extensive experiences in Next-generation sequencing (NGS) generated <b>transcriptomics</b> and
         <b>genomics</b> data analysis to identify genetic changes and development of biomarkers in plants associated with
         environmental stresses. He has worked on genetics of simple (Rice, Arabidopsis, Brachypodium) to complex
-        (Sugarcane, Spartina, Cotton) plants.
+        (Sugarcane, Spartina, Cotton) plants.<br><br>
+        He has developed Bioinformatics software pipelines, web servers, and databases for efficient analysis of
+        large-scale datasets generated from NGS platforms.
+       </p>
+
+        <ul style="list-style-type:disc">
+            <li>Transcriptomics</li>
+            <li>Genomics</li>
+            <li>Bioinformatics</li>
+            <li>Plant biology</li>
+            <li>Gene expression and biomarker discovery</li>
+            <li>Biostatistics</li>
+            <li>Standalone software programs, web servers, and databases development</li>
+            <li>Development of new computational methodologies for NGS analysis</li>
+            <li>High Performance Computing for big data analysis</li>
+            <li>Parallel computing (shared and distributed)</li>
+            <li>Visualization</li>
+        </ul>
+
+    <p><b>Ph.D.</b> in Bioinformatics and plant biology, 2011-2016<br>
+        <span style="color: grey;">Louisiana State University, baton Rouge, LA, USA</span></p>
+    <p><b>M.S.</b> in Bioinformatics, 2009-2011<br>
+        <span style="color: grey;">Indian Institute of Information Technology, Allahabad, UP, India</span></p>
+
+    <i> Please, read <a href={{"/myfiles/Bedre_CV.pdf" | absolute_url }} target="_blank">CV</a>
+        for research experience, awards, and achievements</i>
+
+</div>
+<!--
+<h4 style="color:#1496BB">Biography</h4>
 
 
     </p>
+     -->
     <!--
     <p>I earned Ph.D. from Louisiana State University at Baton Rouge, USA in August 2016. Currently, i am working as
         research associate at Texas A&M University. My primary research interest concerns about transcriptomics and
@@ -34,6 +109,7 @@ width="200" height="200">
         and Bioinformatics software and database development
     </p>
     -->
+<!--
 <h4 style="color:#1496BB">Research Interests</h4>
     <ul style="list-style-type:disc">
         <li>Transcriptomics and genomics data analysis</li>
@@ -93,6 +169,7 @@ width="200" height="200">
                RiceNet, KEGG pathways, MFold, RNAfold, psRNATarget</font></li>
         </ul>
     -->
+ <!--
 <h4 style="color:#1496BB">Fellowships and Awards</h4>
     <ul style="list-style-type:disc">
         <li><b> Gerald O. Mott</b> Meritorious Student Award from Crop Science Society of America, 2015
@@ -132,7 +209,7 @@ width="200" height="200">
         <li><b>Volunteer</b>, Third Science Conclave: An Interaction with Nobel Laureates held at IIIT Allahabad,
             India, 2010</li>
     </ul>
-
+-->
 
 <!--
 <div class="home">
