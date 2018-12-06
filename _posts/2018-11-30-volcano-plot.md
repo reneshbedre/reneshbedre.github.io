@@ -98,3 +98,25 @@ plt.savefig('volcano.png', format='png', bbox_inches='tight', dpi=300)
 Generated volcano plot by adding above code,
 
 ![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq_text.png" | absolute_url }})
+
+To create a inverted volcano plot,
+
+```python
+# plot 
+plt.scatter(d['log2FC'], d['logpv'], c=d['color'])
+# create inverted Y-axis
+plt.gca().invert_yaxis()
+plt.xlabel('log2 Fold Change',fontsize=15, fontname="sans-serif", fontweight="bold")
+plt.ylabel('-log10(P-value)', fontsize=15, fontname="sans-serif", fontweight="bold")
+plt.xticks(fontsize=12, fontname="sans-serif")
+plt.yticks(fontsize=12, fontname="sans-serif")
+# I have added two gene names. You can add multiple gene names to corresponding point  
+# using axis coordinates
+plt.text(4.09, 53.65, "CPuORF26")
+plt.text(-2.23, 39.73, "CIA")
+plt.show()
+```
+
+Generated inverted volcano plot by adding above code,
+
+![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq_text_invert.png" | absolute_url }})
