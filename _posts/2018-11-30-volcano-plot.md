@@ -6,12 +6,11 @@ author: Renesh Bedre
 description: "Advanced Bioinformatics"
 permalink: blog/volcano.html
 comments: true
-hidden: true
 ---
 
 **<span style="color:#33a8ff">What is Volcano plot?</span>**
  - 2-dimensional (2D) scatter plot having a shape like volcano
- - Used to visualize and identify significant gene expression changes from two different conditions (eg. normal vs. 
+ - Used to visualize and identify statistically significant gene expression changes from two different conditions (eg. normal vs. 
    treated) in terms of log fold change (X-axis) and P-value (Y-axis)
    
 **<span style="color:#33a8ff">Applications</span>**   
@@ -20,7 +19,7 @@ hidden: true
    
 **<span style="color:#33a8ff">How to create Volcano plot in Python?</span>**
 
-For generating volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify significantly
+For generating volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify statistically significantly
 induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
 (<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). 
 Here's you can download gene expression dataset used for generating volcano plot: 
@@ -52,7 +51,7 @@ d['color'].fillna('grey', inplace=True) # intermediate
 # to reduce the noise, filter out genes with low expression counts across treatments 
 # (say, < 10 normalized expression count)
 # you can change this number as per your requirement and based on expression unit 
-# value1 and value2 represents stress and control treatments respectively
+# value1 and value2 represents counts for stress and control treatments respectively
 d = d.loc[(d['value1'] >= 10) & (d['value2'] >= 10)]
 
 # Now, data is ready for volcano plot
@@ -91,7 +90,7 @@ plt.yticks(fontsize=12, fontname="sans-serif")
 plt.text(4.09, 53.65, "CPuORF26")
 plt.text(-2.23, 39.73, "CIA")
 plt.show()
-# To save volcano plot to file
+# To save volcano plot to file, replace  plt.show() with following line
 plt.savefig('volcano.png', format='png', bbox_inches='tight', dpi=300)
 ```
 
@@ -120,3 +119,9 @@ plt.show()
 Generated inverted volcano plot by adding above code,
 
 ![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq_text_invert.png" | absolute_url }})
+
+
+
+
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span>
