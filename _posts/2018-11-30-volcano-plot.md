@@ -122,6 +122,7 @@ Generated inverted volcano plot by adding above code,
 
 
 **<span style="color:#33a8ff">How to cite?</span>**
+
 Bedre, R. “Volcano plot to visualize gene expression data using Python” Renesh Bedre (blog), November 30, 2018, 
 https://reneshbedre.github.io/blog/volcano.html.
 

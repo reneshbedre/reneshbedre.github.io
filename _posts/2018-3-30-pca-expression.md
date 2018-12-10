@@ -177,3 +177,13 @@ loaded via a namespace (and not attached):
 [51] glue_1.2.0           hms_0.4.2            survival_2.39-5      AnnotationDbi_1.36.0 colorspace_1.3-2
 [56] caTools_1.17.1       rvest_0.3.2          bindr_0.1
 ```
+
+
+**<span style="color:#33a8ff">How to cite?</span>**
+
+Bedre, R. “Principal component analysis (PCA) analysis and visualization of gene expression data using R” Renesh Bedre 
+(blog), March 30, 2018, 
+https://reneshbedre.github.io/blog/pca_3d.html.
+
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span>

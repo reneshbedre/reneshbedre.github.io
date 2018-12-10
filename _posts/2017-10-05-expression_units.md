@@ -79,3 +79,11 @@ References:
  - Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B. Mapping and quantifying mammalian transcriptomes by RNA-Seq. Nature methods. 2008 Jul 1;5(7):621-8.
  - Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
 
+
+**<span style="color:#33a8ff">How to cite?</span>**
+
+Bedre, R. “Gene expression units explained: RPM, RPKM, FPKM and TPM” Renesh Bedre (blog), October 5, 2017, 
+https://reneshbedre.github.io/blog/expression_units.html.
+
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span>
