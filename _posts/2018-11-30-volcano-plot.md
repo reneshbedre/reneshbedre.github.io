@@ -121,7 +121,9 @@ Generated inverted volcano plot by adding above code,
 ![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq_text_invert.png" | absolute_url }})
 
 
-
+**<span style="color:#33a8ff">How to cite?</span>**
+Bedre, R. “Volcano plot to visualize gene expression data using Python” Renesh Bedre (blog), November 30, 2018, 
+https://reneshbedre.github.io/blog/volcano.html.
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
