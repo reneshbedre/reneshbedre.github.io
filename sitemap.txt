@@ -1,4 +1,6 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/ma.html
+https://reneshbedre.github.io/blog/volcano.html
 https://reneshbedre.github.io/blog/anova.html
 https://reneshbedre.github.io/blog/pca_3d.html
 https://reneshbedre.github.io/blog/ecuador_workshop.html
