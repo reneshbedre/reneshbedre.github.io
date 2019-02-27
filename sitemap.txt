@@ -1,4 +1,7 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/corr.html
+https://reneshbedre.github.io/blog/mtest.html
+https://reneshbedre.github.io/blog/fqutil.html
 https://reneshbedre.github.io/blog/ma.html
 https://reneshbedre.github.io/blog/volcano.html
 https://reneshbedre.github.io/blog/anova.html
