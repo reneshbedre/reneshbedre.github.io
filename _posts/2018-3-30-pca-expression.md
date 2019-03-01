@@ -12,7 +12,7 @@ Transcriptomics  experiments such as RNA-seq allows researchers to study large n
 conditions simultaneously. There have been various analytical methods has been used to deduce underlying biological
 information from gene expression data such as heatmaps, clustering, PCA, Venn diagrams, gene networks and so on.
 
-PCA is a classical multivariate statistical method that used to interpret the variation in dataset usually when the dataset
+PCA is a classical multivariate (unconstrained ordination) statistical method that used to interpret the variation in dataset usually when the dataset
 contains a large number of variables to study. PCA does this by reducing the dimensionality of the dataset by transforming old variable into a new
 set of variables called principal component (PC), which are easy to visualize and summarise the features of datasets.
 In gene expression datasets, variables can be treatment comparisons, gene expression counts across various conditions,
@@ -187,3 +187,5 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
+
+<span style="color:#9e9696"><i> Last updated: February 26, 2019</i> </span>
