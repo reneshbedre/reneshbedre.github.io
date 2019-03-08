@@ -23,7 +23,51 @@ For generating volcano plot, I have used gene expression data published in Bedre
 induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
 (<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). 
 Here's you can download gene expression dataset used for generating volcano plot: 
-[dataset]({{"/myfiles/volcano/SaLR_DEGseq.txt" target="_blank""| absolute_url }})
+[dataset]({{"/myfiles/bioinfokit_data/test_dataset.csv" target="_blank""| absolute_url }})
+ 
+```python
+# We will use `bioinfokit` for volcano plot.
+# download and install bioinfokit (Linux and Mac) 
+git clone https://github.com/reneshbedre/bioinfokit.git
+cd bioinfokit
+python3 setup.py install
+```
+
+After installing `bioinfokit`, it can be used for volcano plot,
+
+```python
+# you can use interactive python console, jupyter or python code
+# I am using interactive python console
+>>> from bioinfokit import visuz
+# here you can change default parameters. 
+# Read documentation at https://github.com/reneshbedre/bioinfokit
+>>> visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value")
+```
+
+Generated volcano plot by above code (green: upregulated and red: downregulated genes),
+
+![screenshot]({{ "/myfiles/bioinfokit_data/volcano.png" | absolute_url }})
+
+
+To create a inverted volcano plot,
+
+```python
+# you can use interactive python console, jupyter or python code
+# I am using interactive python console
+>>> from bioinfokit import visuz
+# here you can change default parameters. 
+# Read documentation at https://github.com/reneshbedre/bioinfokit
+>>> visuz.involcano(table="test_dataset.csv", lfc="log2FC", pv="p-value")
+```
+
+Generated inverted volcano plot by adding above code,
+
+![screenshot]({{ "/myfiles/bioinfokit_data/involcano.png" | absolute_url }})
+
+<!--
+If you would like to add specific gene names in volcano plot, use following code,
+
+
 
 ```python
 # I am using Python3
@@ -34,7 +78,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # load data file
-d = pd.read_csv("https://reneshbedre.github.io/myfiles/volcano/SaLR_DEGseq.txt", sep="\t")
+d = pd.read_csv("https://reneshbedre.github.io/myfiles/ma/SaLR_DEGseq.csv")
 
 # to see first few lines of table and get table dimensions
 print(d.head()) # first five lines
@@ -75,6 +119,9 @@ plt.show()
 Generated volcano plot by above code (green: upregulated and red: downregulated genes),
 
 ![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq.png" | absolute_url }})
+-->
+
+<!--
 
 If you would like to add specific gene names in volcano plot, use following code,
 
@@ -120,6 +167,7 @@ Generated inverted volcano plot by adding above code,
 
 ![screenshot]({{ "/myfiles/volcano/SaLR_DEGseq_text_invert.png" | absolute_url }})
 
+-->
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -129,4 +177,4 @@ https://reneshbedre.github.io/blog/volcano.html.
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: December 12, 2018</i> </span>
+<span style="color:#9e9696"><i> Last updated: March 7, 2019</i> </span>
