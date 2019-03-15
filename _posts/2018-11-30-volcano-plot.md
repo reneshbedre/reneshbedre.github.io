@@ -171,10 +171,13 @@ Generated inverted volcano plot by adding above code,
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+
+<!--
 Bedre, R. “Volcano plot to visualize gene expression data using Python” Renesh Bedre (blog), November 30, 2018, 
 https://reneshbedre.github.io/blog/volcano.html.
-
+-->
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: March 7, 2019</i> </span>
+<span style="color:#9e9696"><i> Last updated: March 15, 2019</i> </span>
