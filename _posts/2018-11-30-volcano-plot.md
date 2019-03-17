@@ -27,7 +27,7 @@ Here's you can download gene expression dataset used for generating volcano plot
  
 ```python
 # We will use `bioinfokit` for volcano plot.
-# download and install bioinfokit (Linux and Mac) 
+# download and install bioinfokit (Tested on Linux, Mac, Windows) 
 git clone https://github.com/reneshbedre/bioinfokit.git
 cd bioinfokit
 python3 setup.py install
@@ -37,7 +37,7 @@ After installing `bioinfokit`, it can be used for volcano plot,
 
 ```python
 # you can use interactive python console, jupyter or python code
-# I am using interactive python console
+# I am using interactive python console (Python 3.6)
 >>> from bioinfokit import visuz
 # here you can change default parameters. 
 # Read documentation at https://github.com/reneshbedre/bioinfokit
@@ -171,10 +171,13 @@ Generated inverted volcano plot by adding above code,
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+
+<!--
 Bedre, R. “Volcano plot to visualize gene expression data using Python” Renesh Bedre (blog), November 30, 2018, 
 https://reneshbedre.github.io/blog/volcano.html.
-
+-->
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: March 7, 2019</i> </span>
+<span style="color:#9e9696"><i> Last updated: March 15, 2019</i> </span>
