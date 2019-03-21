@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Principal component analysis (PCA) analysis and visualization of gene expression data using R"
+title: "Principal component analysis (PCA) analysis and visualization using Python"
 date:   2018-03-30 06:18:08
 author: Renesh Bedre
 description: "Advanced Bioinformatics"
@@ -23,13 +23,81 @@ For example, when datasets contain 10 variables (10D), it is arduous to visualiz
 variables (PCs) with top PCs having highest variation. Most of time first 3 PCs contribute most of the variance. These
 top 2 or 3 PCs can be plotted easily and summarize and/or clusters the features of all 10 variables.
 
+For simplicity and understanding, here I am doing PCA analysis and visualization on small dataset (4 variables). But, 
+once you understood, you can follow similar steps to run PCA analysis and visualization on large gene expression 
+<a href="/myfiles/pca_example_dataset.csv">dataset</a>. (This dataset contains 13324 genes and 18 variables (A to R). 
+These variables represent the log2 expression fold changes between different treatments) 
+
+```python
+# We will use `bioinfokit` for PCA analysis
+# download and install bioinfokit (Tested on Linux, Mac, Windows) 
+# Read documentation at https://github.com/reneshbedre/bioinfokit
+git clone https://github.com/reneshbedre/bioinfokit.git
+cd bioinfokit
+python3 setup.py install
+```
+
+```python
+# you can use interactive python console, jupyter or python code
+# I am using interactive python console (Python 3.6)
+# Read documentation at https://github.com/reneshbedre/bioinfokit
+>>>from bioinfokit import analys
+>>>import pandas as pd
+# load data file
+>>>d = pd.read_csv("https://reneshbedre.github.io/myfiles/bioinfokit_data/pca_small_dataset.csv")
+#view first few rows
+>>>d.head()
+ 	rowid 	A 	B 	C 	D
+0 	row1 	25 	45 	30 	54
+1 	row2 	30 	55 	29 	60
+2 	row3 	28 	29 	33 	51
+3 	row4 	36 	56 	37 	62
+4 	row5 	29 	40 	27 	73
+# make sure the dataframe should not have first identifier columns. 
+# if table has identifier columns, drop it using d=d.drop('column_name', 1) 
+>>>d = d.drop("rowid", 1)
+# now, perform pca analysis and visualization
+>>>analys.pca(table=d)
+
+Component summary
+
+                             PC1       PC2       PC3       PC4
+Proportion of Variance  0.619541  0.291498  0.085472  0.003489
+Cumulative proportion   0.619541  0.911039  0.996511  1.000000
+
+Loadings
+
+      PC1       PC2       PC3       PC4
+A -0.222185 -0.020970  0.671764  0.706348
+B -0.905969 -0.336097 -0.251237 -0.056019
+C -0.042114 -0.285112  0.682941 -0.671215
+D -0.357882  0.897391  0.138581 -0.217728
+# plot will be saved in same directory (screeplot.png, pcaplot_2d.png, and pcaplot_3d.png)
+```
+
+Generated Scree plot,
+
+![screenshot]({{ "/myfiles/bioinfokit_data/screeplot.png" | absolute_url }})
+
+
+Generated PCA plot (2 PCs) plot,
+
+![screenshot]({{ "/myfiles/bioinfokit_data/pcaplot_2d.png" | absolute_url }})
+
+
+Generated PCA plot (3 PCs) plot,
+
+![screenshot]({{ "/myfiles/bioinfokit_data/pcaplot_3d.png" | absolute_url }})
+
+<!--
+
 In this tutorial, I will discuss in detail how to perform PCA analysis, visualization and interpretation using sample gene
 expression data. For PCA analysis and visualization, I will use [prcomp](https://www.rdocumentation.org/packages/stats/versions/3.4.3/topics/prcomp)
 and [scatter3d](https://www.rdocumentation.org/packages/car/versions/2.1-6/topics/scatter3d) R packages.
 
-Sample dataset used in this tutorial [dataset]({{"/myfiles/pca_example_dataset.csv" | absolute_url }}). This sample
+<p>Sample dataset used in this tutorial <a href="/myfiles/pca_example_dataset.csv">dataset</a>. This sample
 gene expression dataset contains 13324 genes and 18 variables (A to R). These variables represent the log2 expression
-fold changes between different treatments.
+fold changes between different treatments.</p>
 
 First, let's load the R libraries needed for analysis. You can install using `install.packages("package")` or using
 `bioclite()` [How to install R packages](https://www.r-bloggers.com/installing-r-packages/)
@@ -177,8 +245,6 @@ loaded via a namespace (and not attached):
 [51] glue_1.2.0           hms_0.4.2            survival_2.39-5      AnnotationDbi_1.36.0 colorspace_1.3-2
 [56] caTools_1.17.1       rvest_0.3.2          bindr_0.1
 ```
-
-
 **<span style="color:#33a8ff">How to cite?</span>**
 
 Bedre, R. “Principal component analysis (PCA) analysis and visualization of gene expression data using R” Renesh Bedre 
@@ -189,3 +255,16 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 <b>reneshbe@gmail.com</b></span>
 
 <span style="color:#9e9696"><i> Last updated: February 26, 2019</i> </span>
+
+-->
+
+
+**<span style="color:#33a8ff">How to cite?</span>**
+
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+
+
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span>
+
+<span style="color:#9e9696"><i> Last updated: March 21, 2019</i> </span>
