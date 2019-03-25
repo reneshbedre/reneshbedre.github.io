@@ -1,4 +1,5 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/mergevcf.html
 https://reneshbedre.github.io/blog/corr.html
 https://reneshbedre.github.io/blog/mtest.html
 https://reneshbedre.github.io/blog/fqutil.html
@@ -12,3 +13,4 @@ https://reneshbedre.github.io/blog/bioseqio.html
 https://reneshbedre.github.io/news/
 https://reneshbedre.github.io/pub/
 https://reneshbedre.github.io/res/
+https://reneshbedre.github.io
