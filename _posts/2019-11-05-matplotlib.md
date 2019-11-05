@@ -4,7 +4,7 @@ title: "Matplotlib Explained"
 date:   2019-11-05 010:19:20
 author: Renesh Bedre
 description: "Advanced Bioinformatics"
-permalink: blog/mlib.html
+permalink: blog/mplib.html
 comments: true
 ---
 
