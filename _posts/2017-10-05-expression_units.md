@@ -13,7 +13,7 @@ In RNA-seq gene expression data analysis, we come across various expression unit
 I have seen a lot of post of such normalization questions and their confusion among readers. Hence, I attempted here to explain these units in the much simpler way (avoided complex mathematical expressions).
 Note: To use biopython, you need to install it.
 
-## <span style="color:#33a8ff">Why different normalized expression units</span> ##
+## <span style="color:#33a8ff">Why different normalized expression units?</span> ##
 
 The expression units provide a digital measure of the abundance of transcripts. Normalized expression units are necessary to remove technical biases in sequenced data such as depth of sequencing (more sequencing depth produces more read count for gene expressed at same level) and gene length (differences in gene length generate unequal reads count for genes expressed at the same level; longer the gene more the read count).
 
@@ -82,8 +82,10 @@ References:
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. “Gene expression units explained: RPM, RPKM, FPKM and TPM” Renesh Bedre (blog), October 5, 2017, 
-https://reneshbedre.github.io/blog/expression_units.html.
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
+
+<span style="color:#9e9696"><i> Last updated: November 25, 2019</i> </span>
