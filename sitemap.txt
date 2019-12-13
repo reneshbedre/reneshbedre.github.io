@@ -1,4 +1,5 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/venn.html
 https://reneshbedre.github.io/blog/hmap.html
 https://reneshbedre.github.io/blog/seqcov.html
 https://reneshbedre.github.io/blog/mplib.html
