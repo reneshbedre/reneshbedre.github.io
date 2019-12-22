@@ -143,7 +143,7 @@ Add gene names instead of gene Ids,
 # add gene customized labels
 # note: here you need to provide column name of gene Ids (geneid parameter)
 # as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
->>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneIds", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
+>>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneNames", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
 ```
 
 <p align="center">
