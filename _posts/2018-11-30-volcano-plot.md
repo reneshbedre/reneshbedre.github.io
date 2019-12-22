@@ -31,7 +31,7 @@ Here's you can download gene expression dataset used for generating volcano plot
 # download and install bioinfokit (Tested on Linux, Mac, Windows) 
 git clone https://github.com/reneshbedre/bioinfokit.git
 cd bioinfokit
-python3 setup.py install
+python setup.py install
 ```
 
 After installing `bioinfokit`, it can be used for volcano plot,
