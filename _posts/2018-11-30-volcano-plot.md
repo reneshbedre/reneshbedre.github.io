@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Volcano plot to visualize gene expression data using Python"
+title: "Volcano plot in Python"
 date:   2018-11-30 02:15:18
 author: Renesh Bedre
 description: "Advanced Bioinformatics"
@@ -23,7 +23,8 @@ For generating volcano plot, I have used gene expression data published in Bedre
 induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
 (<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). 
 Here's you can download gene expression dataset used for generating volcano plot: 
-[dataset]({{"/myfiles/bioinfokit_data/test_dataset.csv" target="_blank""| absolute_url }})
+<!-- [dataset]({{"/myfiles/bioinfokit_data/test_dataset.csv" target="_blank""| absolute_url }})-->
+[dataset]({{"/myfiles/volcano/testvolcano.csv" target="_blank""| absolute_url }})
  
 ```python
 # We will use `bioinfokit` for volcano plot.
@@ -41,12 +42,70 @@ After installing `bioinfokit`, it can be used for volcano plot,
 >>> from bioinfokit import visuz
 # here you can change default parameters. 
 # Read documentation at https://github.com/reneshbedre/bioinfokit
->>> visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value")
+>>> visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value")
 ```
 
 Generated volcano plot by above code (green: upregulated and red: downregulated genes),
 
-![screenshot]({{ "/myfiles/bioinfokit_data/volcano.png" | absolute_url }})
+<!-- ![screenshot]({{ "/myfiles/bioinfokit_data/volcano.png" | absolute_url }}) -->
+<p align="center">
+<img src="/myfiles/volcano/vol1.png" width="600">
+</p>
+
+
+Change color and transparency of volcano plot
+```python
+# change colormap
+>>>visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
+```
+
+<p align="center">
+<img src="/myfiles/volcano/vol2.png" width="600">
+</p>
+
+```python
+# change transparency
+>>>visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"), valpha=0.5)
+```
+
+<p align="center">
+<img src="/myfiles/volcano/vol3.png" width="600">
+</p>
+
+Add gene labels to the points,
+
+```python
+# add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+>>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneIds",genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1") )
+```
+<p align="center">
+<img src="/myfiles/volcano/vol4.png" width="600">
+</p>
+
+change gene label size,
+
+```python
+# add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+>>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneIds",genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1"), gfont=12 )
+```
+
+<p align="center">
+<img src="/myfiles/volcano/vol5.png" width="600">
+</p>
+
+Add gene names instead of gene Ids, 
+```python
+# add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+# as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
+>>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneIds", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
+```
+
+<p align="center">
+<img src="/myfiles/volcano/vol6.png" width="600">
+</p>
 
 
 To create a inverted volcano plot,
@@ -57,12 +116,42 @@ To create a inverted volcano plot,
 >>> from bioinfokit import visuz
 # here you can change default parameters. 
 # Read documentation at https://github.com/reneshbedre/bioinfokit
->>> visuz.involcano(table="test_dataset.csv", lfc="log2FC", pv="p-value")
+>>> visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value")
 ```
 
 Generated inverted volcano plot by adding above code,
 
-![screenshot]({{ "/myfiles/bioinfokit_data/involcano.png" | absolute_url }})
+<!-- ![screenshot]({{ "/myfiles/bioinfokit_data/involcano.png" | absolute_url }}) -->
+
+<p align="center">
+<img src="/myfiles/volcano/involcano1.png" width="600">
+</p>
+
+
+Change color inverted volcano plot
+```python
+# change colormap
+>>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
+```
+<p align="center">
+<img src="/myfiles/volcano/involcano2.png" width="600">
+</p>
+
+
+Add gene names instead of gene Ids, 
+```python
+# add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+# as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
+>>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneIds", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
+```
+
+<p align="center">
+<img src="/myfiles/volcano/involcano3.png" width="600">
+</p>
+
+
+
 
 <!--
 If you would like to add specific gene names in volcano plot, use following code,
@@ -180,4 +269,4 @@ https://reneshbedre.github.io/blog/volcano.html.
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: March 15, 2019</i> </span>
+<span style="color:#9e9696"><i> Last updated: December 21, 2019</i> </span>
