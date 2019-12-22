@@ -56,7 +56,7 @@ Generated volcano plot by above code (green: upregulated and red: downregulated 
 Change color and transparency of volcano plot
 ```python
 # change colormap
->>>visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
+>>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
 ```
 
 <p align="center">
@@ -65,7 +65,7 @@ Change color and transparency of volcano plot
 
 ```python
 # change transparency
->>>visuz.volcano(table="test_dataset.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"), valpha=0.5)
+>>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"), valpha=0.5)
 ```
 
 <p align="center">
