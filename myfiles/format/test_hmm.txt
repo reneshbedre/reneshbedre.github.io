@@ -1,0 +1,1000 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+PHD                  PF00628.29 Spipo12G0011800      -            6.7e-17   61.1  11.6   1.5e-11   44.0   5.7   3.1   2   0   0   2   2   2   2 PHD-finger
+WHIM1                PF15612.6  Spipo12G0011800      -            5.3e-12   45.0   0.6   5.3e-12   45.0   0.6   2.4   2   0   0   2   2   2   1 WSTF, HB1, Itc1p, MBD9 motif 1
+MBD                  PF01429.19 Spipo12G0011800      -            1.8e-07   30.7   0.0   4.8e-07   29.4   0.0   1.7   1   0   0   1   1   1   1 Methyl-CpG binding domain
+FYRN                 PF05964.14 Spipo12G0011800      -            2.8e-06   27.1   0.7   0.00011   21.9   0.0   2.5   2   0   0   2   2   2   1 F/Y-rich N-terminus
+DDT                  PF02791.17 Spipo12G0011800      -            2.8e-05   24.3   0.0   0.00022   21.4   0.0   2.6   2   1   0   2   2   2   1 DDT domain
+WSD                  PF15613.6  Spipo12G0011800      -            4.6e-05   23.8   0.1   0.00017   22.0   0.1   2.1   1   0   0   1   1   1   1 Williams-Beuren syndrome DDT (WSD), D-TOX E motif
+Bromodomain          PF00439.25 Spipo12G0011800      -            9.1e-05   22.5   0.0   0.00022   21.3   0.0   1.6   1   0   0   1   1   1   1 Bromodomain
+FYRC                 PF05965.14 Spipo12G0011800      -             0.0099   16.0   0.0      0.71   10.1   0.0   2.9   2   0   0   2   2   2   1 F/Y rich C-terminus
+Zf_RING              PF16744.5  Spipo12G0011800      -              0.025   14.7   2.1       0.3   11.2   0.2   2.7   2   0   0   2   2   2   0 KIAA1045 RING finger
+Prok-RING_1          PF14446.6  Spipo12G0011800      -              0.081   12.9  18.0      0.27   11.2   1.3   3.2   3   0   0   3   3   3   0 Prokaryotic RING finger family 1
+CcmE                 PF03100.15 Spipo12G0033900      -              9e-44  148.5   0.0   1.3e-43  148.0   0.0   1.2   1   0   0   1   1   1   1 CcmE
+TAXi_N               PF14543.6  Spipo12G0027400      -            8.1e-52  176.0   9.9   8.4e-52  176.0   8.8   1.6   2   0   0   2   2   2   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0027400      -            6.5e-27   94.3   0.0     1e-26   93.6   0.0   1.3   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0027400      -            8.9e-24   84.5   3.0   2.7e-22   79.6   3.0   2.3   1   1   0   1   1   1   1 Eukaryotic aspartyl protease
+UnbV_ASPIC           PF07593.12 Spipo12G0027400      -               0.15   12.1   0.1      0.77    9.8   0.0   2.2   2   0   0   2   2   2   0 ASPIC and UnbV
+Ras                  PF00071.22 Spipo12G0035400      -            3.1e-60  202.4   0.2   3.8e-60  202.2   0.2   1.1   1   0   0   1   1   1   1 Ras family
+Roc                  PF08477.13 Spipo12G0035400      -            4.8e-34  117.1   0.2   6.6e-34  116.7   0.2   1.2   1   0   0   1   1   1   1 Ras of Complex, Roc, domain of DAPkinase
+Arf                  PF00025.21 Spipo12G0035400      -            2.2e-13   50.0   0.1   2.8e-13   49.7   0.1   1.1   1   0   0   1   1   1   1 ADP-ribosylation factor family
+MMR_HSR1             PF01926.23 Spipo12G0035400      -            2.9e-06   27.3   0.0   4.2e-06   26.8   0.0   1.2   1   0   0   1   1   1   1 50S ribosome-binding GTPase
+RsgA_GTPase          PF03193.16 Spipo12G0035400      -             0.0029   17.5   0.1       0.8    9.6   0.1   2.3   1   1   0   2   2   2   2 RsgA GTPase
+Gtr1_RagA            PF04670.12 Spipo12G0035400      -              0.006   16.0   0.0    0.0073   15.7   0.0   1.1   1   0   0   1   1   1   1 Gtr1/RagA G protein conserved region
+SRPRB                PF09439.10 Spipo12G0035400      -             0.0069   15.8   0.0    0.0091   15.4   0.0   1.2   1   0   0   1   1   1   1 Signal recognition particle receptor beta subunit
+GTP_EFTU             PF00009.27 Spipo12G0035400      -              0.029   13.9   0.1     0.083   12.4   0.1   1.8   1   1   0   1   1   1   0 Elongation factor Tu GTP binding domain
+TniB                 PF05621.11 Spipo12G0035400      -              0.042   13.2   0.0     0.074   12.5   0.0   1.4   1   0   0   1   1   1   0 Bacterial TniB protein
+MCM                  PF00493.23 Spipo12G0035400      -              0.055   12.6   0.0       0.1   11.7   0.0   1.5   1   0   0   1   1   1   0 MCM P-loop domain
+UCH                  PF00443.29 Spipo12G0044300      -            1.8e-56  191.5   0.8   2.1e-56  191.3   0.8   1.0   1   0   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+UCH_1                PF13423.6  Spipo12G0044300      -            4.5e-22   79.1   1.3   6.2e-22   78.6   1.3   1.2   1   0   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+CpXC                 PF14353.6  Spipo12G0044300      -             0.0062   16.6   1.8     0.096   12.7   1.2   2.3   1   1   1   2   2   2   1 CpXC protein
+zf-H2C2_2            PF13465.6  Spipo12G0044300      -             0.0093   16.4   3.3       0.9   10.1   0.2   3.1   2   0   0   2   2   2   2 Zinc-finger double domain
+Peptidase_C98        PF15499.6  Spipo12G0044300      -              0.054   13.0  11.8       4.1    6.8   0.1   2.9   2   1   0   2   2   2   0 Ubiquitin-specific peptidase-like, SUMO isopeptidase
+zf-C2H2_4            PF13894.6  Spipo12G0044300      -               0.53   11.3   7.1        17    6.6   0.3   4.0   3   0   0   3   3   3   0 C2H2-type zinc finger
+SH3_11               PF18103.1  Spipo12G0006700      -               0.13   12.4   0.0      0.23   11.7   0.0   1.3   1   0   0   1   1   1   0 Retroviral integrase C-terminal SH3 domain
+DUF761               PF05553.11 Spipo12G0037100      -            4.2e-16   58.2   1.9   7.8e-16   57.3   1.9   1.4   1   0   0   1   1   1   1 Cotton fibre expressed protein
+DUF768               PF05589.11 Spipo12G0037100      -               0.14   12.2   0.0      0.25   11.3   0.0   1.3   1   0   0   1   1   1   0 Protein of unknown function (DUF768)
+SWIB                 PF02201.18 Spipo12G0030800      -            1.8e-29  101.4   1.1   2.7e-21   75.2   0.8   2.1   2   0   0   2   2   2   2 SWIB/MDM2 domain
+NAD_binding_10       PF13460.6  Spipo12G0066500      -            5.4e-27   94.9   0.0   1.4e-12   47.9   0.0   2.3   2   0   0   2   2   2   2 NAD(P)H-binding
+NmrA                 PF05368.13 Spipo12G0066500      -            2.7e-10   40.2   0.1   1.1e-09   38.2   0.1   1.9   2   1   1   3   3   3   1 NmrA-like family
+CIA30                PF08547.12 Spipo12G0066500      -            1.6e-07   31.5   0.0   2.6e-07   30.8   0.0   1.3   1   0   0   1   1   1   1 Complex I intermediate-associated protein 30 (CIA30)
+3Beta_HSD            PF01073.19 Spipo12G0066500      -            7.9e-05   21.8   0.2   0.00012   21.2   0.2   1.2   1   0   0   1   1   1   1 3-beta hydroxysteroid dehydrogenase/isomerase family
+Epimerase            PF01370.21 Spipo12G0066500      -            0.00042   19.9   0.0    0.0012   18.3   0.0   1.7   2   0   0   2   2   2   1 NAD dependent epimerase/dehydratase family
+adh_short            PF00106.25 Spipo12G0066500      -            0.00049   19.6   0.0   0.00083   18.9   0.0   1.3   1   0   0   1   1   1   1 short chain dehydrogenase
+TrkA_N               PF02254.18 Spipo12G0066500      -              0.034   14.4   0.1     0.063   13.5   0.1   1.4   1   0   0   1   1   1   0 TrkA-N domain
+PPR_2                PF13041.6  Spipo12G0014800      -            1.5e-89  294.0   1.1   4.8e-13   49.1   0.0  15.2  10   5   6  16  16  16  12 PPR repeat family
+PPR                  PF01535.20 Spipo12G0014800      -            2.3e-85  275.1  24.4   5.5e-08   32.5   0.0  18.4  20   0   0  20  20  19  14 PPR repeat
+PPR_1                PF12854.7  Spipo12G0014800      -            2.5e-45  151.9   5.4   0.00018   21.1   0.0  15.0  14   1   2  16  16  15  11 PPR repeat
+PPR_3                PF13812.6  Spipo12G0014800      -            3.1e-22   78.4   0.0   1.4e-06   28.2   0.0   8.4   8   1   1   9   9   9   4 Pentatricopeptide repeat domain
+PPR_long             PF17177.4  Spipo12G0014800      -            4.6e-16   58.8   0.1   8.3e-06   25.3   0.0   6.8   3   1   2   7   7   7   3 Pentacotripeptide-repeat region of PRORP
+TPR_14               PF13428.6  Spipo12G0014800      -            1.4e-06   28.6  24.0      0.29   12.1   0.5  11.0   9   4   5  14  14  13   2 Tetratricopeptide repeat
+TPR_19               PF14559.6  Spipo12G0014800      -            4.9e-06   27.0   3.4       7.2    7.2   0.1   6.9   8   1   0   8   8   6   1 Tetratricopeptide repeat
+TPR_1                PF00515.28 Spipo12G0014800      -            0.00037   20.2   8.0    0.0085   15.9   0.1   5.5   6   0   0   6   6   6   1 Tetratricopeptide repeat
+TPR_12               PF13424.6  Spipo12G0014800      -            0.00043   20.5   6.5      0.38   11.1   0.1   6.3   6   1   0   6   6   6   1 Tetratricopeptide repeat
+TPR_7                PF13176.6  Spipo12G0014800      -            0.00057   19.7   3.5       6.1    7.1   0.1   5.4   5   0   0   5   5   5   1 Tetratricopeptide repeat
+BTAD                 PF03704.17 Spipo12G0014800      -             0.0013   19.2   7.1     0.057   13.9   0.0   5.1   5   0   0   5   5   5   1 Bacterial transcriptional activator domain
+TPR_16               PF13432.6  Spipo12G0014800      -              0.003   18.2  10.0       4.9    7.9   0.1   5.8   6   0   0   6   6   5   2 Tetratricopeptide repeat
+TPR_2                PF07719.17 Spipo12G0014800      -             0.0067   16.5  13.4      0.15   12.3   0.3   5.5   7   0   0   7   7   6   1 Tetratricopeptide repeat
+DYW_deaminase        PF14432.6  Spipo12G0014800      -             0.0088   15.9   0.0     0.023   14.6   0.0   1.7   1   0   0   1   1   1   1 DYW family of nucleic acid deaminases
+TPR_11               PF13414.6  Spipo12G0014800      -              0.012   15.3   1.4       3.4    7.4   0.1   4.0   4   0   0   4   4   4   0 TPR repeat
+RPN7                 PF10602.9  Spipo12G0014800      -               0.02   14.6   0.1       4.5    6.9   0.0   4.3   4   1   1   5   5   5   0 26S proteasome subunit RPN7
+TPR_8                PF13181.6  Spipo12G0014800      -              0.076   13.3   2.5        50    4.5   0.1   4.9   5   0   0   5   5   4   0 Tetratricopeptide repeat
+mTERF                PF02536.14 Spipo12G0066900      -            3.7e-35  121.4   0.0   4.1e-34  117.9   0.0   1.9   1   1   0   1   1   1   1 mTERF
+Peptidase_C1         PF00112.23 Spipo12G0003200      -            8.3e-52  176.4  10.1   2.4e-29  103.0   1.7   2.2   1   1   1   2   2   2   2 Papain family cysteine protease
+Inhibitor_I29        PF08246.12 Spipo12G0003200      -            2.5e-18   66.2   3.8   4.8e-18   65.3   3.8   1.5   1   0   0   1   1   1   1 Cathepsin propeptide inhibitor domain (I29)
+Peptidase_C1_2       PF03051.15 Spipo12G0003200      -             0.0001   21.2   1.0    0.0001   21.2   1.0   2.0   2   0   0   2   2   2   1 Peptidase C1-like family
+FAF                  PF11250.8  Spipo12G0040700      -            8.9e-21   73.9   1.3   1.9e-20   72.8   1.3   1.6   1   0   0   1   1   1   1 Fantastic Four meristem regulator
+Ribosomal_L35p       PF01632.19 Spipo12G0048900      -            4.7e-20   71.9   6.5   5.7e-20   71.6   6.5   1.1   1   0   0   1   1   1   1 Ribosomal protein L35
+WD40                 PF00400.32 Spipo12G0045000      -            3.1e-44  148.0  19.6   5.6e-09   36.5   0.0   6.8   7   0   0   7   7   7   5 WD domain, G-beta repeat
+TFIID_NTD2           PF04494.15 Spipo12G0045000      -            9.6e-44  148.8   0.3   1.5e-43  148.2   0.3   1.3   1   0   0   1   1   1   1 WD40 associated region in TFIID subunit, NTD2 domain
+ANAPC4_WD40          PF12894.7  Spipo12G0045000      -              4e-14   52.7   0.5    0.0039   17.4   0.1   5.0   1   1   4   5   5   5   3 Anaphase-promoting complex subunit 4 WD40 domain
+Ge1_WD40             PF16529.5  Spipo12G0045000      -            8.4e-09   34.8   0.1     0.029   13.3   0.0   3.7   1   1   2   4   4   4   3 WD40 region of Ge1, enhancer of mRNA-decapping protein
+Nbas_N               PF15492.6  Spipo12G0045000      -            0.00054   19.4   3.1       2.7    7.3   0.0   4.0   2   1   1   4   4   4   1 Neuroblastoma-amplified sequence, N terminal
+LisH                 PF08513.11 Spipo12G0045000      -            0.00082   19.2   0.3    0.0027   17.6   0.1   2.0   2   0   0   2   2   2   1 LisH
+WD40_like            PF17005.5  Spipo12G0045000      -             0.0047   16.3   0.0      0.56    9.5   0.0   3.3   3   1   1   4   4   4   1 WD40-like domain
+Nup160               PF11715.8  Spipo12G0045000      -             0.0077   14.9   1.8     0.046   12.4   0.1   2.7   2   1   1   3   3   3   1 Nucleoporin Nup120/160
+RAB3GAP2_N           PF14655.6  Spipo12G0045000      -              0.025   13.9   0.0      0.99    8.6   0.0   2.5   2   1   1   3   3   3   0 Rab3 GTPase-activating protein regulatory subunit N-terminus
+Cytochrom_D1         PF02239.16 Spipo12G0045000      -              0.075   11.6   0.0      0.13   10.8   0.0   1.3   1   0   0   1   1   1   0 Cytochrome D1 heme domain
+Frtz                 PF11768.8  Spipo12G0045000      -              0.078   11.3   0.0      0.13   10.5   0.0   1.4   1   0   0   1   1   1   0 WD repeat-containing and planar cell polarity effector protein Fritz
+Cation_ATPase_C      PF00689.21 Spipo12G0059300      -            7.7e-47  159.3   5.9   7.7e-47  159.3   5.9   2.4   3   0   0   3   3   3   1 Cation transporting ATPase, C-terminus
+E1-E2_ATPase         PF00122.20 Spipo12G0059300      -              4e-39  134.0   3.3     4e-39  134.0   3.3   2.5   3   0   0   3   3   3   1 E1-E2 ATPase
+Hydrolase            PF00702.26 Spipo12G0059300      -              2e-17   64.2   0.0   6.8e-17   62.5   0.0   2.0   1   1   0   1   1   1   1 haloacid dehalogenase-like hydrolase
+Cation_ATPase        PF13246.6  Spipo12G0059300      -            8.4e-15   54.6   0.0   1.8e-14   53.6   0.0   1.5   1   0   0   1   1   1   1 Cation transport ATPase (P-type)
+Cation_ATPase_N      PF00690.26 Spipo12G0059300      -              1e-10   41.1   0.0   2.3e-10   40.0   0.0   1.6   1   0   0   1   1   1   1 Cation transporter/ATPase, N-terminus
+CaATP_NAI            PF12515.8  Spipo12G0059300      -            2.1e-06   27.2   0.1     7e-06   25.6   0.1   1.9   1   0   0   1   1   1   1 Ca2+-ATPase N terminal autoinhibitory domain
+Hydrolase_3          PF08282.12 Spipo12G0059300      -            6.2e-05   22.9   0.1    0.0013   18.5   0.1   2.3   2   0   0   2   2   2   1 haloacid dehalogenase-like hydrolase
+HAD                  PF12710.7  Spipo12G0059300      -              0.076   13.4   0.0      0.15   12.4   0.0   1.5   1   0   0   1   1   1   0 haloacid dehalogenase-like hydrolase
+PPR                  PF01535.20 Spipo12G0038700      -            1.2e-61  200.7   3.4   2.5e-06   27.4   0.0  11.8  13   0   0  13  13  13  10 PPR repeat
+PPR_2                PF13041.6  Spipo12G0038700      -            8.9e-61  201.9   0.0   1.3e-11   44.5   0.0   9.9   7   3   3  10  10  10   7 PPR repeat family
+PPR_1                PF12854.7  Spipo12G0038700      -            1.2e-33  114.5   0.0    0.0033   17.1   0.0  10.8  12   0   0  12  12  12   7 PPR repeat
+PPR_3                PF13812.6  Spipo12G0038700      -            3.2e-22   78.4   0.0     0.041   13.9   0.0   8.4   2   2   7  10  10  10   7 Pentatricopeptide repeat domain
+PPR_long             PF17177.4  Spipo12G0038700      -            4.4e-12   45.8   0.0     0.043   13.2   0.0   5.2   2   2   3   5   5   5   4 Pentacotripeptide-repeat region of PRORP
+TPR_14               PF13428.6  Spipo12G0038700      -            1.5e-06   28.5   3.5   1.7e+02    3.4   0.0   9.2   7   3   5  12  12  12   0 Tetratricopeptide repeat
+TPR_19               PF14559.6  Spipo12G0038700      -             0.0034   17.9   0.0         6    7.5   0.0   4.4   4   1   0   4   4   4   1 Tetratricopeptide repeat
+ANF_receptor         PF01094.28 Spipo12G0052500      -            9.6e-65  219.0   0.0   3.1e-64  217.3   0.0   1.9   3   0   0   3   3   3   1 Receptor family ligand binding region
+Lig_chan             PF00060.26 Spipo12G0052500      -            8.2e-34  116.6   0.1   1.3e-33  115.9   0.1   1.3   1   0   0   1   1   1   1 Ligand-gated ion channel
+Peripla_BP_6         PF13458.6  Spipo12G0052500      -            7.1e-22   78.5   0.0     4e-21   76.1   0.0   1.9   2   0   0   2   2   2   1 Periplasmic binding protein
+SBP_bac_3            PF00497.20 Spipo12G0052500      -            7.9e-17   61.4   0.0   2.5e-16   59.8   0.0   1.8   2   0   0   2   2   2   1 Bacterial extracellular solute-binding proteins, family 3
+Lig_chan-Glu_bd      PF10613.9  Spipo12G0052500      -            3.9e-07   30.3   0.0     9e-07   29.1   0.0   1.5   1   0   0   1   1   1   1 Ligated ion channel L-glutamate- and glycine-binding site
+Peripla_BP_5         PF13433.6  Spipo12G0052500      -              0.096   11.7   0.0      0.49    9.3   0.0   2.0   1   1   0   1   1   1   0 Periplasmic binding protein domain
+BAH                  PF01426.18 Spipo12G0007700      -            3.4e-25   88.2   0.0   4.9e-25   87.7   0.0   1.2   1   0   0   1   1   1   1 BAH domain
+PHD                  PF00628.29 Spipo12G0007700      -            0.00072   19.4   0.5    0.0035   17.2   0.1   2.1   2   0   0   2   2   2   1 PHD-finger
+GTP_EFTU_D2          PF03144.25 Spipo12G0007700      -               0.14   12.5   0.0      0.33   11.4   0.0   1.6   1   0   0   1   1   1   0 Elongation factor Tu domain 2
+CBF                  PF03914.17 Spipo12G0003000      -            2.2e-45  154.8   0.6   2.2e-45  154.8   0.6   3.0   2   2   0   2   2   2   1 CBF/Mak21 family
+Condensin2nSMC       PF12422.8  Spipo12G0003000      -              0.045   13.9   0.4       2.1    8.5   0.0   3.0   3   0   0   3   3   3   0 Condensin II non structural maintenance of chromosomes subunit
+SMC_Nse1             PF07574.13 Spipo12G0003000      -                0.1   12.5   0.0      0.27   11.1   0.0   1.6   1   0   0   1   1   1   0 Nse1 non-SMC component of SMC5-6 complex
+Baculo_PEP_C         PF04513.12 Spipo12G0003000      -               0.13   12.3   0.0      0.34   11.0   0.0   1.6   1   0   0   1   1   1   0 Baculovirus polyhedron envelope protein, PEP, C terminus
+Lipl32               PF12103.8  Spipo12G0063300      -               0.19   11.4   0.0      0.31   10.7   0.0   1.3   1   0   0   1   1   1   0 Surface lipoprotein of Spirochaetales order
+DinB_2               PF12867.7  Spipo12G0038000      -               0.15   12.5   0.0      0.31   11.5   0.0   1.4   1   1   0   1   1   1   0 DinB superfamily
+SET                  PF00856.28 Spipo12G0050100      -            3.4e-22   79.6   0.5   3.7e-21   76.3   0.5   2.1   1   1   0   1   1   1   1 SET domain
+AWS                  PF17907.1  Spipo12G0050100      -               0.08   13.0   2.9      0.08   13.0   2.9   2.1   2   0   0   2   2   2   0 AWS domain
+Y2_Tnp               PF04986.13 Spipo12G0050100      -               0.18   11.9   0.0      0.21   11.6   0.0   1.2   1   0   0   1   1   1   0 Putative transposase
+zf-CCCH              PF00642.24 Spipo12G0053000      -               0.16   11.9   1.2      0.16   11.9   1.2   1.5   2   0   0   2   2   2   0 Zinc finger C-x8-C-x5-C-x3-H type (and similar)
+Chloroa_b-bind       PF00504.21 Spipo12G0003300      -              0.011   16.2   0.2     0.013   16.1   0.2   1.2   1   0   0   1   1   1   0 Chlorophyll A-B binding protein
+tRNA-synt_2c         PF01411.19 Spipo12G0008500      -           1.4e-194  647.7   0.0  1.6e-194  647.5   0.0   1.1   1   0   0   1   1   1   1 tRNA synthetases class II (A)
+DHHA1                PF02272.19 Spipo12G0008500      -            1.8e-18   67.3   0.5   4.6e-18   66.0   0.5   1.7   1   0   0   1   1   1   1 DHHA1 domain
+tRNA_SAD             PF07973.14 Spipo12G0008500      -            5.2e-17   61.7   2.0   1.5e-16   60.2   2.0   1.9   1   0   0   1   1   1   1 Threonyl and Alanyl tRNA synthetase second additional domain
+NUDIX                PF00293.28 Spipo12G0049600      -            1.4e-10   41.3   0.0   2.9e-10   40.3   0.0   1.5   1   0   0   1   1   1   1 NUDIX domain
+Peptidase_M49        PF03571.15 Spipo12G0049600      -            1.7e-09   36.6   0.0   1.7e-08   33.3   0.0   2.0   1   1   1   2   2   2   1 Peptidase family M49
+TPP_enzyme_M_2       PF16582.5  Spipo12G0014500      -            1.9e-26   93.1   0.2   3.8e-26   92.1   0.2   1.5   1   0   0   1   1   1   1 Middle domain of thiamine pyrophosphate
+TPP_enzyme_N         PF02776.18 Spipo12G0014500      -            3.2e-23   82.2   0.4   1.7e-13   50.5   0.0   2.9   3   0   0   3   3   3   2 Thiamine pyrophosphate enzyme, N-terminal TPP binding domain
+MR_MLE_C             PF13378.6  Spipo12G0014500      -            1.1e-21   77.4   0.0   2.4e-21   76.3   0.0   1.5   1   0   0   1   1   1   1 Enolase C-terminal domain-like
+Abhydrolase_1        PF00561.20 Spipo12G0014500      -            2.4e-14   53.6   0.0     3e-13   50.0   0.0   2.4   1   1   0   1   1   1   1 alpha/beta hydrolase fold
+Abhydrolase_6        PF12697.7  Spipo12G0014500      -            3.4e-14   54.0   0.0   2.4e-13   51.2   0.0   2.2   2   0   0   2   2   2   1 Alpha/beta hydrolase family
+TPP_enzyme_C         PF02775.21 Spipo12G0014500      -            2.4e-08   33.9   0.0   5.3e-08   32.8   0.0   1.6   1   0   0   1   1   1   1 Thiamine pyrophosphate enzyme, C-terminal TPP binding domain
+DUF676               PF05057.14 Spipo12G0014500      -            9.3e-06   25.3   0.0   2.4e-05   24.0   0.0   1.6   1   0   0   1   1   1   1 Putative serine esterase (DUF676)
+Hydrolase_4          PF12146.8  Spipo12G0014500      -            1.3e-05   24.6   0.0   3.3e-05   23.3   0.0   1.6   1   0   0   1   1   1   1 Serine aminopeptidase, S33
+Abhydrolase_3        PF07859.13 Spipo12G0014500      -            3.5e-05   23.8   0.0   7.7e-05   22.6   0.0   1.5   1   0   0   1   1   1   1 alpha/beta hydrolase fold
+TPP_enzyme_M         PF00205.22 Spipo12G0014500      -            6.3e-05   22.7   0.0   0.00013   21.7   0.0   1.5   1   0   0   1   1   1   1 Thiamine pyrophosphate enzyme, central domain
+BAAT_C               PF08840.11 Spipo12G0014500      -            0.00028   20.9   0.0   0.00085   19.3   0.0   1.8   1   1   0   1   1   1   1 BAAT / Acyl-CoA thioester hydrolase C terminal
+Lipase_3             PF01764.25 Spipo12G0014500      -            0.00046   20.1   0.0    0.0013   18.6   0.0   1.8   1   0   0   1   1   1   1 Lipase (class 3)
+Thioesterase         PF00975.20 Spipo12G0014500      -            0.00076   19.7   0.0    0.0037   17.4   0.0   2.1   2   0   0   2   2   2   1 Thioesterase domain
+Abhydrolase_2        PF02230.16 Spipo12G0014500      -              0.001   18.9   2.2    0.0041   16.9   0.1   2.9   3   1   0   3   3   1   1 Phospholipase/Carboxylesterase
+DUF726               PF05277.12 Spipo12G0014500      -             0.0037   16.2   0.0    0.0072   15.3   0.0   1.4   1   0   0   1   1   1   1 Protein of unknown function (DUF726)
+Lipase               PF00151.19 Spipo12G0014500      -              0.004   16.5   0.0    0.0072   15.7   0.0   1.3   1   0   0   1   1   1   1 Lipase
+DLH                  PF01738.18 Spipo12G0014500      -              0.006   16.1   0.6      0.55    9.7   0.0   3.4   4   0   0   4   4   4   1 Dienelactone hydrolase family
+LIDHydrolase         PF10230.9  Spipo12G0014500      -              0.017   14.7   0.0     0.052   13.1   0.0   1.8   1   0   0   1   1   1   0 Lipid-droplet associated hydrolase
+FSH1                 PF03959.13 Spipo12G0014500      -              0.043   13.5   0.0      0.34   10.6   0.0   2.2   1   1   0   1   1   1   0 Serine hydrolase (FSH1)
+DUF915               PF06028.11 Spipo12G0014500      -              0.045   13.1   0.1      0.12   11.7   0.0   1.6   2   0   0   2   2   2   0 Alpha/beta hydrolase of unknown function (DUF915)
+Esterase             PF00756.20 Spipo12G0014500      -              0.062   12.9   0.0      0.15   11.7   0.0   1.6   1   0   0   1   1   1   0 Putative esterase
+DUF2974              PF11187.8  Spipo12G0014500      -                0.1   12.1   0.0      0.21   11.1   0.0   1.4   1   0   0   1   1   1   0 Protein of unknown function (DUF2974)
+DnaJ                 PF00226.31 Spipo12G0047200      -            4.4e-15   55.5   0.0   9.3e-15   54.5   0.0   1.5   1   0   0   1   1   1   1 DnaJ domain
+Glyco_hydro_127      PF07944.12 Spipo12G0034900      -             1e-127  426.9   0.0  1.2e-127  426.6   0.0   1.1   1   0   0   1   1   1   1 Beta-L-arabinofuranosidase, GH127
+JAB                  PF01398.21 Spipo12G0025100      -            2.6e-25   88.7   0.0   4.3e-25   88.0   0.0   1.4   1   0   0   1   1   1   1 JAB1/Mov34/MPN/PAD-1 ubiquitin protease
+MitMem_reg           PF13012.6  Spipo12G0025100      -            3.1e-25   88.8   0.1   4.7e-25   88.2   0.1   1.3   1   0   0   1   1   1   1 Maintenance of mitochondrial structure and function
+DUF716               PF04819.12 Spipo12G0009000      -            3.1e-36  124.1   0.4   4.9e-36  123.4   0.4   1.3   1   0   0   1   1   1   1 Family of unknown function (DUF716)
+Kelch_4              PF13418.6  Spipo12G0055500      -            1.8e-36  123.9   3.9   2.7e-11   43.3   0.0   6.3   5   1   1   6   6   6   5 Galactose oxidase, central domain
+Kelch_3              PF13415.6  Spipo12G0055500      -            4.4e-32  109.7   8.1   3.8e-07   30.2   0.1   7.0   6   1   1   7   7   7   5 Galactose oxidase, central domain
+Kelch_5              PF13854.6  Spipo12G0055500      -            3.2e-24   84.4   1.1    0.0015   18.5   0.1   5.7   5   0   0   5   5   5   5 Kelch motif
+Kelch_2              PF07646.15 Spipo12G0055500      -            1.3e-20   72.5  11.7   1.3e-05   25.0   0.0   6.3   6   0   0   6   6   6   5 Kelch motif
+Kelch_1              PF01344.25 Spipo12G0055500      -            8.8e-19   66.8   0.8   7.4e-05   22.3   0.0   5.8   6   0   0   6   6   6   5 Kelch motif
+Kelch_6              PF13964.6  Spipo12G0055500      -            2.5e-17   62.5   3.5     0.004   17.4   0.0   6.4   4   1   2   6   6   6   3 Kelch motif
+PAS_9                PF13426.7  Spipo12G0055500      -            5.3e-17   62.0   0.0   9.2e-17   61.2   0.0   1.4   1   0   0   1   1   1   1 PAS domain
+PAS                  PF00989.25 Spipo12G0055500      -            5.7e-08   32.8   0.0   1.1e-06   28.6   0.0   2.7   2   1   0   2   2   2   1 PAS fold
+F-box-like           PF12937.7  Spipo12G0055500      -            1.2e-07   31.4   1.0   2.7e-07   30.4   0.4   2.0   1   1   0   1   1   1   1 F-box-like
+PAS_3                PF08447.12 Spipo12G0055500      -            7.4e-07   29.4   0.0   2.1e-06   27.9   0.0   1.8   1   1   0   1   1   1   1 PAS fold
+F-box                PF00646.33 Spipo12G0055500      -            8.4e-06   25.5   3.8   1.9e-05   24.4   3.8   1.7   1   0   0   1   1   1   1 F-box domain
+p6                   PF17548.2  Spipo12G0055500      -               0.13   12.3   0.0       1.9    8.5   0.0   2.2   2   0   0   2   2   2   0 Histone-like Protein p6
+O-FucT               PF10250.9  Spipo12G0007500      -            1.4e-64  219.0   0.0   1.8e-64  218.6   0.0   1.1   1   0   0   1   1   1   1 GDP-fucose protein O-fucosyltransferase
+Pkinase              PF00069.25 Spipo12G0034700      -            5.8e-54  183.2   0.0   4.8e-31  108.1   0.0   2.1   2   0   0   2   2   2   2 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0034700      -            9.5e-25   87.3   0.0   4.7e-15   55.6   0.0   2.1   2   0   0   2   2   2   2 Protein tyrosine kinase
+Kinase-like          PF14531.6  Spipo12G0034700      -            2.3e-05   23.8   0.0    0.0058   16.0   0.0   2.4   3   0   0   3   3   3   2 Kinase-like
+Pkinase_fungal       PF17667.1  Spipo12G0034700      -             0.0016   17.3   0.0    0.0025   16.6   0.0   1.2   1   0   0   1   1   1   1 Fungal protein kinase
+Haspin_kinase        PF12330.8  Spipo12G0034700      -             0.0029   16.6   0.0    0.0042   16.1   0.0   1.1   1   0   0   1   1   1   1 Haspin like kinase domain
+APH                  PF01636.23 Spipo12G0034700      -              0.013   15.4   0.1     0.031   14.2   0.0   1.7   1   1   1   2   2   2   0 Phosphotransferase enzyme family
+Kdo                  PF06293.14 Spipo12G0034700      -              0.015   14.7   0.0     0.025   13.9   0.0   1.3   1   0   0   1   1   1   0 Lipopolysaccharide kinase (Kdo/WaaP) family
+PPR_2                PF13041.6  Spipo12G0055800      -             3e-132  430.7  22.9   1.5e-15   57.1   0.0  15.6   4   2  12  16  16  16  14 PPR repeat family
+PPR_3                PF13812.6  Spipo12G0055800      -           1.1e-107  352.2   0.0   8.1e-15   54.6   0.0  10.2   6   3   4  10  10  10  10 Pentatricopeptide repeat domain
+PPR                  PF01535.20 Spipo12G0055800      -           3.4e-105  337.2  38.1   6.9e-10   38.5   0.1  18.8  19   2   0  19  19  18  15 PPR repeat
+PPR_1                PF12854.7  Spipo12G0055800      -           4.3e-104  339.9  11.3   1.6e-10   40.5   0.0  16.5  16   0   0  16  16  16  15 PPR repeat
+PPR_long             PF17177.4  Spipo12G0055800      -            7.6e-43  146.3   0.0   7.4e-11   41.8   0.0   6.2   2   2   4   6   6   6   6 Pentacotripeptide-repeat region of PRORP
+TPR_14               PF13428.6  Spipo12G0055800      -            1.2e-08   35.1  12.1      0.37   11.7   0.1   9.5   8   3   2  10  10   9   1 Tetratricopeptide repeat
+TPR_12               PF13424.6  Spipo12G0055800      -            7.5e-08   32.6   6.6      0.26   11.6   0.0   7.8  10   0   0  10  10   9   2 Tetratricopeptide repeat
+TPR_16               PF13432.6  Spipo12G0055800      -            2.2e-07   31.4   6.0         1   10.1   0.0   6.4   6   0   0   6   6   6   2 Tetratricopeptide repeat
+ECSIT                PF06239.11 Spipo12G0055800      -            6.3e-07   28.7   0.0       5.6    6.0   0.0   7.6   4   2   3   7   7   7   1 Evolutionarily conserved signalling intermediate in Toll pathway
+TPR_7                PF13176.6  Spipo12G0055800      -            5.7e-06   26.0   7.5      0.43   10.7   0.1   6.8   7   0   0   7   7   7   1 Tetratricopeptide repeat
+MRP-S27              PF10037.9  Spipo12G0055800      -            0.00034   19.6   0.0       2.7    6.8   0.0   4.6   5   1   1   6   6   6   1 Mitochondrial 28S ribosomal protein S27
+Clathrin             PF00637.20 Spipo12G0055800      -            0.00057   19.8   0.0        18    5.2   0.0   4.5   3   1   2   5   5   5   0 Region in Clathrin and VPS
+ATP13                PF12921.7  Spipo12G0055800      -             0.0068   16.3   0.0        62    3.5   0.0   4.6   4   1   0   4   4   4   0 Mitochondrial ATPase expression
+B12-binding_2        PF02607.17 Spipo12G0055800      -              0.013   15.9   0.0       4.2    7.9   0.0   4.1   4   0   0   4   4   4   0 B12 binding domain
+DUF1884              PF08967.10 Spipo12G0055800      -              0.013   15.7   0.0       3.3    8.0   0.0   4.4   4   1   0   4   4   4   0 Domain of unknown function (DUF1884)
+DUF4256              PF14066.6  Spipo12G0055800      -              0.026   14.2   0.0        10    5.8   0.0   3.6   3   1   0   3   3   3   0 Protein of unknown function (DUF4256)
+TPR_1                PF00515.28 Spipo12G0055800      -              0.047   13.5   5.6        24    5.0   0.0   6.2   8   0   0   8   8   7   0 Tetratricopeptide repeat
+RPN7                 PF10602.9  Spipo12G0055800      -              0.052   13.3   0.7        26    4.5   0.0   4.0   5   1   0   5   5   5   0 26S proteasome subunit RPN7
+TPR_8                PF13181.6  Spipo12G0055800      -              0.063   13.5   5.7      0.14   12.5   0.0   4.4   5   0   0   5   5   3   0 Tetratricopeptide repeat
+YozD                 PF14162.6  Spipo12G0055800      -                0.1   12.9   0.3        12    6.3   0.0   3.5   3   0   0   3   3   3   0 YozD-like protein
+BTAD                 PF03704.17 Spipo12G0055800      -                0.3   11.5   8.5        26    5.3   0.1   4.8   6   0   0   6   6   5   0 Bacterial transcriptional activator domain
+TPR_2                PF07719.17 Spipo12G0055800      -               0.41   10.9  11.8         4    7.8   0.2   6.5   8   0   0   8   8   6   0 Tetratricopeptide repeat
+SET                  PF00856.28 Spipo12G0041700      -            8.2e-21   75.1   0.0   2.6e-20   73.5   0.0   1.7   1   1   0   1   1   1   1 SET domain
+Rer1                 PF03248.13 Spipo12G0001300      -              2e-73  245.8   6.1   2.2e-73  245.6   6.1   1.0   1   0   0   1   1   1   1 Rer1 family
+Holin_BhlA           PF10960.8  Spipo12G0001300      -               0.82    9.7   3.6      0.34   10.9   0.4   2.0   2   0   0   2   2   2   0 BhlA holin family
+GTP_EFTU             PF00009.27 Spipo12G0020200      -            9.1e-48  162.4   0.0   1.4e-47  161.8   0.0   1.3   1   0   0   1   1   1   1 Elongation factor Tu GTP binding domain
+EFTUD2               PF16004.5  Spipo12G0020200      -            7.6e-35  120.2   3.0   1.4e-34  119.3   3.0   1.5   1   0   0   1   1   1   1 116 kDa U5 small nuclear ribonucleoprotein component N-terminus
+EFG_IV               PF03764.18 Spipo12G0020200      -            3.4e-24   85.0   0.0   7.8e-24   83.8   0.0   1.7   1   0   0   1   1   1   1 Elongation factor G, domain IV
+EFG_C                PF00679.24 Spipo12G0020200      -            6.4e-22   77.4   0.0   1.8e-21   75.9   0.0   1.8   1   0   0   1   1   1   1 Elongation factor G C-terminus
+GTP_EFTU_D2          PF03144.25 Spipo12G0020200      -            4.8e-12   46.1   0.0   1.2e-11   44.9   0.0   1.7   1   0   0   1   1   1   1 Elongation factor Tu domain 2
+MMR_HSR1             PF01926.23 Spipo12G0020200      -              3e-05   24.1   0.1     5e-05   23.4   0.1   1.4   1   0   0   1   1   1   1 50S ribosome-binding GTPase
+EFG_II               PF14492.6  Spipo12G0020200      -            0.00019   21.5   0.3    0.0005   20.1   0.1   1.8   2   0   0   2   2   2   1 Elongation Factor G, domain II
+Septin               PF00735.18 Spipo12G0020200      -             0.0079   15.5   0.0     0.014   14.7   0.0   1.3   1   0   0   1   1   1   1 Septin
+Roc                  PF08477.13 Spipo12G0020200      -              0.044   14.0   0.0      0.61   10.3   0.0   2.2   1   1   0   1   1   1   0 Ras of Complex, Roc, domain of DAPkinase
+HlyIII               PF03006.20 Spipo12G0049300      -            2.2e-67  227.1   8.4   2.5e-67  226.9   8.4   1.1   1   0   0   1   1   1   1 Haemolysin-III related
+Fasciclin            PF02469.22 Spipo12G0055000      -            0.00045   20.4   0.0   0.00063   20.0   0.0   1.2   1   0   0   1   1   1   1 Fasciclin domain
+peroxidase           PF00141.23 Spipo12G0009400      -            1.8e-67  227.4   0.1   2.8e-67  226.7   0.1   1.3   1   0   0   1   1   1   1 Peroxidase
+Epimerase            PF01370.21 Spipo12G0050600      -            4.2e-72  242.5   0.0   5.1e-72  242.2   0.0   1.1   1   0   0   1   1   1   1 NAD dependent epimerase/dehydratase family
+GDP_Man_Dehyd        PF16363.5  Spipo12G0050600      -            2.2e-19   70.1   0.0     1e-17   64.5   0.0   2.7   1   1   1   2   2   2   1 GDP-mannose 4,6 dehydratase
+RmlD_sub_bind        PF04321.17 Spipo12G0050600      -            1.4e-07   30.9   0.0   3.7e-07   29.5   0.0   1.7   1   1   0   1   1   1   1 RmlD substrate binding domain
+Polysacc_synt_2      PF02719.15 Spipo12G0050600      -              0.017   14.3   0.2       6.1    5.9   0.0   2.7   2   1   1   3   3   3   0 Polysaccharide biosynthesis protein
+NmrA                 PF05368.13 Spipo12G0050600      -              0.063   12.8   0.1        11    5.5   0.0   2.3   2   1   0   2   2   2   0 NmrA-like family
+Mlo                  PF03094.15 Spipo12G0025800      -           2.9e-189  629.4   7.5  3.5e-189  629.2   7.5   1.0   1   0   0   1   1   1   1 Mlo family
+Cadherin_C_2         PF16492.5  Spipo12G0025800      -               0.27   12.0   1.8      0.96   10.2   0.0   2.7   2   1   0   2   2   2   0 Cadherin cytoplasmic C-terminal
+O-FucT               PF10250.9  Spipo12G0036500      -            1.7e-53  182.5   0.0   2.1e-53  182.2   0.0   1.1   1   0   0   1   1   1   1 GDP-fucose protein O-fucosyltransferase
+Fer4_12              PF13353.6  Spipo12G0036500      -               0.18   12.1   0.0      0.34   11.2   0.0   1.3   1   0   0   1   1   1   0 4Fe-4S single cluster domain
+DUF1296              PF06972.11 Spipo12G0019100      -            6.3e-36  122.3   2.6   7.2e-36  122.1   2.6   1.0   1   0   0   1   1   1   1 Protein of unknown function (DUF1296)
+DUF5069              PF16798.5  Spipo12G0019100      -             0.0034   17.6   0.2    0.0037   17.5   0.2   1.0   1   0   0   1   1   1   1 Domain of unknown function (DUF5069)
+NIBRIN_BRCT_II       PF16508.5  Spipo12G0019100      -              0.051   13.9   0.0     0.057   13.8   0.0   1.0   1   0   0   1   1   1   0 Second BRCT domain on Nijmegen syndrome breakage protein
+SufE                 PF02657.15 Spipo12G0020400      -            3.9e-35  120.3   0.0   5.7e-35  119.8   0.0   1.2   1   0   0   1   1   1   1 Fe-S metabolism associated domain
+BolA                 PF01722.18 Spipo12G0020400      -            1.8e-29  101.8   0.1   2.9e-29  101.1   0.1   1.4   1   0   0   1   1   1   1 BolA-like protein
+DUF1931              PF09123.11 Spipo12G0020400      -              0.029   14.5   0.0     0.056   13.5   0.0   1.4   1   0   0   1   1   1   0 Domain of unknown function (DUF1931)
+CCT                  PF06203.14 Spipo12G0012900      -            9.1e-18   64.0  16.5   1.4e-17   63.5  16.5   1.3   1   0   0   1   1   1   1 CCT motif
+zf-B_box             PF00643.24 Spipo12G0012900      -            3.4e-06   27.1   0.1   5.4e-06   26.5   0.1   1.3   1   0   0   1   1   1   1 B-box zinc finger
+CEBP_ZZ              PF16366.5  Spipo12G0012900      -              0.011   15.9   1.2      0.02   15.1   1.2   1.3   1   0   0   1   1   1   0 Cytoplasmic polyadenylation element-binding protein ZZ domain
+CCT_2                PF09425.10 Spipo12G0012900      -               0.22   11.4   5.8      0.49   10.3   5.8   1.6   1   0   0   1   1   1   0 Divergent CCT motif
+DUF2474              PF10617.9  Spipo12G0025400      -              0.031   14.1   0.2     0.047   13.6   0.2   1.3   1   0   0   1   1   1   0 Protein of unknown function (DUF2474)
+PP2C                 PF00481.21 Spipo12G0047400      -            1.3e-73  247.9   0.2   7.2e-61  206.1   0.1   2.0   2   0   0   2   2   2   2 Protein phosphatase 2C
+SpoIIE               PF07228.12 Spipo12G0047400      -            0.00083   19.3   0.0     0.012   15.6   0.0   2.2   1   1   0   1   1   1   1 Stage II sporulation protein E (SpoIIE)
+PP2C_2               PF13672.6  Spipo12G0047400      -               0.12   12.0   0.0      0.27   10.8   0.0   1.8   1   1   0   1   1   1   0 Protein phosphatase 2C
+Glyco_transf_92      PF01697.27 Spipo12G0041000      -            5.1e-29  101.7   2.6   1.5e-28  100.2   2.6   1.6   1   1   0   1   1   1   1 Glycosyltransferase family 92
+Glyco_tranf_2_4      PF13704.6  Spipo12G0041000      -            3.4e-08   33.9   0.1   9.1e-08   32.5   0.1   1.7   1   0   0   1   1   1   1 Glycosyl transferase family 2
+DUF3325              PF11804.8  Spipo12G0041000      -               0.53   10.5   5.7      0.68   10.1   1.9   2.7   2   0   0   2   2   2   0 Protein of unknown function (DUF3325)
+CorA                 PF01544.18 Spipo12G0046900      -            1.1e-08   34.8   3.3   2.4e-07   30.4   0.5   2.1   2   0   0   2   2   2   2 CorA-like Mg2+ transporter protein
+Filament             PF00038.21 Spipo12G0046900      -             0.0033   17.1   3.3      0.14   11.7   0.1   2.1   2   0   0   2   2   2   2 Intermediate filament protein
+Polysacc_synt_C      PF14667.6  Spipo12G0046900      -               0.04   14.0   2.7     0.065   13.3   2.7   1.3   1   0   0   1   1   1   0 Polysaccharide biosynthesis C-terminal domain
+DUF4456              PF14644.6  Spipo12G0046900      -              0.075   12.7   0.1      0.25   11.0   0.0   1.8   2   0   0   2   2   2   0 Domain of unknown function (DUF4456)
+Uds1                 PF15456.6  Spipo12G0046900      -                0.1   12.8   0.4      0.18   11.9   0.4   1.4   1   0   0   1   1   1   0 Up-regulated During Septation
+YkyA                 PF10368.9  Spipo12G0046900      -               0.34   10.5   2.0      0.26   10.9   0.3   1.6   2   0   0   2   2   2   0 Putative cell-wall binding lipoprotein
+NB-ARC               PF00931.22 Spipo12G0023200      -            4.9e-60  202.8   0.0   7.4e-60  202.2   0.0   1.2   1   0   0   1   1   1   1 NB-ARC domain
+Rx_N                 PF18052.1  Spipo12G0023200      -            4.1e-23   81.5   0.2   1.2e-22   80.0   0.2   1.9   1   0   0   1   1   1   1 Rx N-terminal domain
+LRR_4                PF12799.7  Spipo12G0023200      -            3.8e-08   33.5   5.7     0.086   13.3   0.2   6.5   5   1   2   7   7   7   2 Leucine Rich repeats (2 copies)
+AAA_22               PF13401.6  Spipo12G0023200      -            4.8e-07   30.1   0.0   1.2e-06   28.8   0.0   1.6   1   0   0   1   1   1   1 AAA domain
+AAA_16               PF13191.6  Spipo12G0023200      -              7e-06   26.5   0.0   1.5e-05   25.4   0.0   1.6   1   0   0   1   1   1   1 AAA ATPase domain
+LRR_8                PF13855.6  Spipo12G0023200      -            0.00034   20.3   8.4       1.1    9.1   0.1   5.1   4   2   2   6   6   6   2 Leucine rich repeat
+AAA_33               PF13671.6  Spipo12G0023200      -              0.017   15.3   0.0     0.044   14.0   0.0   1.7   1   0   0   1   1   1   0 AAA domain
+AAA_14               PF13173.6  Spipo12G0023200      -              0.019   15.0   0.0      0.04   13.9   0.0   1.5   1   0   0   1   1   1   0 AAA domain
+AAA                  PF00004.29 Spipo12G0023200      -              0.022   15.2   0.0     0.046   14.2   0.0   1.5   1   0   0   1   1   1   0 ATPase family associated with various cellular activities (AAA)
+ATPase               PF06745.13 Spipo12G0023200      -               0.04   13.3   0.1     0.076   12.3   0.1   1.4   1   0   0   1   1   1   0 KaiC
+TniB                 PF05621.11 Spipo12G0023200      -              0.086   12.2   0.0      0.17   11.3   0.0   1.4   1   0   0   1   1   1   0 Bacterial TniB protein
+AAA_7                PF12775.7  Spipo12G0023200      -               0.14   11.6   0.0      0.26   10.8   0.0   1.3   1   0   0   1   1   1   0 P-loop containing dynein motor region
+SRP54                PF00448.22 Spipo12G0023200      -               0.23   11.0   0.1      0.42   10.2   0.1   1.5   1   1   0   1   1   1   0 SRP54-type protein, GTPase domain
+Glyco_hydro_28       PF00295.17 Spipo12G0035000      -            7.3e-20   71.3   0.0   1.6e-19   70.2   0.0   1.4   1   1   0   1   1   1   1 Glycosyl hydrolases family 28
+Pectate_lyase_3      PF12708.7  Spipo12G0035000      -            6.5e-14   52.3   1.4   3.4e-09   36.9   0.3   3.3   2   1   2   4   4   4   2 Pectate lyase superfamily protein
+Beta_helix           PF13229.6  Spipo12G0035000      -            6.1e-06   26.2   0.2    0.0013   18.6   0.0   2.3   1   1   1   2   2   2   2 Right handed beta helix region
+NosD                 PF05048.13 Spipo12G0035000      -              0.024   13.9   0.2      0.13   11.5   0.0   2.0   2   0   0   2   2   2   0 Periplasmic copper-binding protein (NosD)
+MRG                  PF05712.13 Spipo12G0004200      -            9.2e-35  119.7   0.5   2.7e-34  118.2   0.5   1.7   1   1   0   1   1   1   1 MRG
+Tudor-knot           PF11717.8  Spipo12G0004200      -            1.2e-11   44.3   4.7   2.6e-11   43.2   4.7   1.6   1   0   0   1   1   1   1 RNA binding activity-knot of a chromodomain
+PWWP                 PF00855.17 Spipo12G0004200      -              0.022   15.2   0.6     0.046   14.1   0.6   1.5   1   0   0   1   1   1   0 PWWP domain
+Hydrolase_4          PF12146.8  Spipo12G0023100      -            3.2e-12   46.2   0.0   1.3e-10   40.9   0.0   2.2   1   1   1   2   2   2   1 Serine aminopeptidase, S33
+Abhydrolase_1        PF00561.20 Spipo12G0023100      -            2.2e-06   27.5   0.1   3.1e-06   27.0   0.1   1.2   1   0   0   1   1   1   1 alpha/beta hydrolase fold
+Peptidase_S15        PF02129.18 Spipo12G0023100      -            0.00011   22.0   0.0   0.00015   21.5   0.0   1.3   1   0   0   1   1   1   1 X-Pro dipeptidyl-peptidase (S15 family)
+Abhydrolase_6        PF12697.7  Spipo12G0023100      -             0.0068   17.0   0.0     0.009   16.6   0.0   1.2   1   0   0   1   1   1   1 Alpha/beta hydrolase family
+FSH1                 PF03959.13 Spipo12G0023100      -              0.014   15.1   0.0     0.026   14.2   0.0   1.4   1   1   0   1   1   1   0 Serine hydrolase (FSH1)
+AXE1                 PF05448.12 Spipo12G0023100      -              0.022   13.4   0.0      0.29    9.8   0.1   2.0   1   1   1   2   2   2   0 Acetyl xylan esterase (AXE1)
+Esterase             PF00756.20 Spipo12G0023100      -               0.11   12.2   0.0      0.99    9.0   0.0   2.1   2   0   0   2   2   2   0 Putative esterase
+PALP                 PF00291.25 Spipo12G0012800      -            7.6e-44  150.3   0.0   9.1e-44  150.0   0.0   1.1   1   0   0   1   1   1   1 Pyridoxal-phosphate dependent enzyme
+Catalase-rel         PF06628.12 Spipo12G0056000      -               0.16   12.2   0.0      0.25   11.6   0.0   1.3   1   0   0   1   1   1   0 Catalase-related immune-responsive
+EMP24_GP25L          PF01105.24 Spipo12G0017500      -              4e-27   95.3   0.0   5.1e-27   95.0   0.0   1.1   1   0   0   1   1   1   1 emp24/gp25L/p24 family/GOLD
+GDP_Man_Dehyd        PF16363.5  Spipo12G0050900      -            2.1e-52  178.6   0.0   2.7e-52  178.2   0.0   1.2   1   0   0   1   1   1   1 GDP-mannose 4,6 dehydratase
+Epimerase            PF01370.21 Spipo12G0050900      -            3.9e-51  173.8   0.1   4.8e-51  173.5   0.1   1.1   1   0   0   1   1   1   1 NAD dependent epimerase/dehydratase family
+RmlD_sub_bind        PF04321.17 Spipo12G0050900      -            4.6e-14   52.2   0.0   6.1e-14   51.8   0.0   1.2   1   0   0   1   1   1   1 RmlD substrate binding domain
+3Beta_HSD            PF01073.19 Spipo12G0050900      -            1.9e-13   50.1   0.0   2.3e-13   49.8   0.0   1.1   1   0   0   1   1   1   1 3-beta hydroxysteroid dehydrogenase/isomerase family
+Polysacc_synt_2      PF02719.15 Spipo12G0050900      -            1.8e-11   43.7   0.0   3.6e-10   39.5   0.0   2.1   1   1   0   1   1   1   1 Polysaccharide biosynthesis protein
+NAD_binding_4        PF07993.12 Spipo12G0050900      -              3e-06   26.6   0.4   4.3e-05   22.8   0.4   2.1   1   1   0   1   1   1   1 Male sterility protein
+adh_short            PF00106.25 Spipo12G0050900      -            0.00087   18.8   1.2    0.0039   16.7   1.2   1.8   1   1   0   1   1   1   1 short chain dehydrogenase
+NAD_binding_10       PF13460.6  Spipo12G0050900      -             0.0051   16.7   0.4      0.01   15.7   0.4   1.5   1   1   0   1   1   1   1 NAD(P)H-binding
+NmrA                 PF05368.13 Spipo12G0050900      -             0.0051   16.4   0.1    0.0092   15.6   0.1   1.5   1   0   0   1   1   1   1 NmrA-like family
+KR                   PF08659.10 Spipo12G0050900      -              0.012   15.6   0.0     0.022   14.7   0.0   1.3   1   0   0   1   1   1   0 KR domain
+Methyltransf_11      PF08241.12 Spipo12G0050900      -              0.085   13.5   0.0      0.39   11.4   0.0   2.0   2   0   0   2   2   2   0 Methyltransferase domain
+Methyltransf_25      PF13649.6  Spipo12G0050900      -               0.17   12.6   0.0       0.4   11.4   0.0   1.6   1   0   0   1   1   1   0 Methyltransferase domain
+AMP-binding          PF00501.28 Spipo12G0012600      -            1.8e-43  148.7   0.0   2.5e-43  148.3   0.0   1.2   1   0   0   1   1   1   1 AMP-binding enzyme
+AMP-binding_C        PF13193.6  Spipo12G0012600      -            1.7e-08   35.3   0.1   1.1e-07   32.7   0.1   2.3   3   0   0   3   3   3   1 AMP-binding enzyme C-terminal domain
+ACAS_N               PF16177.5  Spipo12G0012600      -            8.2e-06   25.7   0.0   1.7e-05   24.6   0.0   1.6   1   0   0   1   1   1   1 Acetyl-coenzyme A synthetase N-terminus
+DUF1336              PF07059.12 Spipo12G0043500      -            8.8e-60  202.6   0.0     2e-54  185.1   0.0   2.3   2   0   0   2   2   2   2 Protein of unknown function (DUF1336)
+START                PF01852.19 Spipo12G0043500      -            0.00042   19.8   0.3     0.026   13.9   0.3   2.3   1   1   0   1   1   1   1 START domain
+TFIIE-A_C            PF11521.8  Spipo12G0043500      -              0.012   15.9   0.2     0.012   15.9   0.2   1.7   2   0   0   2   2   2   0 C-terminal general transcription factor TFIIE alpha
+PH                   PF00169.29 Spipo12G0043500      -              0.039   14.5   0.0       0.1   13.1   0.0   1.8   1   0   0   1   1   1   0 PH domain
+RNaseH_like          PF04308.12 Spipo12G0043500      -               0.18   11.7   0.0       0.4   10.6   0.0   1.5   1   0   0   1   1   1   0 Ribonuclease H-like
+PRMT5_TIM            PF17285.2  Spipo12G0066100      -            1.8e-74  250.2   0.0   2.5e-74  249.7   0.0   1.2   1   0   0   1   1   1   1 PRMT5 TIM barrel domain
+PRMT5                PF05185.16 Spipo12G0066100      -              1e-71  240.3   0.0   1.6e-71  239.7   0.0   1.3   1   0   0   1   1   1   1 PRMT5 arginine-N-methyltransferase
+PRMT5_C              PF17286.2  Spipo12G0066100      -            3.3e-54  183.4   0.4   5.1e-54  182.8   0.4   1.3   1   0   0   1   1   1   1 PRMT5 oligomerisation domain
+Met_10               PF02475.16 Spipo12G0066100      -            0.00025   20.8   0.0   0.00039   20.2   0.0   1.2   1   0   0   1   1   1   1 Met-10+ like-protein
+Methyltransf_31      PF13847.6  Spipo12G0066100      -              0.016   15.0   0.0     0.032   14.0   0.0   1.5   1   0   0   1   1   1   0 Methyltransferase domain
+Auxin_inducible      PF02519.14 Spipo12G0062000      -            4.4e-19   68.4   0.0   5.5e-19   68.1   0.0   1.1   1   0   0   1   1   1   1 Auxin responsive protein
+CENP-T_C             PF15511.6  Spipo12G0054700      -            1.5e-08   34.7   0.1   1.8e-08   34.4   0.1   1.2   1   0   0   1   1   1   1 Centromere kinetochore component CENP-T histone fold
+CENP-S               PF15630.6  Spipo12G0054700      -            0.00011   22.5   0.1   0.00014   22.1   0.1   1.3   1   1   0   1   1   1   1 CENP-S protein
+TAF                  PF02969.17 Spipo12G0054700      -            0.00013   22.1   0.1   0.00017   21.6   0.1   1.3   1   1   0   1   1   1   1 TATA box binding protein associated factor (TAF)
+CBFD_NFYB_HMF        PF00808.23 Spipo12G0054700      -            0.00051   20.3   0.1    0.0008   19.6   0.1   1.5   1   1   0   1   1   1   1 Histone-like transcription factor (CBF/NF-Y) and archaeal histone
+Histone              PF00125.24 Spipo12G0054700      -            0.00071   19.9   0.4   0.00079   19.8   0.4   1.3   1   1   0   1   1   1   1 Core histone H2A/H2B/H3/H4
+TFIID-31kDa          PF02291.15 Spipo12G0054700      -               0.01   15.9   0.0     0.012   15.7   0.0   1.1   1   0   0   1   1   1   0 Transcription initiation factor IID, 31kD subunit
+Bromo_TP             PF07524.13 Spipo12G0054700      -              0.013   15.5   0.1     0.019   15.0   0.1   1.2   1   0   0   1   1   1   0 Bromodomain associated
+PsbP                 PF01789.16 Spipo12G0033600      -            2.5e-12   47.2   0.0   3.5e-12   46.7   0.0   1.2   1   0   0   1   1   1   1 PsbP
+RRM_1                PF00076.22 Spipo12G0040100      -            3.3e-17   62.0   0.0   4.4e-17   61.7   0.0   1.1   1   0   0   1   1   1   1 RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+RRM_7                PF16367.5  Spipo12G0040100      -             0.0003   20.9   0.0   0.00076   19.6   0.0   1.6   1   1   0   1   1   1   1 RNA recognition motif
+Nup35_RRM_2          PF14605.6  Spipo12G0040100      -            0.00033   20.6   0.0   0.00056   19.9   0.0   1.4   1   0   0   1   1   1   1 Nup53/35/40-type RNA recognition motif
+PHM7_cyt             PF14703.6  Spipo12G0040100      -                0.1   12.8   0.0      0.15   12.3   0.0   1.3   1   1   0   1   1   1   0 Cytosolic domain of 10TM putative phosphate transporter
+Nup35_RRM            PF05172.13 Spipo12G0040100      -               0.14   12.2   0.0      0.18   11.7   0.0   1.2   1   0   0   1   1   1   0 Nup53/35/40-type RNA recognition motif
+DUF588               PF04535.12 Spipo12G0053500      -            4.6e-28   97.9   9.0   6.1e-28   97.5   9.0   1.2   1   0   0   1   1   1   1 Domain of unknown function (DUF588)
+Alg14                PF08660.11 Spipo12G0053500      -               0.13   12.2   0.9      0.18   11.8   0.2   1.6   2   0   0   2   2   2   0 Oligosaccharide biosynthesis protein Alg14 like
+DUF3413              PF11893.8  Spipo12G0053500      -               0.34   10.0   3.3      0.94    8.6   0.1   2.2   2   0   0   2   2   2   0 Domain of unknown function (DUF3413)
+DUF4231              PF14015.6  Spipo12G0053500      -               0.63   10.5   5.5       4.8    7.7   1.0   2.4   2   1   0   2   2   2   0 Protein of unknown function (DUF4231)
+Chloroa_b-bind       PF00504.21 Spipo12G0051900      -            0.00014   22.4   0.2   0.00028   21.5   0.2   1.4   1   1   0   1   1   1   1 Chlorophyll A-B binding protein
+zf-CCHC_4            PF14392.6  Spipo12G0051900      -               0.14   11.9   0.0      0.24   11.1   0.0   1.4   1   0   0   1   1   1   0 Zinc knuckle
+EPL1                 PF10513.9  Spipo12G0025700      -            4.6e-12   46.6   3.3   4.6e-12   46.6   3.3   2.4   2   1   0   2   2   2   1 Enhancer of polycomb-like
+Glyco_transf_20      PF00982.21 Spipo12G0051800      -           5.6e-172  572.7   0.0  6.8e-172  572.4   0.0   1.1   1   0   0   1   1   1   1 Glycosyltransferase family 20
+Trehalose_PPase      PF02358.16 Spipo12G0051800      -            2.2e-74  249.5   0.0   5.5e-74  248.2   0.0   1.6   1   1   0   1   1   1   1 Trehalose-phosphatase
+Hydrolase_3          PF08282.12 Spipo12G0051800      -              9e-07   28.9   0.0   0.00043   20.1   0.0   2.2   2   0   0   2   2   2   2 haloacid dehalogenase-like hydrolase
+S6PP                 PF05116.13 Spipo12G0051800      -              0.024   14.1   0.0      0.31   10.5   0.0   2.2   2   0   0   2   2   2   0 Sucrose-6F-phosphate phosphohydrolase
+PPR_2                PF13041.6  Spipo12G0061400      -            3.3e-46  155.3   4.9   4.3e-10   39.6   0.1  10.7   8   2   3  11  11  11   8 PPR repeat family
+PPR_3                PF13812.6  Spipo12G0061400      -            2.1e-33  114.2   5.3   1.3e-05   25.2   0.0   9.5   7   3   3  10  10  10   7 Pentatricopeptide repeat domain
+PPR                  PF01535.20 Spipo12G0061400      -            8.1e-28   94.7  22.7   0.00045   20.3   0.6  12.2  13   0   0  13  13  13   7 PPR repeat
+PPR_long             PF17177.4  Spipo12G0061400      -            4.6e-22   78.4   0.0     2e-05   24.0   0.0   5.5   3   2   0   4   4   4   3 Pentacotripeptide-repeat region of PRORP
+PPR_1                PF12854.7  Spipo12G0061400      -            3.3e-06   26.7   8.6     0.076   12.7   0.2   7.9   9   0   0   9   9   9   1 PPR repeat
+DUF4763              PF15960.5  Spipo12G0061400      -             0.0033   16.8   1.2    0.0033   16.8   1.2   2.0   1   1   1   2   2   2   1 Domain of unknown function (DUF4763)
+TSC22                PF01166.18 Spipo12G0061400      -               0.11   12.8   0.9      0.44   10.9   0.9   2.1   1   0   0   1   1   1   0 TSC-22/dip/bun family
+TPR_19               PF14559.6  Spipo12G0061400      -               0.12   12.9   0.6        18    5.9   0.0   4.1   5   0   0   5   5   5   0 Tetratricopeptide repeat
+NPV_P10              PF05531.12 Spipo12G0061400      -               0.21   12.1   0.6      0.61   10.6   0.6   1.8   1   0   0   1   1   1   0 Nucleopolyhedrovirus P10 protein
+Jnk-SapK_ap_N        PF09744.9  Spipo12G0061400      -               0.81    9.9  13.3       2.1    8.5  13.3   1.7   1   0   0   1   1   1   0 JNK_SAPK-associated protein-1
+bPH_6                PF10756.9  Spipo12G0066600      -              0.008   16.2   0.0     0.011   15.8   0.0   1.2   1   0   0   1   1   1   1 Bacterial PH domain
+HDC                  PF02329.16 Spipo12G0006400      -               0.12   11.3   0.0      0.13   11.3   0.0   1.1   1   0   0   1   1   1   0 Histidine carboxylase PI chain
+DAO                  PF01266.24 Spipo12G0043600      -            9.2e-16   58.4   0.0   1.5e-15   57.6   0.0   1.3   1   1   0   1   1   1   1 FAD dependent oxidoreductase
+TAXi_N               PF14543.6  Spipo12G0026200      -            5.8e-50  170.0   9.8   8.2e-50  169.5   9.8   1.2   1   0   0   1   1   1   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0026200      -            2.2e-27   95.8   0.0   3.4e-27   95.2   0.0   1.3   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0026200      -            4.8e-25   88.6   3.5   3.9e-23   82.4   3.5   2.5   1   1   0   1   1   1   1 Eukaryotic aspartyl protease
+PFK                  PF00365.20 Spipo12G0040000      -            2.5e-28   99.2   0.0   1.3e-27   96.9   0.0   1.9   1   1   0   1   1   1   1 Phosphofructokinase
+Thioredoxin          PF00085.20 Spipo12G0000400      -            2.4e-63  210.5   0.0   1.6e-30  105.1   0.0   2.2   2   0   0   2   2   2   2 Thioredoxin
+Thioredoxin_6        PF13848.6  Spipo12G0000400      -            2.1e-12   47.4   0.0   2.8e-08   33.9   0.0   2.6   2   1   0   2   2   2   2 Thioredoxin-like domain
+Thioredoxin_2        PF13098.6  Spipo12G0000400      -            2.4e-12   47.2   0.3   0.00029   21.3   0.0   3.4   2   1   0   2   2   2   2 Thioredoxin-like domain
+Thioredoxin_8        PF13905.6  Spipo12G0000400      -            2.7e-10   40.4   0.0     0.033   14.5   0.0   4.4   3   2   2   5   5   5   2 Thioredoxin-like
+OST3_OST6            PF04756.13 Spipo12G0000400      -            9.7e-10   38.3   0.0   1.8e-05   24.2   0.0   2.2   2   0   0   2   2   2   2 OST3 / OST6 family, transporter family
+Thioredoxin_7        PF13899.6  Spipo12G0000400      -            2.5e-07   30.8   0.0     0.014   15.6   0.0   2.4   2   0   0   2   2   2   2 Thioredoxin-like
+Thioredoxin_3        PF13192.6  Spipo12G0000400      -            7.8e-06   25.8   0.0      0.15   12.1   0.0   2.4   2   0   0   2   2   2   2 Thioredoxin domain
+Thioredoxin_9        PF14595.6  Spipo12G0000400      -            3.2e-05   23.7   0.0      0.29   10.9   0.0   2.2   2   0   0   2   2   2   2 Thioredoxin
+Thioredoxin_4        PF13462.6  Spipo12G0000400      -            0.00055   20.1   0.5       3.9    7.6   0.0   3.9   2   2   1   4   4   4   1 Thioredoxin
+HyaE                 PF07449.11 Spipo12G0000400      -             0.0019   18.2   0.0       3.1    7.8   0.0   2.5   2   0   0   2   2   2   2 Hydrogenase-1 expression protein HyaE
+Thioredoxin_5        PF13743.6  Spipo12G0000400      -              0.008   15.9   0.5        12    5.5   0.0   3.5   2   2   2   4   4   4   1 Thioredoxin
+DSBA                 PF01323.20 Spipo12G0000400      -              0.018   14.8   0.9       8.5    6.1   0.0   3.5   2   2   2   4   4   4   0 DSBA-like thioredoxin domain
+YcaO_C               PF18381.1  Spipo12G0047300      -               0.17   11.8   0.0      0.24   11.3   0.0   1.1   1   0   0   1   1   1   0 YcaO cyclodehydratase C-terminal domain
+Aldose_epim          PF01263.20 Spipo12G0056800      -            7.5e-39  133.8   0.0   8.8e-39  133.6   0.0   1.0   1   0   0   1   1   1   1 Aldose 1-epimerase
+gag-asp_proteas      PF13975.6  Spipo12G0031900      -            3.9e-08   33.8   0.0     5e-08   33.4   0.0   1.1   1   0   0   1   1   1   1 gag-polyprotein putative aspartyl protease
+Asp_protease_2       PF13650.6  Spipo12G0031900      -            4.1e-07   30.5   0.0   5.3e-07   30.2   0.0   1.1   1   0   0   1   1   1   1 Aspartyl protease
+RVP_2                PF08284.11 Spipo12G0031900      -            4.6e-07   29.7   0.0   5.2e-07   29.5   0.0   1.1   1   0   0   1   1   1   1 Retroviral aspartyl protease
+Asp_protease         PF09668.10 Spipo12G0031900      -            7.5e-07   29.0   0.0     1e-06   28.5   0.0   1.2   1   0   0   1   1   1   1 Aspartyl protease
+O-FucT               PF10250.9  Spipo12G0059200      -            9.4e-20   71.6   0.0   1.9e-19   70.5   0.0   1.5   1   1   0   1   1   1   1 GDP-fucose protein O-fucosyltransferase
+VQ                   PF05678.14 Spipo12G0049100      -            9.9e-06   24.9   1.0   2.3e-05   23.8   0.2   2.1   2   0   0   2   2   2   1 VQ motif
+Med11                PF10280.9  Spipo12G0002600      -            1.9e-11   44.6   0.0     2e-11   44.5   0.0   1.1   1   0   0   1   1   1   1 Mediator complex protein
+DUF4301              PF14134.6  Spipo12G0002600      -               0.16   10.8   0.0      0.17   10.6   0.0   1.0   1   0   0   1   1   1   0 Domain of unknown function (DUF4301)
+SWIB                 PF02201.18 Spipo12G0002300      -              2e-19   69.2   0.0   2.8e-19   68.8   0.0   1.2   1   0   0   1   1   1   1 SWIB/MDM2 domain
+Actin                PF00022.19 Spipo12G0023800      -            5.5e-32  110.9   0.1   9.3e-28   96.9   0.0   3.1   1   1   0   2   2   2   2 Actin
+F-box-like           PF12937.7  Spipo12G0023800      -            1.2e-12   47.5   0.1   2.7e-12   46.4   0.1   1.5   1   0   0   1   1   1   1 F-box-like
+F-box                PF00646.33 Spipo12G0023800      -            7.9e-08   32.0   0.0   1.5e-07   31.1   0.0   1.5   1   0   0   1   1   1   1 F-box domain
+MreB_Mbl             PF06723.13 Spipo12G0023800      -               0.13   11.1   0.2       4.6    5.9   0.0   2.1   2   0   0   2   2   2   0 MreB/Mbl protein
+ERG4_ERG24           PF01222.17 Spipo12G0061000      -            9.8e-86  288.2  15.6   1.1e-85  288.0  15.6   1.0   1   0   0   1   1   1   1 Ergosterol biosynthesis ERG4/ERG24 family
+Pkinase_Tyr          PF07714.17 Spipo12G0064900      -            8.6e-40  136.7   0.0   1.2e-39  136.2   0.0   1.2   1   0   0   1   1   1   1 Protein tyrosine kinase
+Pkinase              PF00069.25 Spipo12G0064900      -            1.3e-38  132.9   0.0   1.9e-38  132.3   0.0   1.2   1   0   0   1   1   1   1 Protein kinase domain
+LRR_4                PF12799.7  Spipo12G0064900      -            1.6e-16   60.2   9.5     2e-07   31.2   0.3   4.9   4   0   0   4   4   4   4 Leucine Rich repeats (2 copies)
+LRR_8                PF13855.6  Spipo12G0064900      -            4.1e-15   55.3  14.0   4.1e-09   36.1   1.4   4.6   3   1   1   4   4   4   3 Leucine rich repeat
+LRR_1                PF00560.33 Spipo12G0064900      -            1.2e-07   31.3   7.0     0.083   13.5   0.1   7.0   5   1   0   5   5   5   2 Leucine Rich Repeat
+LRRNT_2              PF08263.12 Spipo12G0064900      -            3.9e-06   27.1   3.2     1e-05   25.7   3.2   1.8   1   0   0   1   1   1   1 Leucine rich repeat N-terminal domain
+LRR_6                PF13516.6  Spipo12G0064900      -            2.2e-05   24.1  17.4      0.12   12.5   0.1   6.3   7   0   0   7   7   7   3 Leucine Rich repeat
+Kinase-like          PF14531.6  Spipo12G0064900      -              0.027   13.8   0.0      0.04   13.2   0.0   1.2   1   0   0   1   1   1   0 Kinase-like
+BAH                  PF01426.18 Spipo12G0010300      -            1.1e-05   25.3   0.0   1.5e-05   24.9   0.0   1.2   1   0   0   1   1   1   1 BAH domain
+Pkinase              PF00069.25 Spipo12G0018800      -            2.1e-60  204.3   0.0   1.5e-37  129.4   0.0   2.2   2   0   0   2   2   2   2 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0018800      -            1.9e-29  102.7   0.0   4.7e-20   72.0   0.0   2.1   2   0   0   2   2   2   2 Protein tyrosine kinase
+Pkinase_fungal       PF17667.1  Spipo12G0018800      -               0.02   13.7   0.0     0.036   12.8   0.0   1.4   1   1   0   1   1   1   0 Fungal protein kinase
+Kinase-like          PF14531.6  Spipo12G0018800      -              0.032   13.6   0.3     0.062   12.6   0.0   1.5   2   0   0   2   2   2   0 Kinase-like
+Kdo                  PF06293.14 Spipo12G0018800      -              0.066   12.6   0.0      0.11   11.8   0.0   1.3   1   0   0   1   1   1   0 Lipopolysaccharide kinase (Kdo/WaaP) family
+APH                  PF01636.23 Spipo12G0018800      -              0.095   12.6   0.1      0.36   10.7   0.0   1.9   1   1   1   2   2   2   0 Phosphotransferase enzyme family
+Haspin_kinase        PF12330.8  Spipo12G0018800      -               0.17   10.8   0.0      0.27   10.1   0.0   1.2   1   0   0   1   1   1   0 Haspin like kinase domain
+DUF3611              PF12263.8  Spipo12G0003400      -              2e-52  177.6   4.9   2.4e-52  177.4   4.9   1.1   1   0   0   1   1   1   1 Protein of unknown function (DUF3611)
+rve                  PF00665.26 Spipo12G0065700      -            8.2e-07   29.2   0.1   5.2e-06   26.7   0.1   2.0   1   1   0   1   1   1   1 Integrase core domain
+RRM_1                PF00076.22 Spipo12G0066400      -            1.2e-05   25.0   0.0     6e-05   22.8   0.0   2.2   2   1   0   2   2   2   1 RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+AP2                  PF00847.20 Spipo12G0042600      -            4.5e-14   52.4   3.8     1e-13   51.3   3.8   1.6   1   0   0   1   1   1   1 AP2 domain
+SET_assoc            PF11767.8  Spipo12G0042600      -               0.19   11.4   0.1        33    4.2   0.0   3.1   3   0   0   3   3   3   0 Histone lysine methyltransferase SET associated
+Transferase          PF02458.15 Spipo12G0047600      -            4.6e-94  315.5   0.0   5.9e-94  315.2   0.0   1.1   1   0   0   1   1   1   1 Transferase family
+CheC                 PF04509.12 Spipo12G0047600      -               0.12   12.4   0.0      0.23   11.4   0.0   1.5   1   0   0   1   1   1   0 CheC-like family
+TAXi_N               PF14543.6  Spipo12G0028200      -            2.5e-49  167.9   9.1   3.6e-49  167.4   9.1   1.2   1   0   0   1   1   1   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0028200      -            2.8e-29  102.0   0.0   4.5e-29  101.3   0.0   1.3   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0028200      -            4.7e-23   82.1   3.3   1.6e-21   77.0   3.3   2.3   1   1   0   1   1   1   1 Eukaryotic aspartyl protease
+TPR_12               PF13424.6  Spipo12G0049200      -            1.1e-25   89.7  12.9   3.3e-13   49.7   1.0   3.6   1   1   1   3   3   3   3 Tetratricopeptide repeat
+TPR_10               PF13374.6  Spipo12G0049200      -            2.7e-22   77.9   9.8   4.1e-08   32.8   0.1   5.6   5   0   0   5   5   5   4 Tetratricopeptide repeat
+eIF3_p135            PF12807.7  Spipo12G0049200      -            7.3e-21   75.0   3.9     5e-20   72.3   0.1   3.1   2   1   0   2   2   2   1 Translation initiation factor eIF3 subunit 135
+CLU_N                PF15044.6  Spipo12G0049200      -            5.1e-09   36.4   0.4   1.1e-08   35.3   0.4   1.6   1   0   0   1   1   1   1 Mitochondrial function, CLU-N-term
+TPR_2                PF07719.17 Spipo12G0049200      -            3.5e-07   29.8   9.9     0.018   15.1   0.1   4.7   4   0   0   4   4   4   3 Tetratricopeptide repeat
+TPR_9                PF13371.6  Spipo12G0049200      -            4.5e-05   23.5   1.4   0.00016   21.7   0.3   2.4   2   0   0   2   2   2   1 Tetratricopeptide repeat
+CLU                  PF13236.6  Spipo12G0049200      -            0.00018   21.4   0.0   0.00032   20.6   0.0   1.4   1   0   0   1   1   1   1 Clustered mitochondria
+TPR_MalT             PF17874.1  Spipo12G0049200      -            0.00047   19.6   1.8      0.01   15.3   0.1   2.1   1   1   1   2   2   2   1 MalT-like TPR region
+TPR_8                PF13181.6  Spipo12G0049200      -            0.00082   19.4   8.7      0.16   12.3   0.1   4.3   4   0   0   4   4   4   1 Tetratricopeptide repeat
+TPR_1                PF00515.28 Spipo12G0049200      -              0.007   16.1   8.4       1.1    9.2   0.1   3.9   3   0   0   3   3   3   2 Tetratricopeptide repeat
+TPR_16               PF13432.6  Spipo12G0049200      -              0.044   14.4   0.9       5.6    7.7   0.0   3.5   2   1   1   3   3   3   0 Tetratricopeptide repeat
+PAM2                 PF07145.15 Spipo12G0049200      -              0.096   12.4   4.3      0.65    9.8   0.1   2.9   2   0   0   2   2   2   0 Ataxin-2 C-terminal region
+Lycopene_cycl        PF05834.12 Spipo12G0018000      -            1.5e-17   63.7   0.5   4.5e-11   42.4   0.1   2.1   1   1   1   2   2   2   2 Lycopene cyclase protein
+UCH                  PF00443.29 Spipo12G0052300      -            9.9e-44  149.8   0.0   1.3e-43  149.4   0.0   1.1   1   0   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+UCH_1                PF13423.6  Spipo12G0052300      -            1.2e-20   74.4   0.3   1.5e-20   74.1   0.3   1.1   1   0   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+Peptidase_C98        PF15499.6  Spipo12G0052300      -              0.033   13.6   1.3      0.78    9.2   0.2   2.3   2   0   0   2   2   2   0 Ubiquitin-specific peptidase-like, SUMO isopeptidase
+zf-C2H2              PF00096.26 Spipo12G0052300      -               0.14   12.7   8.5       1.1    9.9   0.1   4.5   5   0   0   5   5   5   0 Zinc finger, C2H2 type
+DUF620               PF04788.12 Spipo12G0014700      -           1.1e-118  395.1   0.0  1.3e-118  394.7   0.0   1.1   1   0   0   1   1   1   1 Protein of unknown function (DUF620)
+UQ_con               PF00179.26 Spipo12G0023900      -            8.8e-54  181.0   0.0   9.9e-54  180.8   0.0   1.0   1   0   0   1   1   1   1 Ubiquitin-conjugating enzyme
+Prok-E2_B            PF14461.6  Spipo12G0023900      -            0.00059   19.5   0.0    0.0007   19.3   0.0   1.1   1   0   0   1   1   1   1 Prokaryotic E2 family B
+RWD                  PF05773.22 Spipo12G0023900      -            0.00093   19.5   0.0    0.0012   19.1   0.0   1.3   1   0   0   1   1   1   1 RWD domain
+UEV                  PF05743.13 Spipo12G0023900      -              0.029   14.2   0.1     0.043   13.7   0.1   1.3   1   0   0   1   1   1   0 UEV domain
+TAXi_C               PF14541.6  Spipo12G0027700      -            4.2e-19   68.9   0.0   6.3e-19   68.3   0.0   1.3   1   1   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0027700      -               0.12   11.8   0.0      0.13   11.6   0.0   1.1   1   0   0   1   1   1   0 Eukaryotic aspartyl protease
+Lycopene_cycl        PF05834.12 Spipo12G0017900      -            4.1e-12   45.8   0.0   4.4e-12   45.7   0.0   1.0   1   0   0   1   1   1   1 Lycopene cyclase protein
+Reticulon            PF02453.17 Spipo12G0003500      -            6.5e-50  169.2   3.6   8.4e-50  168.8   3.6   1.1   1   0   0   1   1   1   1 Reticulon
+MENTAL               PF10457.9  Spipo12G0003500      -               0.72    9.6   5.9      0.64    9.8   4.8   1.5   1   1   0   1   1   1   0 Cholesterol-capturing domain
+Nop                  PF01798.18 Spipo12G0011400      -            5.3e-72  242.0   0.0   8.8e-72  241.3   0.0   1.4   1   0   0   1   1   1   1 snoRNA binding domain, fibrillarin
+Prp31_C              PF09785.9  Spipo12G0011400      -            7.9e-42  143.0   0.9   1.7e-41  141.9   0.9   1.6   1   0   0   1   1   1   1 Prp31 C terminal domain
+WRKY                 PF03106.15 Spipo12G0044700      -            5.5e-24   84.2   0.6   8.4e-24   83.6   0.6   1.3   1   0   0   1   1   1   1 WRKY DNA -binding domain
+FLYWCH               PF04500.16 Spipo12G0044700      -               0.16   12.1   0.0      0.29   11.3   0.0   1.4   1   0   0   1   1   1   0 FLYWCH zinc finger domain
+PAP_fibrillin        PF04755.12 Spipo12G0038400      -              9e-12   45.3   0.0   1.6e-11   44.5   0.0   1.3   1   1   0   1   1   1   1 PAP_fibrillin
+Peptidase_S10        PF00450.22 Spipo12G0047000      -             3e-118  395.9   0.0  3.4e-118  395.7   0.0   1.0   1   0   0   1   1   1   1 Serine carboxypeptidase
+SBP                  PF03110.14 Spipo12G0064400      -            3.6e-16   59.2  11.6   7.7e-16   58.2  11.6   1.6   1   0   0   1   1   1   1 SBP domain
+EF-hand_1            PF00036.32 Spipo12G0030000      -            2.1e-10   39.4   0.4   8.1e-05   21.9   0.1   2.5   2   0   0   2   2   2   2 EF hand
+EF-hand_5            PF13202.6  Spipo12G0030000      -            2.3e-10   39.5   2.7    0.0001   21.6   0.2   3.1   3   0   0   3   3   3   2 EF hand
+EF-hand_7            PF13499.6  Spipo12G0030000      -            1.8e-09   37.9   0.1   3.4e-09   37.0   0.1   1.5   1   1   0   1   1   1   1 EF-hand domain pair
+EF-hand_6            PF13405.6  Spipo12G0030000      -            6.3e-09   35.1   0.2   0.00024   20.8   0.1   2.5   2   0   0   2   2   2   2 EF-hand domain
+EF-hand_8            PF13833.6  Spipo12G0030000      -            2.9e-07   30.2   0.2   0.00096   19.0   0.1   2.5   2   0   0   2   2   2   2 EF-hand domain pair
+SPARC_Ca_bdg         PF10591.9  Spipo12G0030000      -               0.21   11.9   0.0       1.4    9.3   0.0   2.0   1   1   1   2   2   2   0 Secreted protein acidic and rich in cysteine Ca binding region
+Acetyltransf_1       PF00583.25 Spipo12G0045800      -            9.5e-06   25.8   0.1   1.9e-05   24.8   0.1   1.6   1   0   0   1   1   1   1 Acetyltransferase (GNAT) family
+PORR                 PF11955.8  Spipo12G0062200      -            6.5e-93  311.2   0.0   8.2e-93  310.9   0.0   1.0   1   0   0   1   1   1   1 Plant organelle RNA recognition domain
+zf-B_box             PF00643.24 Spipo12G0060000      -            0.00064   19.8   1.2   0.00064   19.8   1.2   2.6   2   1   0   2   2   2   1 B-box zinc finger
+IBR                  PF01485.21 Spipo12G0060000      -               0.68   10.2   5.5       7.4    6.9   2.9   2.5   1   1   1   2   2   2   0 IBR domain, a half RING-finger domain
+RNase_E_G            PF10150.9  Spipo12G0019600      -            6.1e-86  288.2   0.1   7.6e-86  287.9   0.1   1.1   1   0   0   1   1   1   1 Ribonuclease E/G family
+TAXi_N               PF14543.6  Spipo12G0026500      -            4.5e-51  173.6   8.1     8e-51  172.8   8.1   1.4   1   0   0   1   1   1   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0026500      -            5.1e-27   94.6   0.0   9.4e-27   93.8   0.0   1.5   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0026500      -            3.2e-25   89.2   1.7   2.2e-23   83.2   1.7   2.5   1   1   0   1   1   1   1 Eukaryotic aspartyl protease
+Aldedh               PF00171.22 Spipo12G0011500      -             2e-176  587.1   0.0  2.3e-176  586.9   0.0   1.0   1   0   0   1   1   1   1 Aldehyde dehydrogenase family
+DUF1487              PF07368.11 Spipo12G0011500      -               0.22   10.9   0.1      0.96    8.8   0.1   2.0   1   1   0   1   1   1   0 Protein of unknown function (DUF1487)
+SAGA-Tad1            PF12767.7  Spipo12G0057100      -              4e-08   33.3   0.3   4.8e-08   33.0   0.3   1.1   1   0   0   1   1   1   1 Transcriptional regulator of RNA polII, SAGA, subunit
+Sec63                PF02889.16 Spipo12G0040800      -           6.9e-156  517.0   0.2   2.5e-90  302.1   0.1   3.3   3   0   0   3   3   3   3 Sec63 Brl domain
+DEAD                 PF00270.29 Spipo12G0040800      -            4.6e-57  192.6   5.8   9.5e-28   97.1   0.2   3.6   4   0   0   4   4   4   2 DEAD/DEAH box helicase
+Helicase_PWI         PF18149.1  Spipo12G0040800      -            2.2e-36  124.4   2.1   2.2e-36  124.4   2.1   2.4   2   0   0   2   2   2   1 N-terminal helicase PWI domain
+ResIII               PF04851.15 Spipo12G0040800      -            1.4e-28  100.0   0.0   1.2e-13   51.5   0.0   2.7   2   0   0   2   2   2   2 Type III restriction enzyme, res subunit
+Helicase_C           PF00271.31 Spipo12G0040800      -            1.8e-13   50.8   0.0   5.9e-07   29.8   0.0   3.7   2   2   0   2   2   2   2 Helicase conserved C-terminal domain
+AAA_22               PF13401.6  Spipo12G0040800      -            6.2e-09   36.3   0.1   0.00087   19.6   0.0   3.2   2   1   0   2   2   2   2 AAA domain
+T2SSE                PF00437.20 Spipo12G0040800      -            0.00012   21.2   0.0     0.068   12.2   0.0   2.5   2   0   0   2   2   2   2 Type II/IV secretion system protein
+PhoH                 PF02562.16 Spipo12G0040800      -              0.014   14.9   0.0       3.2    7.1   0.0   2.5   2   0   0   2   2   2   0 PhoH-like protein
+IstB_IS21            PF01695.17 Spipo12G0040800      -              0.029   14.1   0.0       3.6    7.3   0.0   3.3   3   0   0   3   3   3   0 IstB-like ATP binding protein
+AAA_7                PF12775.7  Spipo12G0040800      -              0.042   13.4   0.0         5    6.6   0.0   2.4   2   0   0   2   2   2   0 P-loop containing dynein motor region
+Zeta_toxin           PF06414.12 Spipo12G0040800      -              0.084   12.1   0.0       5.1    6.3   0.0   3.3   3   0   0   3   3   3   0 Zeta toxin
+F-box_5              PF18511.1  Spipo12G0041900      -            2.9e-08   33.1   0.0   5.3e-08   32.3   0.0   1.5   1   0   0   1   1   1   1 F-box
+LRR_6                PF13516.6  Spipo12G0041900      -            2.1e-07   30.5  16.2      0.52   10.5   0.1   8.6  10   0   0  10  10  10   3 Leucine Rich repeat
+F-box-like           PF12937.7  Spipo12G0041900      -            3.1e-05   23.8   0.0   0.00011   22.0   0.0   2.0   1   0   0   1   1   1   1 F-box-like
+LRR_4                PF12799.7  Spipo12G0041900      -            0.00029   21.1  13.6       1.1    9.7   0.2   6.7   5   2   3   8   8   8   3 Leucine Rich repeats (2 copies)
+F-box                PF00646.33 Spipo12G0041900      -             0.0013   18.6   0.0    0.0096   15.8   0.0   2.6   1   0   0   1   1   1   1 F-box domain
+2_5_RNA_ligase2      PF13563.6  Spipo12G0018300      -            7.7e-11   42.1   0.0   1.6e-10   41.1   0.0   1.5   1   1   0   1   1   1   1 2'-5' RNA ligase superfamily
+LigT_PEase           PF02834.16 Spipo12G0018300      -              0.016   15.4   0.1      0.11   12.7   0.1   2.2   2   0   0   2   2   2   0 LigT like Phosphoesterase
+Mhr1                 PF12829.7  Spipo12G0018300      -               0.13   12.3   0.0      0.34   11.0   0.0   1.6   1   0   0   1   1   1   0 Transcriptional regulation of mitochondrial recombination
+Corona_NS2A          PF05213.12 Spipo12G0018300      -               0.18   11.1   0.0      0.26   10.6   0.0   1.1   1   0   0   1   1   1   0 Coronavirus NS2A protein
+PTR2                 PF00854.21 Spipo12G0038100      -            3.2e-94  316.0   0.4     3e-93  312.8   0.1   1.9   2   0   0   2   2   2   2 POT family
+NB-ARC               PF00931.22 Spipo12G0024400      -            1.7e-07   30.7   0.0     4e-07   29.5   0.0   1.6   2   0   0   2   2   2   1 NB-ARC domain
+AAA_16               PF13191.6  Spipo12G0024400      -            7.8e-07   29.6   0.0   2.1e-05   25.0   0.0   2.7   3   0   0   3   3   3   1 AAA ATPase domain
+IstB_IS21            PF01695.17 Spipo12G0024400      -            0.00045   20.0   0.0    0.0074   16.0   0.0   2.1   2   0   0   2   2   2   1 IstB-like ATP binding protein
+AAA_22               PF13401.6  Spipo12G0024400      -             0.0011   19.3   0.0    0.0032   17.8   0.0   1.7   2   0   0   2   2   2   1 AAA domain
+AAA_5                PF07728.14 Spipo12G0024400      -              0.002   18.1   0.0    0.0037   17.2   0.0   1.4   1   0   0   1   1   1   1 AAA domain (dynein-related subfamily)
+TIR_2                PF13676.6  Spipo12G0024400      -             0.0072   16.9   0.0     0.015   15.9   0.0   1.5   1   0   0   1   1   1   1 TIR domain
+AAA_25               PF13481.6  Spipo12G0024400      -             0.0096   15.5   0.0     0.019   14.5   0.0   1.4   1   0   0   1   1   1   1 AAA domain
+AAA                  PF00004.29 Spipo12G0024400      -              0.011   16.2   0.0     0.021   15.3   0.0   1.4   1   0   0   1   1   1   0 ATPase family associated with various cellular activities (AAA)
+AAA_28               PF13521.6  Spipo12G0024400      -              0.068   13.4   0.1         2    8.6   0.0   2.3   1   1   1   2   2   2   0 AAA domain
+DnaB_C               PF03796.15 Spipo12G0024400      -              0.098   12.0   0.0      0.17   11.2   0.0   1.3   1   0   0   1   1   1   0 DnaB-like helicase C terminal domain
+ATPase               PF06745.13 Spipo12G0024400      -               0.11   11.9   0.0      0.18   11.2   0.0   1.3   1   0   0   1   1   1   0 KaiC
+AAA_11               PF13086.6  Spipo12G0024400      -               0.11   12.3   0.0       0.2   11.4   0.0   1.5   1   0   0   1   1   1   0 AAA domain
+AMP-binding          PF00501.28 Spipo12G0064500      -            1.6e-90  303.7   0.1   1.9e-90  303.5   0.1   1.1   1   0   0   1   1   1   1 AMP-binding enzyme
+AMP-binding_C        PF13193.6  Spipo12G0064500      -            2.2e-17   63.8   0.1     6e-17   62.4   0.1   1.8   1   0   0   1   1   1   1 AMP-binding enzyme C-terminal domain
+LysR_substrate       PF03466.20 Spipo12G0064500      -              0.053   12.9   0.0      0.14   11.5   0.0   1.7   1   0   0   1   1   1   0 LysR substrate binding domain
+Ribosomal_L30        PF00327.20 Spipo12G0064500      -               0.17   11.8   0.0      0.38   10.7   0.0   1.5   1   0   0   1   1   1   0 Ribosomal protein L30p/L7e
+Auxin_resp           PF06507.13 Spipo12G0063000      -            4.9e-34  116.4   0.1   1.1e-33  115.3   0.1   1.6   1   0   0   1   1   1   1 Auxin response factor
+B3                   PF02362.21 Spipo12G0063000      -            5.1e-23   80.8   0.1   1.1e-21   76.6   0.0   3.2   3   0   0   3   3   3   1 B3 DNA binding domain
+AUX_IAA              PF02309.16 Spipo12G0063000      -            6.7e-09   36.0   0.7   6.7e-09   36.0   0.7   4.0   2   2   0   2   2   2   1 AUX/IAA family
+PHD                  PF00628.29 Spipo12G0060400      -            1.2e-07   31.5   8.2   1.2e-07   31.5   8.2   2.6   2   0   0   2   2   2   1 PHD-finger
+ELM2                 PF01448.24 Spipo12G0060400      -            1.2e-07   32.3   0.2   0.00022   21.9   0.0   2.4   2   0   0   2   2   2   2 ELM2 domain
+zf-CW                PF07496.15 Spipo12G0060400      -            0.00029   20.8   1.7   0.00029   20.8   1.7   3.2   3   1   0   3   3   3   1 CW-type Zinc Finger
+PHD_2                PF13831.6  Spipo12G0060400      -             0.0021   17.6   3.5    0.0021   17.6   3.5   2.8   3   0   0   3   3   3   1 PHD-finger
+C1_2                 PF03107.16 Spipo12G0060400      -               0.01   16.1   2.9      0.01   16.1   2.9   2.0   2   0   0   2   2   2   0 C1 domain
+ADIP                 PF11559.8  Spipo12G0055300      -            1.9e-45  154.6  11.4   1.9e-45  154.6  11.4   2.4   2   0   0   2   2   2   1 Afadin- and alpha -actinin-Binding
+Macoilin             PF09726.9  Spipo12G0055300      -              0.031   12.9  15.6     0.055   12.0  15.6   1.6   1   0   0   1   1   1   0 Macoilin family
+DUF2218              PF09981.9  Spipo12G0055300      -              0.045   14.1   0.1       3.7    8.0   0.1   2.9   2   1   0   2   2   2   0 Uncharacterized protein conserved in bacteria (DUF2218)
+Syntaxin-6_N         PF09177.11 Spipo12G0055300      -              0.058   13.9  17.4      0.43   11.2   0.3   3.8   2   1   1   3   3   3   0 Syntaxin 6, N-terminal
+HsbA                 PF12296.8  Spipo12G0055300      -               0.06   13.8   0.2      0.13   12.7   0.2   1.6   1   0   0   1   1   1   0 Hydrophobic surface binding protein A
+Aa_trans             PF01490.18 Spipo12G0022700      -            1.2e-55  188.9   8.4   1.1e-38  133.1   3.3   2.0   1   1   1   2   2   2   2 Transmembrane amino acid transporter protein
+Trp_Tyr_perm         PF03222.13 Spipo12G0022700      -               0.12   11.4  12.1      0.11   11.5   1.7   2.5   2   1   0   2   2   2   0 Tryptophan/tyrosine permease family
+ABC2_membrane        PF01061.24 Spipo12G0031500      -            4.7e-95  316.9  64.3   1.4e-54  184.7  26.2   2.9   3   0   0   3   3   3   2 ABC-2 type transporter
+PDR_assoc            PF08370.11 Spipo12G0031500      -              6e-26   90.0   0.2     6e-26   90.0   0.2   3.0   3   0   0   3   3   2   1 Plant PDR ABC transporter associated
+ABC_tran             PF00005.27 Spipo12G0031500      -            5.7e-23   81.9   0.5   3.2e-13   50.4   0.0   2.5   2   0   0   2   2   2   2 ABC transporter
+ABC_trans_N          PF14510.6  Spipo12G0031500      -            6.1e-11   42.8   0.0   1.2e-10   41.8   0.0   1.5   1   0   0   1   1   1   1 ABC-transporter N-terminal
+AAA_16               PF13191.6  Spipo12G0031500      -            1.2e-05   25.8   2.4    0.0052   17.2   0.0   2.7   3   0   0   3   3   2   2 AAA ATPase domain
+AAA_29               PF13555.6  Spipo12G0031500      -            1.3e-05   24.9   3.5     0.088   12.6   0.5   2.5   2   0   0   2   2   2   2 P-loop containing region of AAA domain
+AAA_25               PF13481.6  Spipo12G0031500      -            1.6e-05   24.6   0.8     0.015   14.9   0.0   2.3   2   0   0   2   2   2   2 AAA domain
+AAA_18               PF13238.6  Spipo12G0031500      -            6.8e-05   23.4   1.0      0.09   13.3   0.0   2.4   2   0   0   2   2   2   2 AAA domain
+RsgA_GTPase          PF03193.16 Spipo12G0031500      -             0.0002   21.3   1.9      0.17   11.8   0.3   2.4   2   0   0   2   2   2   2 RsgA GTPase
+AAA_21               PF13304.6  Spipo12G0031500      -             0.0002   21.2   0.0      0.34   10.7   0.0   2.4   2   0   0   2   2   2   2 AAA domain, putative AbiEii toxin, Type IV TA system
+AAA_23               PF13476.6  Spipo12G0031500      -            0.00025   21.6   0.4      0.66   10.4   0.0   2.6   3   0   0   3   3   2   2 AAA domain
+AAA_33               PF13671.6  Spipo12G0031500      -            0.00057   20.1   0.8      0.43   10.7   0.0   2.6   2   0   0   2   2   2   1 AAA domain
+AAA_22               PF13401.6  Spipo12G0031500      -            0.00068   19.9   0.9      0.29   11.4   0.0   2.8   2   0   0   2   2   2   1 AAA domain
+AAA                  PF00004.29 Spipo12G0031500      -             0.0011   19.4   2.4    0.0084   16.5   0.0   2.7   3   0   0   3   3   2   1 ATPase family associated with various cellular activities (AAA)
+AAA_30               PF13604.6  Spipo12G0031500      -             0.0057   16.4   2.6       1.1    9.0   0.1   2.4   2   0   0   2   2   2   2 AAA domain
+SMC_N                PF02463.19 Spipo12G0031500      -             0.0066   15.9   1.2       2.5    7.5   0.0   3.1   3   0   0   3   3   3   1 RecF/RecN/SMC N terminal domain
+AAA_24               PF13479.6  Spipo12G0031500      -              0.045   13.5   0.8         6    6.5   0.0   2.3   2   0   0   2   2   2   0 AAA domain
+NTPase_1             PF03266.15 Spipo12G0031500      -               0.05   13.5   2.9      0.31   10.9   0.1   2.9   3   0   0   3   3   3   0 NTPase
+NACHT                PF05729.12 Spipo12G0031500      -              0.054   13.4   3.9       0.8    9.6   0.1   2.5   2   0   0   2   2   2   0 NACHT domain
+RuvB_N               PF05496.12 Spipo12G0031500      -              0.063   13.0   1.4      0.25   11.1   0.1   2.2   2   0   0   2   2   2   0 Holliday junction DNA helicase RuvB P-loop domain
+AAA_11               PF13086.6  Spipo12G0031500      -              0.071   12.9   0.0      0.12   12.1   0.0   1.2   1   0   0   1   1   1   0 AAA domain
+MMR_HSR1             PF01926.23 Spipo12G0031500      -               0.08   13.0   2.0       9.5    6.3   0.1   2.4   2   0   0   2   2   2   0 50S ribosome-binding GTPase
+Rad17                PF03215.15 Spipo12G0031500      -               0.08   12.9   0.5       2.6    7.9   0.1   2.4   2   0   0   2   2   2   0 Rad17 P-loop domain
+PduV-EutP            PF10662.9  Spipo12G0031500      -              0.086   12.6   1.3       5.6    6.7   0.2   2.4   2   0   0   2   2   2   0 Ethanolamine utilisation - propanediol utilisation
+TIP49                PF06068.13 Spipo12G0031500      -               0.12   11.5   0.1      0.21   10.7   0.1   1.2   1   0   0   1   1   1   0 TIP49 P-loop domain
+AAA_5                PF07728.14 Spipo12G0031500      -               0.13   12.3   3.5       0.3   11.1   0.3   2.5   2   0   0   2   2   2   0 AAA domain (dynein-related subfamily)
+Zeta_toxin           PF06414.12 Spipo12G0031500      -               0.17   11.2   1.4       5.6    6.2   0.0   2.8   3   0   0   3   3   3   0 Zeta toxin
+AAA_7                PF12775.7  Spipo12G0031500      -               0.17   11.4   0.4         2    7.9   0.0   2.3   2   0   0   2   2   2   0 P-loop containing dynein motor region
+cobW                 PF02492.19 Spipo12G0031500      -               0.18   11.4   5.8       1.3    8.6   0.4   2.3   2   0   0   2   2   2   0 CobW/HypB/UreG, nucleotide-binding domain
+TsaE                 PF02367.17 Spipo12G0031500      -               0.26   11.3   0.6        19    5.3   0.0   2.5   2   0   0   2   2   2   0 Threonylcarbamoyl adenosine biosynthesis protein TsaE
+AAA_28               PF13521.6  Spipo12G0031500      -               0.26   11.5   4.5       3.1    8.0   0.1   2.3   2   0   0   2   2   2   0 AAA domain
+AAA_19               PF13245.6  Spipo12G0031500      -               0.32   11.3   0.7      0.94    9.8   0.0   2.1   2   0   0   2   2   2   0 AAA domain
+ANF_receptor         PF01094.28 Spipo12G0052600      -              4e-57  193.9   0.0   5.3e-57  193.5   0.0   1.2   1   0   0   1   1   1   1 Receptor family ligand binding region
+Lig_chan             PF00060.26 Spipo12G0052600      -            9.8e-31  106.6   0.0   1.7e-30  105.9   0.0   1.4   1   0   0   1   1   1   1 Ligand-gated ion channel
+Peripla_BP_6         PF13458.6  Spipo12G0052600      -            1.7e-23   83.9   0.6     3e-23   83.0   0.2   1.5   2   0   0   2   2   2   1 Periplasmic binding protein
+SBP_bac_3            PF00497.20 Spipo12G0052600      -            1.7e-19   70.2   0.0   6.3e-19   68.3   0.0   1.8   2   0   0   2   2   2   1 Bacterial extracellular solute-binding proteins, family 3
+Lig_chan-Glu_bd      PF10613.9  Spipo12G0052600      -            4.2e-07   30.2   0.0     1e-06   28.9   0.0   1.7   1   1   0   1   1   1   1 Ligated ion channel L-glutamate- and glycine-binding site
+PPR_2                PF13041.6  Spipo12G0050300      -            1.5e-71  236.4   0.0   2.8e-11   43.4   0.0  11.6   8   4   3  11  11  11   9 PPR repeat family
+PPR                  PF01535.20 Spipo12G0050300      -            8.3e-61  198.1  11.6   6.6e-07   29.2   0.0  15.1  15   1   0  15  15  15  11 PPR repeat
+PPR_1                PF12854.7  Spipo12G0050300      -            8.2e-34  115.0   0.0    0.0037   16.9   0.0  13.9  12   3   3  15  15  15   6 PPR repeat
+PPR_3                PF13812.6  Spipo12G0050300      -            6.1e-28   96.7   0.0   1.1e-06   28.5   0.0   8.6   5   2   5  10  10  10   4 Pentatricopeptide repeat domain
+PPR_long             PF17177.4  Spipo12G0050300      -            1.6e-06   27.6   0.5      0.59    9.5   0.0   4.8   2   2   3   5   5   5   3 Pentacotripeptide-repeat region of PRORP
+DYW_deaminase        PF14432.6  Spipo12G0050300      -            5.5e-06   26.3   0.0   1.8e-05   24.6   0.0   1.8   2   0   0   2   2   2   1 DYW family of nucleic acid deaminases
+TPR_4                PF07721.14 Spipo12G0050300      -              0.099   13.3   2.2        16    6.4   0.0   4.7   4   0   0   4   4   4   0 Tetratricopeptide repeat
+TPR_16               PF13432.6  Spipo12G0050300      -               0.94   10.2   9.8       4.3    8.1   0.2   4.8   4   0   0   4   4   4   0 Tetratricopeptide repeat
+PSRT                 PF07636.11 Spipo12G0035600      -               0.23   11.2   7.5         5    6.9   0.6   3.2   2   0   0   2   2   2   0 PSRT
+ABC_trans_N          PF14510.6  Spipo12G0032400      -            2.8e-11   43.9   0.1   5.2e-11   43.0   0.1   1.6   1   1   0   1   1   1   1 ABC-transporter N-terminal
+ABC_tran             PF00005.27 Spipo12G0032400      -            5.7e-06   26.9   0.0   1.1e-05   25.9   0.0   1.5   1   0   0   1   1   1   1 ABC transporter
+AAA                  PF00004.29 Spipo12G0032400      -            8.5e-05   23.0   0.1    0.0002   21.8   0.1   1.6   1   0   0   1   1   1   1 ATPase family associated with various cellular activities (AAA)
+AAA_16               PF13191.6  Spipo12G0032400      -            0.00015   22.2   2.1    0.0011   19.4   0.0   2.3   2   1   0   2   2   2   1 AAA ATPase domain
+AAA_25               PF13481.6  Spipo12G0032400      -            0.00087   18.9   0.4    0.0031   17.1   0.1   1.9   2   0   0   2   2   2   1 AAA domain
+RuvB_N               PF05496.12 Spipo12G0032400      -             0.0024   17.6   0.0    0.0041   16.9   0.0   1.3   1   0   0   1   1   1   1 Holliday junction DNA helicase RuvB P-loop domain
+RsgA_GTPase          PF03193.16 Spipo12G0032400      -             0.0027   17.6   0.0    0.0044   16.9   0.0   1.3   1   0   0   1   1   1   1 RsgA GTPase
+AAA_22               PF13401.6  Spipo12G0032400      -             0.0055   17.0   0.2     0.054   13.8   0.1   2.4   3   0   0   3   3   3   1 AAA domain
+AAA_29               PF13555.6  Spipo12G0032400      -             0.0062   16.3   0.1     0.015   15.0   0.1   1.6   1   0   0   1   1   1   1 P-loop containing region of AAA domain
+AAA_11               PF13086.6  Spipo12G0032400      -             0.0086   15.9   0.1     0.016   15.0   0.1   1.4   1   0   0   1   1   1   1 AAA domain
+AAA_23               PF13476.6  Spipo12G0032400      -             0.0092   16.5   0.2     0.058   13.9   0.0   2.0   2   0   0   2   2   2   1 AAA domain
+AAA_18               PF13238.6  Spipo12G0032400      -              0.011   16.3   0.1     0.039   14.5   0.1   1.9   2   0   0   2   2   2   0 AAA domain
+AAA_5                PF07728.14 Spipo12G0032400      -              0.011   15.7   0.1     0.026   14.5   0.1   1.6   1   0   0   1   1   1   0 AAA domain (dynein-related subfamily)
+TIP49                PF06068.13 Spipo12G0032400      -              0.017   14.3   0.1     0.027   13.7   0.1   1.2   1   0   0   1   1   1   0 TIP49 P-loop domain
+NACHT                PF05729.12 Spipo12G0032400      -              0.048   13.6   0.3      0.13   12.2   0.1   1.7   2   0   0   2   2   2   0 NACHT domain
+NTPase_1             PF03266.15 Spipo12G0032400      -              0.088   12.7   0.1      0.22   11.4   0.1   1.7   1   0   0   1   1   1   0 NTPase
+Rad17                PF03215.15 Spipo12G0032400      -              0.091   12.7   0.1      0.15   12.0   0.1   1.3   1   0   0   1   1   1   0 Rad17 P-loop domain
+T2SSE                PF00437.20 Spipo12G0032400      -              0.091   11.8   0.0      0.12   11.4   0.0   1.3   1   0   0   1   1   1   0 Type II/IV secretion system protein
+IstB_IS21            PF01695.17 Spipo12G0032400      -                0.1   12.3   0.0      0.19   11.4   0.0   1.4   1   0   0   1   1   1   0 IstB-like ATP binding protein
+AAA_30               PF13604.6  Spipo12G0032400      -               0.12   12.1   0.1      0.12   12.1   0.1   2.0   3   0   0   3   3   3   0 AAA domain
+AAA_33               PF13671.6  Spipo12G0032400      -               0.12   12.5   0.2      0.25   11.5   0.2   1.5   1   0   0   1   1   1   0 AAA domain
+SMC_N                PF02463.19 Spipo12G0032400      -               0.12   11.7   0.1      0.22   10.9   0.1   1.3   1   0   0   1   1   1   0 RecF/RecN/SMC N terminal domain
+cobW                 PF02492.19 Spipo12G0032400      -               0.13   11.9   0.3      0.22   11.1   0.3   1.3   1   0   0   1   1   1   0 CobW/HypB/UreG, nucleotide-binding domain
+AAA_19               PF13245.6  Spipo12G0032400      -               0.13   12.6   0.1      0.26   11.6   0.1   1.4   1   0   0   1   1   1   0 AAA domain
+AAA_7                PF12775.7  Spipo12G0032400      -               0.24   10.9   0.0      0.47    9.9   0.0   1.4   1   0   0   1   1   1   0 P-loop containing dynein motor region
+AAA_21               PF13304.6  Spipo12G0032400      -               0.31   10.8   2.7      0.18   11.6   0.3   1.8   2   1   0   2   2   2   0 AAA domain, putative AbiEii toxin, Type IV TA system
+EMP70                PF02990.16 Spipo12G0042800      -           1.5e-182  607.9   6.5  1.5e-182  607.9   6.5   1.6   2   0   0   2   2   2   1 Endomembrane protein 70
+Peptidase_M10        PF00413.24 Spipo12G0008800      -            8.7e-48  162.1   0.0   1.1e-47  161.8   0.0   1.1   1   0   0   1   1   1   1 Matrixin
+PG_binding_1         PF01471.18 Spipo12G0008800      -              2e-12   47.1   0.0   3.7e-12   46.3   0.0   1.5   1   0   0   1   1   1   1 Putative peptidoglycan binding domain
+Reprolysin_4         PF13583.6  Spipo12G0008800      -              0.006   16.3   0.0     0.011   15.4   0.0   1.5   1   0   0   1   1   1   1 Metallo-peptidase family M12B Reprolysin-like
+Reprolysin_3         PF13582.6  Spipo12G0008800      -             0.0086   16.6   0.7     0.015   15.8   0.2   1.7   2   0   0   2   2   2   1 Metallo-peptidase family M12B Reprolysin-like
+Metallopep           PF12044.8  Spipo12G0008800      -              0.015   13.9   0.0     0.021   13.5   0.0   1.2   1   0   0   1   1   1   0 Putative peptidase family
+Peptidase_M54        PF07998.11 Spipo12G0008800      -              0.021   14.8   0.0     0.032   14.2   0.0   1.2   1   0   0   1   1   1   0 Peptidase family M54
+Astacin              PF01400.24 Spipo12G0008800      -              0.027   14.1   0.0       1.3    8.6   0.0   2.2   2   0   0   2   2   2   0 Astacin (Peptidase family M12A)
+DUF4953              PF16313.5  Spipo12G0008800      -              0.035   13.3   0.0     0.055   12.7   0.0   1.2   1   0   0   1   1   1   0 Met-zincin
+Zincin_1             PF06262.11 Spipo12G0008800      -              0.048   13.8   0.2      0.11   12.6   0.2   1.6   1   0   0   1   1   1   0 Zincin-like metallopeptidase
+Peptidase_M57        PF12388.8  Spipo12G0008800      -              0.061   12.9   0.1      0.12   12.0   0.1   1.4   1   0   0   1   1   1   0 Dual-action HEIGH metallo-peptidase
+Peptidase_M66        PF10462.9  Spipo12G0008800      -               0.13   11.2   0.0      0.22   10.5   0.0   1.2   1   0   0   1   1   1   0 Peptidase M66
+UBM                  PF14377.6  Spipo12G0008800      -               0.14   11.6   0.0      0.27   10.8   0.0   1.5   1   0   0   1   1   1   0 Ubiquitin binding region
+RNF220               PF15926.5  Spipo12G0024500      -              0.012   15.3   0.6     0.059   13.0   0.0   2.2   1   1   1   2   2   2   0 E3 ubiquitin-protein ligase RNF220
+NOG1                 PF06858.14 Spipo12G0047700      -            8.6e-06   25.4   0.0   1.8e-05   24.4   0.0   1.5   2   0   0   2   2   2   1 Nucleolar GTP-binding protein 1 (NOG1)
+Tetraspanin          PF00335.20 Spipo12G0012700      -            8.5e-27   94.3   8.8   1.1e-26   93.9   8.8   1.0   1   0   0   1   1   1   1 Tetraspanin family
+DUF2207              PF09972.9  Spipo12G0012700      -              0.035   12.9   2.4      0.35    9.6   1.6   2.0   2   0   0   2   2   2   0 Predicted membrane protein (DUF2207)
+O-FucT               PF10250.9  Spipo12G0016000      -            7.2e-73  246.2   0.0   8.8e-73  245.9   0.0   1.1   1   0   0   1   1   1   1 GDP-fucose protein O-fucosyltransferase
+Clp_N                PF02861.20 Spipo12G0059700      -            0.00021   21.4   0.1       0.1   12.7   0.2   2.7   2   0   0   2   2   2   2 Clp amino terminal domain, pathogenicity island component
+AAA_5                PF07728.14 Spipo12G0059700      -               0.17   11.9   0.0       1.3    9.0   0.0   2.3   1   1   0   1   1   1   0 AAA domain (dynein-related subfamily)
+CRAL_TRIO            PF00650.20 Spipo12G0023700      -              3e-37  127.8   0.0     5e-37  127.1   0.0   1.4   1   0   0   1   1   1   1 CRAL/TRIO domain
+CRAL_TRIO_N          PF03765.15 Spipo12G0023700      -             0.0027   17.9   0.1    0.0066   16.6   0.1   1.7   1   0   0   1   1   1   1 CRAL/TRIO, N-terminal domain
+CRAL_TRIO_2          PF13716.6  Spipo12G0023700      -             0.0064   16.7   0.0     0.027   14.6   0.0   2.0   2   0   0   2   2   2   1 Divergent CRAL/TRIO domain
+XET_C                PF06955.12 Spipo12G0058000      -            3.9e-19   68.2   1.3   7.5e-19   67.3   1.3   1.4   1   0   0   1   1   1   1 Xyloglucan endo-transglycosylase (XET) C-terminus
+Ubiquitin_4          PF18036.1  Spipo12G0002900      -            2.1e-21   75.7   0.0   3.2e-21   75.2   0.0   1.2   1   0   0   1   1   1   1 Ubiquitin-like domain
+ubiquitin            PF00240.23 Spipo12G0002900      -              0.026   14.2   0.0      0.14   12.0   0.0   1.9   2   0   0   2   2   2   0 Ubiquitin family
+YukD                 PF08817.10 Spipo12G0002900      -              0.053   14.2   0.0      0.19   12.4   0.0   1.9   1   1   0   1   1   1   0 WXG100 protein secretion system (Wss), protein YukD
+RRM_1                PF00076.22 Spipo12G0022000      -            2.7e-13   49.5   0.0   3.8e-13   49.0   0.0   1.2   1   0   0   1   1   1   1 RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+RRM_9                PF18444.1  Spipo12G0022000      -               0.19   11.6   0.0      0.28   11.1   0.0   1.2   1   0   0   1   1   1   0 RNA recognition motif
+Metalloenzyme        PF01676.18 Spipo12G0013500      -            6.6e-14   51.9   0.0   1.7e-13   50.5   0.0   1.6   1   1   0   1   1   1   1 Metalloenzyme superfamily
+PhosphMutase         PF10143.9  Spipo12G0013500      -            2.8e-10   40.3   0.0   4.7e-10   39.6   0.0   1.3   1   0   0   1   1   1   1 2,3-bisphosphoglycerate-independent phosphoglycerate mutase
+Phosphodiest         PF01663.22 Spipo12G0013500      -              0.037   13.6   0.0     0.079   12.5   0.0   1.5   2   0   0   2   2   2   0 Type I phosphodiesterase / nucleotide pyrophosphatase
+Glyco_hydro81C       PF17652.1  Spipo12G0012200      -             2e-102  343.0   0.0  2.6e-102  342.6   0.0   1.1   1   0   0   1   1   1   1 Glycosyl hydrolase family 81 C-terminal domain
+Glyco_hydro_81       PF03639.13 Spipo12G0012200      -            6.7e-63  212.8   0.0     9e-63  212.4   0.0   1.1   1   0   0   1   1   1   1 Glycosyl hydrolase family 81 N-terminal domain
+DUF1677              PF07911.13 Spipo12G0042100      -            2.4e-35  120.8   6.6   3.1e-35  120.4   6.6   1.1   1   0   0   1   1   1   1 Protein of unknown function (DUF1677)
+FYVE                 PF01363.21 Spipo12G0042100      -               0.54   10.4  10.5       1.8    8.8  10.5   1.8   1   1   0   1   1   1   0 FYVE zinc finger
+Cupin_1              PF00190.22 Spipo12G0035900      -            4.7e-32  110.7   0.3   5.6e-32  110.4   0.3   1.1   1   0   0   1   1   1   1 Cupin
+Cupin_2              PF07883.11 Spipo12G0035900      -            1.4e-08   34.3   0.0   2.7e-08   33.4   0.0   1.5   1   1   0   1   1   1   1 Cupin domain
+Auxin_BP             PF02041.16 Spipo12G0035900      -              0.015   15.0   0.0     0.024   14.3   0.0   1.3   1   0   0   1   1   1   0 Auxin binding protein
+Cupin_7              PF12973.7  Spipo12G0035900      -              0.088   12.7   0.0      0.14   12.1   0.0   1.4   1   0   0   1   1   1   0 ChrR Cupin-like domain
+Cupin_3              PF05899.12 Spipo12G0035900      -               0.11   12.2   0.0       0.2   11.4   0.0   1.4   1   0   0   1   1   1   0 Protein of unknown function (DUF861)
+ARD                  PF03079.14 Spipo12G0035900      -               0.19   11.9   0.0       0.3   11.3   0.0   1.2   1   0   0   1   1   1   0 ARD/ARD' family
+E1-E2_ATPase         PF00122.20 Spipo12G0033200      -            7.9e-50  168.9   0.7   1.8e-49  167.8   0.7   1.6   1   0   0   1   1   1   1 E1-E2 ATPase
+Hydrolase            PF00702.26 Spipo12G0033200      -            1.9e-44  152.5   1.3   3.9e-44  151.4   1.3   1.5   1   0   0   1   1   1   1 haloacid dehalogenase-like hydrolase
+HMA                  PF00403.26 Spipo12G0033200      -            3.1e-09   37.1   1.3   2.3e-06   27.9   0.0   3.0   3   0   0   3   3   3   2 Heavy-metal-associated domain
+Hydrolase_3          PF08282.12 Spipo12G0033200      -             0.0022   17.8   3.6    0.0039   17.0   2.2   2.0   2   0   0   2   2   2   1 haloacid dehalogenase-like hydrolase
+alpha-hel2           PF14456.6  Spipo12G0033200      -              0.084   12.2   0.0      0.16   11.3   0.0   1.3   1   0   0   1   1   1   0 Alpha-helical domain 2
+SKA2                 PF16740.5  Spipo12G0049500      -            8.8e-34  115.6   2.0   1.2e-33  115.2   1.2   1.6   2   0   0   2   2   2   1 Spindle and kinetochore-associated protein 2
+DUF4355              PF14265.6  Spipo12G0049500      -              0.075   13.3   0.1      0.13   12.5   0.1   1.4   1   1   0   1   1   1   0 Domain of unknown function (DUF4355)
+DUF5082              PF16888.5  Spipo12G0049500      -              0.082   13.2   1.8      0.12   12.7   0.2   1.9   2   0   0   2   2   2   0 Domain of unknown function (DUF5082)
+DUF948               PF06103.11 Spipo12G0049500      -                0.1   12.8   0.5       9.3    6.6   0.1   2.9   3   0   0   3   3   3   0 Bacterial protein of unknown function (DUF948)
+CorA                 PF01544.18 Spipo12G0049500      -               0.25   10.6   1.7      0.41    9.9   1.6   1.5   1   1   0   1   1   1   0 CorA-like Mg2+ transporter protein
+Dus                  PF01207.17 Spipo12G0001700      -            9.6e-34  116.9   0.0   9.5e-23   80.7   0.0   2.1   1   1   1   2   2   2   2 Dihydrouridine synthase (Dus)
+Folate_rec           PF03024.14 Spipo12G0001700      -              0.015   15.2   0.2     0.025   14.5   0.2   1.3   1   0   0   1   1   1   0 Folate receptor family
+His_biosynth         PF00977.21 Spipo12G0001700      -              0.049   13.1   0.0     0.098   12.1   0.0   1.4   1   0   0   1   1   1   0 Histidine biosynthesis protein
+bZIP_1               PF00170.21 Spipo12G0039800      -            5.5e-08   32.8  11.7     1e-07   31.9  11.2   1.7   1   1   1   2   2   2   1 bZIP transcription factor
+bZIP_2               PF07716.15 Spipo12G0039800      -            3.8e-07   30.1  13.9     4e-06   26.8  13.9   2.1   1   1   0   1   1   1   1 Basic region leucine zipper
+bZIP_Maf             PF03131.17 Spipo12G0039800      -            0.00028   21.3   5.8   0.00039   20.9   5.8   1.2   1   0   0   1   1   1   1 bZIP Maf transcription factor
+CENP-F_leu_zip       PF10473.9  Spipo12G0039800      -              0.017   15.1   3.7     0.026   14.5   3.7   1.2   1   0   0   1   1   1   0 Leucine-rich repeats of kinetochore protein Cenp-F/LEK1
+CDC45                PF02724.14 Spipo12G0039800      -               0.12   10.6   4.9      0.14   10.4   4.9   1.1   1   0   0   1   1   1   0 CDC45-like protein
+Retrotran_gag_2      PF14223.6  Spipo12G0056900      -            6.7e-09   35.5   0.0   7.8e-09   35.3   0.0   1.0   1   0   0   1   1   1   1 gag-polypeptide of LTR copia-type
+zf-AN1               PF01428.16 Spipo12G0034600      -            2.9e-10   40.1   8.8   2.9e-10   40.1   8.8   1.9   2   0   0   2   2   2   1 AN1-like Zinc finger
+zf-A20               PF01754.16 Spipo12G0034600      -            2.5e-07   30.5   6.6   2.5e-07   30.5   6.6   2.1   2   0   0   2   2   2   1 A20-like zinc finger
+LBR_tudor            PF09465.10 Spipo12G0044100      -              0.011   15.5   0.2     0.021   14.6   0.2   1.4   1   0   0   1   1   1   0 Lamin-B receptor of TUDOR domain
+Tudor_3              PF18115.1  Spipo12G0044100      -              0.068   13.0   0.0      0.15   11.9   0.0   1.5   1   0   0   1   1   1   0 DNA repair protein Crb2 Tudor domain
+Pkinase_Tyr          PF07714.17 Spipo12G0036900      -            2.7e-32  112.1   0.0   3.9e-32  111.6   0.0   1.1   1   0   0   1   1   1   1 Protein tyrosine kinase
+Pkinase              PF00069.25 Spipo12G0036900      -            3.9e-27   95.3   0.0   5.3e-27   94.8   0.0   1.1   1   0   0   1   1   1   1 Protein kinase domain
+LRR_8                PF13855.6  Spipo12G0036900      -            4.9e-12   45.4  18.3   1.1e-09   37.9  10.0   3.1   2   1   1   3   3   3   3 Leucine rich repeat
+LRR_4                PF12799.7  Spipo12G0036900      -            2.8e-11   43.5   7.6    0.0003   21.1   1.8   3.5   3   0   0   3   3   3   3 Leucine Rich repeats (2 copies)
+LRR_1                PF00560.33 Spipo12G0036900      -            1.6e-06   27.8  10.4       0.2   12.4   0.1   5.1   4   1   0   4   4   4   3 Leucine Rich Repeat
+LRRNT_2              PF08263.12 Spipo12G0036900      -            9.3e-05   22.7   0.5   0.00024   21.3   0.1   1.9   2   0   0   2   2   2   1 Leucine rich repeat N-terminal domain
+LRR_6                PF13516.6  Spipo12G0036900      -            0.00082   19.2  14.5         1    9.6   0.7   4.7   4   0   0   4   4   4   3 Leucine Rich repeat
+Pinin_SDK_N          PF04697.13 Spipo12G0036900      -                0.1   13.3   4.8      0.17   12.5   4.8   1.3   1   0   0   1   1   1   0 pinin/SDK conserved region
+zf-CCCH              PF00642.24 Spipo12G0001100      -            1.4e-18   66.3  17.0   8.4e-10   38.3   4.7   2.2   2   0   0   2   2   2   2 Zinc finger C-x8-C-x5-C-x3-H type (and similar)
+zf_CCCH_4            PF18345.1  Spipo12G0001100      -            1.4e-10   40.9  22.2   2.8e-05   24.0   7.4   2.3   2   0   0   2   2   2   2 Zinc finger domain
+zf-CCCH_4            PF18044.1  Spipo12G0001100      -            3.6e-07   29.8  15.1    0.0014   18.3   3.1   2.2   2   0   0   2   2   2   2 CCCH-type zinc finger
+Torus                PF16131.5  Spipo12G0001100      -            8.7e-05   23.2   1.8       0.2   12.4   0.0   2.2   2   0   0   2   2   2   2 Torus domain
+zf-CCCH_2            PF14608.6  Spipo12G0001100      -              0.002   18.5  14.5     0.078   13.5   3.6   2.6   2   0   0   2   2   2   2 RNA-binding, Nab2-type zinc finger
+APO_RNA-bind         PF05634.11 Spipo12G0022800      -           1.6e-116  386.7   0.5   1.6e-89  298.6   0.1   2.0   2   0   0   2   2   2   2 APO RNA-binding
+NB-ARC               PF00931.22 Spipo12G0023400      -            1.1e-20   74.0   0.2     1e-10   41.2   0.0   2.2   1   1   1   2   2   2   2 NB-ARC domain
+Rx_N                 PF18052.1  Spipo12G0023400      -            2.8e-09   37.1   0.0   9.1e-09   35.5   0.0   1.9   1   0   0   1   1   1   1 Rx N-terminal domain
+GFO_IDH_MocA         PF01408.22 Spipo12G0036400      -            1.5e-10   41.9   0.1   3.5e-10   40.8   0.0   1.5   2   0   0   2   2   2   1 Oxidoreductase family, NAD-binding Rossmann fold
+GFO_IDH_MocA_C       PF02894.17 Spipo12G0036400      -             0.0027   17.7   0.0    0.0055   16.7   0.0   1.5   1   0   0   1   1   1   1 Oxidoreductase family, C-terminal alpha/beta domain
+DUF1427              PF07235.11 Spipo12G0036400      -              0.039   13.9   0.1      0.69    9.9   0.0   2.5   3   0   0   3   3   3   0 Protein of unknown function (DUF1427)
+GRAS                 PF03514.14 Spipo12G0025200      -           3.4e-116  388.2   0.0  4.1e-116  388.0   0.0   1.1   1   0   0   1   1   1   1 GRAS domain family
+Xan_ur_permease      PF00860.20 Spipo12G0010100      -            1.7e-38  132.3  22.6     1e-24   87.0   4.4   3.0   2   1   0   2   2   2   2 Permease family
+JAB                  PF01398.21 Spipo12G0055900      -            2.6e-32  111.2   0.0     5e-32  110.4   0.0   1.5   1   0   0   1   1   1   1 JAB1/Mov34/MPN/PAD-1 ubiquitin protease
+CSN5_C               PF18323.1  Spipo12G0055900      -            3.7e-28   98.3   1.0   6.4e-28   97.5   1.0   1.4   1   0   0   1   1   1   1 Cop9 signalosome subunit 5 C-terminal domain
+Prok-JAB             PF14464.6  Spipo12G0055900      -            2.7e-05   23.9   0.0   4.5e-05   23.2   0.0   1.4   1   0   0   1   1   1   1 Prokaryotic homologs of the JAB domain
+UPF0172              PF03665.13 Spipo12G0055900      -             0.0016   18.5   0.1    0.0035   17.4   0.0   1.6   2   0   0   2   2   2   1 Uncharacterised protein family (UPF0172)
+zf-rbx1              PF12678.7  Spipo12G0057200      -            1.3e-09   38.2   1.4   2.2e-09   37.4   1.4   1.4   1   0   0   1   1   1   1 RING-H2 zinc finger domain
+zf-RING_2            PF13639.6  Spipo12G0057200      -            3.3e-08   33.7   1.0     6e-08   32.9   1.0   1.4   1   0   0   1   1   1   1 Ring finger domain
+zf-C3HC4_2           PF13923.6  Spipo12G0057200      -            5.3e-07   29.4   2.0   9.6e-07   28.5   2.0   1.4   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-C3HC4             PF00097.25 Spipo12G0057200      -            1.9e-05   24.4   0.3     4e-05   23.4   0.3   1.5   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-ANAPC11           PF12861.7  Spipo12G0057200      -             0.0016   18.4   1.3    0.0029   17.6   1.3   1.3   1   0   0   1   1   1   1 Anaphase-promoting complex subunit 11 RING-H2 finger
+zf-C3HC4_3           PF13920.6  Spipo12G0057200      -             0.0075   16.1   2.1     0.013   15.3   2.1   1.3   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+Zn_ribbon_17         PF17120.5  Spipo12G0057200      -              0.018   14.7   1.9     0.033   13.8   1.9   1.4   1   0   0   1   1   1   0 Zinc-ribbon, C4HC2 type
+zf-RING_5            PF14634.6  Spipo12G0057200      -               0.02   14.9   0.5     0.037   14.0   0.5   1.4   1   0   0   1   1   1   0 zinc-RING finger domain
+zf-RING_11           PF17123.5  Spipo12G0057200      -              0.028   14.2   0.5     0.062   13.1   0.0   1.9   2   0   0   2   2   2   0 RING-like zinc finger
+zf-RING_UBOX         PF13445.6  Spipo12G0057200      -              0.078   13.0   2.9      0.14   12.2   0.9   2.2   1   1   1   2   2   2   0 RING-type zinc-finger
+zf-C3HC4_4           PF15227.6  Spipo12G0057200      -               0.11   12.7   1.5      0.33   11.1   1.6   1.8   1   1   0   1   1   1   0 zinc finger of C3HC4-type, RING
+FANCL_C              PF11793.8  Spipo12G0057200      -               0.24   11.6   3.4      0.86    9.8   3.4   1.9   1   1   0   1   1   1   0 FANCL C-terminal domain
+zf-RING-like         PF08746.11 Spipo12G0057200      -               0.35   11.2   2.5       0.6   10.5   2.5   1.3   1   0   0   1   1   1   0 RING-like domain
+ABC_tran             PF00005.27 Spipo12G0057600      -              1e-33  116.8   0.0   1.6e-33  116.1   0.0   1.3   1   0   0   1   1   1   1 ABC transporter
+AAA_21               PF13304.6  Spipo12G0057600      -            1.8e-11   44.5   0.1   4.7e-05   23.3   0.0   2.1   2   0   0   2   2   2   2 AAA domain, putative AbiEii toxin, Type IV TA system
+AAA_29               PF13555.6  Spipo12G0057600      -              2e-05   24.2   0.4   5.2e-05   22.9   0.0   1.9   2   0   0   2   2   2   1 P-loop containing region of AAA domain
+SMC_N                PF02463.19 Spipo12G0057600      -            2.2e-05   24.0   0.2      0.11   11.9   0.0   2.1   2   0   0   2   2   2   2 RecF/RecN/SMC N terminal domain
+AAA_16               PF13191.6  Spipo12G0057600      -            7.2e-05   23.2   0.1   0.00012   22.5   0.1   1.6   1   1   0   1   1   1   1 AAA ATPase domain
+AAA_30               PF13604.6  Spipo12G0057600      -             0.0001   22.1   0.1    0.0007   19.4   0.1   2.0   1   1   0   1   1   1   1 AAA domain
+AAA_22               PF13401.6  Spipo12G0057600      -            0.00025   21.3   0.1    0.0017   18.6   0.1   2.2   1   1   0   1   1   1   1 AAA domain
+ABC_ATPase           PF09818.9  Spipo12G0057600      -            0.00032   19.6   1.8     0.019   13.8   0.1   2.2   2   0   0   2   2   2   1 Predicted ATPase of the ABC class
+APS_kinase           PF01583.20 Spipo12G0057600      -            0.00099   19.0   0.1     0.046   13.6   0.0   2.3   2   0   0   2   2   2   1 Adenylylsulphate kinase
+MMR_HSR1             PF01926.23 Spipo12G0057600      -             0.0011   19.0   0.1     0.052   13.6   0.0   2.4   2   0   0   2   2   2   1 50S ribosome-binding GTPase
+Adeno_IVa2           PF02456.15 Spipo12G0057600      -             0.0011   17.8   0.1    0.0019   17.0   0.1   1.3   1   0   0   1   1   1   1 Adenovirus IVa2 protein
+AAA_24               PF13479.6  Spipo12G0057600      -             0.0025   17.6   0.0     0.018   14.8   0.0   2.1   2   0   0   2   2   2   1 AAA domain
+AAA_23               PF13476.6  Spipo12G0057600      -             0.0027   18.2   0.1    0.0041   17.6   0.1   1.3   1   0   0   1   1   1   1 AAA domain
+AAA_33               PF13671.6  Spipo12G0057600      -             0.0033   17.6   0.2    0.0093   16.1   0.0   1.7   2   1   0   2   2   1   1 AAA domain
+AAA_18               PF13238.6  Spipo12G0057600      -             0.0053   17.3   0.0     0.011   16.3   0.0   1.5   1   0   0   1   1   1   1 AAA domain
+NACHT                PF05729.12 Spipo12G0057600      -              0.012   15.6   0.0     0.029   14.3   0.0   1.6   1   0   0   1   1   1   0 NACHT domain
+AAA_25               PF13481.6  Spipo12G0057600      -              0.017   14.7   0.5       4.2    6.9   0.0   2.6   2   1   0   2   2   2   0 AAA domain
+RecA                 PF00154.21 Spipo12G0057600      -              0.024   14.1   0.0     0.082   12.4   0.0   1.9   1   1   1   2   2   2   0 recA bacterial DNA recombination protein
+AAA_28               PF13521.6  Spipo12G0057600      -              0.024   14.9   0.0     0.069   13.4   0.0   1.7   2   0   0   2   2   1   0 AAA domain
+RsgA_GTPase          PF03193.16 Spipo12G0057600      -              0.027   14.4   0.2     0.068   13.1   0.1   1.7   2   0   0   2   2   2   0 RsgA GTPase
+AAA_14               PF13173.6  Spipo12G0057600      -              0.046   13.8   0.0      0.35   10.9   0.0   2.1   2   0   0   2   2   2   0 AAA domain
+MeaB                 PF03308.16 Spipo12G0057600      -              0.061   12.3   0.3      0.15   11.0   0.1   1.6   2   0   0   2   2   2   0 Methylmalonyl Co-A mutase-associated GTPase MeaB
+PRK                  PF00485.18 Spipo12G0057600      -              0.081   12.6   0.0      0.16   11.7   0.0   1.5   1   0   0   1   1   1   0 Phosphoribulokinase / Uridine kinase family
+NB-ARC               PF00931.22 Spipo12G0057600      -              0.099   11.8   0.0      0.17   11.0   0.0   1.3   1   0   0   1   1   1   0 NB-ARC domain
+Cytidylate_kin       PF02224.18 Spipo12G0057600      -               0.14   11.9   0.2      0.29   10.8   0.2   1.8   1   1   0   1   1   1   0 Cytidylate kinase
+AAA                  PF00004.29 Spipo12G0057600      -               0.14   12.6   0.0      0.71   10.3   0.0   2.1   1   1   0   1   1   1   0 ATPase family associated with various cellular activities (AAA)
+Zeta_toxin           PF06414.12 Spipo12G0057600      -               0.18   11.0   0.0      0.33   10.2   0.0   1.3   1   0   0   1   1   1   0 Zeta toxin
+AAA_15               PF13175.6  Spipo12G0057600      -               0.23   11.1   0.0      0.34   10.6   0.0   1.1   1   0   0   1   1   1   0 AAA ATPase domain
+Metallophos          PF00149.28 Spipo12G0029600      -            9.5e-37  127.5   0.2   1.3e-36  127.0   0.2   1.2   1   0   0   1   1   1   1 Calcineurin-like phosphoesterase
+STPPase_N            PF16891.5  Spipo12G0029600      -             0.0017   18.7   1.3    0.0043   17.5   0.4   2.1   2   0   0   2   2   2   1 Serine-threonine protein phosphatase N-terminal domain
+Metallophos_2        PF12850.7  Spipo12G0029600      -               0.08   13.1   0.0      0.12   12.5   0.0   1.4   1   0   0   1   1   1   0 Calcineurin-like phosphoesterase superfamily domain
+UQ_con               PF00179.26 Spipo12G0065200      -            5.5e-43  146.0   0.0   6.3e-43  145.8   0.0   1.0   1   0   0   1   1   1   1 Ubiquitin-conjugating enzyme
+Prok-E2_B            PF14461.6  Spipo12G0065200      -            0.00031   20.4   0.0   0.00039   20.1   0.0   1.2   1   0   0   1   1   1   1 Prokaryotic E2 family B
+Spermine_synth       PF01564.17 Spipo12G0011300      -            4.2e-74  248.1   0.0     2e-73  245.8   0.0   1.9   2   0   0   2   2   2   1 Spermine/spermidine synthase domain
+Spermine_synt_N      PF17284.2  Spipo12G0011300      -            3.5e-24   84.4   0.1   5.9e-24   83.7   0.1   1.4   1   0   0   1   1   1   1 Spermidine synthase tetramerisation domain
+Methyltransf_25      PF13649.6  Spipo12G0011300      -            4.4e-05   24.1   0.0   8.9e-05   23.1   0.0   1.5   1   0   0   1   1   1   1 Methyltransferase domain
+MTS                  PF05175.14 Spipo12G0011300      -            0.00068   19.2   0.0   0.00096   18.7   0.0   1.2   1   0   0   1   1   1   1 Methyltransferase small domain
+Methyltransf_30      PF05430.11 Spipo12G0011300      -             0.0018   18.2   0.0    0.0027   17.6   0.0   1.3   1   0   0   1   1   1   1 S-adenosyl-L-methionine-dependent methyltransferase
+Kelch_1              PF01344.25 Spipo12G0011300      -              0.017   14.7   0.0     0.036   13.6   0.0   1.5   1   0   0   1   1   1   0 Kelch motif
+Methyltransf_24      PF13578.6  Spipo12G0011300      -              0.078   14.0   0.0      0.16   13.0   0.0   1.4   1   0   0   1   1   1   0 Methyltransferase domain
+Methyltransf_12      PF08242.12 Spipo12G0011300      -              0.094   13.5   0.0      0.41   11.4   0.0   2.0   1   1   0   1   1   1   0 Methyltransferase domain
+Methyltransf_11      PF08241.12 Spipo12G0011300      -               0.15   12.7   0.0      0.36   11.5   0.0   1.6   1   1   0   1   1   1   0 Methyltransferase domain
+dsrm                 PF00035.26 Spipo12G0006100      -              0.038   14.7   0.2      0.15   12.8   0.1   1.9   1   1   1   2   2   2   0 Double-stranded RNA binding motif
+peroxidase           PF00141.23 Spipo12G0056700      -            6.6e-69  232.1   0.3   1.5e-68  230.9   0.1   1.6   1   1   1   2   2   2   1 Peroxidase
+Ank_2                PF12796.7  Spipo12G0051400      -            5.8e-42  142.2   6.5   7.1e-16   58.6   0.2   4.2   1   1   2   4   4   4   4 Ankyrin repeats (3 copies)
+Ank                  PF00023.30 Spipo12G0051400      -            8.2e-36  120.9   5.9   3.2e-08   33.7   0.4   6.5   6   0   0   6   6   6   5 Ankyrin repeat
+Ank_4                PF13637.6  Spipo12G0051400      -            1.8e-31  108.1   6.7   9.6e-10   38.8   0.0   5.4   4   1   1   5   5   5   4 Ankyrin repeats (many copies)
+Ank_5                PF13857.6  Spipo12G0051400      -            1.3e-30  105.1   9.2   2.1e-06   27.9   0.3   6.2   2   2   4   6   6   6   5 Ankyrin repeats (many copies)
+Ank_3                PF13606.6  Spipo12G0051400      -            7.2e-26   87.4   7.3   0.00059   20.1   0.0   7.2   7   0   0   7   7   7   5 Ankyrin repeat
+zf-C3HC4_3           PF13920.6  Spipo12G0051400      -            0.00022   21.0  10.2   0.00096   19.0  10.2   2.1   1   1   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-RING_2            PF13639.6  Spipo12G0051400      -             0.0022   18.3  11.0    0.0022   18.3  11.0   2.4   2   0   0   2   2   2   1 Ring finger domain
+zf-C3HC4             PF00097.25 Spipo12G0051400      -             0.0043   16.9  10.3      0.02   14.7  10.3   2.3   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-C3HC4_4           PF15227.6  Spipo12G0051400      -               0.26   11.5   7.2       1.3    9.2   7.2   2.4   1   1   0   1   1   1   0 zinc finger of C3HC4-type, RING
+Prok-RING_4          PF14447.6  Spipo12G0051400      -               0.26   11.2  10.7       1.7    8.6  10.7   2.4   1   1   0   1   1   1   0 Prokaryotic RING finger family 4
+PNRC                 PF15365.6  Spipo12G0043300      -            6.5e-08   32.2   4.8   1.4e-07   31.1   4.8   1.6   1   0   0   1   1   1   1 Proline-rich nuclear receptor coactivator motif
+Cadherin_tail        PF15974.5  Spipo12G0043300      -              0.091   13.1   1.7      0.13   12.6   1.7   1.4   1   1   0   1   1   1   0 Cadherin C-terminal cytoplasmic tail, catenin-binding region
+Saf_2TM              PF18303.1  Spipo12G0043300      -               0.19   11.3   0.0      0.24   11.0   0.0   1.2   1   0   0   1   1   1   0 SAVED-fused 2TM effector domain
+DUF89                PF01937.19 Spipo12G0039100      -            1.3e-53  182.2   0.0   1.6e-53  182.0   0.0   1.0   1   0   0   1   1   1   1 Protein of unknown function DUF89
+BTK                  PF00779.19 Spipo12G0033500      -              0.024   14.5   2.2     0.024   14.5   2.2   1.7   2   0   0   2   2   2   0 BTK motif
+Glyco_hydro_1        PF00232.18 Spipo12G0036700      -           1.2e-154  515.1   0.0  1.4e-154  514.9   0.0   1.0   1   0   0   1   1   1   1 Glycosyl hydrolase family 1
+LSM                  PF01423.22 Spipo12G0021100      -              3e-19   68.5   1.5   3.7e-19   68.2   1.5   1.1   1   0   0   1   1   1   1 LSM domain
+DUF2642              PF10842.8  Spipo12G0021100      -              0.023   14.5   0.4       4.6    7.2   0.2   2.2   1   1   1   2   2   2   0 Protein of unknown function (DUF2642)
+Gemin7               PF11095.8  Spipo12G0021100      -              0.047   13.6   0.0     0.066   13.1   0.0   1.3   1   0   0   1   1   1   0 Gem-associated protein 7 (Gemin7)
+SM-ATX               PF14438.6  Spipo12G0021100      -              0.058   13.5   0.2     0.071   13.3   0.2   1.2   1   0   0   1   1   1   0 Ataxin 2 SM domain
+BPL_C                PF02237.17 Spipo12G0021100      -               0.16   11.9   1.0      0.27   11.2   0.5   1.6   2   0   0   2   2   2   0 Biotin protein ligase C terminal domain
+CCT                  PF06203.14 Spipo12G0060200      -            1.1e-13   51.0  10.6   2.5e-13   49.8  10.6   1.6   1   0   0   1   1   1   1 CCT motif
+CCT_2                PF09425.10 Spipo12G0060200      -               0.42   10.6   4.5       0.9    9.5   4.5   1.5   1   0   0   1   1   1   0 Divergent CCT motif
+NB-ARC               PF00931.22 Spipo12G0027800      -                0.1   11.8   0.1      0.14   11.3   0.1   1.2   1   0   0   1   1   1   0 NB-ARC domain
+SBP                  PF03110.14 Spipo12G0040900      -            7.2e-30  103.1  16.2   1.7e-29  101.9  16.2   1.7   1   0   0   1   1   1   1 SBP domain
+Ank_2                PF12796.7  Spipo12G0040900      -              4e-06   27.3   0.0    0.0024   18.4   0.0   2.1   2   1   1   3   3   3   2 Ankyrin repeats (3 copies)
+Ank                  PF00023.30 Spipo12G0040900      -            0.00055   20.3   0.0      0.21   12.1   0.0   3.2   2   0   0   2   2   2   1 Ankyrin repeat
+Ank_5                PF13857.6  Spipo12G0040900      -             0.0097   16.2   0.0      0.13   12.6   0.0   2.6   1   1   1   2   2   2   1 Ankyrin repeats (many copies)
+Ank_3                PF13606.6  Spipo12G0040900      -              0.013   15.9   0.2       4.3    8.2   0.0   3.3   3   0   0   3   3   3   0 Ankyrin repeat
+Ank_4                PF13637.6  Spipo12G0040900      -              0.052   14.1   0.1         1   10.1   0.0   2.7   2   0   0   2   2   2   0 Ankyrin repeats (many copies)
+CxC6                 PF18721.1  Spipo12G0040900      -              0.087   13.1   7.1       1.2    9.5   7.1   2.4   1   1   0   1   1   1   0 CxC6 like cysteine cluster associated with KDZ transposases
+TAXi_N               PF14543.6  Spipo12G0026600      -            1.2e-54  185.2   6.8   1.9e-54  184.6   6.8   1.3   1   0   0   1   1   1   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0026600      -            8.3e-29  100.4   0.0   1.4e-28   99.7   0.0   1.4   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0026600      -            2.3e-24   86.4   3.5   1.8e-12   47.4   0.4   2.3   1   1   1   2   2   2   2 Eukaryotic aspartyl protease
+Pkinase_Tyr          PF07714.17 Spipo12G0009900      -            6.1e-24   84.7   0.0   1.5e-23   83.5   0.0   1.5   2   0   0   2   2   2   1 Protein tyrosine kinase
+Pkinase              PF00069.25 Spipo12G0009900      -            7.5e-21   74.7   0.0     1e-20   74.2   0.0   1.1   1   0   0   1   1   1   1 Protein kinase domain
+LRR_4                PF12799.7  Spipo12G0009900      -            7.1e-09   35.8   1.7    0.0013   19.1   0.1   2.7   2   0   0   2   2   2   2 Leucine Rich repeats (2 copies)
+LRR_8                PF13855.6  Spipo12G0009900      -            5.9e-08   32.4   3.1   0.00076   19.2   0.1   2.6   2   1   0   2   2   2   2 Leucine rich repeat
+LRRNT_2              PF08263.12 Spipo12G0009900      -             0.0007   19.9   1.4     0.002   18.4   1.4   1.9   1   0   0   1   1   1   1 Leucine rich repeat N-terminal domain
+LRR_6                PF13516.6  Spipo12G0009900      -              0.001   19.0   2.3       9.6    6.6   0.0   4.0   4   0   0   4   4   4   1 Leucine Rich repeat
+LRR_1                PF00560.33 Spipo12G0009900      -             0.0027   18.0   5.1       2.1    9.2   0.1   5.2   4   0   0   4   4   4   1 Leucine Rich Repeat
+RT_RNaseH            PF17917.1  Spipo12G0028400      -               0.03   14.6   0.0     0.036   14.3   0.0   1.1   1   0   0   1   1   1   0 RNase H-like domain found in reverse transcriptase
+zf-CCCH_4            PF18044.1  Spipo12G0033800      -            9.2e-19   66.8  34.9   4.2e-07   29.6   1.3   4.7   4   0   0   4   4   4   4 CCCH-type zinc finger
+zf-CCCH              PF00642.24 Spipo12G0033800      -            4.5e-16   58.3  32.3   7.6e-07   28.9   2.7   4.7   4   0   0   4   4   4   4 Zinc finger C-x8-C-x5-C-x3-H type (and similar)
+zf_CCCH_4            PF18345.1  Spipo12G0033800      -            1.5e-15   56.6  47.9   1.6e-05   24.8   4.4   5.1   5   0   0   5   5   5   4 Zinc finger domain
+Torus                PF16131.5  Spipo12G0033800      -            5.5e-12   46.3  25.6   0.00029   21.5   1.1   4.7   3   2   2   5   5   5   4 Torus domain
+zf-RING_2            PF13639.6  Spipo12G0033800      -            3.8e-07   30.3   4.8   3.8e-07   30.3   4.8   4.2   4   2   0   4   4   3   1 Ring finger domain
+zf-C3HC4             PF00097.25 Spipo12G0033800      -            4.8e-07   29.5   3.2   4.8e-07   29.5   3.2   3.0   2   0   0   2   2   2   1 Zinc finger, C3HC4 type (RING finger)
+zf-CCCH_3            PF15663.5  Spipo12G0033800      -            8.9e-07   29.1   3.0   8.9e-07   29.1   3.0   3.3   3   0   0   3   3   3   1 Zinc-finger containing family
+zf-RING_5            PF14634.6  Spipo12G0033800      -              1e-06   28.6   2.8     1e-06   28.6   2.8   3.2   3   0   0   3   3   3   1 zinc-RING finger domain
+zf-RING_UBOX         PF13445.6  Spipo12G0033800      -             0.0014   18.6   0.9    0.0014   18.6   0.9   3.3   3   0   0   3   3   3   1 RING-type zinc-finger
+zf-rbx1              PF12678.7  Spipo12G0033800      -             0.0038   17.5   2.2    0.0038   17.5   2.2   3.7   3   1   1   4   4   3   1 RING-H2 zinc finger domain
+zf-C3HC4_4           PF15227.6  Spipo12G0033800      -              0.017   15.3   8.1     0.094   12.9   4.5   3.6   2   1   1   3   3   3   0 zinc finger of C3HC4-type, RING
+zf-CCCH_2            PF14608.6  Spipo12G0033800      -              0.022   15.2   3.2     0.022   15.2   3.2   5.3   4   1   0   4   4   4   0 RNA-binding, Nab2-type zinc finger
+zf-C3HC4_2           PF13923.6  Spipo12G0033800      -              0.024   14.5   2.3     0.024   14.5   2.3   4.4   3   1   0   3   3   2   0 Zinc finger, C3HC4 type (RING finger)
+FANCL_C              PF11793.8  Spipo12G0033800      -               0.04   14.1   1.9      0.04   14.1   1.9   3.1   3   0   0   3   3   2   0 FANCL C-terminal domain
+Defensin_int         PF17858.1  Spipo12G0033800      -               0.18   11.8   0.3      0.18   11.8   0.3   3.9   3   1   1   4   4   4   0 Platypus intermediate defensin-like peptide
+DEAD                 PF00270.29 Spipo12G0000900      -            1.4e-37  129.2   0.0   2.7e-37  128.2   0.0   1.5   1   0   0   1   1   1   1 DEAD/DEAH box helicase
+Helicase_C           PF00271.31 Spipo12G0000900      -            2.6e-31  108.3   0.6   7.6e-29  100.3   0.1   3.5   4   0   0   4   4   4   1 Helicase conserved C-terminal domain
+ResIII               PF04851.15 Spipo12G0000900      -            4.2e-05   23.6   0.0   8.7e-05   22.6   0.0   1.5   1   0   0   1   1   1   1 Type III restriction enzyme, res subunit
+AAA_19               PF13245.6  Spipo12G0000900      -              0.011   16.1   0.1     0.023   15.0   0.1   1.8   1   1   0   1   1   1   0 AAA domain
+RRM_1                PF00076.22 Spipo12G0063700      -            1.5e-53  178.5   0.0   7.1e-21   73.8   0.0   3.2   3   0   0   3   3   3   3 RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+RRM_occluded         PF16842.5  Spipo12G0063700      -            7.3e-07   29.0   0.0     0.012   15.5   0.0   3.2   3   0   0   3   3   3   2 Occluded RNA-recognition motif
+RRM_7                PF16367.5  Spipo12G0063700      -            4.4e-05   23.5   0.0       1.1    9.4   0.0   3.6   3   0   0   3   3   3   2 RNA recognition motif
+PHM7_cyt             PF14703.6  Spipo12G0063700      -             0.0005   20.4   0.0       1.7    8.8   0.0   3.2   3   0   0   3   3   3   1 Cytosolic domain of 10TM putative phosphate transporter
+Cas_Cas2CT1978       PF09707.10 Spipo12G0063700      -             0.0013   18.8   0.0       5.8    7.1   0.0   3.2   3   1   0   3   3   3   2 CRISPR-associated protein (Cas_Cas2CT1978)
+RRM_8                PF11835.8  Spipo12G0063700      -             0.0022   18.1   0.0      0.98    9.7   0.0   3.0   2   1   1   3   3   3   1 RRM-like domain
+RRM_5                PF13893.6  Spipo12G0063700      -             0.0058   16.2   0.0       1.5    8.4   0.0   2.7   2   1   1   3   3   3   2 RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)
+Pkinase              PF00069.25 Spipo12G0050800      -            1.9e-39  135.6   0.0   2.6e-39  135.2   0.0   1.2   1   0   0   1   1   1   1 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0050800      -            1.6e-38  132.5   0.0   2.9e-38  131.6   0.0   1.4   1   1   0   1   1   1   1 Protein tyrosine kinase
+LRRNT_2              PF08263.12 Spipo12G0050800      -            8.2e-12   45.2   0.4   1.9e-11   44.1   0.4   1.7   1   0   0   1   1   1   1 Leucine rich repeat N-terminal domain
+LRR_8                PF13855.6  Spipo12G0050800      -              2e-10   40.3  14.9   5.2e-09   35.7   4.6   2.4   1   1   1   2   2   2   2 Leucine rich repeat
+LRR_4                PF12799.7  Spipo12G0050800      -            2.6e-09   37.2   8.8   0.00028   21.2   1.6   2.8   1   1   0   2   2   2   2 Leucine Rich repeats (2 copies)
+LRR_1                PF00560.33 Spipo12G0050800      -             0.0011   19.2   7.5      0.88   10.4   0.0   4.8   4   1   0   4   4   4   1 Leucine Rich Repeat
+SKG6                 PF08693.10 Spipo12G0050800      -              0.048   13.1   1.0      0.15   11.5   1.0   1.9   1   1   0   1   1   1   0 Transmembrane alpha-helix domain
+TMEM51               PF15345.6  Spipo12G0050800      -              0.095   12.5   0.1      0.16   11.8   0.1   1.3   1   0   0   1   1   1   0 Transmembrane protein 51
+STE2                 PF02116.15 Spipo12G0050800      -                0.1   11.9   0.1      0.16   11.3   0.1   1.2   1   0   0   1   1   1   0 Fungal pheromone mating factor STE2 GPCR
+Pkinase_fungal       PF17667.1  Spipo12G0050800      -               0.11   11.3   0.0      0.17   10.6   0.0   1.2   1   0   0   1   1   1   0 Fungal protein kinase
+TMEM100              PF16311.5  Spipo12G0050800      -               0.19   11.3   0.2      0.38   10.3   0.2   1.4   1   0   0   1   1   1   0 Transmembrane protein 100
+LRR_6                PF13516.6  Spipo12G0050800      -               0.21   11.8   4.4       2.4    8.4   0.1   3.4   4   0   0   4   4   4   0 Leucine Rich repeat
+EF-hand_1            PF00036.32 Spipo12G0030300      -            1.1e-09   37.1   0.1   7.5e-05   22.0   0.1   2.5   2   0   0   2   2   2   2 EF hand
+EF-hand_5            PF13202.6  Spipo12G0030300      -            1.5e-09   36.9   1.5   9.5e-05   21.7   0.2   3.0   3   0   0   3   3   3   2 EF hand
+EF-hand_7            PF13499.6  Spipo12G0030300      -              5e-09   36.5   0.0   9.7e-09   35.6   0.0   1.5   1   1   0   1   1   1   1 EF-hand domain pair
+EF-hand_6            PF13405.6  Spipo12G0030300      -            1.3e-08   34.1   0.1   0.00018   21.2   0.1   2.5   2   0   0   2   2   2   2 EF-hand domain
+EF-hand_8            PF13833.6  Spipo12G0030300      -            3.4e-07   30.0   0.0   0.00089   19.1   0.0   2.5   2   0   0   2   2   2   2 EF-hand domain pair
+SPARC_Ca_bdg         PF10591.9  Spipo12G0030300      -               0.18   12.2   0.0      0.99    9.8   0.0   1.9   2   0   0   2   2   2   0 Secreted protein acidic and rich in cysteine Ca binding region
+DUF247               PF03140.15 Spipo12G0061600      -            4.5e-76  256.6   0.0   5.5e-76  256.3   0.0   1.1   1   0   0   1   1   1   1 Plant protein of unknown function
+DUF1168              PF06658.12 Spipo12G0003800      -            5.8e-06   26.2   0.2     1e-05   25.4   0.0   1.5   2   0   0   2   2   2   1 Protein of unknown function (DUF1168)
+CLTH                 PF10607.9  Spipo12G0003600      -            4.5e-41  140.2   0.8   8.3e-41  139.3   0.8   1.5   1   0   0   1   1   1   1 CTLH/CRA C-terminal to LisH motif domain
+zf-RING_UBOX         PF13445.6  Spipo12G0003600      -              0.018   15.0   0.0     0.041   13.9   0.0   1.6   1   0   0   1   1   1   0 RING-type zinc-finger
+U-box                PF04564.15 Spipo12G0003600      -               0.17   12.1   0.0      0.41   10.8   0.0   1.6   1   0   0   1   1   1   0 U-box domain
+MMR_HSR1             PF01926.23 Spipo12G0066700      -            1.9e-17   63.4   0.0   3.9e-15   55.9   0.0   2.7   3   0   0   3   3   3   1 50S ribosome-binding GTPase
+FeoB_N               PF02421.18 Spipo12G0066700      -            9.6e-06   25.2   0.0   2.4e-05   23.9   0.0   1.6   2   0   0   2   2   2   1 Ferrous iron transport protein B
+RsgA_GTPase          PF03193.16 Spipo12G0066700      -             0.0024   17.8   0.0    0.0069   16.3   0.0   1.7   2   0   0   2   2   2   1 RsgA GTPase
+MeaB                 PF03308.16 Spipo12G0066700      -              0.037   13.0   0.2      0.11   11.4   0.1   2.0   2   0   0   2   2   2   0 Methylmalonyl Co-A mutase-associated GTPase MeaB
+Dynamin_N            PF00350.23 Spipo12G0066700      -               0.14   12.2   0.0      0.53   10.3   0.0   2.0   2   0   0   2   2   2   0 Dynamin family
+Virul_Fac            PF10139.9  Spipo12G0066700      -               0.17   10.1   0.3      0.24    9.6   0.3   1.1   1   0   0   1   1   1   0 Putative bacterial virulence factor
+Branch               PF02485.21 Spipo12G0060100      -            3.7e-60  203.5   0.0   4.5e-60  203.2   0.0   1.1   1   0   0   1   1   1   1 Core-2/I-Branching enzyme
+adh_short_C2         PF13561.6  Spipo12G0002100      -            4.1e-59  200.0   1.2   4.9e-59  199.7   1.2   1.0   1   0   0   1   1   1   1 Enoyl-(Acyl carrier protein) reductase
+adh_short            PF00106.25 Spipo12G0002100      -              5e-41  140.3   1.0   6.1e-41  140.0   1.0   1.1   1   0   0   1   1   1   1 short chain dehydrogenase
+KR                   PF08659.10 Spipo12G0002100      -            2.4e-09   37.4   0.3   3.4e-09   36.9   0.3   1.2   1   0   0   1   1   1   1 KR domain
+SIS                  PF01380.22 Spipo12G0002100      -             0.0058   16.5   0.2     0.015   15.1   0.1   1.9   2   0   0   2   2   2   1 SIS domain
+Glyco_hydro_10       PF00331.20 Spipo12G0002100      -              0.011   14.9   0.3     0.016   14.4   0.3   1.1   1   0   0   1   1   1   0 Glycosyl hydrolase family 10
+DUF1847              PF08901.11 Spipo12G0002100      -              0.065   12.9   0.2     0.098   12.3   0.2   1.3   1   0   0   1   1   1   0 Protein of unknown function (DUF1847)
+IMPDH                PF00478.25 Spipo12G0002100      -              0.066   12.2   1.3     0.099   11.6   1.3   1.2   1   0   0   1   1   1   0 IMP dehydrogenase / GMP reductase domain
+B12-binding          PF02310.19 Spipo12G0002100      -              0.084   12.9   0.6      0.19   11.8   0.3   1.7   2   0   0   2   2   2   0 B12 binding domain
+MIT                  PF04212.18 Spipo12G0002100      -               0.11   12.6   0.4      0.22   11.6   0.4   1.4   1   0   0   1   1   1   0 MIT (microtubule interacting and transport) domain
+Acid_phosphat_B      PF03767.14 Spipo12G0002100      -               0.11   12.1   0.1      0.17   11.4   0.1   1.2   1   0   0   1   1   1   0 HAD superfamily, subfamily IIIB (Acid phosphatase)
+P-II                 PF00543.22 Spipo12G0002100      -               0.18   12.4   2.2      0.33   11.6   2.2   1.4   1   0   0   1   1   1   0 Nitrogen regulatory protein P-II
+3HCDH_N              PF02737.18 Spipo12G0002100      -               0.19   11.6   2.3       0.4   10.5   2.3   1.6   1   1   0   1   1   1   0 3-hydroxyacyl-CoA dehydrogenase, NAD binding domain
+zf-RING_2            PF13639.6  Spipo12G0022200      -            2.8e-08   34.0   2.6   7.5e-08   32.6   2.6   1.8   1   0   0   1   1   1   1 Ring finger domain
+zf-rbx1              PF12678.7  Spipo12G0022200      -            4.7e-08   33.2   2.5   9.4e-08   32.2   2.5   1.5   1   0   0   1   1   1   1 RING-H2 zinc finger domain
+zf-C3HC4             PF00097.25 Spipo12G0022200      -            1.5e-07   31.2   2.4   3.4e-07   30.0   2.4   1.6   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-RING_UBOX         PF13445.6  Spipo12G0022200      -            5.6e-06   26.3   0.4   4.6e-05   23.3   0.0   2.4   1   1   1   2   2   2   2 RING-type zinc-finger
+zf-RING_5            PF14634.6  Spipo12G0022200      -            1.4e-05   24.9   2.7   2.5e-05   24.1   2.7   1.4   1   0   0   1   1   1   1 zinc-RING finger domain
+zf-RING_11           PF17123.5  Spipo12G0022200      -            1.5e-05   24.7   3.0   1.5e-05   24.7   3.0   3.5   3   1   0   3   3   3   1 RING-like zinc finger
+zf-C3HC4_2           PF13923.6  Spipo12G0022200      -            2.4e-05   24.1   4.3   5.1e-05   23.0   1.9   2.3   2   0   0   2   2   2   1 Zinc finger, C3HC4 type (RING finger)
+VWA_2                PF13519.6  Spipo12G0022200      -            0.00043   20.9   0.0   0.00077   20.1   0.0   1.3   1   0   0   1   1   1   1 von Willebrand factor type A domain
+zf-ANAPC11           PF12861.7  Spipo12G0022200      -             0.0034   17.4   1.0     0.007   16.4   1.0   1.5   1   0   0   1   1   1   1 Anaphase-promoting complex subunit 11 RING-H2 finger
+VWA                  PF00092.28 Spipo12G0022200      -              0.016   15.5   0.0     0.023   14.9   0.0   1.2   1   0   0   1   1   1   0 von Willebrand factor type A domain
+PHD                  PF00628.29 Spipo12G0022200      -              0.031   14.2   2.5     0.059   13.3   2.5   1.5   1   0   0   1   1   1   0 PHD-finger
+zf-RING_4            PF14570.6  Spipo12G0022200      -              0.046   13.5   1.1     0.082   12.7   1.1   1.5   1   0   0   1   1   1   0 RING/Ubox like zinc-binding domain
+zf-C3HC4_3           PF13920.6  Spipo12G0022200      -              0.052   13.4   2.9      0.13   12.1   2.9   1.7   1   1   0   1   1   1   0 Zinc finger, C3HC4 type (RING finger)
+Trigger_N            PF05697.13 Spipo12G0028800      -            1.5e-20   74.0   1.1   1.5e-20   74.0   1.1   2.7   2   1   0   2   2   2   1 Bacterial trigger factor protein (TF)
+Trigger_C            PF05698.14 Spipo12G0028800      -              4e-19   69.2  16.8   7.9e-19   68.2  16.8   1.5   1   0   0   1   1   1   1 Bacterial trigger factor protein (TF) C-terminus
+Pkinase              PF00069.25 Spipo12G0013000      -            3.1e-30  105.4   0.0     5e-29  101.5   0.0   2.0   1   1   0   1   1   1   1 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0013000      -            1.8e-13   50.4   0.0   1.6e-12   47.3   0.0   2.0   1   1   0   1   1   1   1 Protein tyrosine kinase
+APH                  PF01636.23 Spipo12G0013000      -              0.045   13.7   0.0     0.083   12.8   0.0   1.6   2   0   0   2   2   2   0 Phosphotransferase enzyme family
+IGPS                 PF00218.21 Spipo12G0018400      -            2.6e-80  269.2   0.0   3.1e-80  269.0   0.0   1.0   1   0   0   1   1   1   1 Indole-3-glycerol phosphate synthase
+ThiG                 PF05690.14 Spipo12G0018400      -             0.0031   16.9   0.1      0.05   12.9   0.0   2.2   2   0   0   2   2   2   1 Thiazole biosynthesis protein ThiG
+His_biosynth         PF00977.21 Spipo12G0018400      -              0.058   12.9   0.0       1.3    8.4   0.0   2.1   2   0   0   2   2   2   0 Histidine biosynthesis protein
+NanE                 PF04131.14 Spipo12G0018400      -              0.066   12.4   0.1       1.8    7.7   0.0   2.4   2   0   0   2   2   2   0 Putative N-acetylmannosamine-6-phosphate epimerase
+TAXi_N               PF14543.6  Spipo12G0026900      -            3.3e-48  164.2   6.0   4.3e-48  163.9   6.0   1.1   1   0   0   1   1   1   1 Xylanase inhibitor N-terminal
+TAXi_C               PF14541.6  Spipo12G0026900      -            9.7e-32  110.0   0.0   1.4e-31  109.4   0.0   1.2   1   0   0   1   1   1   1 Xylanase inhibitor C-terminal
+Asp                  PF00026.23 Spipo12G0026900      -            4.5e-31  108.4   0.0   1.8e-29  103.2   0.0   2.1   1   1   0   1   1   1   1 Eukaryotic aspartyl protease
+Crr6                 PF08847.11 Spipo12G0041600      -            5.7e-61  204.6   0.0   7.2e-61  204.3   0.0   1.1   1   0   0   1   1   1   1 Chlororespiratory reduction 6
+UCH                  PF00443.29 Spipo12G0013400      -            9.8e-40  136.7   0.0   1.4e-39  136.2   0.0   1.2   1   0   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+zf-UBP_var           PF17807.1  Spipo12G0013400      -            1.6e-20   72.6   0.0   1.4e-19   69.6   0.0   2.4   2   0   0   2   2   2   1 Variant UBP zinc finger
+UBA                  PF00627.31 Spipo12G0013400      -            3.5e-18   65.1   0.0   1.6e-10   40.7   0.0   2.7   2   0   0   2   2   2   2 UBA/TS-N domain
+zf-UBP               PF02148.19 Spipo12G0013400      -              1e-16   61.0   0.3   3.3e-16   59.3   0.0   2.0   2   0   0   2   2   2   1 Zn-finger in ubiquitin-hydrolases and other protein
+UCH_1                PF13423.6  Spipo12G0013400      -              3e-11   43.5   0.0   2.5e-10   40.5   0.0   2.3   1   1   0   1   1   1   1 Ubiquitin carboxyl-terminal hydrolase
+UBA_4                PF14555.6  Spipo12G0013400      -              0.018   14.9   0.0     0.046   13.5   0.0   1.7   1   0   0   1   1   1   0 UBA-like domain
+ADK                  PF00406.22 Spipo12G0042900      -            1.5e-48  164.8   0.0   2.3e-48  164.1   0.0   1.2   1   0   0   1   1   1   1 Adenylate kinase
+DUF1995              PF09353.10 Spipo12G0042900      -            1.6e-31  109.9   0.0   2.5e-31  109.2   0.0   1.3   1   0   0   1   1   1   1 Domain of unknown function (DUF1995)
+AAA_17               PF13207.6  Spipo12G0042900      -            2.8e-27   95.8   0.0   6.5e-27   94.6   0.0   1.6   1   0   0   1   1   1   1 AAA domain
+AAA_18               PF13238.6  Spipo12G0042900      -            4.1e-06   27.4   0.0     1e-05   26.1   0.0   1.7   1   0   0   1   1   1   1 AAA domain
+Thymidylate_kin      PF02223.17 Spipo12G0042900      -            0.00017   21.4   0.1     0.073   12.7   0.0   2.3   2   0   0   2   2   2   2 Thymidylate kinase
+AAA_33               PF13671.6  Spipo12G0042900      -             0.0099   16.0   0.6      0.14   12.3   0.6   2.3   1   1   0   1   1   1   1 AAA domain
+Hydin_ADK            PF17213.3  Spipo12G0042900      -              0.027   14.7   0.2     0.091   13.0   0.1   1.8   1   1   1   2   2   2   0 Hydin Adenylate kinase-like domain
+Zeta_toxin           PF06414.12 Spipo12G0042900      -              0.055   12.7   0.1      0.12   11.6   0.1   1.5   1   0   0   1   1   1   0 Zeta toxin
+Myb_DNA-bind_4       PF13837.6  Spipo12G0033100      -            4.1e-19   68.7   0.0   4.1e-19   68.7   0.0   2.4   3   0   0   3   3   3   1 Myb/SANT-like DNA-binding domain
+Trnau1ap             PF17654.1  Spipo12G0033100      -              0.025   15.4   3.6      0.25   12.2   0.1   2.5   2   0   0   2   2   2   0 Selenocysteine tRNA 1 associated proteins
+Inj_translocase      PF16928.5  Spipo12G0033100      -               0.23   10.9   2.5      0.42   10.0   2.5   1.3   1   0   0   1   1   1   0 DNA/protein translocase of phage P22 injectosome
+DIOX_N               PF14226.6  Spipo12G0035700      -            0.00019   22.1   0.0   0.00041   21.1   0.0   1.7   1   1   0   1   1   1   1 non-haem dioxygenase in morphine synthesis N-terminal
+2OG-FeII_Oxy         PF03171.20 Spipo12G0035700      -             0.0073   16.8   0.0      0.01   16.3   0.0   1.3   1   0   0   1   1   1   1 2OG-Fe(II) oxygenase superfamily
+ABC2_membrane        PF01061.24 Spipo12G0032200      -              1e-57  194.9  26.1     1e-57  194.9  26.1   2.7   2   1   1   3   3   3   1 ABC-2 type transporter
+ABC_trans_N          PF14510.6  Spipo12G0032200      -            6.6e-11   42.7   0.0   1.2e-10   41.9   0.0   1.4   1   0   0   1   1   1   1 ABC-transporter N-terminal
+PDR_CDR              PF06422.12 Spipo12G0032200      -             0.0041   17.0   1.1    0.0041   17.0   1.1   2.9   3   0   0   3   3   3   1 CDR ABC transporter
+DUF2154              PF09922.9  Spipo12G0032200      -              0.063   13.2   0.0      0.16   11.8   0.0   1.6   1   0   0   1   1   1   0 Cell wall-active antibiotics response 4TMS YvqF
+Pkinase_Tyr          PF07714.17 Spipo12G0064000      -            1.4e-25   90.1   0.0   2.1e-25   89.5   0.0   1.2   1   0   0   1   1   1   1 Protein tyrosine kinase
+Pkinase              PF00069.25 Spipo12G0064000      -            9.6e-25   87.4   0.0   1.2e-24   87.1   0.0   1.2   1   0   0   1   1   1   1 Protein kinase domain
+LRR_8                PF13855.6  Spipo12G0064000      -            1.4e-16   60.0   5.4   4.4e-08   32.8   0.0   3.6   1   1   4   5   5   5   5 Leucine rich repeat
+LRRNT_2              PF08263.12 Spipo12G0064000      -            6.6e-10   39.1   0.3   1.6e-09   37.9   0.1   1.8   2   0   0   2   2   2   1 Leucine rich repeat N-terminal domain
+LRR_4                PF12799.7  Spipo12G0064000      -            7.9e-06   26.1   2.5   0.00055   20.3   0.1   3.2   2   1   1   4   4   4   2 Leucine Rich repeats (2 copies)
+LRR_1                PF00560.33 Spipo12G0064000      -              0.018   15.5   0.2     1e+02    4.1   0.0   4.5   4   0   0   4   4   4   0 Leucine Rich Repeat
+Aa_trans             PF01490.18 Spipo12G0022500      -            1.5e-53  182.0   4.0   1.8e-53  181.8   4.0   1.0   1   0   0   1   1   1   1 Transmembrane amino acid transporter protein
+DUF3082              PF11282.8  Spipo12G0022500      -              0.016   15.4   3.4      0.13   12.6   0.0   2.7   3   0   0   3   3   3   0 Protein of unknown function (DUF3082)
+ANAPC10              PF03256.16 Spipo12G0009500      -            4.3e-74  248.2   0.0   4.7e-74  248.0   0.0   1.0   1   0   0   1   1   1   1 Anaphase-promoting complex, subunit 10 (APC10)
+PITH                 PF06201.13 Spipo12G0009500      -             0.0091   16.2   0.0      0.02   15.1   0.0   1.6   1   1   0   1   1   1   1 PITH domain
+F5_F8_type_C         PF00754.25 Spipo12G0009500      -               0.13   12.4   0.0      0.23   11.6   0.0   1.4   1   0   0   1   1   1   0 F5/8 type C domain
+RPN13_C              PF16550.5  Spipo12G0064100      -            3.9e-26   91.4   0.0   6.2e-26   90.8   0.0   1.3   1   0   0   1   1   1   1 UCH-binding domain
+Proteasom_Rpn13      PF04683.13 Spipo12G0064100      -              1e-23   83.6   0.0   1.7e-23   82.9   0.0   1.4   1   0   0   1   1   1   1 Proteasome complex subunit Rpn13 ubiquitin receptor
+E3_UFM1_ligase       PF09743.9  Spipo12G0064100      -               0.18   11.4   0.0       1.7    8.2   0.0   2.0   2   0   0   2   2   2   0 E3 UFM1-protein ligase 1
+TIC20                PF16166.5  Spipo12G0015900      -            8.7e-48  162.5   2.7   1.1e-47  162.2   2.7   1.0   1   0   0   1   1   1   1 Chloroplast import apparatus Tic20-like
+Galactosyl_T         PF01762.21 Spipo12G0054000      -             0.0002   21.3   0.0   0.00028   20.8   0.0   1.2   1   0   0   1   1   1   1 Galactosyltransferase
+zf-C3HC4_3           PF13920.6  Spipo12G0051000      -             0.0047   16.8   7.9    0.0047   16.8   7.9   2.2   2   0   0   2   2   2   1 Zinc finger, C3HC4 type (RING finger)
+Baculo_IE-1          PF05290.11 Spipo12G0051000      -               0.14   12.2   6.2      0.24   11.3   6.2   1.4   1   0   0   1   1   1   0 Baculovirus immediate-early protein (IE-0)
+ANAPC4               PF12896.7  Spipo12G0053700      -            3.4e-48  163.9   0.1   5.9e-48  163.1   0.1   1.4   1   0   0   1   1   1   1 Anaphase-promoting complex, cyclosome, subunit 4
+ANAPC4_WD40          PF12894.7  Spipo12G0053700      -            5.4e-20   71.5   0.3   6.2e-19   68.1   0.3   2.5   1   1   0   1   1   1   1 Anaphase-promoting complex subunit 4 WD40 domain
+WD40                 PF00400.32 Spipo12G0053700      -               0.06   14.2   0.1        47    5.1   0.0   3.9   3   1   0   3   3   3   0 WD domain, G-beta repeat
+EAP30                PF04157.16 Spipo12G0028600      -             0.0062   15.9   0.2     0.008   15.5   0.2   1.2   1   0   0   1   1   1   1 EAP30/Vps36 family
+DUF1366              PF07104.11 Spipo12G0028600      -              0.053   13.2   0.2     0.069   12.8   0.2   1.2   1   0   0   1   1   1   0 Protein of unknown function (DUF1366)
+Bcr-Abl_Oligo        PF09036.10 Spipo12G0028600      -               0.13   12.3   0.0      0.18   11.8   0.0   1.3   1   0   0   1   1   1   0 Bcr-Abl oncoprotein oligomerisation domain
+Arena_glycoprot      PF00798.18 Spipo12G0028600      -               0.17   10.5   0.0      0.22   10.1   0.0   1.1   1   0   0   1   1   1   0 Arenavirus glycoprotein
+SPOUT_MTase          PF02590.17 Spipo12G0060700      -            2.1e-36  125.2   0.0   2.4e-36  125.0   0.0   1.0   1   0   0   1   1   1   1 Predicted SPOUT methyltransferase
+Rhodanese            PF00581.20 Spipo12G0012500      -            0.00035   21.0   0.0   0.00092   19.7   0.0   1.7   1   1   0   1   1   1   1 Rhodanese-like domain
+MCC-bdg_PDZ          PF10506.9  Spipo12G0012500      -              0.049   13.6   0.0      0.17   12.0   0.1   1.8   2   0   0   2   2   2   0 PDZ domain of MCC-2 bdg protein for Usher syndrome
+PhaP_Bmeg            PF09602.10 Spipo12G0012500      -              0.097   12.6   0.4        12    5.8   0.0   2.2   2   0   0   2   2   2   0 Polyhydroxyalkanoic acid inclusion protein (PhaP_Bmeg)
+LEM                  PF03020.15 Spipo12G0012500      -               0.11   12.1   0.0      0.47   10.1   0.0   2.1   2   0   0   2   2   2   0 LEM domain
+Fib_alpha            PF08702.10 Spipo12G0012500      -               0.14   12.3   1.0      0.78    9.9   0.1   2.0   2   0   0   2   2   2   0 Fibrinogen alpha/beta chain family
+DUF5446              PF17522.2  Spipo12G0012500      -               0.19   11.9   0.7       0.4   10.9   0.7   1.5   1   0   0   1   1   1   0 Family of unknown function (DUF5446)
+LRR_8                PF13855.6  Spipo12G0045100      -            3.6e-35  119.5  37.4     4e-10   39.3   1.1   7.5   3   1   2   7   7   7   7 Leucine rich repeat
+Pkinase              PF00069.25 Spipo12G0045100      -            1.2e-33  116.6   0.0   6.6e-33  114.2   0.0   2.1   2   1   0   2   2   2   1 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0045100      -            4.5e-33  114.6   0.0   6.4e-33  114.1   0.0   1.2   1   0   0   1   1   1   1 Protein tyrosine kinase
+LRR_4                PF12799.7  Spipo12G0045100      -            8.3e-31  105.5  32.0   5.8e-06   26.6   0.7   8.6   2   1   6  10  10  10   9 Leucine Rich repeats (2 copies)
+LRR_6                PF13516.6  Spipo12G0045100      -            2.3e-17   61.5  28.6       0.2   11.8   0.2  13.0  13   0   0  13  13  13   5 Leucine Rich repeat
+LRR_1                PF00560.33 Spipo12G0045100      -            3.9e-16   57.1  37.6      0.38   11.5   0.2  13.1  14   0   0  14  14  13   4 Leucine Rich Repeat
+Kinase-like          PF14531.6  Spipo12G0045100      -             0.0003   20.2   0.0   0.00054   19.4   0.0   1.3   1   0   0   1   1   1   1 Kinase-like
+Neurensin            PF14927.6  Spipo12G0045100      -             0.0051   16.5   0.0     0.012   15.3   0.0   1.6   1   0   0   1   1   1   1 Neurensin
+HipN                 PF18253.1  Spipo12G0045100      -              0.048   13.3   0.1      0.13   11.9   0.1   1.8   1   0   0   1   1   1   0 Hsp70-interacting protein N N-terminal domain
+LapA_dom             PF06305.11 Spipo12G0045100      -              0.061   13.1   1.6      0.19   11.6   1.6   1.8   1   0   0   1   1   1   0 Lipopolysaccharide assembly protein A domain
+LRRNT_2              PF08263.12 Spipo12G0045100      -               0.68   10.3   4.4      0.47   10.8   2.0   2.0   2   0   0   2   2   2   0 Leucine rich repeat N-terminal domain
+Pkinase              PF00069.25 Spipo12G0034100      -            7.3e-68  228.8   0.0     1e-67  228.3   0.0   1.2   1   0   0   1   1   1   1 Protein kinase domain
+Pkinase_Tyr          PF07714.17 Spipo12G0034100      -            1.1e-41  142.9   0.0   1.5e-41  142.4   0.0   1.2   1   0   0   1   1   1   1 Protein tyrosine kinase
+APH                  PF01636.23 Spipo12G0034100      -            0.00014   21.9   0.3      0.56   10.1   0.1   2.6   1   1   1   2   2   2   2 Phosphotransferase enzyme family
+Kinase-like          PF14531.6  Spipo12G0034100      -            0.00015   21.2   0.0   0.00022   20.6   0.0   1.4   1   0   0   1   1   1   1 Kinase-like
+Pkinase_fungal       PF17667.1  Spipo12G0034100      -            0.00017   20.5   0.0    0.0003   19.7   0.0   1.4   1   0   0   1   1   1   1 Fungal protein kinase
+YrbL-PhoP_reg        PF10707.9  Spipo12G0034100      -               0.13   11.8   0.1      0.73    9.3   0.0   2.1   2   0   0   2   2   2   0 PhoP regulatory network protein YrbL
+Kdo                  PF06293.14 Spipo12G0034100      -               0.14   11.5   0.2      0.34   10.2   0.2   1.7   1   1   0   1   1   1   0 Lipopolysaccharide kinase (Kdo/WaaP) family
+DOG1                 PF14144.6  Spipo12G0036200      -            2.1e-29  101.6   0.0     7e-29   99.9   0.0   2.0   1   0   0   1   1   1   1 Seed dormancy control
+bZIP_2               PF07716.15 Spipo12G0036200      -            3.8e-08   33.3   7.6   1.2e-07   31.7   7.6   1.9   1   0   0   1   1   1   1 Basic region leucine zipper
+bZIP_1               PF00170.21 Spipo12G0036200      -            7.6e-08   32.3   9.4   7.6e-08   32.3   9.4   1.9   2   0   0   2   2   2   1 bZIP transcription factor
+Exo70                PF03081.15 Spipo12G0058700      -            1.3e-73  248.2   0.0   3.7e-73  246.7   0.0   1.7   2   0   0   2   2   2   1 Exo70 exocyst complex subunit
+Cu_bind_like         PF02298.17 Spipo12G0017200      -            5.2e-21   74.5   0.3   6.7e-21   74.1   0.3   1.2   1   0   0   1   1   1   1 Plastocyanin-like domain
+GHMP_kinases_C       PF08544.13 Spipo12G0062100      -            8.6e-10   38.8   0.5   2.4e-09   37.4   0.5   1.8   1   0   0   1   1   1   1 GHMP kinases C terminal
+GHMP_kinases_N       PF00288.26 Spipo12G0062100      -            3.8e-07   30.2   0.1   3.8e-07   30.2   0.1   1.9   2   0   0   2   2   2   1 GHMP kinases N terminal domain
+GalKase_gal_bdg      PF10509.9  Spipo12G0062100      -              4e-07   29.5   0.1   9.6e-07   28.3   0.1   1.6   1   0   0   1   1   1   1 Galactokinase galactose-binding signature
+Cir_N                PF10197.9  Spipo12G0025300      -            5.1e-15   55.4   8.5   5.1e-15   55.4   8.5   4.5   5   1   1   6   6   6   1 N-terminal domain of CBF1 interacting co-repressor CIR
+CWC25                PF12542.8  Spipo12G0025300      -              2e-12   47.9   0.1     2e-12   47.9   0.1   4.4   4   2   0   4   4   4   1 Pre-mRNA splicing factor
+DUF3417              PF11897.8  Spipo12G0025300      -               0.24   11.9   5.0      0.06   13.8   1.2   1.9   2   0   0   2   2   2   0 Protein of unknown function (DUF3417)
+PPR_2                PF13041.6  Spipo12G0063900      -            1.2e-08   35.0   0.1      0.02   15.1   0.0   4.7   6   0   0   6   6   6   2 PPR repeat family
+PPR                  PF01535.20 Spipo12G0063900      -            2.9e-06   27.2  10.6     0.011   16.0   0.5   5.7   6   0   0   6   6   6   3 PPR repeat
+PPR_3                PF13812.6  Spipo12G0063900      -            5.8e-05   23.1   0.0         1    9.5   0.0   3.7   5   0   0   5   5   5   2 Pentatricopeptide repeat domain
+TPR_14               PF13428.6  Spipo12G0063900      -               0.15   12.9   0.3      0.15   12.9   0.3   3.8   4   1   2   6   6   6   0 Tetratricopeptide repeat
+DUF247               PF03140.15 Spipo12G0001000      -           4.6e-106  355.4   0.0  5.4e-106  355.2   0.0   1.0   1   0   0   1   1   1   1 Plant protein of unknown function
+Phage_holin_2_1      PF04971.12 Spipo12G0001000      -               0.19   11.7   3.1      0.66   10.0   3.1   1.9   1   0   0   1   1   1   0 Bacteriophage P21 holin S
+Tetraspanin          PF00335.20 Spipo12G0051100      -            2.1e-30  106.2   9.4   2.6e-30  105.9   9.4   1.1   1   0   0   1   1   1   1 Tetraspanin family
+DUF2207              PF09972.9  Spipo12G0051100      -            0.00031   19.7   2.7   0.00031   19.7   2.7   1.8   2   0   0   2   2   2   1 Predicted membrane protein (DUF2207)
+DUF1772              PF08592.11 Spipo12G0051100      -            0.00055   20.3   0.5    0.0015   18.8   0.1   1.9   2   0   0   2   2   2   1 Domain of unknown function (DUF1772)
+ABC2_membrane_2      PF12679.7  Spipo12G0051100      -              0.025   13.9   0.5     0.082   12.2   0.2   1.9   2   0   0   2   2   2   0 ABC-2 family transporter protein
+Neur_chan_memb       PF02932.16 Spipo12G0051100      -              0.053   13.6   0.0     0.093   12.8   0.0   1.4   1   1   0   1   1   1   0 Neurotransmitter-gated ion-channel transmembrane region
+OAD_gamma            PF04277.13 Spipo12G0051100      -               0.22   12.1   3.4        13    6.4   1.4   2.5   2   0   0   2   2   2   0 Oxaloacetate decarboxylase, gamma chain
+GAPT                 PF11770.8  Spipo12G0051100      -               0.28   11.0   0.1      0.28   11.0   0.1   2.4   3   0   0   3   3   3   0 GRB2-binding adapter (GAPT)
+Cadherin_C_2         PF16492.5  Spipo12G0051100      -               0.42   11.4   3.6        16    6.3   0.1   2.5   2   0   0   2   2   2   0 Cadherin cytoplasmic C-terminal
+Orf78                PF06024.12 Spipo12G0051100      -               0.54   10.6   1.3       4.9    7.5   0.8   2.2   2   0   0   2   2   2   0 Orf78 (ac78)
+Aldedh               PF00171.22 Spipo12G0008600      -           2.3e-174  580.2   0.0  2.6e-174  580.1   0.0   1.0   1   0   0   1   1   1   1 Aldehyde dehydrogenase family
+DUF1487              PF07368.11 Spipo12G0008600      -            0.00044   19.8   0.1      0.28   10.6   0.0   2.2   2   0   0   2   2   2   2 Protein of unknown function (DUF1487)
+SpoIIAA-like         PF11964.8  Spipo12G0008600      -              0.045   14.8   0.0       4.4    8.4   0.0   2.4   2   0   0   2   2   2   0 SpoIIAA-like
+DUF16                PF01519.16 Spipo12G0046600      -              0.014   15.9   0.8     0.014   15.9   0.8   4.6   3   2   0   3   3   3   0 Protein of unknown function DUF16
+DUF2968              PF11180.8  Spipo12G0046600      -              0.069   12.8   0.1     0.069   12.8   0.1   5.5   2   2   3   5   5   5   0 Protein of unknown function (DUF2968)
+ARS2                 PF04959.13 Spipo12G0059600      -            1.6e-34  120.0   0.2   3.1e-34  119.1   0.2   1.4   1   0   0   1   1   1   1 Arsenite-resistance protein 2
+DUF3546              PF12066.8  Spipo12G0059600      -              7e-21   74.5   0.1   1.6e-20   73.4   0.1   1.5   1   0   0   1   1   1   1 Domain of unknown function (DUF3546)
+TRAM_LAG1_CLN8       PF03798.16 Spipo12G0013700      -            1.9e-39  135.5  20.9   1.9e-39  135.5  20.9   1.7   2   0   0   2   2   2   1 TLC domain
+CHD5                 PF04420.14 Spipo12G0013700      -               0.19   11.6   0.1      0.19   11.6   0.1   1.8   2   0   0   2   2   2   0 CHD5-like protein
+Dor1                 PF04124.12 Spipo12G0036000      -               0.01   14.5   0.1     0.017   13.8   0.1   1.2   1   0   0   1   1   1   0 Dor1-like family
+BLOC1_2              PF10046.9  Spipo12G0036000      -              0.031   14.6   0.3     0.064   13.6   0.3   1.5   1   0   0   1   1   1   0 Biogenesis of lysosome-related organelles complex-1 subunit 2
+HAUS-augmin3         PF14932.6  Spipo12G0036000      -               0.16   11.5   2.0      0.28   10.7   2.0   1.3   1   0   0   1   1   1   0 HAUS augmin-like complex subunit 3
+GrpE                 PF01025.19 Spipo12G0036000      -               0.18   11.4   0.9       2.9    7.5   0.1   2.3   2   0   0   2   2   2   0 GrpE
+PPR_2                PF13041.6  Spipo12G0048100      -            1.1e-63  211.2   1.4   5.6e-13   48.9   0.0  10.2   5   3   5  10  10  10   8 PPR repeat family
+PPR                  PF01535.20 Spipo12G0048100      -            1.3e-57  188.1  23.4   6.2e-08   32.4   0.0  12.9  13   0   0  13  13  13   8 PPR repeat
+PPR_1                PF12854.7  Spipo12G0048100      -            4.3e-43  144.7   1.1   1.6e-05   24.5   0.0  10.1   8   2   2  10  10  10   8 PPR repeat
+PPR_3                PF13812.6  Spipo12G0048100      -            6.5e-25   87.0   0.0   8.5e-05   22.6   0.0   8.6   6   3   5  11  11  11   7 Pentatricopeptide repeat domain
+PPR_long             PF17177.4  Spipo12G0048100      -            5.7e-10   38.9   0.0   0.00014   21.4   0.0   3.4   1   1   2   3   3   3   3 Pentacotripeptide-repeat region of PRORP
+TPR_14               PF13428.6  Spipo12G0048100      -            1.6e-06   28.5   9.5        19    6.4   0.0   9.3   7   2   3  10  10   9   0 Tetratricopeptide repeat
+TPR_19               PF14559.6  Spipo12G0048100      -            0.00026   21.4   7.7      0.44   11.1   0.0   6.0   6   2   2   8   8   8   2 Tetratricopeptide repeat
+TPR_12               PF13424.6  Spipo12G0048100      -             0.0081   16.4   2.1       2.9    8.2   0.0   4.7   5   0   0   5   5   5   1 Tetratricopeptide repeat
+TPR_2                PF07719.17 Spipo12G0048100      -              0.072   13.2   5.4        44    4.5   0.5   4.8   5   0   0   5   5   5   0 Tetratricopeptide repeat
+TPR_7                PF13176.6  Spipo12G0048100      -               0.16   12.1   2.1        79    3.6   0.1   4.5   5   0   0   5   5   5   0 Tetratricopeptide repeat
+TPR_11               PF13414.6  Spipo12G0048100      -               0.21   11.3   2.7        21    4.9   0.0   3.9   5   0   0   5   5   5   0 TPR repeat
+TPR_10               PF13374.6  Spipo12G0048100      -               0.68    9.9   4.2        62    3.7   0.1   4.4   5   0   0   5   5   5   0 Tetratricopeptide repeat
+DUF4248              PF14053.6  Spipo12G0014400      -               0.12   12.4   0.0       0.6   10.2   0.0   1.9   2   0   0   2   2   2   0 Domain of unknown function (DUF4248)
+PRELI                PF04707.14 Spipo12G0034300      -            1.7e-38  131.9   0.2   2.1e-38  131.6   0.2   1.0   1   0   0   1   1   1   1 PRELI-like family
+PPR                  PF01535.20 Spipo12G0015200      -            1.9e-84  272.2  19.6   7.8e-09   35.2   0.0  15.6  17   0   0  17  17  17  13 PPR repeat
+PPR_2                PF13041.6  Spipo12G0015200      -            8.1e-78  256.5   7.6   3.4e-14   52.8   0.0  13.9   7   5   8  15  15  15  11 PPR repeat family
+PPR_1                PF12854.7  Spipo12G0015200      -            7.5e-56  185.5   0.5   3.9e-05   23.2   0.0  14.8  15   1   1  16  16  16  12 PPR repeat
+DYW_deaminase        PF14432.6  Spipo12G0015200      -            9.2e-41  138.7   0.0   1.8e-40  137.7   0.0   1.5   1   0   0   1   1   1   1 DYW family of nucleic acid deaminases
+PPR_3                PF13812.6  Spipo12G0015200      -            3.6e-29  100.6   0.0   5.4e-05   23.2   0.0   9.3   6   4   5  11  11  11   5 Pentatricopeptide repeat domain
+PPR_long             PF17177.4  Spipo12G0015200      -            3.8e-11   42.8   0.0    0.0044   16.4   0.0   4.3   2   1   1   4   4   4   3 Pentacotripeptide-repeat region of PRORP
+TPR_7                PF13176.6  Spipo12G0015200      -            0.00038   20.3   0.2      0.29   11.3   0.1   4.4   4   0   0   4   4   4   1 Tetratricopeptide repeat
+BTAD                 PF03704.17 Spipo12G0015200      -             0.0085   16.5   0.1       2.1    8.8   0.0   3.7   3   0   0   3   3   3   1 Bacterial transcriptional activator domain
+DUF5401              PF17380.2  Spipo12G0015200      -               0.11   10.6   0.0      0.16   10.0   0.0   1.1   1   0   0   1   1   1   0 Family of unknown function (DUF5401)
+TPR_17               PF13431.6  Spipo12G0015200      -               0.12   12.8   0.0         1    9.9   0.0   2.4   2   0   0   2   2   2   0 Tetratricopeptide repeat
+Peptidase_S41        PF03572.18 Spipo12G0033700      -            1.9e-47  160.9   0.0   2.7e-47  160.4   0.0   1.3   1   0   0   1   1   1   1 Peptidase family S41
+PDZ_6                PF17820.1  Spipo12G0033700      -            1.8e-12   46.9   0.3   4.4e-12   45.7   0.3   1.7   1   0   0   1   1   1   1 PDZ domain
+PDZ                  PF00595.24 Spipo12G0033700      -            3.4e-09   36.9   0.1   7.8e-09   35.8   0.1   1.6   1   0   0   1   1   1   1 PDZ domain
+PDZ_2                PF13180.6  Spipo12G0033700      -            2.6e-08   34.1   0.0   8.3e-08   32.5   0.0   1.8   2   0   0   2   2   2   1 PDZ domain
+Tricorn_PDZ          PF14685.6  Spipo12G0033700      -              0.039   13.9   0.1     0.097   12.7   0.1   1.6   1   0   0   1   1   1   0 Tricorn protease PDZ domain
+Tricorn_C1           PF14684.6  Spipo12G0033700      -              0.099   12.7   0.0      0.18   11.9   0.0   1.4   1   0   0   1   1   1   0 Tricorn protease C1 domain
+zf-RING_2            PF13639.6  Spipo12G0019500      -            1.2e-11   44.7  13.1   1.5e-11   44.4  13.1   1.1   1   0   0   1   1   1   1 Ring finger domain
+zf-RING_11           PF17123.5  Spipo12G0019500      -            1.3e-10   40.8   6.4   1.3e-10   40.8   6.4   1.7   2   0   0   2   2   2   1 RING-like zinc finger
+zf-rbx1              PF12678.7  Spipo12G0019500      -            1.4e-06   28.5  12.3   2.4e-06   27.7  12.3   1.4   1   1   0   1   1   1   1 RING-H2 zinc finger domain
+zf-C3HC4             PF00097.25 Spipo12G0019500      -            1.6e-05   24.7  13.9     2e-05   24.4  13.9   1.1   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-C3HC4_2           PF13923.6  Spipo12G0019500      -            2.7e-05   23.9  13.4   3.6e-05   23.5  13.4   1.2   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+zf-RING_5            PF14634.6  Spipo12G0019500      -            4.5e-05   23.3  11.6   5.7e-05   23.0  11.6   1.1   1   0   0   1   1   1   1 zinc-RING finger domain
+zf-RING_UBOX         PF13445.6  Spipo12G0019500      -            6.9e-05   22.8   5.5   0.00014   21.8   2.8   2.1   1   1   1   2   2   2   1 RING-type zinc-finger
+zf-C3HC4_3           PF13920.6  Spipo12G0019500      -            0.00029   20.6  11.6   0.00039   20.2  11.6   1.2   1   0   0   1   1   1   1 Zinc finger, C3HC4 type (RING finger)
+Prok-RING_4          PF14447.6  Spipo12G0019500      -            0.00049   19.9  11.1   0.00072   19.4  11.1   1.3   1   0   0   1   1   1   1 Prokaryotic RING finger family 4
+zf-ANAPC11           PF12861.7  Spipo12G0019500      -              0.016   15.2   7.6     0.038   14.0   7.6   1.6   1   1   0   1   1   1   0 Anaphase-promoting complex subunit 11 RING-H2 finger
+FANCL_C              PF11793.8  Spipo12G0019500      -               0.15   12.3  11.7       2.2    8.5  11.7   2.2   1   1   0   1   1   1   0 FANCL C-terminal domain
+Zn_ribbon_17         PF17120.5  Spipo12G0019500      -               0.24   11.1  11.6      0.48   10.1  11.6   1.5   1   1   0   1   1   1   0 Zinc-ribbon, C4HC2 type
+BSD                  PF03909.17 Spipo12G0016100      -              3e-08   33.5   0.5   4.8e-08   32.9   0.5   1.4   1   0   0   1   1   1   1 BSD domain
+Adaptin_binding      PF10199.9  Spipo12G0016100      -             0.0037   17.9   0.5    0.0042   17.7   0.5   1.2   1   0   0   1   1   1   1 Alpha and gamma adaptin binding protein p34
