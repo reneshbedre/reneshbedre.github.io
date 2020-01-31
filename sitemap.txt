@@ -1,4 +1,5 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/oanova.html
 https://reneshbedre.github.io/blog/format.html
 https://reneshbedre.github.io/blog/chisq.html
 https://reneshbedre.github.io/blog/ttest.html
