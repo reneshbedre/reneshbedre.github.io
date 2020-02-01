@@ -64,6 +64,14 @@ P-value corrections methods for multiple hypothesis testing can increase the num
 type of methodology used. If false negative observations are very important or expensive, you should avoid correcting 
 P-values during multiple hypothesis testing.   
 
+Below graph represents the probability of getting at least one significant result by chance with different numbers
+tests at &alpha = 0.05 and &alpha = 0.01,
+
+<p align="center">
+<img src="/myfiles/bioinfokit_data/sign.png" width="600">
+</p>
+
+
 **<span style="color:#33a8ff">Case study</span>**  
 ```python
 # I am using Python3
@@ -151,10 +159,23 @@ Benjamini and Hochberg to control FDR: False negatives = 50
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. “Multiple testing problem in Bioinformatics” Renesh Bedre (blog), December 16, 2018, 
-https://reneshbedre.github.io/blog/mtest.html.
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: December 18, 2018</i> </span>
+<span style="color:#9e9696"><i> Last updated: February 1, 2020</i> </span>
+
+
+<div>
+
+<a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<a href="https://twitter.com/share?url=https://reneshbedre.github.io/blog/volcano.html&amp;text=Volcano%20Plot%20Python&amp;hashtags=" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" style="width: 35px;"/>
+    </a>
+<a href="http://www.facebook.com/sharer.php?u=https://reneshbedre.github.io/blog/volcano.html" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" style="width: 35px;"/>
+    </a>    
+    
+</div>
