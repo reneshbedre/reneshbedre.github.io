@@ -65,7 +65,7 @@ type of methodology used. If false negative observations are very important or e
 P-values during multiple hypothesis testing.   
 
 Below graph represents the probability of getting at least one significant result by chance with different numbers
-tests at &alpha = 0.05 and &alpha = 0.01,
+tests at &alpha; = 0.05 and &alpha; = 0.01,
 
 <p align="center">
 <img src="/myfiles/bioinfokit_data/sign.png" width="600">
