@@ -55,10 +55,10 @@
 <div class="share-box">
 <!--<h5>Share this:</h5>-->
     <b>Share:</b> &nbsp;
-<a class="f" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | absolute_url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fa fa-facebook-official fa"></i><span> facebook</span></a>
 
-<a class="t" href="https://twitter.com/intent/tweet?text=&url={{ site.url | absolute_url }}" onclick="window.open(this.href, 'mywin',
+<a class="t" href="https://twitter.com/intent/tweet?text=&url={{ site.url | absolute_url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter fa"></i><span> twitter</span></a>
 
 <a class="g" href="https://plus.google.com/share?url={{ site.url }}{{site.baseurl}}{{ page.url }}" onclick="window.open(this.href, 'mywin',
