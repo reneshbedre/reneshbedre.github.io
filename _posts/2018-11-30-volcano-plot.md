@@ -7,6 +7,9 @@ description: "Advanced Bioinformatics"
 permalink: blog/volcano.html
 comments: true
 ---
+<p>
+{% include  share.html %}
+</p>
 
 **<span style="color:#33a8ff">What is Volcano plot?</span>**
  - 2-dimensional (2D) scatter plot having a shape like volcano
@@ -272,15 +275,6 @@ https://reneshbedre.github.io/blog/volcano.html.
 <span style="color:#9e9696"><i> Last updated: December 21, 2019</i> </span>
 
 
-<div>
-
-<a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<a href="https://twitter.com/share?url=https://reneshbedre.github.io/blog/volcano.html&amp;text=Volcano%20Plot%20Python&amp;hashtags=" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" style="width: 35px;"/>
-    </a>
-<a href="http://www.facebook.com/sharer.php?u=https://reneshbedre.github.io/blog/volcano.html" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" style="width: 35px;"/>
-    </a>    
-    
-</div>
+<p>
+{% include  share.html %}
+</p>

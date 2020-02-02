@@ -8,6 +8,10 @@ permalink: blog/expression_units.html
 comments: true
 ---
 
+<p>
+{% include  share.html %}
+</p>
+
 In RNA-seq gene expression data analysis, we come across various expression units such as RPM, RPKM, FPKM and raw reads counts. Most of the times it's difficult to understand basic underlying methodology to calculate these units from mapped sequence data.
 
 I have seen a lot of post of such normalization questions and their confusion among readers. Hence, I attempted here to explain these units in the much simpler way (avoided complex mathematical expressions).
@@ -89,3 +93,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <b>reneshbe@gmail.com</b></span>
 
 <span style="color:#9e9696"><i> Last updated: November 25, 2019</i> </span>
+
+<p>
+{% include  share.html %}
+</p>
