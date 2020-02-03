@@ -30,8 +30,8 @@ Example data for one-way ANOVA analysis, [dataset]({{"/myfiles/anova/onewayanova
 
 ```python
 # load packages
-import pandas as pd
-d = pd.read_csv("https://reneshbedre.github.io/myfiles/anova/onewayanova.txt", sep="\t")
+>>> import pandas as pd
+>>> d = pd.read_csv("https://reneshbedre.github.io/myfiles/anova/onewayanova.txt", sep="\t")
 >>> d.head()
     A   B   C   D
 0  25  45  30  54
@@ -41,7 +41,7 @@ d = pd.read_csv("https://reneshbedre.github.io/myfiles/anova/onewayanova.txt", s
 4  29  40  27  73
 
 # convert it as a stacked table 
-d_melt = pd.melt(d.reset_index(), id_vars=['index'], value_vars=['A', 'B', 'C', 'D'])
+>>> d_melt = pd.melt(d.reset_index(), id_vars=['index'], value_vars=d.columns)
 >>> d_melt.head()
    index variable  value
 0      0        A     25
@@ -56,8 +56,18 @@ Now, perform one-way ANOVA using bioinfokit
 ```python
 # load packages
 # check documentation at 
-from bioinfokit import analys
-analys.stat.oanova(d=d_melt, res="value", xfac="variable", ph=True)
+>>> from bioinfokit import analys
+>>> analys.stat.oanova(table=d_melt, res="value", xfac="variable", ph=True)
+
+Table Summary
+
+Group      Count    Mean    Std Dev    Min    25%    50%    75%    Max
+-------  -------  ------  ---------  -----  -----  -----  -----  -----
+A              5    29.6    4.03733     25     28     29     30     36
+B              5    45     11.2027      29     40     45     55     56
+C              5    31.2    3.89872     27     29     30     33     37
+D              5    60      8.51469     51     54     60     62     73
+
 
 One-way ANOVA Summary
 
@@ -86,8 +96,6 @@ ANOVA Assumption tests
 Shapiro-Wilk (P-value): 0.7229810953140259
 
 Bartlett (P-value): 0.1278253399753447
-
-
 ```
 
 <b>Interpretation</b>: The P-value obtained from ANOVA analysis is 
@@ -126,7 +134,7 @@ GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://g
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
     
-<span style="color:#9e9696"><i> Last updated: January 31, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: February 3, 2020</i> </span>
 
 
 <div>
