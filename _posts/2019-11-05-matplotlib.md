@@ -8,6 +8,10 @@ permalink: blog/mplib.html
 comments: true
 ---
 
+<p>
+{% include  share.html %}
+</p>
+
 **<span style="color:#33a8ff">What is Matplotlib?</span>**
  - Matplotlib is the plotting library (visualization) for Python
  - Matplotlib useful for exploratory data analysis and scientific plotting for publication (e.g. machine learning, statistics, etc.)
@@ -108,3 +112,6 @@ Generated line plot by above code,
 
 This article is modified version of original <a href="https://kite.com/blog/python/matplotlib-tutorial">article</a> appeared on <a href="https://kite.com/">Kite</a>
 
+<p>
+{% include  share.html %}
+</p>

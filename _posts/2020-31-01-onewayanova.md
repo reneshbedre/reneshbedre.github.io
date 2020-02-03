@@ -9,7 +9,9 @@ comments: true
 hidden: true
 ---
 
-
+<p>
+{% include  share.html %}
+</p>
 
 
 Read basic about, [one-way ANOVA analysis]({{"/blog/anova.html" | absolute_url }})
@@ -136,16 +138,6 @@ GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://g
     
 <span style="color:#9e9696"><i> Last updated: February 3, 2020</i> </span>
 
-
-<div>
-
-<a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<a href="https://twitter.com/share?url=https://reneshbedre.github.io/blog/anova.html&amp;text=ANOVA%20using%20Python&amp;hashtags=" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" style="width: 35px;"/>
-    </a>
-<a href="http://www.facebook.com/sharer.php?u=https://reneshbedre.github.io/blog/anova.html" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" style="width: 35px;"/>
-    </a>    
-    
-</div>
+<p>
+{% include  share.html %}
+</p>
