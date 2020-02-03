@@ -7,6 +7,9 @@ description: "Advanced Bioinformatics"
 permalink: blog/pca_3d.html
 comments: true
 ---
+<p>
+{% include  share.html %}
+</p>
 
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
 conditions simultaneously. There have been various analytical methods has been used to deduce underlying biological
@@ -269,16 +272,6 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 
 <span style="color:#9e9696"><i> Last updated: March 21, 2019</i> </span>
 
-
-
-</div>
-<a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<a href="https://twitter.com/share?url=https://reneshbedre.github.io/blog/pca_3d.html&amp;text=PCA%20in%20Python&amp;hashtags=" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" style="width: 35px;"/>
-    </a>
-<a href="http://www.facebook.com/sharer.php?u=https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">
-        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" style="width: 35px;"/>
-    </a>    
-    
-</div>
+<p>
+{% include  share.html %}
+</p>

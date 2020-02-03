@@ -9,6 +9,10 @@ comments: true
 ---
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  
+  <p>
+{% include  share.html %}
+</p>
 
 **<span style="color:#33a8ff">What is multiple testing problem?</span>**
 - In transcriptomics experiments, we analyze thousands of genes to identify significant differentially 
@@ -63,6 +67,14 @@ comments: true
 P-value corrections methods for multiple hypothesis testing can increase the number of false negatives depending on the
 type of methodology used. If false negative observations are very important or expensive, you should avoid correcting 
 P-values during multiple hypothesis testing.   
+
+Below graph represents the probability of getting at least one significant result by chance with different numbers
+tests at &alpha; = 0.05 and &alpha; = 0.01,
+
+<p align="center">
+<img src="/myfiles/bioinfokit_data/sign.png" width="600">
+</p>
+
 
 **<span style="color:#33a8ff">Case study</span>**  
 ```python
@@ -151,10 +163,14 @@ Benjamini and Hochberg to control FDR: False negatives = 50
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. “Multiple testing problem in Bioinformatics” Renesh Bedre (blog), December 16, 2018, 
-https://reneshbedre.github.io/blog/mtest.html.
+Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: December 18, 2018</i> </span>
+<span style="color:#9e9696"><i> Last updated: February 1, 2020</i> </span>
+
+
+<p>
+{% include  share.html %}
+</p>
