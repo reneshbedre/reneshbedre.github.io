@@ -57,7 +57,7 @@ Now, perform one-way ANOVA using bioinfokit
 
 ```python
 # load packages
-# check documentation at 
+# check documentation at https://github.com/reneshbedre/bioinfokit
 >>> from bioinfokit import analys
 >>> analys.stat.oanova(table=d_melt, res="value", xfac="variable", ph=True)
 
