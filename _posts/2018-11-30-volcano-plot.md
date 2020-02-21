@@ -28,7 +28,7 @@ induced or downregulated genes in response to salt stress in <i>Spartina alterni
 Here's you can download gene expression dataset used for generating volcano plot: 
 <!-- [dataset]({{"/myfiles/bioinfokit_data/test_dataset.csv" target="_blank""| absolute_url }})-->
 [dataset]({{"/myfiles/volcano/testvolcano.csv" target="_blank""| absolute_url }})
- 
+
 ```python
 # We will use `bioinfokit` for volcano plot.
 # download and install bioinfokit (Tested on Linux, Mac, Windows) 
@@ -263,7 +263,7 @@ Generated inverted volcano plot by adding above code,
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+Bedre, R. Bioinformatics data analysis and visualization toolkit. 2018, GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
 
 <!--
 Bedre, R. “Volcano plot to visualize gene expression data using Python” Renesh Bedre (blog), November 30, 2018, 
