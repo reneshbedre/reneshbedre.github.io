@@ -264,7 +264,7 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+Renesh Bedre. (2020, March 5). Bioinformatics data analysis and visualization toolkit (Version v0.3). Zenodo. <a href="http://doi.org/10.5281/zenodo.3698146">http://doi.org/10.5281/zenodo.3698146</a>
 
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
