@@ -53,6 +53,8 @@ Useful reading: [Data handling using pandas ]({{"/blog/pandas.html" | absolute_u
 2      2        A     28
 3      3        A     36
 4      4        A     29
+
+# if dataframe has any missing data (NaN), drop it using d_melt.dropna()
 ```
 
 Now, perform one-way ANOVA using bioinfokit
