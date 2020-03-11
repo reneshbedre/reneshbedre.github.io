@@ -41,9 +41,6 @@ cd bioinfokit
 python setup.py install
 ```
 
-<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
-<b>reneshbe@gmail.com</b></span>
-
 <p>
 {% include  share.html %}
 </p>
