@@ -103,3 +103,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# venodr
+vendor/cache/ruby/2.5.0/
