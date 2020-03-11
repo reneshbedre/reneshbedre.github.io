@@ -65,16 +65,12 @@ Download test [dataset]({{"/myfiles/format/test_csv.csv" target="_blank""| absol
 # output will ve saved in same directory (output.txt)
 ```  
 
-**<span style="color:#33a8ff">How to cite?</span>**
-
-Renesh Bedre. (2020, March 5). Bioinformatics data analysis and visualization toolkit (Version v0.3). Zenodo. <a href="http://doi.org/10.5281/zenodo.3698146">http://doi.org/10.5281/zenodo.3698146</a>
-
-<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
-<b>reneshbe@gmail.com</b></span>
-    
-<span style="color:#9e9696"><i> Last updated: January 27, 2020</i> </span>    
-
+<p>
+{% include  cite.html %}
+</p>
 
 <p>
 {% include  share.html %}
 </p>
+    
+<span style="color:#9e9696"><i> Last updated: January 27, 2020</i> </span>    

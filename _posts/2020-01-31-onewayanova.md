@@ -127,15 +127,13 @@ hypothesis and conclude that treatments have equal variances.
 Note: <b>Levene test</b> can be used to check the Homogeneity of variances
 when the data is not drawn from normal distribution.
 
-**<span style="color:#33a8ff">How to cite?</span>**
-
-Renesh Bedre. (2020, March 5). Bioinformatics data analysis and visualization toolkit (Version v0.3). Zenodo. <a href="http://doi.org/10.5281/zenodo.3698146">http://doi.org/10.5281/zenodo.3698146</a>
-
-<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
-<b>reneshbe@gmail.com</b></span>
-    
-<span style="color:#9e9696"><i> Last updated: February 3, 2020</i> </span>
+<p>
+{% include  cite.html %}
+</p>
 
 <p>
 {% include  share.html %}
 </p>
+
+
+<span style="color:#9e9696"><i> Last updated: February 3, 2020</i> </span>
