@@ -43,6 +43,9 @@ easy_install bioinfokit
 
 # specific version
 easy_install bioinfokit==0.3
+
+# uninstall 
+pip uninstall bioinfokit
 ```
 
 
