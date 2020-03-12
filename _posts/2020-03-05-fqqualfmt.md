@@ -63,7 +63,7 @@ We will use `bioinfokit v0.4` or later for checking the FASTQ Sequence Quality F
 
 Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }}) for latest version. After installation, You can check the version using `bioinfokit.__version__`
 
-After installing `bioinfokit v0.4` or later, it can be used for detecting the FASTQ Sequence Quality Format (,
+After installing `bioinfokit v0.4` or later, it can be used for detecting the FASTQ sequence quality format
 
 I have used the subset of FASTQ [dataset]({{"/myfiles/fqformat/fq_18.fastq" target="_blank""| absolute_url }}) published in  <a href="https://www.nature.com/articles/s41598-019-45184-1" target="_blank">Bedre et al., 2019</a> for the analysis
 
