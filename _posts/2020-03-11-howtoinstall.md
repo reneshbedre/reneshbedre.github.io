@@ -28,9 +28,23 @@ requirement for `bioinfokit` below,
 
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
-```
+```python
+# install
 pip install bioinfokit
+
+# uninstall 
+pip uninstall bioinfokit
 ```
+
+Install using <a href="https://setuptools.readthedocs.io/en/latest/easy_install.html" target="_blank">easy_install</a> for Python 3 (easiest way)
+```python
+# install latest version
+easy_install bioinfokit
+
+# specific version
+easy_install bioinfokit==0.3
+```
+
 
 Install using <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">git</a>
 
