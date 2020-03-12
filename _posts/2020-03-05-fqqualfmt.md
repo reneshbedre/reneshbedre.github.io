@@ -25,7 +25,7 @@ comments: true
   later converted to FASTQ files using `bcl2fastq` tool
 
  <p align="center">
-<img src="/myfiles/fqformat/figure1.png" width="600" >
+<img src="/myfiles/fqformat/figure1.PNG" width="600" >
 <p align="center">FASTQ sequence record for four sequences with quality encoding on fourth <br>line of each record (Awika et al., 2019)</p>
 </p>
 
