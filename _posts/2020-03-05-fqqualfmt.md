@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "FASTQ Sequence Quality Format"
 date:   2020-03-05 02:15:18
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
 permalink: blog/fqqualfmt.html
-comments: true
+author_profile: true
+classes: wide
 ---
 
 
@@ -15,7 +13,6 @@ comments: true
 <p>
 {% include  share.html %}
 </p>
-
 **<span style="color:#33a8ff">What FASTQ Sequence Quality Format?</span>**
 - FASTQ file (Sanger format) is a text file which represents  a DNA/RNA sequence information in four lines, including
   sequence identifier (starts with @), DNA/RNA sequence (Nucleotide bases: A, T, G, C or Uncalled base: N),
@@ -25,7 +22,7 @@ comments: true
   later converted to FASTQ files using `bcl2fastq` tool
 
  <p align="center">
-<img src="/myfiles/fqformat/figure.png" width="600" >
+<img src="/assets/posts/fqformat/figure.png" width="600" >
 <p align="center">FASTQ sequence record for four sequences with quality encoding on fourth <br>line of each record (Awika et al., 2019)</p>
 </p>
 
@@ -65,7 +62,7 @@ Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }})
 
 After installing `bioinfokit v0.4` or later, it can be used for detecting the FASTQ sequence quality format
 
-I have used the subset of FASTQ [dataset]({{"/myfiles/fqformat/fq_18.fastq" target="_blank""| absolute_url }}) published in  <a href="https://www.nature.com/articles/s41598-019-45184-1" target="_blank">Bedre et al., 2019</a> for the analysis
+I have used the subset of FASTQ [dataset]({{"/assets/posts/fqformat/fq_18.fastq" | absolute_url }}) published in  <a href="https://www.nature.com/articles/s41598-019-45184-1">Bedre et al., 2019</a> for the analysis
 
 ```python
 # you can use interactive python interpreter, jupyter notebook or python code
@@ -80,7 +77,7 @@ I have used the subset of FASTQ [dataset]({{"/myfiles/fqformat/fq_18.fastq" targ
 # output
 # The fastq quality format is illumina 1.8+ (Offset +33)
 
-# download dataset https://reneshbedre.github.io/myfiles/fqformat/fq_sanger.fastq
+# download dataset https://reneshbedre.github.io/assets/posts/fqformat/fq_sanger.fastq
 >>> analys.format.fq_qual_var(file="fq_sanger.fastq")
 # output
 # The fastq quality format is Sanger (Offset +33)

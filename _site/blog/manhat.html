@@ -1,0 +1,1043 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.0 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Manhattan plot - Renesh Bedre</title>
+<meta name="description" content="                             ">
+
+
+  <meta name="author" content="Renesh Bedre">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Renesh Bedre">
+<meta property="og:title" content="Manhattan plot">
+<meta property="og:url" content="https://reneshbedre.github.io//blog/manhat.html">
+
+
+  <meta property="og:description" content="                             ">
+
+
+
+
+
+  <meta name="twitter:site" content="@renbedre">
+  <meta name="twitter:title" content="Manhattan plot">
+  <meta name="twitter:description" content="                             ">
+  <meta name="twitter:url" content="https://reneshbedre.github.io//blog/manhat.html">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-02-16T20:15:18-06:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://reneshbedre.github.io//blog/manhat.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Renesh Bedre",
+      "url": "https://reneshbedre.github.io//"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Renesh Bedre Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Renesh Bedre
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pub/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/res/">Resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/me.png" alt="Renesh Bedre" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Renesh Bedre</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Bioinformatics Scientist</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Texas A&M University</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://reneshbedre.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/renbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/reneshbedre/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/reneshbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+          
+            <li><a href="assets/scipapers/Bedre_CV.pdf" rel="nofollow noopener noreferrer"><i class="ai ai-cv-square" aria-hidden="true"></i> CV</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:reneshbe@gmail.com">
+            <meta itemprop="email" content="reneshbe@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Manhattan plot">
+    <meta itemprop="description" content="    ">
+    <meta itemprop="datePublished" content="2020-02-16T20:15:18-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Manhattan plot
+</h1>
+
+          <!-- change by me to add date and read time together -->
+          <p class="page__meta">
+          
+           <!-- <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>-->
+
+            
+              <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2020-02-16T20:15:18-06:00">February 16, 2020 </time>&emsp;
+          
+          &nbsp;<i class="far fa-clock" aria-hidden="true"></i>&nbsp;
+
+
+
+
+  2 minute read
+
+
+          
+
+          </p>
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<!--<h5>Share this:</h5>-->
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&amp;url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site https://reneshbedre.github.io//blog/manhat.html"><i class="fas fa-envelope-square"></i></a>
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+</div>
+</p>
+
+<p><strong><span style="color:#33a8ff">What is Manhattan plot?</span></strong></p>
+
+<ul>
+  <li>Manhattan plot used to visualize the association statistical
+significance in terms of P-values on a genomic scale</li>
+  <li>In Manhattan plot, X- and Y-axis represents the SNPs
+on the chromosomes and associated P-values as −log10[P].</li>
+  <li>It is good way to visualize thousands to millions of SNPs on
+genome-scale. The lowest the P-value (higher −log10[P]), highest is the association of a
+given SNP with trait or disease</li>
+</ul>
+
+<p><strong><span style="color:#33a8ff">How to create Manhattan plot?</span></strong></p>
+
+<p>For generating Manhattan plot, I have used simulated GWAS data for 20K SNPs distributed over 10 chromosomes
+Here’s you can download GWAS dataset used for generating Manhattan plot:
+<!-- [dataset](https://reneshbedre.github.io//assets/posts/bioinfokit_data/test_dataset.csv)-->
+<a href="https://reneshbedre.github.io//assets/posts/mhat/gwas_res_sim.csv">dataset</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># We will use `bioinfokit v0.2` or later for volcano plot.
+# download and install bioinfokit (Tested on Linux, Mac, Windows) 
+</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">reneshbedre</span><span class="o">/</span><span class="n">bioinfokit</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">bioinfokit</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<p>After installing <code class="highlighter-rouge">bioinfokit v0.2</code> or later, it can be used for Manhattan plot (you can check the version using <code class="highlighter-rouge">bioinfokit.__version__</code>,</p>
+
+<p>Useful reading: <a href="https://reneshbedre.github.io//blog/pandas.html">Data handling using pandas </a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python interpreter, jupyter notebook or python code
+# I am using interactive python interpreter (Python 3.7)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit</span> <span class="kn">import</span> <span class="n">visuz</span>
+<span class="c1"># Read documentation at https://github.com/reneshbedre/bioinfokit or
+# get help message
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">help</span><span class="o">.</span><span class="n">mhat</span><span class="p">()</span>
+<span class="c1"># get data
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="c1"># data should not have missing values (NaN)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/mhat/gwas_res_sim.csv"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+   <span class="n">SNP</span>    <span class="n">pvalue</span>  <span class="nb">chr</span>
+<span class="mi">0</span>  <span class="n">rs0</span>  <span class="mf">0.773739</span>    <span class="mi">3</span>
+<span class="mi">1</span>  <span class="n">rs1</span>  <span class="mf">0.554637</span>    <span class="mi">6</span>
+<span class="mi">2</span>  <span class="n">rs2</span>  <span class="mf">0.733446</span>   <span class="mi">10</span>
+<span class="mi">3</span>  <span class="n">rs3</span>  <span class="mf">0.872185</span>    <span class="mi">8</span>
+<span class="mi">4</span>  <span class="n">rs4</span>  <span class="mf">0.919034</span>   <span class="mi">10</span>
+
+<span class="c1"># create Manhattan plot with default parameters
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Generated Manhattan plot,</p>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten1.png" width="600" />
+</p>
+
+<p>Change colors</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add alternate two colors
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#d7d1c9"</span><span class="p">,</span> <span class="s">"#696464"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten2.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add different colors equal to number of chromosomes
+</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#a7414a"</span><span class="p">,</span> <span class="s">"#696464"</span><span class="p">,</span> <span class="s">"#00743f"</span><span class="p">,</span> <span class="s">"#563838"</span><span class="p">,</span> <span class="s">"#6a8a82"</span><span class="p">,</span> <span class="s">"#a37c27"</span><span class="p">,</span> <span class="s">"#5edfff"</span><span class="p">,</span> <span class="s">"#282726"</span><span class="p">,</span> <span class="s">"#c0334d"</span><span class="p">,</span> <span class="s">"#c9753d"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten3.png" width="600" />
+</p>
+
+<p>Add genome-wide significance line,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># by default line will be plotted at P=5E-08
+# you can change this value as per need
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten4.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Change the position of genome-wide significance line
+# you can change this value as per need
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">gwasp</span><span class="o">=</span><span class="mf">5E-06</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten5.png" width="600" />
+</p>
+
+<p>Add annotation to SNPs,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add name to SNPs based on the significance defined by 'gwasp'
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">gwasp</span><span class="o">=</span><span class="mf">5E-06</span><span class="p">,</span> <span class="n">markernames</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">markeridcol</span><span class="o">=</span><span class="s">'SNP'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten6.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add name to specified  SNPs only
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">gwasp</span><span class="o">=</span><span class="mf">5E-06</span><span class="p">,</span> <span class="n">markernames</span><span class="o">=</span><span class="p">(</span><span class="s">"rs19990"</span><span class="p">,</span> <span class="s">"rs40"</span><span class="p">),</span> <span class="n">markeridcol</span><span class="o">=</span><span class="s">'SNP'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten7.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change fontsize of SNP annotation
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">gwasp</span><span class="o">=</span><span class="mf">5E-06</span><span class="p">,</span> <span class="n">markernames</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">markeridcol</span><span class="o">=</span><span class="s">'SNP'</span><span class="p">,</span> <span class="n">gfont</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten13.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add gene names to SNPs
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> 
+<span class="n">gwas_sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">gwasp</span><span class="o">=</span><span class="mf">5E-06</span><span class="p">,</span> <span class="n">markernames</span><span class="o">=</span><span class="p">({</span><span class="s">"rs19990"</span><span class="p">:</span><span class="s">"gene1"</span><span class="p">,</span> <span class="s">"rs40"</span><span class="p">:</span><span class="s">"gene2"</span><span class="p">}),</span> <span class="n">markeridcol</span><span class="o">=</span><span class="s">'SNP'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/mhat/manhatten8.png" width="600" />
+</p>
+
+<p>Change fontsize, figure size, resolution, point size, and transparency</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change figure size
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten9.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change point size
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">dotsize</span><span class="o">=</span><span class="mi">2</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten10.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change point transparency
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">valpha</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten11.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change X-axis tick label rotation
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">ar</span><span class="o">=</span><span class="mi">60</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten12.png" width="600" />
+</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change figure resolution
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">mhat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">chr</span><span class="o">=</span><span class="s">'chr'</span><span class="p">,</span><span class="n">pv</span><span class="o">=</span><span class="s">'pvalue'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">600</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/mhat/manhatten14.png" width="600" />
+</p>
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre. (2020, March 5). Bioinformatics data analysis and visualization toolkit. Zenodo. <a href="http://doi.org/10.5281/zenodo.3698145" target="_blank">http://doi.org/10.5281/zenodo.3698145</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+</p>
+
+<p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<!--<h5>Share this:</h5>-->
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&amp;url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://reneshbedre.github.io//blog/manhat.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site https://reneshbedre.github.io//blog/manhat.html"><i class="fas fa-envelope-square"></i></a>
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+</div>
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: February 21, 2020</i> </span>
+<!--
+@ qqplot
+https://stats.stackexchange.com/questions/92124/how-to-interpret-a-qq-plot-of-p-values
+--></p>
+
+        
+      </section>
+
+
+
+
+      <footer class="page__meta">
+        
+        
+
+
+        <!-- commented to remove updated in footer section
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-16T20:15:18-06:00">February 16, 2020</time></p>
+        
+        -->
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=renbedre&text=Manhattan+plot%20https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fmanhat.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fmanhat.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fmanhat.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/pandas.html" class="pagination--pager" title="Data handling and manipulation with Pandas
+">Previous</a>
+    
+    
+      <a href="/blog/bardot.html" class="pagination--pager" title="Bar graph with overlapping dots (Bar-dot) plot
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/howtoinstall.html" rel="permalink">How to install bioinfokit
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/fqqualfmt.html" rel="permalink">FASTQ Sequence Quality Format
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/bardot.html" rel="permalink">Bar graph with overlapping dots (Bar-dot) plot
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/pandas.html" rel="permalink">Data handling and manipulation with Pandas
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/renbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/reneshbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=6pv2AiMAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square" aria-hidden="true"></i> Google Scholar</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=6pv2AiMAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square" aria-hidden="true"></i> ResearchGate</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Renesh Bedre. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115112853-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115112853-1', { 'anonymize_ip': false});
+</script>
+
+
+<!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+    (function() {
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 814107329]);
+    var ldinsp = function(){
+    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=814107329&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 0);
+    })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

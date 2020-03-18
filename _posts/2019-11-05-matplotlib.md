@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Matplotlib Explained"
 date:   2019-11-05 010:19:20
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
 permalink: blog/mplib.html
-comments: true
+author_profile: true
+classes: wide
 ---
 
 <p>
@@ -53,7 +51,11 @@ plt.show()
 
 Generated histogram by above code,
 
-![screenshot]({{ "/myfiles/matplotlib/hist.png" | absolute_url }})
+
+<p align="center">
+<img src="/assets/posts/matplotlib/hist.png" width="600">
+</p>
+
 
 **Scatter plot**
 ```python
@@ -76,7 +78,9 @@ plt.show()
 
 Generated scatter plot by above code,
 
-![screenshot]({{ "/myfiles/matplotlib/scatter.png" | absolute_url }})
+<p align="center">
+<img src="/assets/posts/matplotlib/scatter.png" width="600">
+</p>
 
 **3D Scatter plot**
 
@@ -107,7 +111,9 @@ plt.show()
 
 Generated line plot by above code,
 
-![screenshot]({{ "/myfiles/matplotlib/math.png" | absolute_url }})
+<p align="center">
+<img src="/assets/posts/matplotlib/math.png" width="600">
+</p>
 
 
 This article is modified version of original <a href="https://kite.com/blog/python/matplotlib-tutorial">article</a> appeared on <a href="https://kite.com/">Kite</a>

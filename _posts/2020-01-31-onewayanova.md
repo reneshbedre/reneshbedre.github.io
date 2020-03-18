@@ -1,12 +1,9 @@
 ---
-layout: post
 title: "One-way ANOVA using Python"
 date:   2020-01-31 06:18:08
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
 permalink: blog/oanova.html
-comments: true
-hidden: true
+author_profile: true
+classes: wide
 ---
 
 <p>
@@ -28,14 +25,14 @@ cd bioinfokit
 python setup.py install
 ```   
 
-Example data for one-way ANOVA analysis, [dataset]({{"/myfiles/anova/onewayanova.txt" | absolute_url }})
+Example data for one-way ANOVA analysis, [dataset]({{"/assets/posts/anova/onewayanova.txt" | absolute_url }})
 
 Useful reading: [Data handling using pandas ]({{"/blog/pandas.html" | absolute_url }})
 
 ```python
 # load packages
 >>> import pandas as pd
->>> d = pd.read_csv("https://reneshbedre.github.io/myfiles/anova/onewayanova.txt", sep="\t")
+>>> d = pd.read_csv("https://reneshbedre.github.io/assets/posts/anova/onewayanova.txt", sep="\t")
 >>> d.head()
     A   B   C   D
 0  25  45  30  54

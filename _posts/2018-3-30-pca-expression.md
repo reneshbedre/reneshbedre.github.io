@@ -1,12 +1,11 @@
 ---
-layout: post
 title: "Principal component analysis (PCA) analysis and visualization using Python"
 date:   2018-03-30 06:18:08
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
+author_profile: true
 permalink: blog/pca_3d.html
-comments: true
+classes: wide
 ---
+
 <p>
 {% include  share.html %}
 </p>
@@ -28,7 +27,7 @@ top 2 or 3 PCs can be plotted easily and summarize and/or clusters the features 
 
 For simplicity and understanding, here I am doing PCA analysis and visualization on small dataset (4 variables). But, 
 once you understood, you can follow similar steps to run PCA analysis and visualization on large gene expression 
-<a href="/myfiles/pca_example_dataset.csv">dataset</a>. (This dataset contains 13324 genes and 18 variables (A to R). 
+<a href="/assets/posts/pca/pca_example_dataset.csv">dataset</a>. (This dataset contains 13324 genes and 18 variables (A to R). 
 These variables represent the log2 expression fold changes between different treatments) 
 
 ```python
@@ -80,17 +79,17 @@ D -0.357882  0.897391  0.138581 -0.217728
 
 Generated Scree plot,
 
-![screenshot]({{ "/myfiles/bioinfokit_data/screeplot.png" | absolute_url }})
+![screenshot]({{ "/assets/posts/pca/screeplot.png" | absolute_url }})
 
 
 Generated PCA plot (2 PCs) plot,
 
-![screenshot]({{ "/myfiles/bioinfokit_data/pcaplot_2d.png" | absolute_url }})
+![screenshot]({{ "/assets/posts/pca/pcaplot_2d.png" | absolute_url }})
 
 
 Generated PCA plot (3 PCs) plot,
 
-![screenshot]({{ "/myfiles/bioinfokit_data/pcaplot_3d.png" | absolute_url }})
+![screenshot]({{ "/assets/posts/pca/pcaplot_3d.png" | absolute_url }})
 
 <!--
 

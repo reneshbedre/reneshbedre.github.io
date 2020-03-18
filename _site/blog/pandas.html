@@ -1,0 +1,1287 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.0 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data handling and manipulation with Pandas - Renesh Bedre</title>
+<meta name="description" content="                             ">
+
+
+  <meta name="author" content="Renesh Bedre">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Renesh Bedre">
+<meta property="og:title" content="Data handling and manipulation with Pandas">
+<meta property="og:url" content="https://reneshbedre.github.io//blog/pandas.html">
+
+
+  <meta property="og:description" content="                             ">
+
+
+
+
+
+  <meta name="twitter:site" content="@renbedre">
+  <meta name="twitter:title" content="Data handling and manipulation with Pandas">
+  <meta name="twitter:description" content="                             ">
+  <meta name="twitter:url" content="https://reneshbedre.github.io//blog/pandas.html">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-02-07T00:18:08-06:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://reneshbedre.github.io//blog/pandas.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Renesh Bedre",
+      "url": "https://reneshbedre.github.io//"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Renesh Bedre Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Renesh Bedre
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pub/">Publications</a>
+            </li><li class="masthead__menu-item">
+              <a href="/news/">News</a>
+            </li><li class="masthead__menu-item">
+              <a href="/res/">Resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/me.png" alt="Renesh Bedre" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Renesh Bedre</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Bioinformatics Scientist</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Texas A&M University</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://reneshbedre.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/renbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/reneshbedre/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/reneshbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+          
+            <li><a href="assets/scipapers/Bedre_CV.pdf" rel="nofollow noopener noreferrer"><i class="ai ai-cv-square" aria-hidden="true"></i> CV</a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:reneshbe@gmail.com">
+            <meta itemprop="email" content="reneshbe@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data handling and manipulation with Pandas">
+    <meta itemprop="description" content="    ">
+    <meta itemprop="datePublished" content="2020-02-07T00:18:08-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Data handling and manipulation with Pandas
+</h1>
+
+          <!-- change by me to add date and read time together -->
+          <p class="page__meta">
+          
+           <!-- <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+
+</p>-->
+
+            
+              <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2020-02-07T00:18:08-06:00">February 07, 2020 </time>&emsp;
+          
+          &nbsp;<i class="far fa-clock" aria-hidden="true"></i>&nbsp;
+
+
+
+
+  8 minute read
+
+
+          
+
+          </p>
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<!--<h5>Share this:</h5>-->
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&amp;url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site https://reneshbedre.github.io//blog/pandas.html"><i class="fas fa-envelope-square"></i></a>
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+</div>
+</p>
+
+<p><strong><span style="color:#33a8ff">What is pandas?</span></strong></p>
+
+<p>Pandas is python data analysis library which provides integrated and function rich
+utilities for data handling, wrangling, and analysis of the datasets.</p>
+
+<p><strong><span style="color:#33a8ff">How to install pandas?</span></strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># using Miniconda</span>
+<span class="c"># to install specific version provide pandas=version number (e.g. pandas=1.0)</span>
+conda <span class="nb">install </span>pandas
+
+<span class="c"># using pip</span>
+pip <span class="nb">install </span>pandas
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Create dataframe and series using pandas</span></strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python interpreter, jupyter notebook or python code
+# I am using interactive python interpreter (Python 3.7)
+</span>
+<span class="c1"># create pandas dataframe (two-dimensional)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="c1"># dataframe from dict
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'col1'</span><span class="p">:[</span><span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">,</span> <span class="s">'E'</span><span class="p">],</span> <span class="s">'col2'</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="s">'col3'</span><span class="p">:[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span>
+<span class="n">col1</span> 	<span class="n">col2</span> 	<span class="n">col3</span>
+<span class="mi">0</span> 	<span class="n">A</span> 	<span class="mi">1</span> 	<span class="mf">0.1</span>
+<span class="mi">1</span> 	<span class="n">B</span> 	<span class="mi">2</span> 	<span class="mf">0.2</span>
+<span class="mi">2</span> 	<span class="n">C</span> 	<span class="mi">3</span> 	<span class="mf">0.3</span>
+<span class="mi">3</span> 	<span class="n">D</span> 	<span class="mi">4</span> 	<span class="mf">0.4</span>
+<span class="mi">4</span> 	<span class="n">E</span> 	<span class="mi">5</span> 	<span class="mf">0.5</span>
+
+<span class="c1"># Create a dataframe with some random numbers
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'col</span><span class="si">%</span><span class="s">i'</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+<span class="c1"># print first 5 rows
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+   <span class="n">col0</span>  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>  <span class="n">col5</span>  <span class="n">col6</span>  <span class="n">col7</span>  <span class="n">col8</span>  <span class="n">col9</span>
+<span class="mi">0</span>     <span class="mi">2</span>    <span class="mi">72</span>     <span class="mi">7</span>    <span class="mi">23</span>    <span class="mi">82</span>    <span class="mi">76</span>    <span class="mi">29</span>    <span class="mi">86</span>    <span class="mi">55</span>    <span class="mi">41</span>
+<span class="mi">1</span>    <span class="mi">37</span>    <span class="mi">23</span>    <span class="mi">73</span>    <span class="mi">62</span>    <span class="mi">53</span>    <span class="mi">70</span>    <span class="mi">50</span>    <span class="mi">30</span>     <span class="mi">5</span>    <span class="mi">11</span>
+<span class="mi">2</span>    <span class="mi">38</span>    <span class="mi">13</span>    <span class="mi">64</span>    <span class="mi">54</span>    <span class="mi">19</span>    <span class="mi">35</span>    <span class="mi">93</span>    <span class="mi">67</span>    <span class="mi">25</span>    <span class="mi">13</span>
+<span class="mi">3</span>    <span class="mi">55</span>    <span class="mi">58</span>    <span class="mi">82</span>    <span class="mi">92</span>    <span class="mi">35</span>    <span class="mi">24</span>     <span class="mi">0</span>    <span class="mi">57</span>     <span class="mi">7</span>     <span class="mi">6</span>
+<span class="mi">4</span>    <span class="mi">75</span>    <span class="mi">65</span>    <span class="mi">82</span>    <span class="mi">68</span>    <span class="mi">16</span>    <span class="mi">49</span>    <span class="mi">50</span>    <span class="mi">86</span>    <span class="mi">52</span>    <span class="mi">65</span>
+
+<span class="c1"># create pandas series (one-dimensional)
+</span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="mi">0</span>     <span class="mi">5</span>
+<span class="mi">1</span>    <span class="mi">37</span>
+<span class="mi">2</span>    <span class="mi">59</span>
+<span class="mi">3</span>    <span class="mi">53</span>
+<span class="mi">4</span>    <span class="mi">37</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int32</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Import data from file</span></strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># read csv file
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df4</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+          <span class="n">GeneNames</span>  <span class="n">value1</span>  <span class="n">value2</span>    <span class="n">log2FC</span>       <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="mi">0</span>  <span class="n">LOC_Os09g01000</span><span class="mf">.1</span>    <span class="mi">8862</span>   <span class="mi">32767</span> <span class="o">-</span><span class="mf">1.886539</span>  <span class="mf">1.250000e-55</span>
+<span class="mi">1</span>  <span class="n">LOC_Os12g42876</span><span class="mf">.1</span>    <span class="mi">1099</span>     <span class="mi">117</span>  <span class="mf">3.231611</span>  <span class="mf">1.050000e-55</span>
+<span class="mi">2</span>  <span class="n">LOC_Os12g42884</span><span class="mf">.2</span>     <span class="mi">797</span>      <span class="mi">88</span>  <span class="mf">3.179004</span>  <span class="mf">2.590000e-54</span>
+<span class="mi">3</span>  <span class="n">LOC_Os03g16920</span><span class="mf">.1</span>     <span class="mi">274</span>       <span class="mi">7</span>  <span class="mf">5.290677</span>  <span class="mf">4.690000e-54</span>
+<span class="mi">4</span>  <span class="n">LOC_Os05g47540</span><span class="mf">.4</span>     <span class="mi">308</span>      <span class="mi">18</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+
+<span class="c1"># read tab file
+</span><span class="n">df5</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/anova/onewayanova.txt"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df5</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    <span class="n">A</span>   <span class="n">B</span>   <span class="n">C</span>   <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">25</span>  <span class="mi">45</span>  <span class="mi">30</span>  <span class="mi">54</span>
+<span class="mi">1</span>  <span class="mi">30</span>  <span class="mi">55</span>  <span class="mi">29</span>  <span class="mi">60</span>
+<span class="mi">2</span>  <span class="mi">28</span>  <span class="mi">29</span>  <span class="mi">33</span>  <span class="mi">51</span>
+<span class="mi">3</span>  <span class="mi">36</span>  <span class="mi">56</span>  <span class="mi">37</span>  <span class="mi">62</span>
+<span class="mi">4</span>  <span class="mi">29</span>  <span class="mi">40</span>  <span class="mi">27</span>  <span class="mi">73</span>
+
+<span class="c1"># make first column of table as index
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df6</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df6</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+                  <span class="n">value1</span>  <span class="n">value2</span>    <span class="n">log2FC</span>       <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="n">GeneNames</span>
+<span class="n">LOC_Os09g01000</span><span class="mf">.1</span>    <span class="mi">8862</span>   <span class="mi">32767</span> <span class="o">-</span><span class="mf">1.886539</span>  <span class="mf">1.250000e-55</span>
+<span class="n">LOC_Os12g42876</span><span class="mf">.1</span>    <span class="mi">1099</span>     <span class="mi">117</span>  <span class="mf">3.231611</span>  <span class="mf">1.050000e-55</span>
+<span class="n">LOC_Os12g42884</span><span class="mf">.2</span>     <span class="mi">797</span>      <span class="mi">88</span>  <span class="mf">3.179004</span>  <span class="mf">2.590000e-54</span>
+<span class="n">LOC_Os03g16920</span><span class="mf">.1</span>     <span class="mi">274</span>       <span class="mi">7</span>  <span class="mf">5.290677</span>  <span class="mf">4.690000e-54</span>
+<span class="n">LOC_Os05g47540</span><span class="mf">.4</span>     <span class="mi">308</span>      <span class="mi">18</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+
+<span class="c1"># import specific columns only
+# you can also replace numbers with column names in usecols argument
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df7</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv"</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df7</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+          <span class="n">GeneNames</span>    <span class="n">log2FC</span>       <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="mi">0</span>  <span class="n">LOC_Os09g01000</span><span class="mf">.1</span> <span class="o">-</span><span class="mf">1.886539</span>  <span class="mf">1.250000e-55</span>
+<span class="mi">1</span>  <span class="n">LOC_Os12g42876</span><span class="mf">.1</span>  <span class="mf">3.231611</span>  <span class="mf">1.050000e-55</span>
+<span class="mi">2</span>  <span class="n">LOC_Os12g42884</span><span class="mf">.2</span>  <span class="mf">3.179004</span>  <span class="mf">2.590000e-54</span>
+<span class="mi">3</span>  <span class="n">LOC_Os03g16920</span><span class="mf">.1</span>  <span class="mf">5.290677</span>  <span class="mf">4.690000e-54</span>
+<span class="mi">4</span>  <span class="n">LOC_Os05g47540</span><span class="mf">.4</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+
+<span class="c1"># skip first n rows
+# you can also skip rows from bottom using skipfooter argument
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df8</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+                    <span class="mi">1</span>     <span class="mi">2</span>         <span class="mi">3</span>             <span class="mi">4</span>
+<span class="mi">0</span>
+<span class="n">LOC_Os05g47540</span><span class="mf">.4</span>  <span class="mi">308</span>    <span class="mi">18</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+<span class="n">LOC_Os09g00999</span><span class="mf">.1</span>  <span class="mi">339</span>  <span class="mi">1213</span> <span class="o">-</span><span class="mf">1.839222</span>  <span class="mf">1.950000e-54</span>
+<span class="n">LOC_Os01g62900</span><span class="mf">.1</span>  <span class="mi">193</span>     <span class="mi">4</span>  <span class="mf">5.592457</span>  <span class="mf">1.560000e-54</span>
+<span class="n">LOC_Os09g27030</span><span class="mf">.2</span>  <span class="mi">504</span>   <span class="mi">162</span>  <span class="mf">1.637430</span>  <span class="mf">1.360000e-54</span>
+<span class="n">LOC_Os01g51410</span><span class="mf">.2</span>  <span class="mi">225</span>    <span class="mi">22</span>  <span class="mf">3.354350</span>  <span class="mf">6.760000e-54</span>
+
+<span class="c1"># read only first n rows
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df9</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df9</span>
+                  <span class="n">value1</span>  <span class="n">value2</span>    <span class="n">log2FC</span>       <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="n">GeneNames</span>
+<span class="n">LOC_Os09g01000</span><span class="mf">.1</span>    <span class="mi">8862</span>   <span class="mi">32767</span> <span class="o">-</span><span class="mf">1.886539</span>  <span class="mf">1.250000e-55</span>
+<span class="n">LOC_Os12g42876</span><span class="mf">.1</span>    <span class="mi">1099</span>     <span class="mi">117</span>  <span class="mf">3.231611</span>  <span class="mf">1.050000e-55</span>
+<span class="n">LOC_Os12g42884</span><span class="mf">.2</span>     <span class="mi">797</span>      <span class="mi">88</span>  <span class="mf">3.179004</span>  <span class="mf">2.590000e-54</span>
+<span class="n">LOC_Os03g16920</span><span class="mf">.1</span>     <span class="mi">274</span>       <span class="mi">7</span>  <span class="mf">5.290677</span>  <span class="mf">4.690000e-54</span>
+<span class="n">LOC_Os05g47540</span><span class="mf">.4</span>     <span class="mi">308</span>      <span class="mi">18</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+<span class="p">[</span><span class="mi">100</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">4</span> <span class="n">columns</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Check data type (dtype)</span></strong></p>
+
+<p>Check a data type of each column in the dataframe</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="n">Col1</span>     <span class="nb">object</span>
+<span class="n">col2</span>      <span class="n">int64</span>
+<span class="n">col3</span>    <span class="n">float64</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Check dataframe dimensions (size, shape and ndim)</span></strong></p>
+
+<p>Check the total number of elements, columns, and rows in a dataframe</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get total number of elements in a dataframe 
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">size</span>
+<span class="mi">15</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">size</span>
+<span class="mi">10000</span>
+
+<span class="c1"># get number of rows and columns
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># (rows, columns)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># (rows, columns)
+</span>
+<span class="c1"># get the array dimensions (number of axes)
+# returns 1 for pandas series (one-dimensional) and 2 for dataframes (two-dimensional) 
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">ndim</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">ndim</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df3</span><span class="o">.</span><span class="n">ndim</span>
+<span class="mi">1</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Extracting columns and rows from dataframe</span></strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get column data based on column name
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="p">[</span><span class="s">'col2'</span><span class="p">]</span>
+<span class="mi">0</span>    <span class="mi">1</span>
+<span class="mi">1</span>    <span class="mi">2</span>
+<span class="mi">2</span>    <span class="mi">3</span>
+<span class="mi">3</span>    <span class="mi">4</span>
+<span class="mi">4</span>    <span class="mi">5</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">col2</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+
+<span class="c1"># get row data based on row index
+# return row output will be series 
+# extract row with index 0 
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">Col1</span>      <span class="n">A</span>
+<span class="n">col2</span>      <span class="mi">1</span>
+<span class="n">col3</span>    <span class="mf">0.1</span>
+<span class="n">Name</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+
+<span class="c1"># assign first column (col1) as index
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">'col1'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df1_1</span>
+      <span class="n">col2</span>  <span class="n">col3</span>
+<span class="n">col1</span>
+<span class="n">A</span>        <span class="mi">1</span>   <span class="mf">0.1</span>
+<span class="n">B</span>        <span class="mi">2</span>   <span class="mf">0.2</span>
+<span class="n">C</span>        <span class="mi">3</span>   <span class="mf">0.3</span>
+<span class="n">D</span>        <span class="mi">4</span>   <span class="mf">0.4</span>
+<span class="n">E</span>        <span class="mi">5</span>   <span class="mf">0.5</span>
+
+<span class="c1"># get rows data based on row index (col1 as index)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s">'E'</span><span class="p">]</span>
+<span class="n">col2</span>    <span class="mf">5.0</span>
+<span class="n">col3</span>    <span class="mf">0.5</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">E</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Extracting subsets of dataframes</span></strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get subset of dataframe [row, column]
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s">'A'</span><span class="p">:</span><span class="s">'C'</span><span class="p">,</span> <span class="s">'col2'</span><span class="p">:</span><span class="s">'col3'</span><span class="p">]</span>
+      <span class="n">col2</span>  <span class="n">col3</span>
+<span class="n">col1</span>
+<span class="n">A</span>        <span class="mi">1</span>   <span class="mf">0.1</span>
+<span class="n">B</span>        <span class="mi">2</span>   <span class="mf">0.2</span>
+<span class="n">C</span>        <span class="mi">3</span>   <span class="mf">0.3</span>
+
+<span class="c1"># based on default numeric index
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s">'col2'</span><span class="p">:</span><span class="s">'col6'</span><span class="p">]</span>
+   <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>  <span class="n">col5</span>  <span class="n">col6</span>
+<span class="mi">5</span>    <span class="mi">49</span>     <span class="mi">5</span>    <span class="mi">61</span>    <span class="mi">87</span>    <span class="mi">23</span>
+<span class="mi">6</span>    <span class="mi">20</span>    <span class="mi">57</span>    <span class="mi">40</span>    <span class="mi">21</span>    <span class="mi">17</span>
+<span class="mi">7</span>    <span class="mi">30</span>    <span class="mi">30</span>    <span class="mi">38</span>    <span class="mi">94</span>    <span class="mi">50</span>
+<span class="mi">8</span>    <span class="mi">98</span>    <span class="mi">17</span>    <span class="mi">31</span>    <span class="mi">67</span>    <span class="mi">59</span>
+<span class="mi">9</span>    <span class="mi">39</span>     <span class="mi">9</span>     <span class="mi">4</span>    <span class="mi">17</span>     <span class="mi">8</span>
+
+<span class="c1"># get specific columns with all rows
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="p">[[</span><span class="s">'col1'</span><span class="p">,</span> <span class="s">'col5'</span><span class="p">,</span> <span class="s">'col8'</span><span class="p">]]</span>
+     <span class="n">col1</span>  <span class="n">col5</span>  <span class="n">col8</span>
+<span class="mi">0</span>      <span class="mi">21</span>     <span class="mi">2</span>    <span class="mi">14</span>
+<span class="mi">1</span>      <span class="mi">93</span>    <span class="mi">29</span>    <span class="mi">93</span>
+<span class="mi">2</span>      <span class="mi">23</span>    <span class="mi">24</span>    <span class="mi">32</span>
+<span class="mi">3</span>      <span class="mi">26</span>    <span class="mi">72</span>    <span class="mi">55</span>
+<span class="mi">4</span>      <span class="mi">17</span>    <span class="mi">96</span>    <span class="mi">40</span>
+
+<span class="c1"># get specific rows with all columns
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+   <span class="n">col0</span>  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>  <span class="n">col5</span>  <span class="n">col6</span>  <span class="n">col7</span>  <span class="n">col8</span>  <span class="n">col9</span>
+<span class="mi">2</span>     <span class="mi">4</span>    <span class="mi">23</span>    <span class="mi">64</span>    <span class="mi">49</span>    <span class="mi">71</span>    <span class="mi">24</span>    <span class="mi">97</span>    <span class="mi">92</span>    <span class="mi">32</span>    <span class="mi">39</span>
+<span class="mi">3</span>    <span class="mi">73</span>    <span class="mi">26</span>    <span class="mi">33</span>    <span class="mi">99</span>    <span class="mi">62</span>    <span class="mi">72</span>    <span class="mi">73</span>     <span class="mi">3</span>    <span class="mi">55</span>    <span class="mi">82</span>
+<span class="mi">4</span>    <span class="mi">72</span>    <span class="mi">17</span>    <span class="mi">73</span>    <span class="mi">71</span>    <span class="mi">42</span>    <span class="mi">96</span>    <span class="mi">56</span>    <span class="mi">29</span>    <span class="mi">40</span>    <span class="mi">96</span>
+<span class="mi">5</span>    <span class="mi">16</span>    <span class="mi">10</span>    <span class="mi">49</span>     <span class="mi">5</span>    <span class="mi">61</span>    <span class="mi">87</span>    <span class="mi">23</span>     <span class="mi">7</span>    <span class="mi">36</span>     <span class="mi">1</span>
+
+
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Statistics of dataframes</span></strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># check above to create dataframe objects (df1, df2 and df1_1)
+# get descriptive statistics (count, mean, std dev, min, max, and quartiles)
+# it excludes all NaN or missing values
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+           <span class="n">col2</span>      <span class="n">col3</span>
+<span class="n">count</span>  <span class="mf">5.000000</span>  <span class="mf">5.000000</span>
+<span class="n">mean</span>   <span class="mf">3.000000</span>  <span class="mf">0.300000</span>
+<span class="n">std</span>    <span class="mf">1.581139</span>  <span class="mf">0.158114</span>
+<span class="nb">min</span>    <span class="mf">1.000000</span>  <span class="mf">0.100000</span>
+<span class="mi">25</span><span class="o">%</span>    <span class="mf">2.000000</span>  <span class="mf">0.200000</span>
+<span class="mi">50</span><span class="o">%</span>    <span class="mf">3.000000</span>  <span class="mf">0.300000</span>
+<span class="mi">75</span><span class="o">%</span>    <span class="mf">4.000000</span>  <span class="mf">0.400000</span>
+<span class="nb">max</span>    <span class="mf">5.000000</span>  <span class="mf">0.500000</span>
+
+<span class="c1"># get only certain element like mean ,count
+# get mean
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s">'mean'</span><span class="p">]</span>
+<span class="n">col2</span>    <span class="mf">3.0</span>
+<span class="n">col3</span>    <span class="mf">0.3</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">mean</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+
+<span class="c1"># get mean and std dev
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s">'mean'</span><span class="p">,</span> <span class="s">'std'</span><span class="p">]]</span>
+          <span class="n">col2</span>      <span class="n">col3</span>
+<span class="n">mean</span>  <span class="mf">3.000000</span>  <span class="mf">0.300000</span>
+<span class="n">std</span>   <span class="mf">1.581139</span>  <span class="mf">0.158114</span>
+
+<span class="c1"># get standard error of mean (sem)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">sem</span><span class="p">()</span>
+<span class="n">col2</span>    <span class="mf">0.707107</span>
+<span class="n">col3</span>    <span class="mf">0.070711</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+
+<span class="c1"># for specific columns only
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="p">[</span><span class="s">'col4'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">count</span>    <span class="mf">1000.000000</span>
+<span class="n">mean</span>       <span class="mf">48.917000</span>
+<span class="n">std</span>        <span class="mf">28.679865</span>
+<span class="nb">min</span>         <span class="mf">0.000000</span>
+<span class="mi">25</span><span class="o">%</span>        <span class="mf">25.000000</span>
+<span class="mi">50</span><span class="o">%</span>        <span class="mf">49.000000</span>
+<span class="mi">75</span><span class="o">%</span>        <span class="mf">74.000000</span>
+<span class="nb">max</span>        <span class="mf">99.000000</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">col4</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+
+<span class="c1"># for only selected multiple columns
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s">'col1'</span><span class="p">:</span><span class="s">'col5'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+              <span class="n">col1</span>         <span class="n">col2</span>         <span class="n">col3</span>         <span class="n">col4</span>         <span class="n">col5</span>
+<span class="n">count</span>  <span class="mf">1000.000000</span>  <span class="mf">1000.000000</span>  <span class="mf">1000.000000</span>  <span class="mf">1000.000000</span>  <span class="mf">1000.000000</span>
+<span class="n">mean</span>     <span class="mf">49.334000</span>    <span class="mf">51.057000</span>    <span class="mf">48.676000</span>    <span class="mf">48.917000</span>    <span class="mf">48.486000</span>
+<span class="n">std</span>      <span class="mf">28.311375</span>    <span class="mf">29.141293</span>    <span class="mf">28.252065</span>    <span class="mf">28.679865</span>    <span class="mf">29.070619</span>
+<span class="nb">min</span>       <span class="mf">0.000000</span>     <span class="mf">0.000000</span>     <span class="mf">0.000000</span>     <span class="mf">0.000000</span>     <span class="mf">0.000000</span>
+<span class="mi">25</span><span class="o">%</span>      <span class="mf">25.000000</span>    <span class="mf">26.000000</span>    <span class="mf">25.000000</span>    <span class="mf">25.000000</span>    <span class="mf">22.000000</span>
+<span class="mi">50</span><span class="o">%</span>      <span class="mf">50.000000</span>    <span class="mf">52.000000</span>    <span class="mf">49.000000</span>    <span class="mf">49.000000</span>    <span class="mf">50.000000</span>
+<span class="mi">75</span><span class="o">%</span>      <span class="mf">73.000000</span>    <span class="mf">77.000000</span>    <span class="mf">73.000000</span>    <span class="mf">74.000000</span>    <span class="mf">73.000000</span>
+<span class="nb">max</span>      <span class="mf">99.000000</span>    <span class="mf">99.000000</span>    <span class="mf">99.000000</span>    <span class="mf">99.000000</span>    <span class="mf">99.000000</span>
+
+<span class="c1"># to get descriptive statistics by row-wise you can transpose the columns
+# or use apply function
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_1</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">describe</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">count</span>  <span class="n">mean</span>       <span class="n">std</span>  <span class="nb">min</span>    <span class="mi">25</span><span class="o">%</span>   <span class="mi">50</span><span class="o">%</span>    <span class="mi">75</span><span class="o">%</span>  <span class="nb">max</span>
+<span class="n">col1</span>
+<span class="n">A</span>       <span class="mf">2.0</span>  <span class="mf">0.55</span>  <span class="mf">0.636396</span>  <span class="mf">0.1</span>  <span class="mf">0.325</span>  <span class="mf">0.55</span>  <span class="mf">0.775</span>  <span class="mf">1.0</span>
+<span class="n">B</span>       <span class="mf">2.0</span>  <span class="mf">1.10</span>  <span class="mf">1.272792</span>  <span class="mf">0.2</span>  <span class="mf">0.650</span>  <span class="mf">1.10</span>  <span class="mf">1.550</span>  <span class="mf">2.0</span>
+<span class="n">C</span>       <span class="mf">2.0</span>  <span class="mf">1.65</span>  <span class="mf">1.909188</span>  <span class="mf">0.3</span>  <span class="mf">0.975</span>  <span class="mf">1.65</span>  <span class="mf">2.325</span>  <span class="mf">3.0</span>
+<span class="n">D</span>       <span class="mf">2.0</span>  <span class="mf">2.20</span>  <span class="mf">2.545584</span>  <span class="mf">0.4</span>  <span class="mf">1.300</span>  <span class="mf">2.20</span>  <span class="mf">3.100</span>  <span class="mf">4.0</span>
+<span class="n">E</span>       <span class="mf">2.0</span>  <span class="mf">2.75</span>  <span class="mf">3.181981</span>  <span class="mf">0.5</span>  <span class="mf">1.625</span>  <span class="mf">2.75</span>  <span class="mf">3.875</span>  <span class="mf">5.0</span>
+
+<span class="c1"># to get descriptive statistics by row-wise but only for specific columns
+</span><span class="o">&gt;&gt;</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s">'col0'</span><span class="p">:</span><span class="s">'col4'</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">describe</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+     <span class="n">count</span>  <span class="n">mean</span>        <span class="n">std</span>   <span class="nb">min</span>   <span class="mi">25</span><span class="o">%</span>   <span class="mi">50</span><span class="o">%</span>   <span class="mi">75</span><span class="o">%</span>   <span class="nb">max</span>
+<span class="mi">0</span>      <span class="mf">5.0</span>  <span class="mf">43.8</span>  <span class="mf">37.325594</span>  <span class="mf">12.0</span>  <span class="mf">12.0</span>  <span class="mf">30.0</span>  <span class="mf">69.0</span>  <span class="mf">96.0</span>
+<span class="mi">1</span>      <span class="mf">5.0</span>  <span class="mf">52.8</span>  <span class="mf">34.687173</span>   <span class="mf">1.0</span>  <span class="mf">43.0</span>  <span class="mf">55.0</span>  <span class="mf">71.0</span>  <span class="mf">94.0</span>
+<span class="mi">2</span>      <span class="mf">5.0</span>  <span class="mf">61.6</span>  <span class="mf">36.287739</span>  <span class="mf">14.0</span>  <span class="mf">34.0</span>  <span class="mf">72.0</span>  <span class="mf">90.0</span>  <span class="mf">98.0</span>
+<span class="mi">3</span>      <span class="mf">5.0</span>  <span class="mf">70.0</span>  <span class="mf">32.992423</span>  <span class="mf">21.0</span>  <span class="mf">52.0</span>  <span class="mf">83.0</span>  <span class="mf">96.0</span>  <span class="mf">98.0</span>
+<span class="mi">4</span>      <span class="mf">5.0</span>  <span class="mf">43.4</span>  <span class="mf">34.681407</span>   <span class="mf">3.0</span>   <span class="mf">9.0</span>  <span class="mf">59.0</span>  <span class="mf">73.0</span>  <span class="mf">73.0</span>
+<span class="o">..</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Add/Insert rows and columns to existing dataframes</span></strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># check above to create dataframe objects (df1, df2 and df1_1)
+# add extra row to existing df1 dataframe
+</span><span class="o">&gt;&gt;&gt;</span><span class="n">df1_2</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s">'col1'</span><span class="p">:</span> <span class="s">'F'</span><span class="p">,</span> <span class="s">'col2'</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s">'col3'</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># ignore_index option will ignore the current index and append to df1
+# dataframe.This option is useful when appending two dataframe and to
+# preserve the original index of each dataframes
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_2</span>
+  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>
+<span class="mi">0</span>    <span class="n">A</span>     <span class="mi">1</span>   <span class="mf">0.1</span>
+<span class="mi">1</span>    <span class="n">B</span>     <span class="mi">2</span>   <span class="mf">0.2</span>
+<span class="mi">2</span>    <span class="n">C</span>     <span class="mi">3</span>   <span class="mf">0.3</span>
+<span class="mi">3</span>    <span class="n">D</span>     <span class="mi">4</span>   <span class="mf">0.4</span>
+<span class="mi">4</span>    <span class="n">E</span>     <span class="mi">5</span>   <span class="mf">0.5</span>
+<span class="mi">5</span>    <span class="n">F</span>     <span class="mi">6</span>   <span class="mf">0.6</span>
+
+<span class="c1"># adding a column to dataframe
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_2</span><span class="p">[</span><span class="s">'col4'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span><span class="mi">36</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df1_2</span>
+  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>
+<span class="mi">0</span>    <span class="n">A</span>     <span class="mi">1</span>   <span class="mf">0.1</span>     <span class="mi">1</span>
+<span class="mi">1</span>    <span class="n">B</span>     <span class="mi">2</span>   <span class="mf">0.2</span>     <span class="mi">4</span>
+<span class="mi">2</span>    <span class="n">C</span>     <span class="mi">3</span>   <span class="mf">0.3</span>     <span class="mi">9</span>
+<span class="mi">3</span>    <span class="n">D</span>     <span class="mi">4</span>   <span class="mf">0.4</span>    <span class="mi">16</span>
+<span class="mi">4</span>    <span class="n">E</span>     <span class="mi">5</span>   <span class="mf">0.5</span>    <span class="mi">25</span>
+<span class="mi">5</span>    <span class="n">F</span>     <span class="mi">6</span>   <span class="mf">0.6</span>    <span class="mi">36</span>
+
+<span class="c1"># merge/append two dataframes
+# create a new dataframe 
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'col1'</span><span class="p">:[</span><span class="s">'X'</span><span class="p">,</span> <span class="s">'Y'</span><span class="p">],</span> <span class="s">'col2'</span><span class="p">:[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="s">'col3'</span><span class="p">:[</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">]})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df10</span>
+  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>
+<span class="mi">0</span>    <span class="n">X</span>     <span class="mi">7</span>   <span class="mf">0.7</span>
+<span class="mi">1</span>    <span class="n">Y</span>     <span class="mi">8</span>   <span class="mf">0.8</span>
+
+<span class="c1"># mereg df10 with df1_2
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df10</span><span class="p">)</span>
+  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>
+<span class="mi">0</span>    <span class="n">A</span>     <span class="mi">1</span>   <span class="mf">0.1</span>   <span class="mf">1.0</span>
+<span class="mi">1</span>    <span class="n">B</span>     <span class="mi">2</span>   <span class="mf">0.2</span>   <span class="mf">4.0</span>
+<span class="mi">2</span>    <span class="n">C</span>     <span class="mi">3</span>   <span class="mf">0.3</span>   <span class="mf">9.0</span>
+<span class="mi">3</span>    <span class="n">D</span>     <span class="mi">4</span>   <span class="mf">0.4</span>  <span class="mf">16.0</span>
+<span class="mi">4</span>    <span class="n">E</span>     <span class="mi">5</span>   <span class="mf">0.5</span>  <span class="mf">25.0</span>
+<span class="mi">5</span>    <span class="n">F</span>     <span class="mi">6</span>   <span class="mf">0.6</span>  <span class="mf">36.0</span>
+<span class="mi">0</span>    <span class="n">X</span>     <span class="mi">7</span>   <span class="mf">0.7</span>   <span class="n">NaN</span>
+<span class="mi">1</span>    <span class="n">Y</span>     <span class="mi">8</span>   <span class="mf">0.8</span>   <span class="n">NaN</span>
+
+<span class="c1"># if you set ignore_index=True, the index order will not be preserved
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df10</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+  <span class="n">col1</span>  <span class="n">col2</span>  <span class="n">col3</span>  <span class="n">col4</span>
+<span class="mi">0</span>    <span class="n">A</span>     <span class="mi">1</span>   <span class="mf">0.1</span>   <span class="mf">1.0</span>
+<span class="mi">1</span>    <span class="n">B</span>     <span class="mi">2</span>   <span class="mf">0.2</span>   <span class="mf">4.0</span>
+<span class="mi">2</span>    <span class="n">C</span>     <span class="mi">3</span>   <span class="mf">0.3</span>   <span class="mf">9.0</span>
+<span class="mi">3</span>    <span class="n">D</span>     <span class="mi">4</span>   <span class="mf">0.4</span>  <span class="mf">16.0</span>
+<span class="mi">4</span>    <span class="n">E</span>     <span class="mi">5</span>   <span class="mf">0.5</span>  <span class="mf">25.0</span>
+<span class="mi">5</span>    <span class="n">F</span>     <span class="mi">6</span>   <span class="mf">0.6</span>  <span class="mf">36.0</span>
+<span class="mi">6</span>    <span class="n">X</span>     <span class="mi">7</span>   <span class="mf">0.7</span>   <span class="n">NaN</span>
+<span class="mi">7</span>    <span class="n">Y</span>     <span class="mi">8</span>   <span class="mf">0.8</span>   <span class="n">NaN</span>
+
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Export dataframes to file</span></strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># check above to create dataframe objects (df1)
+# Export to CSV file
+# with first column as index
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"df1.csv"</span><span class="p">)</span>
+<span class="c1"># do not export index as first column
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"df1.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="c1"># Export to TAB file
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"df1.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+<span class="c1"># no column headers
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"df1.csv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="c1"># compress output file (works with pandas 1.0.0)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"df1.zip"</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="p">{</span><span class="s">'method'</span><span class="p">:</span><span class="s">'zip'</span><span class="p">,</span> <span class="s">'archive_name'</span><span class="p">:</span><span class="s">'df1.csv'</span><span class="p">})</span>
+<span class="c1"># export to excel file
+# use similar option as above for headers and index
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df1</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s">"df1.xlsx"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong><span style="color:#33a8ff">Convert series to dataframes</span></strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create pandas series
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df11</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df11</span>
+<span class="mi">0</span>    <span class="mi">1</span>
+<span class="mi">1</span>    <span class="mi">2</span>
+<span class="mi">2</span>    <span class="mi">3</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+
+<span class="c1"># convert to dataframe
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df11</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+   <span class="mi">0</span>
+<span class="mi">0</span>  <span class="mi">1</span>
+<span class="mi">1</span>  <span class="mi">2</span>
+<span class="mi">2</span>  <span class="mi">3</span>
+
+<span class="c1"># add column name
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df11</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s">'col1'</span><span class="p">)</span>
+   <span class="n">col1</span>
+<span class="mi">0</span>     <span class="mi">1</span>
+<span class="mi">1</span>     <span class="mi">2</span>
+<span class="mi">2</span>     <span class="mi">3</span>
+</code></pre></div></div>
+
+<p><span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span></p>
+
+<p><span style="color:#9e9696"><i> Last updated: February 25, 2020</i> </span></p>
+
+<p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<!--<h5>Share this:</h5>-->
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&amp;url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://reneshbedre.github.io//blog/pandas.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site https://reneshbedre.github.io//blog/pandas.html"><i class="fas fa-envelope-square"></i></a>
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+</div>
+</p>
+
+        
+      </section>
+
+
+
+
+      <footer class="page__meta">
+        
+        
+
+
+        <!-- commented to remove updated in footer section
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-02-07T00:18:08-06:00">February 7, 2020</time></p>
+        
+        -->
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=renbedre&text=Data+handling+and+manipulation+with+Pandas%20https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fpandas.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fpandas.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Freneshbedre.github.io%2F%2Fblog%2Fpandas.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/oanova.html" class="pagination--pager" title="One-way ANOVA using Python
+">Previous</a>
+    
+    
+      <a href="/blog/manhat.html" class="pagination--pager" title="Manhattan plot
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/howtoinstall.html" rel="permalink">How to install bioinfokit
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/fqqualfmt.html" rel="permalink">FASTQ Sequence Quality Format
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/bardot.html" rel="permalink">Bar graph with overlapping dots (Bar-dot) plot
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blog/manhat.html" rel="permalink">Manhattan plot
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/renbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/reneshbedre" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=6pv2AiMAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-google-scholar-square" aria-hidden="true"></i> Google Scholar</a></li>
+        
+      
+        
+          <li><a href="https://scholar.google.com/citations?user=6pv2AiMAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="ai ai-researchgate-square" aria-hidden="true"></i> ResearchGate</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Renesh Bedre. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115112853-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115112853-1', { 'anonymize_ip': false});
+</script>
+
+
+<!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+    (function() {
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 814107329]);
+    var ldinsp = function(){
+    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=814107329&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 0);
+    })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

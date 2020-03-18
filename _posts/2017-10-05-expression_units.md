@@ -1,12 +1,11 @@
 ---
-layout: post
 title: "Gene expression units explained: RPM, RPKM, FPKM and TPM"
 date:   2017-10-05
-author: Renesh Bedre
-description: "Basic Bioinformatics"
+author_profile: true
 permalink: blog/expression_units.html
-comments: true
+classes: wide
 ---
+
 
 <p>
 {% include  share.html %}

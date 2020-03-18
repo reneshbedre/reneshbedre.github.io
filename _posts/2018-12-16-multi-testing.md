@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Multiple testing problem in Bioinformatics"
 date:   2018-12-16 010:19:20
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
+author_profile: true
 permalink: blog/mtest.html
-comments: true
+classes: wide
 ---
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
@@ -72,7 +70,7 @@ Below graph represents the probability of getting at least one significant resul
 tests at &alpha; = 0.05 and &alpha; = 0.01,
 
 <p align="center">
-<img src="/myfiles/bioinfokit_data/sign.png" width="600">
+<img src="/assets/posts/multest/sign.png" width="600">
 </p>
 
 

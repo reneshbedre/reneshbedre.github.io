@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "File format conversions"
 date:   2020-01-27 02:15:18
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
 permalink: blog/format.html
-comments: true
+author_profile: true
+classes: wide
 ---
 <p>
 {% include  share.html %}
@@ -26,7 +24,7 @@ python setup.py install
 
 **<span style="color:#33a8ff">FASTQ to FASTA</span>**
 
-Download test [dataset]({{"/myfiles/format/test_1.fastq" target="_blank""| absolute_url }})
+Download test [dataset]({{"/assets/posts/format/test_1.fastq" | absolute_url }})
 
 ```python
 >>> from bioinfokit import analys
@@ -37,7 +35,7 @@ Download test [dataset]({{"/myfiles/format/test_1.fastq" target="_blank""| absol
 **<span style="color:#33a8ff">HMM to CSV</span>**
 
 Convert table output obtained from hmmscan (HMMER tool) to CSV format
-Download test [dataset]({{"/myfiles/format/test_hmm.txt" target="_blank""| absolute_url }})
+Download test [dataset]({{"/assets/posts/format/test_hmm.txt" | absolute_url }})
 
 ```python
 >>> from bioinfokit import analys
@@ -47,7 +45,7 @@ Download test [dataset]({{"/myfiles/format/test_hmm.txt" target="_blank""| absol
 
 **<span style="color:#33a8ff">TAB to CSV</span>**
 
-Download test [dataset]({{"/myfiles/format/test_tab.txt" target="_blank""| absolute_url }})
+Download test [dataset]({{"/assets/posts/format/test_tab.txt" | absolute_url }})
 
 ```python
 >>> from bioinfokit import analys
@@ -57,7 +55,7 @@ Download test [dataset]({{"/myfiles/format/test_tab.txt" target="_blank""| absol
 
 **<span style="color:#33a8ff">CSV to TAB</span>**
 
-Download test [dataset]({{"/myfiles/format/test_csv.csv" target="_blank""| absolute_url }})
+Download test [dataset]({{"/assets/posts/format/test_csv.csv" | absolute_url }})
 
 ```python
 >>> from bioinfokit import analys

@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "How to install bioinfokit"
 date:   2020-03-11 02:15:18
-author: Renesh Bedre
-description: "Advanced Bioinformatics"
 permalink: blog/howtoinstall.html
-comments: true
+author_profile: true
+classes: wide
 ---
 
 <p>
