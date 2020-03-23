@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -34,6 +36,7 @@ layout: default
            <!-- <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>-->
 
             {% if page.date %}
+             <i class="fas fa-user" aria-hidden="true"></i> {{ author.name }} &nbsp;
               <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y " }}</time>&emsp;
           {% endif %}
           &nbsp;<i class="far fa-clock" aria-hidden="true"></i>&nbsp;{% include read-time.html %}
