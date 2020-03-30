@@ -1,4 +1,5 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/linearreg.html
 https://reneshbedre.github.io/blog/fqqualfmt.html
 https://reneshbedre.github.io/blog/howtoinstall.html
 https://reneshbedre.github.io/blog/bardot.html

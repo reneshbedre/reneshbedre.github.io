@@ -250,4 +250,12 @@ From the plot,
 - As the standardized residuals lie around the 45-degree line, the observed data meets the assumption of data
   normality.
   
-## <span style="color:#33a8ff">  Linear Regression (LR) Interpretation</span> 
+<p>
+{% include  cite.html %}
+</p>
+
+<p>
+{% include  share.html %}
+</p>
+
+<span style="color:#9e9696"><i> Last updated: March 30, 2020</i> </span>
