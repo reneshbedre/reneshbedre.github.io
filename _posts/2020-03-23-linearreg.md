@@ -88,6 +88,7 @@ toc_label: "Page Content"
 2  18  635
 3  15  625
 4  20  640
+# if dataframe has any missing data (NaN), drop it using df.dropna()
 
 # run LR
 >>> from bioinfokit import analys, visuz, help
