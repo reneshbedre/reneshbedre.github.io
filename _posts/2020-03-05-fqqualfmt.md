@@ -2,7 +2,7 @@
 title: "FASTQ Sequence Quality Format"
 date:   2020-03-05 02:15:18
 permalink: blog/fqqualfmt.html
-author_profile: true
+author_profile: false
 classes: wide
 ---
 
@@ -26,7 +26,7 @@ classes: wide
 <p align="center">FASTQ sequence record for four sequences with quality encoding on fourth <br>line of each record (Awika et al., 2019)</p>
 </p>
 
-- <p> The PHRED quality score \( Q_{PHRED} \) of a individual nucleotide base represents the error probability \( P_{e} \) of a given nucleotide base call is incorrect and it is
+- <p> The PHRED quality score \( Q_{PHRED} \) of an individual nucleotide base represents the error probability \( P_{e} \) of a given nucleotide base call is incorrect and it is
   given as,</p> 
 
   <p align="center">
@@ -58,14 +58,15 @@ Notes:
 
 We will use `bioinfokit v0.4` or later for checking the FASTQ Sequence Quality Format.
 
-Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }}) for latest version. After installation, You can check the version using `bioinfokit.__version__`
+Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }}) for the latest version. After 
+installation, You can check the version using `bioinfokit.__version__`
 
 After installing `bioinfokit v0.4` or later, it can be used for detecting the FASTQ sequence quality format
 
 I have used the subset of FASTQ [dataset]({{"/assets/posts/fqformat/fq_18.fastq" | absolute_url }}) published in  <a href="https://www.nature.com/articles/s41598-019-45184-1">Bedre et al., 2019</a> for the analysis
 
 ```python
-# you can use interactive python interpreter, jupyter notebook or python code
+# you can use interactive python interpreter, jupyter notebook, spyder or python code
 # I am using interactive python interpreter (Python 3.7)
 >>> from bioinfokit import analys, help
 # Read documentation at https://github.com/reneshbedre/bioinfokit or
