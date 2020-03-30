@@ -1,51 +1,51 @@
 ---
-layout: posts
 title: "Volcano plot in Python"
 date:   2018-11-30 02:15:18
-author_profile: true
+author_profile: false
 permalink: blog/volcano.html
-classes: wide
-categories: blog
-tags: bioinformatics
+toc: true
+toc_label: "Page Content"
 ---
 <p>
 {% include  share.html %}
 </p>
 
-**<span style="color:#33a8ff">What is Volcano plot?</span>**
- - 2-dimensional (2D) scatter plot having a shape like volcano
- - Used to visualize and identify statistically significant gene expression changes from two different conditions (eg. normal vs. 
-   treated) in terms of log fold change (X-axis) and P-value (Y-axis)
+## <span style="color:#33a8ff">What is Volcano plot?</span>
+ - 2-dimensional (2D) scatter plot having a shape like a volcano
+ - Used to visualize and identify statistically significant gene expression changes from two different conditions 
+   (eg. normal vs. treated) in terms of log fold change (X-axis) and P-value (Y-axis)
    
-**<span style="color:#33a8ff">Applications</span>**   
- - Easy to visualize expression of thousands of genes obtained from omics research (eg. Transcriptomics, genomics, 
-   proteomics etc.) and pinpoint genes with significant changes 
+## <span style="color:#33a8ff">Applications</span>   
+ - Easy to visualize the expression of thousands of genes obtained from omics research (eg. Transcriptomics, genomics, 
+   proteomics, etc.) and pinpoint genes with significant changes 
    
-**<span style="color:#33a8ff">How to create Volcano plot in Python?</span>**
-
-For generating volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify statistically significantly
-induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
-(<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). 
-Here's you can download gene expression dataset used for generating volcano plot: 
-[dataset]({{"/assets/posts/volcano/testvolcano.csv" | absolute_url }})
+## <span style="color:#33a8ff">How to create Volcano plot in Python?</span>
+- We will use `bioinfokit v0.5` or later 
+- Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
+- For generating a volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify 
+  statistically significantly induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
+  (<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). Here's you can 
+  download gene expression dataset used for generating volcano plot: 
+  [dataset]({{"/assets/posts/volcano/testvolcano.csv" | absolute_url }})
 
 ```python
-# We will use `bioinfokit` for volcano plot.
-# download and install bioinfokit (Tested on Linux, Mac, Windows) 
-git clone https://github.com/reneshbedre/bioinfokit.git
-cd bioinfokit
-python setup.py install
-```
-
-After installing `bioinfokit`, it can be used for volcano plot,
-
-```python
-# you can use interactive python console, jupyter or python code
-# I am using interactive python console (Python 3.6)
+# you can use interactive python interpreter, jupyter notebook, spyder or python code
+# I am using interactive python interpreter (Python 3.7)
+>>> import pandas as pd
 >>> from bioinfokit import visuz
-# here you can change default parameters. 
 # Read documentation at https://github.com/reneshbedre/bioinfokit
->>> visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value")
+>>> df = pd.read_csv("https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv")
+>>> df.head()
+          GeneNames  value1  value2    log2FC       p-value
+0  LOC_Os09g01000.1    8862   32767 -1.886539  1.250000e-55
+1  LOC_Os12g42876.1    1099     117  3.231611  1.050000e-55
+2  LOC_Os12g42884.2     797      88  3.179004  2.590000e-54
+3  LOC_Os03g16920.1     274       7  5.290677  4.690000e-54
+4  LOC_Os05g47540.4     308      18  4.096862  2.190000e-54
+
+>>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value')
+# plot will be saved in same directory (volcano.png)
+# set parameter show=True, if you want view the image instead of saving
 ```
 
 Generated volcano plot by above code (green: upregulated and red: downregulated genes),
@@ -55,46 +55,68 @@ Generated volcano plot by above code (green: upregulated and red: downregulated 
 </p>
 
 
-Change color and transparency of volcano plot
+Change color of volcano plot
 ```python
 # change colormap
->>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
+>>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value', color=("#00239CFF","#E10600FF"))
 ```
 
 <p align="center">
 <img src="/assets/posts/volcano/vol2.png" width="600">
 </p>
 
+Change transparency of volcano plot
 ```python
-# change transparency
->>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"), valpha=0.5)
+>>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value', color=("#00239CFF","#E10600FF"), 
+    valpha=0.5)
 ```
 
 <p align="center">
 <img src="/assets/posts/volcano/vol3.png" width="600">
 </p>
 
-Add gene labels to the points,
+Change the shape of the points
+```python
+# add star shape
+# check more shapes at https://matplotlib.org/3.1.1/api/markers_api.html
+>>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value', color=("#00239CFF","#E10600FF"), 
+    markerdot='*')
+```
+<p align="center">
+<img src="/assets/posts/volcano/vol31.png" width="600">
+</p>
+
+Change the shape size of the points
+```python
+>>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value', color=("#00239CFF","#E10600FF"), 
+    markerdot='*', dotsize=30)
+```
+<p align="center">
+<img src="/assets/posts/volcano/vol32.png" width="600">
+</p>
+
+Add gene labels (text style) to the points,
 
 ```python
 # add gene customized labels
 # note: here you need to provide column name of gene Ids (geneid parameter)
->>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneNames",genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1") )
+# default simple text will be added
+>>> visuz.gene_exp.volcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames",
+    genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1") )
+# if you want to label all DEGs defined lfc_thr and pv_thr, set genenames='deg' 
 ```
 <p align="center">
 <img src="/assets/posts/volcano/vol4.png" width="600">
 </p>
 
-change gene label size,
+Add gene labels (box style) to the points,
 
 ```python
-# add gene customized labels
-# note: here you need to provide column name of gene Ids (geneid parameter)
->>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneNames",genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1"), gfont=12 )
+>>> visuz.gene_exp.volcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames",
+    genenames=("LOC_Os09g01000.1", "LOC_Os01g50030.1", "LOC_Os06g40940.3", "LOC_Os03g03720.1"), gstyle=2 )
 ```
-
 <p align="center">
-<img src="/assets/posts/volcano/vol5.png" width="600">
+<img src="/assets/posts/volcano/vol51.png" width="600">
 </p>
 
 Add gene names instead of gene Ids, 
@@ -102,12 +124,25 @@ Add gene names instead of gene Ids,
 # add gene customized labels
 # note: here you need to provide column name of gene Ids (geneid parameter)
 # as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
->>>visuz.volcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneNames", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
+>>> visuz.gene_exp.volcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames", 
+    genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}),
+    gstyle=2)
 ```
 
 <p align="center">
 <img src="/assets/posts/volcano/vol6.png" width="600">
 </p>
+
+Add threshold lines,
+```python
+>>> visuz.gene_exp.volcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames", 
+    genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}),
+    gstyle=2, sign_line=True)
+``` 
+<p align="center">
+<img src="/assets/posts/volcano/vol61.png" width="600">
+</p>
+
 
 
 To create a inverted volcano plot,
@@ -118,12 +153,10 @@ To create a inverted volcano plot,
 >>> from bioinfokit import visuz
 # here you can change default parameters. 
 # Read documentation at https://github.com/reneshbedre/bioinfokit
->>> visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value")
+>>> visuz.gene_exp.involcano(d=df, lfc="log2FC", pv="p-value")
 ```
 
 Generated inverted volcano plot by adding above code,
-
-<!-- ![screenshot]({{ "/assets/posts/bioinfokit_data/involcano.png" | absolute_url }}) -->
 
 <p align="center">
 <img src="/assets/posts/volcano/involcano1.png" width="600">
@@ -133,7 +166,7 @@ Generated inverted volcano plot by adding above code,
 Change color inverted volcano plot
 ```python
 # change colormap
->>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
+>>> visuz.gene_exp.involcano(d=df, lfc="log2FC", pv="p-value", color=("#00239CFF","#E10600FF"))
 ```
 <p align="center">
 <img src="/assets/posts/volcano/involcano2.png" width="600">
@@ -145,7 +178,9 @@ Add gene names instead of gene Ids,
 # add gene customized labels
 # note: here you need to provide column name of gene Ids (geneid parameter)
 # as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
->>>visuz.involcano(table="testvolcano.csv", lfc="log2FC", pv="p-value", geneid="GeneNames", genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}))
+>>> visuz.gene_exp.involcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames", 
+    genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}), 
+    gstyle=2)
 ```
 
 <p align="center">
@@ -162,6 +197,6 @@ Add gene names instead of gene Ids,
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: December 21, 2019</i> </span>
+<span style="color:#9e9696"><i> Last updated: March 28, 2020</i> </span>
 
 
