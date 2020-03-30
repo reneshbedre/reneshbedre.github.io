@@ -2,7 +2,7 @@
 title: "One-way ANOVA using Python"
 date:   2020-01-31 06:18:08
 permalink: blog/oanova.html
-author_profile: true
+author_profile: false
 classes: wide
 ---
 
@@ -15,15 +15,7 @@ Read basic about, [one-way ANOVA analysis]({{"/blog/anova.html" | absolute_url }
 
 We will use bioinfokit for performing one-way ANOVA analysis
 
-**<span style="color:#33a8ff">Install bioinfokit</span>**
-```python
-# We will use `bioinfokit` 
-# download and install bioinfokit (Tested on Linux, Mac, Windows) 
-# read instructions https://github.com/reneshbedre/bioinfokit
-git clone https://github.com/reneshbedre/bioinfokit.git
-cd bioinfokit
-python setup.py install
-```   
+Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 
 Example data for one-way ANOVA analysis, [dataset]({{"/assets/posts/anova/onewayanova.txt" | absolute_url }})
 
@@ -105,24 +97,21 @@ Bartlett (P-value): 0.1278253399753447
 significant (P=0.000026), and therefore, we conclude that there are 
 significant differences among treatments.
 
-Above results from Tukey HSD suggests that except A-C, all other 
-pairwise comparisons for treatments rejects null hypothesis and 
-indicates statistical significant differences.
+The above results from Tukey HSD suggest that except for A-C, all other pairwise comparisons for treatments reject 
+the null hypothesis and indicate statistically significant differences.
 
-The <b>Shapiro-Wilk test</b> can be used to check the <b> normal 
-distribution of residuals </b>. <i>Null hypothesis</i>: 
-data is drawn from normal distribution.
-As the P-value is non significant (P=0.72), we fail to reject null 
-hypothesis and conclude that data is drawn from normal distribution.
+The Shapiro-Wilk test can be used to check the normal distribution of residuals. Null hypothesis: data is drawn from a 
+normal distribution. As the P-value is non-significant (P=0.72), we fail to reject the null hypothesis and conclude 
+that data is drawn from the normal distribution.
 
-Use Bartlett’s test to check the <b>Homogeneity of variances</b>.
+Use Bartlett’s test to check the <b>homogeneity of variances</b>.
  <i>Null hypothesis</i>: samples from populations 
 have equal variances.
-As the P-value (P=0.12) is non significant, we fail to reject null 
+As the P-value (P=0.12) is non-significant,, we fail to reject the null 
 hypothesis and conclude that treatments have equal variances.
 
 Note: <b>Levene test</b> can be used to check the Homogeneity of variances
-when the data is not drawn from normal distribution.
+when the data is not drawn from a normal distribution.
 
 <p>
 {% include  cite.html %}
