@@ -492,6 +492,10 @@ Regression plot image in same directory (reg_plot.png)
  24;30(12):4250-65.
 
 <p>
+{% include  cite.html %}
+</p>
+
+<p>
 {% include  share.html %}
 </p>
 
