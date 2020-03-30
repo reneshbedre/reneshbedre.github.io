@@ -1,5 +1,5 @@
 ---
-title: "Linear Regression"
+title: "Linear Regression in Python"
 date:   2020-03-23 02:15:18
 permalink: blog/linearreg.html
 author_profile: false
