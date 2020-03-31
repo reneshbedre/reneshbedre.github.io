@@ -39,7 +39,7 @@ toc_label: "Page Content"
  - Observations should be independent of each other. Data collection for each variable should
    not be influenced.
  - Relationship between the X and Y variables should be linear
- - Errors (residuals) should be randomly distributed
+ - Errors (residuals) should be normally distributed
  - Errors (residuals) should have equal variance (Homoscedasticity)
  
 ## <span style="color:#33a8ff">Linear Regression (LR) Outputs</span> 
@@ -214,8 +214,8 @@ the regression data
 </p>
 
 From the plot, 
-- As the data is pretty equally distributed around the line=0 in the residual plot, it meets the assumption of equal 
-  variances. The outliers could be detected here if the data lies far away from the line=0.
+- As the data is pretty equally distributed around the line=0 in the residual plot, it meets the assumption of residual 
+  equal variances. The outliers could be detected here if the data lies far away from the line=0.
 - In the standardized residual plot, the residuals are within -2 and +2 range and suggest that it meets assumptions of 
   linearity
   
@@ -248,9 +248,7 @@ From the plot,
 </p>
 
 From the plot, 
-- As the standardized residuals lie around the 45-degree line, the observed data meets the assumption of data
-  normality.
-  
+- As the standardized residuals lie around the 45-degree line, it suggests that the residuals are normally distributed  
 <p>
 {% include  cite.html %}
 </p>
