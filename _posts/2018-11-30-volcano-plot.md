@@ -5,6 +5,9 @@ author_profile: false
 permalink: blog/volcano.html
 toc: true
 toc_label: "Page Content"
+tags:
+  - Genomic visualization
+  - Gene expression
 ---
 <p>
 {% include  share.html %}

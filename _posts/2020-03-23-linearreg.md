@@ -5,6 +5,8 @@ permalink: blog/linearreg.html
 author_profile: false
 toc: true
 toc_label: "Page Content"
+tags:
+  - Supervised machine learning
 ---
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
