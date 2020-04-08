@@ -1,0 +1,38 @@
+Parameters specified for filtering
+===============================================
+
+Mean quality value threshold                      	20
+Minimum size of reads                             	0
+Filtering mode for quality value                  	Filter
+
+
+Filtering Statistics for given Paired end files
+==================================================================================================================================
+
+Input file                                                       	test/1_S1_L001_R1_001.fastq	test/1_S1_L001_R2_001.fastq
+Quality format                                                   	illumina 1.8+       	illumina 1.8+       
+Total number of reads analyzed                                   	1404445             	1404445             
+Total Bases (ATGC) in unfiltered reads (bp)                      	210650292           	210631883           
+Total Bases (ATGC) in filtered reads (bp)                        	208077200           	208058859           
+Minimum size (bp) of unfiltered reads                            	150.0               	150.0               
+Maximum size (bp) of unfiltered reads                            	150.0               	150.0               
+Mean size (bp) of unfiltered reads                               	150.0               	150.0               
+Average Quality value for unfiltered reads                       	38.47137614265184   	35.76466955511489   
+Average Quality value for filtered reads                         	38.53709799263022   	35.9805828926654    
+Total number of reads below minimum size                         	0                   	0                   
+Total unfiltered reads containing at least one uncalled base(N)  	15546               	32221               
+Total filtered reads containing at least one uncalled base(N)    	15154               	31817               
+Reads filtered out with more than given % of N                   	0                   	0                   
+Reads filtered out for quality                                   	121                 	17060               
+Average %GC content in unfiltered reads                          	37.220855213269296  	37.22066486524333   
+Average %GC content in filtered reads                            	37.2008383743438    	37.165472490211116  
+Total unfiltered reads with >Q30 mean quality value              	1352149             	1186539             
+Total filtered reads with >Q30 mean quality value                	1339259             	1186495             
+Total number of reads kept                                       	1387288             	1387288             
+Minimum size (bp) of filtered reads                              	150.0               	150.0               
+Maximum size (bp) of filtered reads                              	150.0               	150.0               
+Mean size (bp) of filtered reads                                 	150.0               	150.0               
+
+
+
+The total number of sequences removed:17157
