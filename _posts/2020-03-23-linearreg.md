@@ -11,8 +11,8 @@ tags:
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 ## <span style="color:#33a8ff">What is Linear Regression (LR)?</span>
-- Linear regression (LR) models the relationship between the explanatory/independent/predictor (X) variable with that
-  of dependent/response/criterion variable (Y)
+- Linear regression (LR) models the relationship between the explanatory/independent/predictor/regressor/exogeneous (X) variable with that
+  of dependent/response/criterion/endogeneous variable (Y)
 - For example, how the likelihood of blood pressure is influenced by a person's age and weight. This relationship can 
   be explained using linear regression
 - In LR, the Y variable should be continuous whereas the X variable can be continuous or categorical. If both X and Y 
@@ -22,14 +22,14 @@ tags:
 - LR is helpful to predict the value of Y based on the value of the X variable
 
 ## <span style="color:#33a8ff">Types of Linear Regression (LR)?</span>
-- <u>Univariable LR</u>: Linear relationships between Y and X variables can be explained by single X variable 
+- <u>Univariate LR</u>: Linear relationships between Y and X variables can be explained by single X variable
 
  <p align="center">
   \( Y = a + bX + \epsilon \) <br>
   Where, a = y-intercept, b = slope of the regression line and \( \epsilon \) = error term (residuals)
   </p>
   
-- <u>Multivariable (Multiple) LR</u>: Linear relationships between Y and X variables can be explained by multiple X variables
+- <u>Multiple LR</u>: Linear relationships between Y and X variables can be explained by multiple X variables
 
     <p align="center">
       \( Y = a + b_1X_1 + b_2X_2 + b_3X_3 + ... + b_nX_n + \epsilon \) <br>
@@ -42,7 +42,9 @@ tags:
    not be influenced.
  - Relationship between the X and Y variables should be linear
  - Errors (residuals) should be normally distributed
- - Errors (residuals) should have equal variance (Homoscedasticity)
+ - Errors (residuals) should have equal variance (Homoscedasticity). It means residual variance
+   should be same for each observation.
+- Mean of Errors (residuals) should be 0
  
 ## <span style="color:#33a8ff">Linear Regression (LR) Outputs</span> 
 ### Correlation coefficient (r)  

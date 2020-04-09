@@ -4,6 +4,8 @@ date:   2020-03-05 02:15:18
 permalink: blog/fqqualfmt.html
 author_profile: false
 classes: wide
+tags:
+  - High-throughput sequence analysis
 ---
 
 
