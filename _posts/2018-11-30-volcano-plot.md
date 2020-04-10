@@ -3,8 +3,7 @@ title: "Volcano plot in Python"
 date:   2018-11-30 02:15:18
 author_profile: false
 permalink: blog/volcano.html
-toc: true
-toc_label: "Page Content"
+classes: wide
 tags:
   - Genomic visualization
   - Gene expression
@@ -23,7 +22,7 @@ tags:
    proteomics, etc.) and pinpoint genes with significant changes 
    
 ## <span style="color:#33a8ff">How to create Volcano plot in Python?</span>
-- We will use `bioinfokit v0.5` or later 
+- We will use `bioinfokit v0.6` or later
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 - For generating a volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify 
   statistically significantly induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
@@ -31,13 +30,13 @@ tags:
   download gene expression dataset used for generating volcano plot: 
   [dataset]({{"/assets/posts/volcano/testvolcano.csv" | absolute_url }})
 
+
 ```python
 # you can use interactive python interpreter, jupyter notebook, spyder or python code
 # I am using interactive python interpreter (Python 3.7)
->>> import pandas as pd
->>> from bioinfokit import visuz
-# Read documentation at https://github.com/reneshbedre/bioinfokit
->>> df = pd.read_csv("https://reneshbedre.github.io/assets/posts/volcano/testvolcano.csv")
+>>> from bioinfokit import analys, visuz
+# load dataset as pandas dataframe
+>>> df = analys.get_data('volcano').data
 >>> df.head()
           GeneNames  value1  value2    log2FC       p-value
 0  LOC_Os09g01000.1    8862   32767 -1.886539  1.250000e-55
@@ -147,6 +146,22 @@ Add threshold lines,
 </p>
 
 
+Change X and Y range ticks, font size and name for tick labels
+```python
+>>> visuz.gene_exp.volcano(d=df, lfc="log2FC", pv="p-value", geneid="GeneNames", 
+    genenames=({"LOC_Os09g01000.1":"EP", "LOC_Os01g50030.1":"CPuORF25", "LOC_Os06g40940.3":"GDH", "LOC_Os03g03720.1":"G3PD"}),
+    gstyle=2, sign_line=True, xlm=(-6,6,1), ylm=(0,61,5), figtype='svg', axtickfontsize=10,
+    axtickfontname='Verdana')
+```
+<p align="center">
+<img src="/assets/posts/volcano/vol7.svg" width="600">
+</p>
+
+In addition to these parameters, the parameters for figure type (`figtype`), X and Y axis ticks range (`xlm`, `ylm`), axis labels (`axxlabel`, `axylabel`),  
+axis labels font size  (`axlabelfontsize`), and axis tick labels font size and name (`axtickfontsize`, `axtickfontname`)
+can be provided.
+
+
 
 To create a inverted volcano plot,
 
@@ -190,6 +205,9 @@ Add gene names instead of gene Ids,
 <img src="/assets/posts/volcano/involcano3.png" width="600">
 </p>
 
+In addition to these parameters, the parameters for figure type (`figtype`), axis labels (`axxlabel`, `axylabel`), axis labels
+font size (`axlabelfontsize`), and axis tick labels font size and name (`axtickfontsize`,  `axtickfontname`)
+can be provided.
 
 <p>
 {% include  cite.html %}
@@ -200,6 +218,6 @@ Add gene names instead of gene Ids,
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: March 28, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: April 9, 2020</i> </span>
 
 

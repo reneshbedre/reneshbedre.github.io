@@ -42,14 +42,11 @@ tags:
 - The y-intercept (a) is a constant and slope (b) of regression line is a regression coefficient.
  
 ## <span style="color:#33a8ff">Linear Regression (LR) Assumptions</span>
- - Observations should be independent of each other. Data collection for each variable should
-   not be influenced.
  - Relationship between the X and Y variables should be linear
- - Errors (residuals) should be normally distributed
- - Errors (residuals) should have equal variance (Homoscedasticity). It means residual variance
-   should be same for each observation.
-- Mean of Errors (residuals) should be 0
- 
+ - Errors (residuals) should be independent of each other
+ - Errors (residuals) should be normally distributed with mean of 0
+ - Errors (residuals) should have equal variance (Homoscedasticity)
+
 ## <span style="color:#33a8ff">Linear Regression (LR) Outputs</span> 
 ### Correlation coefficient (r)  
 - r describes a linear relationship between X and Y variables
@@ -77,7 +74,7 @@ tags:
   across the predicted regression line
  
 ## <span style="color:#33a8ff">Linear Regression (LR) in Python</span>
-- We will use `bioinfokit v0.5` or later for performing LR.
+- We will use `bioinfokit v0.6` or later for performing LR.
 - Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }}) for latest version.
 - Download [dataset]({{"/assets/posts/reg/test_reg_uni.csv" | absolute_url }})
 
@@ -86,9 +83,10 @@ tags:
 ```python
 # you can use interactive python interpreter, jupyter notebook, spyder or python code
 # I am using interactive python interpreter (Python 3.7)
->>> import pandas as pd
-# load dataset
->>> df = pd.read_csv("https://reneshbedre.github.io/assets/posts/reg/test_reg_uni.csv")
+>>> from bioinfokit import analys, visuz
+# load dataset as pandas dataframe
+# should not have missing values (NaN)
+>>> df = analys.get_data('slr').data
 >>> df.head()
    X1    Y
 0  25  670
@@ -99,9 +97,6 @@ tags:
 # if dataframe has any missing data (NaN), drop it using df.dropna()
 
 # run LR
->>> from bioinfokit import analys, visuz, help
-# Read documentation at 
-# https://reneshbedre.github.io/blog/howtoinstall.html
 >>> reg = analys.stat()
 # LR with one independent variable
 >>> reg.lin_reg(df=df, x=["X1"], y=["Y"])
@@ -118,10 +113,8 @@ Regression Summary:
 Dependent variables                       ['X1']
 Independent variables                     ['Y']
 Coefficient of determination (r-squared)  0.918
-Adjusted r-squared)                       0.9141
-Correlation coefficient (r)               0.9581
+Adjusted r-squared                        0.9141
 Root Mean Square Error (RMSE)             6.6718
-Adjusted r-squared)                       0.9141
 Mean of Y                                 639.3913
 Residual standard error                   6.9808
 No. of Observations                       23
@@ -197,9 +190,6 @@ Generate regression plot,
 <u>Residuals vs fitted (y_hat) plot</u>: This plot used to check for linearity, variances and outliers in
 the regression data
 ```python
-# you can use interactive python interpreter, jupyter notebook, spyder or python code
-# I am using interactive python interpreter (Python 3.7)
->>> import pandas as pd
 # get residuals and standardized residuals and add to original dataframe
 >>> df['res']=reg.residuals
 >>> df['std_res']=reg.std_residuals
@@ -265,4 +255,4 @@ From the plot,
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: March 30, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: April 10, 2020</i> </span>
