@@ -16,15 +16,6 @@ requirement for `bioinfokit` below,
 
 ## <span style="color:#33a8ff">How to install?</span>
 
-`bioinfokit` requires
-- Python 3
-- NumPy
-- scikit-learn
-- seaborn
-- pandas
-- matplotlib
-- SciPy
-
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
 ```python
