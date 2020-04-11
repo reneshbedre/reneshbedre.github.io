@@ -88,7 +88,7 @@ Change the shape of the points
 <img src="/assets/posts/volcano/vol31.png" width="600">
 </p>
 
-Change the shape size of the points
+Change the shape and size of the points
 ```python
 >>> visuz.gene_exp.volcano(d=df, lfc='log2FC', pv='p-value', color=("#00239CFF","#E10600FF"), 
     markerdot='*', dotsize=30)
