@@ -4,7 +4,8 @@ date:   2020-01-31 06:18:08
 permalink: blog/oanova.html
 author_profile: false
 classes: wide
----
+published: false
+----------------
 
 <p>
 {% include  share.html %}
