@@ -336,9 +336,8 @@ Reverse complement of original DNA sequence
 
 <a href="https://reneshbedre.github.io/blog/revcom.html" target="_blank">Working example</a>
 
-### Two sample t-test with equal and unequal variance
-
-`bioinfokit.analys.stat.ttsam(table, xfac, res, evar)`
+### Two sample and Welch's t-test
+`bioinfokit.analys.stat.ttsam(table, xfac, res, evar, alpha)`
 
 Parameters | Description
 ------------ | -------------
@@ -346,6 +345,7 @@ Parameters | Description
 `xfac` | Independent group column name with two levels [string][default: None]
 `res` | Response variable column name [string][default: None]
 `evar` | t-test with equal variance [bool (True or False)][default: True]
+`alpha` | Confidence level [float][default: 0.05]
 
 Returns:
 
