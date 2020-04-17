@@ -5,7 +5,7 @@ permalink: blog/oanova.html
 author_profile: false
 classes: wide
 published: false
-----------------
+---
 
 <p>
 {% include  share.html %}

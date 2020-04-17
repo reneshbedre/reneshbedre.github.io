@@ -52,8 +52,8 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : algolia # lunr (default), algolia, google
+search_full_content      : true # true, false (default)
+search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : '0RGCO6WR5G' # YOUR_APPLICATION_ID
   index_name             : 'prod_reneshweb' # YOUR_INDEX_NAME
