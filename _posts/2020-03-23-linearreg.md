@@ -162,6 +162,7 @@ Generate regression plot,
 
 ```python
 >>> import pandas as pd
+>>> from bioinfokit import visuz
 # get predicted Y and add to original dataframe
 >>> df['yhat']=reg.y_hat
 >>> df.head()
