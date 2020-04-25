@@ -7,7 +7,6 @@ toc: true
 toc_label: "Page Content"
 tags:
   - Supervised machine learning
-published: false
 ---
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
@@ -75,19 +74,19 @@ published: false
   across the predicted regression line
  
 ## <span style="color:#33a8ff">Linear Regression (LR) in Python</span>
-- We will use `bioinfokit v0.6` or later for performing LR.
+- We will use `bioinfokit v0.7.1` or later for performing LR.
 - Check [How to install bioinfokit]({{"/blog/howtoinstall.html" | absolute_url }}) for latest version.
 - Download [dataset]({{"/assets/posts/reg/test_reg_uni.csv" | absolute_url }})
 
 ### Perform Linear Regression (LR) 
 
 ```python
-# you can use interactive python interpreter, jupyter notebook, spyder or python code
-# I am using interactive python interpreter (Python 3.7)
->>> from bioinfokit import analys, visuz
+# you can use interactive python interpreter, jupyter notebook, google colab, spyder or python code
+# I am using interactive python interpreter (Python 3.8.2)
+>>> from bioinfokit.analys import stat, get_data
 # load dataset as pandas dataframe
 # should not have missing values (NaN)
->>> df = analys.get_data('slr').data
+>>> df = get_data('slr').data
 >>> df.head()
    X1    Y
 0  25  670
@@ -95,11 +94,9 @@ published: false
 2  18  635
 3  15  625
 4  20  640
-# if dataframe has any missing data (NaN), drop it using df.dropna()
 
-# run LR
->>> reg = analys.stat()
 # LR with one independent variable
+>>> reg= stat()
 >>> reg.lin_reg(df=df, x=["X1"], y=["Y"])
 
 # output
@@ -124,8 +121,8 @@ Regression Coefficients:
 
 Parameter      Estimate    Std Error    t-value    P-value Pr(>|t|)
 -----------  ----------  -----------  ---------  ------------------
-Intercept     569.092         4.8094   118.329           2.3837e-32
-X1              3.75149       0.2446    15.3373          3.1377e-13
+Intercept     569.092         4.8094   118.329           3.7802e-31
+X1              3.75149       0.2446    15.3373          7.0019e-13
 
 
 ANOVA Summary:
@@ -164,8 +161,6 @@ Total       22       12485.5
 Generate regression plot,
 
 ```python
-# you can use interactive python interpreter, jupyter notebook, spyder or python code
-# I am using interactive python interpreter (Python 3.7)
 >>> import pandas as pd
 # get predicted Y and add to original dataframe
 >>> df['yhat']=reg.y_hat
@@ -256,4 +251,4 @@ From the plot,
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: April 10, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: April 25, 2020</i> </span>
