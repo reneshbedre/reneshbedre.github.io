@@ -11,8 +11,7 @@ toc_label: "Page Content"
 {% include  share.html %}
 </p>
 
-bioinfokit can be installed using pip and git. Before installing, please check the
-requirement for `bioinfokit` below,
+bioinfokit can be installed using pip, easy_install and git. 
 
 ## <span style="color:#33a8ff">How to install?</span>
 
