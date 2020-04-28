@@ -11,7 +11,7 @@ toc_label: "Page Content"
 {% include  share.html %}
 </p>
 
-bioinfokit can be installed using pip, easy_install and git. 
+bioinfokit can be installed using pip, easy_install and git.
 
 ## <span style="color:#33a8ff">How to install?</span>
 
@@ -479,9 +479,12 @@ Regression plot image in same directory (reg_plot.png)
 - Wes McKinney. Data Structures for Stati
 
 ### bioinfokit cited by:
-- Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform 
- Effects on Regeneration by Pulmonary Basal Cells as Evaluated by Single-Cell RNA Sequencing. Cell Reports. 2020 Mar 
- 24;30(12):4250-65.
+- Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
+  bioRxiv 2020.04.23.057786; doi: https://doi.org/10.1101/2020.04.23.057786
+- Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform
+  Effects on Regeneration by Pulmonary Basal Cells as Evaluated by Single-Cell RNA Sequencing. Cell Reports. 2020 Mar
+  24;30(12):4250-65.
+
 
 <p>
 {% include  cite.html %}
