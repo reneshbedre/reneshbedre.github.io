@@ -4,6 +4,8 @@ date:   2020-04-29 06:18:08
 author_profile: true
 permalink: blog/newfeaturespython39.html
 classes: wide
+tags:
+  - Python
 ---
 <p>
 {% include  share.html %}
