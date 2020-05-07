@@ -4,6 +4,8 @@ date:   2019-11-05 010:19:20
 permalink: blog/mplib.html
 author_profile: true
 classes: wide
+tags:
+  - Python
 ---
 
 <p>
