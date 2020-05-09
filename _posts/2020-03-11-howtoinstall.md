@@ -292,15 +292,33 @@ Bar-dot plot image in same directory (bardot.png)
 
 ### Merge VCF files
 
-`bioinfokit.analys.mergevcf(file)`
+`bioinfokit.analys.marker.mergevcf(file)`
 
 Parameters | Description
 ------------ | -------------
-`file` | Multiple vcf files and separate them by comma
+`file` | Multiple vcf files separated by comma
 
 Returns:
 
 Merged VCF file (merge_vcf.vcf)
+
+<a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
+
+### Split VCF file
+
+`bioinfokit.analys.marker.splitvcf(file)`
+
+Split single VCF file containing variants for all chromosomes into individual file containing variants for each chromosome
+
+Parameters | Description
+------------ | -------------
+ `file` | VCF file to split
+ `id` | chromosome id column in VCF file [string][default='#CHROM']
+
+
+Returns:
+
+VCF files for each chromosome
 
 <a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
 
