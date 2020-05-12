@@ -40,7 +40,7 @@ tags:
       Where, a = y-intercept, b = slope of the regression line and \( \epsilon \) = error term (residuals)
       </p>
 - The y-intercept (a) is a constant and slope (b) of regression line is a regression coefficient.
-- <a href='https://reneshbedre.github.io/blog/mlr.html', target='_blank'>How to perform multiple linear regression?</a>
+- <a href="https://reneshbedre.github.io/blog/mlr.html", target="_blank">How to perform multiple linear regression?</a>
  
 ## <span style="color:#33a8ff">Linear Regression (LR) Assumptions</span>
  - Relationship between the X and Y variables should be linear
@@ -247,7 +247,7 @@ From the plot,
 - As the standardized residuals lie around the 45-degree line, it suggests that the residuals are normally distributed
 
 
-Check for <a href='https://reneshbedre.github.io/blog/mlr.html', target='_blank'>How to perform multiple linear regression?</a>
+Check for <a href="https://reneshbedre.github.io/blog/mlr.html", target="_blank">How to perform multiple linear regression?</a>
 
 <p>
 {% include  cite.html %}
