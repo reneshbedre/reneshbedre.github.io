@@ -513,4 +513,4 @@ Regression plot image in same directory (reg_plot.png)
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: April 9, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: May 14, 2020</i> </span>
