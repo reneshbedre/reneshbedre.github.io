@@ -488,6 +488,20 @@ Regression plot image in same directory (reg_plot.png)
 
 <a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
 
+### GFF3 to GTF file format conversion
+
+`bioinfokit.analys.gff.gff_to_gtf(file)`
+
+Parameters | Description
+------------ | -------------
+`file` | GFF3 genome annotation file
+
+Returns:
+
+GTF format genome annotation file (file.gtf will be saved in same directory)
+
+<a href="https://reneshbedre.github.io/blog/gffgtf.html" target="_blank">Working Example</a>
+
 ### References:
 - Travis E. Oliphant. A guide to NumPy, USA: Trelgol Publishing, (2006).
 - John D. Hunter. Matplotlib: A 2D Graphics Environment, Computing in Science & Engineering, 9, 90-95 (2007), DOI:10.1109/MCSE.2007.55 (publisher link)
