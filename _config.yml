@@ -123,7 +123,7 @@ author:
       # url: "https://instagram.com/"
     - label: "CV"
       icon: "ai ai-cv-square"
-      url: "assets/scipapers/Bedre_CV.pdf"
+      url: "/assets/cv/Bedre_CV_May12020.pdf"
 
 # Site Footer
 footer:
