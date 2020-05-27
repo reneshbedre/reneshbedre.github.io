@@ -1,7 +1,7 @@
 ---
 title: "Volcano plot in Python"
 date:   2018-11-30 02:15:18
-author_profile: false
+author_profile: true
 permalink: blog/volcano.html
 classes: wide
 tags:
