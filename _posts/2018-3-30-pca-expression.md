@@ -56,11 +56,11 @@ tags:
 # standardization is necessary as it removes the biases in the original variables. For example,
 # when the data for each variable is collected on different units. The standardized variables 
 # will be unitless and have a similar variance. 
-# at some cases, the dataset needs not to be standardized and the original variation in dataset
+# At some cases, the dataset needs not to be standardized as the original variation in dataset
 # is important (Gewers et al., 2018)
 # this is an optional step
 >>> df_st =  StandardScaler().fit_transform(df)  
-# see few rows of standardize dataset
+# see few rows of standardized dataset
 >>> pd.DataFrame(df_st, columns=df.columns).head()
           A         B         C         D         E         F
 0  0.619654  0.448280 -0.240867  2.457058  2.304732 -0.331489
@@ -180,7 +180,7 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   cumulative 70% variation is common to retain the PCs for analysis (Jolliffe et al., 2016). Even though the first four PCs contribute  ~99%
   and have eigenvalues > 1, it will be difficult to visualize them at once and needs to perform pairwise visualization.
 - From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster. Similarly, A and B are
-  highly correlated and forms another cluster. If the variables are highly associated, the angle between the variable vectors
+  highly associated and forms another cluster. If the variables are highly associated, the angle between the variable vectors
   should be as small as possible in the biplot.
 
 
