@@ -36,7 +36,7 @@ tags:
 
 ```python
 # you can use interactive python console, jupyter or python code
-# I am using interactive python console (Python 3.6)
+# I am using interactive python console (Python 3.7.4)
 >>> from sklearn.decomposition import PCA
 >>> from sklearn.preprocessing import StandardScaler
 >>> from bioinfokit.analys import get_data
