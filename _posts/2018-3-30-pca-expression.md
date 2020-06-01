@@ -29,7 +29,7 @@ tags:
 
 
 ## <span style="color:#33a8ff">Perform PCA in Python</span>
-- we will use sklearn and bioinfokit (v0.8.1 or later) packages for PCA and visualization
+- we will use sklearn and bioinfokit (v0.8.2 or later) packages for PCA and visualization
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 - Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data published in
   <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
