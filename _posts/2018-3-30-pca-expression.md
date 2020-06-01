@@ -1,17 +1,200 @@
 ---
 title: "Principal component analysis (PCA) analysis and visualization using Python"
 date:   2018-03-30 06:18:08
-author_profile: false
+author_profile: true
 permalink: blog/pca_3d.html
+classes: wide
 tags:
   - Unsupervised machine learning
   - Clustering
+  - Exploratory data analysis
 ---
 
 <p>
 {% include  share.html %}
 </p>
 
+## <span style="color:#33a8ff">What is PCA?</span>
+
+- PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the variation in
+  high-dimensional interrelated dataset (dataset with a large number of variables)
+- PCA reduces the high-dimensional data to low-dimension by linearly transforming the old variable into a new set of variables called
+  principal component (PC) while retaining the most possible variation. The PCs are easy to visualize and summarise the features
+  of original high-dimensional datasets in low-dimensional space
+- For example, when datasets contain 10 variables (10D), it is arduous to visualize them at the same time
+  (you may have to do 45 pairwise comparisons to interpret dataset effectively). PCA transforms them into a new set of
+  variables (PCs) with top PCs having the highest variation. PCs are ordered which means that the first few PCs
+  (generally first 3 PCs) contribute most of the variance present in the the original high-dimensional dataset. These top first 2 or 3 PCs can be plotted
+  easily and summarize and the features of all original 10 variables.
+
+
+## <span style="color:#33a8ff">Perform PCA in Python</span>
+- we will use sklearn and bioinfokit (v0.8.1 or later) packages for PCA and visualization
+- Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
+- Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data published in
+  <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
+
+```python
+# you can use interactive python console, jupyter or python code
+# I am using interactive python console (Python 3.6)
+>>> from sklearn.decomposition import PCA
+>>> from sklearn.preprocessing import StandardScaler
+>>> from bioinfokit.analys import get_data
+>>> import numpy as np
+>>> import pandas as pd
+# load dataset as pandas dataframe
+>>> df = get_data('gexp').data
+>>> df.head()
+         A         B         C          D          E         F
+0  4.50570  3.260360 -1.249400   8.898070   8.059550 -0.842803
+1  3.50856  1.660790 -1.856680  -2.573360  -1.373700  1.196000
+2  4.44701  3.411940 -1.040870  10.271195  10.517256  0.272272
+3  2.16003  3.146520  0.982809   9.024300   6.058320 -2.967420
+4  2.35701  0.452589 -1.910680  12.984239  10.019605 -2.939020
+
+# standardize dataset with (mean=0, variance=1) scale
+# standardization is necessary as it removes the biases in the original variables. For example,
+# when the data for each variable is collected on different units. The standardized variables 
+# will be unitless and have a similar variance. 
+# at some cases, the dataset needs not to be standardized and the original variation in dataset
+# is important (Gewers et al., 2018)
+# this is an optional step
+>>> df_st =  StandardScaler().fit_transform(df)  
+# see few rows of standardize dataset
+>>> pd.DataFrame(df_st, columns=df.columns).head()
+          A         B         C         D         E         F
+0  0.619654  0.448280 -0.240867  2.457058  2.304732 -0.331489
+1  0.342286 -0.041499 -0.428652 -1.214732 -0.877151  0.474930
+2  0.603329  0.494693 -0.176385  2.896569  3.133729  0.109563
+3 -0.032825  0.413423  0.449383  2.497462  1.629707 -1.171850
+4  0.021968 -0.411444 -0.445350  3.764964  2.965869 -1.160617
+
+# perform PCA
+>>> pca_out = PCA().fit(df_st)
+
+# get the component variance
+# Proportion of Variance (from PC1 to PC6)
+>>> pca_out.explained_variance_ratio_
+array([0.2978742 , 0.27481252, 0.23181442, 0.19291638, 0.00144353,
+       0.00113895])
+
+# Cumulative proportion of variance (from PC1 to PC6)   
+>>> np.cumsum(pca_out.explained_variance_ratio_)
+array([0.2978742 , 0.57268672, 0.80450114, 0.99741752, 0.99886105,
+       1.        ])
+       
+# get component loadings (correlation coefficient between original variables and the component) 
+>>> loadings = pca_out.components_
+>>> num_pc = pca_out.n_features_
+>>> pc_list = ["PC"+str(i) for i in list(range(1, num_pc+1))]
+>>> loadings_df = pd.DataFrame.from_dict(dict(zip(pc_list, loadings)))
+>>> loadings_df['variable'] = df.columns.values
+>>> loadings_df = loadings_df.set_index('variable')
+>>> loadings_df
+               PC1       PC2       PC3       PC4       PC5       PC6
+variable
+A        -0.510898  0.452234  0.227356 -0.323464  0.614881  0.008372
+B        -0.085908  0.401197  0.708556  0.132788 -0.558448 -0.010616
+C         0.477477 -0.100994  0.462437  0.487951  0.556605  0.007893
+D         0.370318  0.611485 -0.308295  0.054973 -0.007642  0.625159
+E         0.568491  0.300118 -0.011775 -0.484115  0.009382 -0.593425
+F         0.208090 -0.400426  0.370440 -0.634234 -0.010111  0.506732
+
+# get eigenvalues (from PC1 to PC6)  
+# generally, PCs with eigenvalues > 1 contributes greater variance and helps to retain the
+# PCs for the analysis 
+>>> pca_out.explained_variance_
+array([1.78994905, 1.65136965, 1.39299071, 1.15924943, 0.0086743 ,
+       0.00684401])
+
+# get scree plot (for scree or elbow test)
+# scree plot is useful to determine how many components need to considered for 
+# visualizing the data
+# generally, keep up to first 3 PCs which cumulatively explains the most variance
+>>> from bioinfokit.visuz import cluster
+>>> cluster.screeplot(obj=[pc_list, pca_out.explained_variance_ratio_])
+# Scree plot will be saved in the same directory with name screeplot.png
+
+# get PCA loadings plots (2D and 3D)
+# 2D
+>>> cluster.pcaplot(x=loadings[0], y=loadings[1], labels=df.columns.values, 
+    var1=round(pca_out.explained_variance_ratio_[0]*100, 2),
+    var2=round(pca_out.explained_variance_ratio_[1]*100, 2))
+
+# 3D
+>>> cluster.pcaplot(x=loadings[0], y=loadings[1], z=loadings[2],  labels=df.columns.values, 
+    var1=round(pca_out.explained_variance_ratio_[0]*100, 2), var2=round(pca_out.explained_variance_ratio_[1]*100, 2), 
+    var3=round(pca_out.explained_variance_ratio_[2]*100, 2))
+```
+Generated Scree plot,
+<p align="center">
+<img src="/assets/posts/pca/screeplot.svg" width="600">
+</p>
+
+Generated 2D PCA loadings plot (2 PCs) plot,
+<p align="center">
+<img src="/assets/posts/pca/pcaplot_2d.svg" width="600">
+</p>
+
+Generated 3D PCA loadings plot (3 PCs) plot,
+<p align="center">
+<img src="/assets/posts/pca/pcaplot_3d.svg" width="600">
+</p>
+
+## <span style="color:#33a8ff">PCA biplot</span>
+- In biplot, the PC loadings and scores are plotted in a single figure
+- biplots are useful to visualize the relationships between variables and observations
+
+```python
+# get PC scores
+>>> pca_scores = PCA().fit_transform(df_st)
+
+# get 2D biplot
+>>> cluster.biplot(cscore=pca_scores, loadings=loadings, labels=df.columns.values, var1=round(pca_out.explained_variance_ratio_[0]*100, 2),
+    var2=round(pca_out.explained_variance_ratio_[1]*100, 2))
+    
+# get 3D biplot
+>>> cluster.biplot(cscore=pca_scores, loadings=loadings, labels=df.columns.values, 
+    var1=round(pca_out.explained_variance_ratio_[0]*100, 2), var2=round(pca_out.explained_variance_ratio_[1]*100, 2), 
+    var3=round(pca_out.explained_variance_ratio_[2]*100, 2))
+```
+
+Generated 2D biplot,
+<p align="center">
+<img src="/assets/posts/pca/biplot_2d.svg" width="600">
+</p>
+
+Generated 3D biplot,
+<p align="center">
+<img src="/assets/posts/pca/biplot_3d.svg" width="600">
+</p>
+
+In addition to these features, we can also control the label fontsize,
+figure size, resolution, figure format, and other many parameters for scree plot, loadings plot and biplot.
+
+Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>usage</a>
+
+## <span style="color:#33a8ff">PCA interpretation</span>
+- The first three PCs (3D) contribute  ~81% of the total variation in the dataset  and have eigenvalues > 1, and thus provides a
+  good approximation of the variation present in the original 6D dataset (see the cumulative proportion of variance and scree plot). The cut-off of
+  cumulative 70% variation is common to retain the PCs for analysis (Jolliffe et al., 2016). Even though the first four PCs contribute  ~99%
+  and have eigenvalues > 1, it will be difficult to visualize them at once and needs to perform pairwise visualization.
+- From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster. Similarly, A and B are
+  highly correlated and forms another cluster. If the variables are highly associated, the angle between the variable vectors
+  should be as small as possible in the biplot.
+
+
+
+## <span style="color:#33a8ff">References</span>
+- Abdi H, Williams LJ. Principal component analysis. Wiley interdisciplinary reviews: computational statistics. 2010 Jul;2(4):433-59.
+- Jolliffe IT, Cadima J. Principal component analysis: a review and recent developments. Philosophical Transactions of the Royal Society A:
+  Mathematical, Physical and Engineering Sciences. 2016 Apr 13;374(2065):20150202.
+- Gewers FL, Ferreira GR, de Arruda HF, Silva FN, Comin CH, Amancio DR, Costa LD. Principal component analysis: A natural approach to data
+  exploration. arXiv preprint arXiv:1804.02502. 2018 Apr 7.
+- Bedre R, Rajasekaran K, Mangu VR, Timm LE, Bhatnagar D, Baisakh N. Genome-wide transcriptome analysis of cotton (Gossypium hirsutum L.)
+  identifies candidate gene signatures in response to aflatoxin producing fungus Aspergillus flavus. PLoS One. 2015;10(9).
+
+<!--
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
 conditions simultaneously. There have been various analytical methods has been used to deduce underlying biological
 information from gene expression data such as heatmaps, clustering, PCA, Venn diagrams, gene networks and so on.
@@ -271,5 +454,5 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: March 21, 2019</i> </span>
+<span style="color:#9e9696"><i> Last updated: May 31, 2020</i> </span>
 
