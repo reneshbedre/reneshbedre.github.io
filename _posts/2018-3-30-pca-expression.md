@@ -31,8 +31,8 @@ tags:
 ## <span style="color:#33a8ff">Perform PCA in Python</span>
 - we will use sklearn and bioinfokit (v0.8.2 or later) packages for PCA and visualization
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
-- Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data published in
-  <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
+- Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data associated with
+  different conditions of fungal stress in cotton which is published in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
 
 ```python
 # you can use interactive python console, jupyter or python code
@@ -51,6 +51,8 @@ tags:
 2  4.44701  3.411940 -1.040870  10.271195  10.517256  0.272272
 3  2.16003  3.146520  0.982809   9.024300   6.058320 -2.967420
 4  2.35701  0.452589 -1.910680  12.984239  10.019605 -2.939020
+# variables A to F denotes multiple conditions associated with fungal stress
+# Read full paper https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025
 
 # standardize dataset with (mean=0, variance=1) scale
 # standardization is necessary as it removes the biases in the original variables. For example,
@@ -179,10 +181,10 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   good approximation of the variation present in the original 6D dataset (see the cumulative proportion of variance and scree plot). The cut-off of
   cumulative 70% variation is common to retain the PCs for analysis (Jolliffe et al., 2016). Even though the first four PCs contribute  ~99%
   and have eigenvalues > 1, it will be difficult to visualize them at once and needs to perform pairwise visualization.
-- From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster. Similarly, A and B are
-  highly associated and forms another cluster. If the variables are highly associated, the angle between the variable vectors
-  should be as small as possible in the biplot.
-
+- From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster (gene expression response in D and E
+  conditions are highly similar). Similarly, A and B are highly associated and forms another cluster (gene expression response in A and B
+  conditions are highly similar but different from other clusters). If the variables are highly associated, the angle
+  between the variable vectors should be as small as possible in the biplot.
 
 
 ## <span style="color:#33a8ff">References</span>
