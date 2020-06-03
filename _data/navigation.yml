@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Blog"
+  - title: "Bioinformatics Blog"
     url: /blog/
   - title: "Publications"
     url: /pub/
