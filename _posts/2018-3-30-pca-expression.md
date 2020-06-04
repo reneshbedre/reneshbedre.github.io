@@ -1,5 +1,5 @@
 ---
-title: "Principal component analysis (PCA) analysis and visualization using Python"
+title: "Principal component analysis (PCA) and visualization using Python"
 date:   2018-03-30 06:18:08
 author_profile: true
 permalink: blog/pca_3d.html
