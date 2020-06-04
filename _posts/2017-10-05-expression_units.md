@@ -115,6 +115,9 @@ Notes:
 - TMM is a between-sample normalization method in contrast to within-sample normalization methods (RPM, RPKM/FPKM, or TPM)
 - TMM normalization method assumes that most of the genes are not differentially expressed
 - TMM normalize the total RNA output among the samples and does not consider gene length or library size for normalization
+- TMM considers sample RNA population and effective in normalization of samples with diverse RNA repertoires (e.g. samples from
+  different tissues). TMM will be good choice to remove the batch effects while comparing the samples from different tissues or genotypes or in cases
+  where RNA population would be significantly different among the samples.
 - To calculate TMM,
     - get the library size normalized read count for each gene in each sample
     - calculate the log2 fold change between the two samples (M value)
