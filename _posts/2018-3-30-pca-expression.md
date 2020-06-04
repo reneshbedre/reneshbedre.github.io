@@ -29,7 +29,7 @@ tags:
 
 
 ## <span style="color:#33a8ff">Perform PCA in Python</span>
-- we will use sklearn and bioinfokit (v0.8.2 or later) packages for PCA and visualization
+- we will use sklearn, seaborn, and bioinfokit (v0.8.2 or later) packages for PCA and visualization
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 - Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data associated with
   different conditions of fungal stress in cotton which is published in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
@@ -102,6 +102,19 @@ D         0.370318  0.611485 -0.308295  0.054973 -0.007642  0.625159
 E         0.568491  0.300118 -0.011775 -0.484115  0.009382 -0.593425
 F         0.208090 -0.400426  0.370440 -0.634234 -0.010111  0.506732
 
+# get correlation matrix plot for loadings
+>>> import seaborn as sns
+>>> import matplotlib.pyplot as plt
+>>> ax = sns.heatmap(loadings_df, annot=True, cmap='Spectral')
+>>> plt.show()
+
+```
+Generated correlation matrix plot for loadings,
+<p align="center">
+<img src="/assets/posts/pca/loading_corr.svg" width="600">
+</p>
+
+```python
 # get eigenvalues (from PC1 to PC6)  
 # generally, PCs with eigenvalues > 1 contributes greater variance and helps to retain the
 # PCs for the analysis 
@@ -128,6 +141,7 @@ array([1.78994905, 1.65136965, 1.39299071, 1.15924943, 0.0086743 ,
     var1=round(pca_out.explained_variance_ratio_[0]*100, 2), var2=round(pca_out.explained_variance_ratio_[1]*100, 2), 
     var3=round(pca_out.explained_variance_ratio_[2]*100, 2))
 ```
+
 Generated Scree plot,
 <p align="center">
 <img src="/assets/posts/pca/screeplot.svg" width="600">
@@ -456,5 +470,5 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: May 31, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: June 03, 2020</i> </span>
 
