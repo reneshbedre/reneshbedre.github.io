@@ -12,7 +12,7 @@ classes: wide
 {% include  share.html %}
 </p>
 
-- In RNA-seq gene expression data analysis, we come across various expression units such as RPM, RPKM, FPKM, and raw reads counts.
+- In RNA-seq gene expression data analysis, we come across various expression units such as RPM, RPKM, FPKM, TPM, TMM, and raw reads counts.
 - Most of the times it's difficult to understand the basic underlying  methodology to calculate these units from mapped sequence data.
 - I have seen a lot of posts of such normalization questions and their confusion among readers. Hence, I attempted here to explain these units
   in a much simpler way (avoided complex mathematical expressions).
@@ -121,12 +121,12 @@ Notes:
 
         <p align="center">
         <br>
-            \(  \text{M} = log_2 \frac{\text{treated sample}}{\text{control sample}} \)
+            \(  \text{M} = log_2 \frac{\text{treated sample count}}{\text{control sample count}} \)
         </p>
     - get absolute expression count (A value)
         <p align="center">
             <br>
-          \(  \text{A} =  \frac{log_2(\text{treated sample count})+log_2(\text{treated sample count})}{2} \)
+          \(  \text{A} =  \frac{log_2(\text{treated sample count})+log_2(\text{control sample count})}{2} \)
           </p>
     - Now, double trim the upper and lower percentages of the data (trim M values by 30% and A values by 5%)
     - Get weighted mean of M after trimming and calculate normalization factor ( see Robinson et al., 2010 for details)
