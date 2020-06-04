@@ -1,5 +1,5 @@
 ---
-title: "Gene expression units explained: RPM, RPKM, FPKM and TPM"
+title: "Gene expression units explained: RPM, RPKM, FPKM, TPM and TMM"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
@@ -83,6 +83,7 @@ Notes:
  - RPKM considers the gene length for normalization
  - RPKM is suitable for sequencing protocols where reads sequencing depends on gene length
  - Used in single-end RNA-seq experiments (FPKM for paired-end RNA-seq data)
+ - RPKM/FPKM can be biased towards identfiying the differentially expressed genes (Bullard et al., 2010)
 
 
 **<span style="color:#060606">TPM (Transcript per million)</span>**
@@ -110,17 +111,38 @@ Notes:
  - TPM proposed as an alternative to RPKM due to inaccuracy in RPKM measurement (Wagner et al., 2012)
  - TPM is suitable for sequencing protocols where reads sequencing depends on gene length
 
+**<span style="color:#060606">TMM (Trimmed Mean of M-values)</span>**
+- TMM is a between-sample normalization method in contrast to within-sample normalization methods (RPM, RPKM/FPKM, or TPM)
+- TMM normalization method assumes that most of the genes are not differentially expressed
+- TMM normalize the total RNA output among the samples and does not consider gene length or library size for normalization
+- To calculate TMM,
+    - get the library size normalized read count for each gene in each sample
+    - calculate the log2 fold change between the two samples (M value)
+
+        <p align="center">
+        <br>
+            \(  \text{M} = log_2 \frac{\text{treated sample}}{\text{control sample}} \)
+        </p>
+    - get absolute expression count (A value)
+        <p align="center">
+            <br>
+          \(  \text{A} =  \frac{log_2(\text{treated sample count})+log_2(\text{treated sample count})}{2} \)
+          </p>
+    - Now, double trim the upper and lower percentages of the data (trim M values by 30% and A values by 5%)
+    - Get weighted mean of M after trimming and calculate normalization factor ( see Robinson et al., 2010 for details)
+
 <!--
 **<span style="color:#060606">Relationship between RPKM and TPM,</span>**
 
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;RPKM&space;=&space;TPM&space;\times&space;\frac{10^3&space;\times&space;total&space;\&space;number&space;\&space;of&space;\&space;transcripts&space;\&space;sampled}{read&space;\&space;length&space;\times&space;total&space;\&space;number&space;\&space;of&space;\&space;mapped&space;\&space;reads}" />
 -->
 
-References:
+**<span style="color:#060606">References</span>**
 
  - Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B. Mapping and quantifying mammalian transcriptomes by RNA-Seq. Nature methods. 2008 Jul 1;5(7):621-8.
  - Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
-
+ - Bullard JH, Purdom E, Hansen KD, Dudoit S. Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. BMC bioinformatics. 2010 Dec;11(1):94.
+ - Robinson MD, Oshlack A. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology. 2010 Mar;11(3):R25.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -130,7 +152,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: May 16, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: June 03, 2020</i> </span>
 
 <p>
 {% include  share.html %}
