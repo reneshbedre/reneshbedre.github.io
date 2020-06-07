@@ -16,6 +16,7 @@ classes: wide
 - Most of the times it's difficult to understand the basic underlying  methodology to calculate these units from mapped sequence data.
 - I have seen a lot of posts of such normalization questions and their confusion among readers. Hence, I attempted here to explain these units
   in a much simpler way (avoided complex mathematical expressions).
+- All of these units are explained in the context of bulk RNA-seq
 
 
 ## <span style="color:#33a8ff">Why different normalized expression units?</span> ##
@@ -83,7 +84,7 @@ Notes:
  - RPKM considers the gene length for normalization
  - RPKM is suitable for sequencing protocols where reads sequencing depends on gene length
  - Used in single-end RNA-seq experiments (FPKM for paired-end RNA-seq data)
- - RPKM/FPKM can be biased towards identfiying the differentially expressed genes (Bullard et al., 2010)
+ - RPKM/FPKM can be biased towards identifying the differentially expressed genes (Bullard et al., 2010)
 
 
 **<span style="color:#060606">TPM (Transcript per million)</span>**
@@ -133,6 +134,12 @@ Notes:
           </p>
     - Now, double trim the upper and lower percentages of the data (trim M values by 30% and A values by 5%)
     - Get weighted mean of M after trimming and calculate normalization factor ( see Robinson et al., 2010 for details)
+
+<!--
+**<span style="color:#060606">DESeq</span>**
+- The DESeq normalization method is prosposed by Anders and Huber, 2010 and is similar to TMM
+- DESeq also assumes that most of the genes are not differentially expressed
+-->
 
 <!--
 **<span style="color:#060606">Relationship between RPKM and TPM,</span>**
