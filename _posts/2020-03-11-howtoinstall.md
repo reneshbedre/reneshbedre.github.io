@@ -612,3 +612,7 @@ PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in sam
 
 
 <span style="color:#9e9696"><i> Last updated: May 14, 2020</i> </span>
+
+<p>
+{% include  license.html %}
+</p>

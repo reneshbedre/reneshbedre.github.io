@@ -202,6 +202,8 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
 
 
 ## <span style="color:#33a8ff">References</span>
+- Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, Blondel M, Prettenhofer P, Weiss R, Dubourg V, Vanderplas J.
+  Scikit-learn: Machine learning in Python. the Journal of machine Learning research. 2011 Nov 1;12:2825-30.
 - Abdi H, Williams LJ. Principal component analysis. Wiley interdisciplinary reviews: computational statistics. 2010 Jul;2(4):433-59.
 - Jolliffe IT, Cadima J. Principal component analysis: a review and recent developments. Philosophical Transactions of the Royal Society A:
   Mathematical, Physical and Engineering Sciences. 2016 Apr 13;374(2065):20150202.
@@ -472,3 +474,6 @@ https://reneshbedre.github.io/blog/pca_3d.html.
 
 <span style="color:#9e9696"><i> Last updated: June 03, 2020</i> </span>
 
+<p>
+{% include  license.html %}
+</p>

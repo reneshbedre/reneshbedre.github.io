@@ -258,3 +258,7 @@ Check for <a href="https://reneshbedre.github.io/blog/mlr.html" target="_blank">
 </p>
 
 <span style="color:#9e9696"><i> Last updated: April 25, 2020</i> </span>
+
+<p>
+{% include  license.html %}
+</p>

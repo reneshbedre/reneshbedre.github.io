@@ -79,3 +79,7 @@ Download test [dataset]({{"/assets/posts/format/test_csv.csv" | absolute_url }})
 </p>
     
 <span style="color:#9e9696"><i> Last updated: May 24, 2020</i> </span>
+
+<p>
+{% include  license.html %}
+</p>

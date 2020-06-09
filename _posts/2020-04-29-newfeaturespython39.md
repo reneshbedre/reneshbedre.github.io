@@ -118,3 +118,7 @@ Check detailed <a href="https://docs.python.org/3.9/library/math.html" target='_
 </p>
 
 <span style="color:#9e9696"><i> Last updated: May 1, 2020</i> </span>
+
+<p>
+{% include  license.html %}
+</p>

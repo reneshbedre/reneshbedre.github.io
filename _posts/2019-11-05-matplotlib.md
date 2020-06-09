@@ -123,3 +123,7 @@ This article is modified version of original <a href="https://kite.com/blog/pyth
 <p>
 {% include  share.html %}
 </p>
+
+<p>
+{% include  license.html %}
+</p>

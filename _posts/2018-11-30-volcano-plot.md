@@ -221,3 +221,6 @@ can be provided.
 <span style="color:#9e9696"><i> Last updated: April 9, 2020</i> </span>
 
 
+<p>
+{% include  license.html %}
+</p>

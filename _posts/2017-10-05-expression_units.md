@@ -1,5 +1,5 @@
 ---
-title: "Gene expression units explained: RPM, RPKM, FPKM, TPM and TMM"
+title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, and TMM"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
@@ -112,6 +112,7 @@ Notes:
  - TPM proposed as an alternative to RPKM due to inaccuracy in RPKM measurement (Wagner et al., 2012)
  - TPM is suitable for sequencing protocols where reads sequencing depends on gene length
 
+
 **<span style="color:#060606">TMM (Trimmed Mean of M-values)</span>**
 - TMM is a between-sample normalization method in contrast to within-sample normalization methods (RPM, RPKM/FPKM, or TPM)
 - TMM normalization method assumes that most of the genes are not differentially expressed
@@ -135,11 +136,17 @@ Notes:
     - Now, double trim the upper and lower percentages of the data (trim M values by 30% and A values by 5%)
     - Get weighted mean of M after trimming and calculate normalization factor ( see Robinson et al., 2010 for details)
 
-<!--
-**<span style="color:#060606">DESeq</span>**
-- The DESeq normalization method is prosposed by Anders and Huber, 2010 and is similar to TMM
-- DESeq also assumes that most of the genes are not differentially expressed
--->
+
+**<span style="color:#060606"><i>DESeq</i> or <i>DESeq2</i> normalization (median-of-ratios method)</span>**
+- The <i>DESeq</i> (and also <i>DESeq2</i>) normalization method is proposed by Anders and Huber, 2010 and is similar to TMM
+- <i>DESeq</i> normalization method  also assumes that most of the genes are not differentially expressed
+- The <i>DESeq</i> calculates size factors for each sample to compare the counts obtained from different samples with
+  different sequencing depth
+- <i>DESeq</i> normalization uses the median of the ratios of observed counts to calculate size factors. Briefly,
+  the size factor is calculated by first dividing the observed counts for each sample by its geometric mean. The size factor
+  is then calculated as the median of this ratio for each sample. This size factor then used for normalizing raw
+  count data for each sample.
+
 
 <!--
 **<span style="color:#060606">Relationship between RPKM and TPM,</span>**
@@ -153,6 +160,8 @@ Notes:
  - Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
  - Bullard JH, Purdom E, Hansen KD, Dudoit S. Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. BMC bioinformatics. 2010 Dec;11(1):94.
  - Robinson MD, Oshlack A. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology. 2010 Mar;11(3):R25.
+ - Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
+ - Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -162,8 +171,12 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: June 03, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: June 08, 2020</i> </span>
 
 <p>
 {% include  share.html %}
+</p>
+
+<p>
+{% include  license.html %}
 </p>

@@ -172,3 +172,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <p>
 {% include  share.html %}
 </p>
+
+<p>
+{% include  license.html %}
+</p>
