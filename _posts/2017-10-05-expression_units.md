@@ -1,5 +1,5 @@
 ---
-title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, and TMM"
+title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, and SCnorm"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
@@ -16,7 +16,6 @@ classes: wide
 - Most of the times it's difficult to understand the basic underlying  methodology to calculate these units from mapped sequence data.
 - I have seen a lot of posts of such normalization questions and their confusion among readers. Hence, I attempted here to explain these units
   in a much simpler way (avoided complex mathematical expressions).
-- All of these units are explained in the context of bulk RNA-seq
 
 
 ## <span style="color:#33a8ff">Why different normalized expression units?</span> ##
@@ -148,6 +147,20 @@ Notes:
   count data for each sample.
 
 
+**<span style="color:#060606">SCnorm for single cell RNA-seq (scRNA-seq)</span>**
+- The normalization units explained above works best for bulk RNA-seq and could be biased for scRNA-seq due to
+  abundance of non-zero expression counts, variable count-depth relationship (dependence of gene expression on sequencing depth),
+  and other unwanted technical variations
+- Bacher et al., 2017 proposed a SCnorm, a robust and accurate between-sample normalization unit for scRNA-seq
+- Steps involved in SCnorm normalization;
+  - SCnorm requires the raw expression counts (not-normalized), which can be obtained from RSEM or HTSeq
+  - Genes with low expression counts are filtered out (keep the genes with atleast 10 non-zero expression counts)
+  - estimate the count-depth relationship using quantile regression
+  - Cluster genes into groups with similar count-depth relationship
+  - A scale factor is calculated from each group and used for estimation for normalized expression
+- <a href="https://bioconductor.org/packages/devel/bioc/html/SCnorm.html" target="_blank">SCnorm</a>
+  is implemented in R package and is available on Bioconductor
+
 <!--
 **<span style="color:#060606">Relationship between RPKM and TPM,</span>**
 
@@ -162,6 +175,7 @@ Notes:
  - Robinson MD, Oshlack A. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology. 2010 Mar;11(3):R25.
  - Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
  - Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
+ - Bacher R, Chu LF, Leng N, Gasch AP, Thomson JA, Stewart RM, Newton M, Kendziorski C. SCnorm: robust normalization of single-cell RNA-seq data. Nature methods. 2017 Jun;14(6):584.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -171,7 +185,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: June 08, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: June 10, 2020</i> </span>
 
 <p>
 {% include  share.html %}
