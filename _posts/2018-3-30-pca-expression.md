@@ -199,6 +199,8 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   conditions are highly similar). Similarly, A and B are highly associated and forms another cluster (gene expression response in A and B
   conditions are highly similar but different from other clusters). If the variables are highly associated, the angle
   between the variable vectors should be as small as possible in the biplot.
+- The length of PCs in biplot refers to the amount of variance contributed by the PCs. The longer the length of PC, the higher the
+  variance contributed and well represented in space.
 
 
 ## <span style="color:#33a8ff">References</span>
@@ -211,6 +213,8 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   exploration. arXiv preprint arXiv:1804.02502. 2018 Apr 7.
 - Bedre R, Rajasekaran K, Mangu VR, Timm LE, Bhatnagar D, Baisakh N. Genome-wide transcriptome analysis of cotton (Gossypium hirsutum L.)
   identifies candidate gene signatures in response to aflatoxin producing fungus Aspergillus flavus. PLoS One. 2015;10(9).
+- Kirkwood RN, Brandon SC, de Souza Moreira B, Deluzio KJ. Searching for stability as we age: the PCA-Biplot approach. International
+  Journal of Statistics in Medical Research. 2013 Oct 1;2(4):255.
 
 <!--
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
