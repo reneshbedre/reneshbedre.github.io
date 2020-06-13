@@ -1,5 +1,5 @@
 ---
-title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, and SCnorm"
+title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, and ComBat-Seq"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
@@ -161,6 +161,19 @@ Notes:
 - <a href="https://bioconductor.org/packages/devel/bioc/html/SCnorm.html" target="_blank">SCnorm</a>
   is implemented in R package and is available on Bioconductor
 
+**<span style="color:#060606">ComBat-Seq method</span>**
+- Zhang et al., 2020 proposed a ComBat-Seq (batch  effect  adjustment  method) approach to addresses the large variance of
+  batch effects present in RNA-seq count data (the paper is still in preprint)
+- The benefit of ComBat-Seq is that it adjusts the batch effects for raw counts data and provide the output
+  as integer counts in contrast to other normalization methods which can produce fraction count values as described above (e.g. RPKM, TPM, TMM)
+- The resulting batch adjusted integer counts can be directly used with <i>DESeq2</i> which accepts only integer count data
+  for differential gene expression analysis
+- ComBat-Seq takes input as a raw un-normalized data as input and addresses the batch effects using
+  a negative binomial regression model
+- Briefly, ComBat-Seq adjust the count data by comparing the quantiles of the  empirical distributions of data to the
+  expected distribution without batch effects in the data
+- <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
+
 <!--
 **<span style="color:#060606">Relationship between RPKM and TPM,</span>**
 
@@ -176,6 +189,7 @@ Notes:
  - Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
  - Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
  - Bacher R, Chu LF, Leng N, Gasch AP, Thomson JA, Stewart RM, Newton M, Kendziorski C. SCnorm: robust normalization of single-cell RNA-seq data. Nature methods. 2017 Jun;14(6):584.
+ - Zhang, Y., Parmigiani, G., & Johnson, W. E. (2020). ComBat-Seq: batch effect adjustment for RNA-Seq count data. bioRxiv, 904730.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -185,7 +199,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: June 10, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: June 13, 2020</i> </span>
 
 <p>
 {% include  share.html %}
