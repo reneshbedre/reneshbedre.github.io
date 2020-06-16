@@ -32,7 +32,9 @@ classes: wide
 **<span style="color:#33a8ff">How to minimize false discoveries?</span>**  
 - To control false discoveries from multiple hypothesis testing, it is imperative adjust significance level (&alpha;) to 
   reduce the probability of getting Type I error (family-wise error rate or FWER)
-- <b>Family-wise error rate (FWER)</b> is defined as a probability of getting at least one significant result just by chance.
+- <b>Family-wise error rate (FWER)</b> is defined as a probability of
+  getting at least one significant result (false discovery) just by
+  chance during multiple testing.
   
   For example, If we perform 50 multiple tests at &alpha;=0.05, the probability of getting at least one significant 
   result by chance is ~ 92% <br>
