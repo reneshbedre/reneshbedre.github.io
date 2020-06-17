@@ -9,6 +9,9 @@ tags:
   - Biological data handling
 ---
 
+<p>
+{% include  share.html %}
+</p>
 
 ## <span style="color:#33a8ff">Bioinformatics file readers</span>
 - We will discuss how to read and process common bioinformatics files
