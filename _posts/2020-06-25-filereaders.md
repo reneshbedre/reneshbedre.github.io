@@ -9,6 +9,8 @@ tags:
   - Biological data handling
 ---
 
+
+## <span style="color:#33a8ff">Bioinformatics file readers</span>
 - We will discuss how to read and process common bioinformatics files
 - We will use `bioinfokit v0.8.4` or later
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
