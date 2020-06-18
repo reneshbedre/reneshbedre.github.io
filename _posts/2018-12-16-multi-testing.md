@@ -163,7 +163,8 @@ Benjamini and Hochberg to control FDR: False negatives = 50
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+Bedre, R. (2018, December 16). Multiple testing problem in Bioinformatics. 
+https://reneshbedre.github.io/blog/mtest.html
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
@@ -172,7 +173,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 
 
 <p>
-{% include  share.html %}
+{% include  subscribe.html %}
 </p>
 
 <p>

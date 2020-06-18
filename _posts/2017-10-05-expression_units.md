@@ -193,7 +193,8 @@ Notes:
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
-Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub repository, <a href="https://github.com/reneshbedre/bioinfokit">https://github.com/reneshbedre/bioinfokit</a>
+Bedre, R.  (2017, May 05) .Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, and ComBat-Seq. 
+https://reneshbedre.github.io//blog/expression_units.html
 
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
@@ -202,7 +203,7 @@ Bedre, R. Bioinformatics data analysis and visualization toolkit. GitHub reposit
 <span style="color:#9e9696"><i> Last updated: June 13, 2020</i> </span>
 
 <p>
-{% include  share.html %}
+{% include  subscribe.html %}
 </p>
 
 <p>
