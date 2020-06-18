@@ -174,11 +174,6 @@ Notes:
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
 
-<!--
-**<span style="color:#060606">Relationship between RPKM and TPM,</span>**
-
- <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;RPKM&space;=&space;TPM&space;\times&space;\frac{10^3&space;\times&space;total&space;\&space;number&space;\&space;of&space;\&space;transcripts&space;\&space;sampled}{read&space;\&space;length&space;\times&space;total&space;\&space;number&space;\&space;of&space;\&space;mapped&space;\&space;reads}" />
--->
 
 **<span style="color:#060606">References</span>**
 
@@ -194,7 +189,7 @@ Notes:
 **<span style="color:#33a8ff">How to cite?</span>**
 
 Bedre, R.  (2017, May 05) .Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, and ComBat-Seq. 
-https://reneshbedre.github.io//blog/expression_units.html
+https://reneshbedre.github.io/blog/expression_units.html
 
 
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
