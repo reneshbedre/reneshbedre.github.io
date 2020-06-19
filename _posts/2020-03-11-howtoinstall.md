@@ -64,9 +64,9 @@ python setup.py install
 Parameters | Description
 ------------ | -------------
 `table` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values columns
-`lfc` | Name of a column having log fold change values [string][default:logFC]
+`lfc` | Name of a column having log or absolute fold change values [string][default:logFC]
 `pv` | Name of a column having P-values or adjusted P-values [string][default:p_values]
-`lfc_thr` | Log fold change cutoff for up and downregulated genes [float][default:1.0]
+`lfc_thr` | Log or absolute fold change cutoff for up and downregulated genes [float][default:1.0]
 `pv_thr` | P-values or adjusted P-values cutoff for up and downregulated genes [float][default:0.05]
 `color` | Tuple of two colors [tuple][default: ("green", "red")]
 `valpha` | Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]
@@ -169,8 +169,10 @@ MA plot image in same directory (ma.png)
 
 ### Heatmap
 
-`bioinfokit.visuz.gene_exp.hmap(table, cmap='seismic', scale=True, dim=(6, 8), clus=True, zscore=None, xlabel=True, ylabel=True, 
-    tickfont=(12, 12), show, r, figtype)`
+`latest update v0.8.4`
+
+`bioinfokit.visuz.gene_exp.hmap(table, cmap='seismic', scale=True, dim=(6, 8), rowclus=True, colclus=True, zscore=None, 
+    xlabel=True, ylabel=True, tickfont=(12, 12), show, r, figtype, figname)`
 
 Parameters | Description
 ------------ | -------------
@@ -178,7 +180,8 @@ Parameters | Description
 `cmap` | Color Palette for heatmap [string][default: 'seismic']
 `scale` | Draw a color key with heatmap [boolean (True or False)][default: True]
 `dim` | heatmap figure size [tuple of two floats (width, height) in inches][default: (6, 8)]
-`clus` | Draw hierarchical clustering with heatmap [boolean (True or False)][default: True]
+`rowclus` | Draw hierarchical clustering for rows  [boolean (True or False)][default: True]
+`colclus` | Draw hierarchical clustering for columns [boolean (True or False)][default: True]
 `zscore` | Z-score standardization of row (0) or column (1). It works when clus is True. [None, 0, 1][default: None]
 `xlable` | Plot X-label [boolean (True or False)][default: True]
 `ylable` | Plot Y-label [boolean (True or False)][default: True]
@@ -186,6 +189,8 @@ Parameters | Description
 `show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
 `r` | Figure resolution in dpi [int][default: 300]. Not compatible with `show`= True
 `figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`figname` | name of figure [string ][default:"heatmap"]
+
 
 Returns:
 
@@ -552,9 +557,11 @@ PCA loadings plot 2D and 3D image (pcaplot_2d.png and pcaplot_3d.png will be sav
 
 ### Principal component analysis (PCA)  biplots
 
+`latest update v0.8.4`
+
 `bioinfokit.visuz.cluster.biplot(cscore, loadings, labels, var1, var2, var3, axlabelfontsize, axlabelfontname,
     figtype, r, show, markerdot, dotsize, valphadot, colordot, arrowcolor, valphaarrow, arrowlinestyle, arrowlinewidth,
-    centerlines)`
+    centerlines, datapoints, legendpos, colorlist)`
 
 Parameters | Description
 ------------ | -------------
@@ -572,19 +579,56 @@ Parameters | Description
 `markerdot` | Shape of the dot on plot. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
 `dotsize`| The size of the dots in the plot [float][default: 6]
 `valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
-`colordot` | Color of dots on plot [string ][default:"#4a4e4d"]
+`colordot` | Color of dots on plot [string or list ][default:"#4a4e4d"]
 `arrowcolor` | Color of the arrow [string ][default:"#fe8a71"]
 `valphaarrow` | Transparency of the arrow [float (between 0 and 1)][default: 1]
-`arrowlinestyle` | line style of the arrow [string][default: '-']
+`arrowlinestyle` | line style of the arrow. check more styles at https://matplotlib.org/3.1.0/gallery/lines_bars_and_markers/linestyles.html [string][default: '-']
 `arrowlinewidth`| line width of the arrow [float][default: 1.0]
 `centerlines`| draw center lines at x=0 and y=0 for 2D plot [bool (True or False)][default: True]
-
+`datapoints`| plot data points on graph [bool (True or False)][default: True]
+`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
+`colorlist` | list of the categories to assign the color [list][default:None]
 
 Returns:
 
 PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in same directory)
 
 <a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a>
+
+<!--
+### t-SNE plot
+
+`latest update v0.8.4`
+
+`bioinfokit.visuz.cluster.tsneplot(score, colorlist, axlabelfontsize, axlabelfontname,
+    figtype, r, show, markerdot, dotsize, valphadot, colordot, dim, figname, legendpos,
+    legendanchor)`
+
+Parameters | Description
+------------ | -------------
+`score` | t-SNE component scores (obtained from TSNE().fit_transfrom() function in sklearn.manifold)
+`colorlist` | list of the categories to assign the color [list][default:None]
+`axlabelfontsize` | Font size for axis labels [float][default: 9]
+`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
+`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`r` | Figure resolution in dpi [int][default: 300]
+`show` | Show the figure on console instead of saving in current folder [True or False][default:False]
+`markerdot` | Shape of the dot on plot. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
+`dotsize`| The size of the dots in the plot [float][default: 6]
+`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
+`colordot` | Color of dots on plot [string or list ][default:"#4a4e4d"]
+`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
+`legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
+`figname` | name of figure [string ][default:"tsne_2d"]
+
+Returns:
+
+t-SNE 2D image (tsne_2d.png will be saved in same directory)
+
+<a href="https://reneshbedre.github.io/blog/tsne.html" target="_blank">Working Example</a>
+-->
+
 
 ### References:
 - Travis E. Oliphant. A guide to NumPy, USA: Trelgol Publishing, (2006).
