@@ -258,6 +258,8 @@ Manhatten plot image in same directory (manhatten.png)
 
 ### Bar-dot plot
 
+`latest update v0.8.5`
+
 `bioinfokit.visuz.stat.bardot(df, colorbar, colordot, bw, dim, r, ar, hbsize, errorbar, dotsize, markerdot, valphabar, 
     valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, ylm, axtickfontsize, axtickfontname,
     yerrlw, yerrcw)`
@@ -595,10 +597,9 @@ PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in sam
 
 <a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a>
 
-<!--
 ### t-SNE plot
 
-`latest update v0.8.4`
+`latest update v0.8.5`
 
 `bioinfokit.visuz.cluster.tsneplot(score, colorlist, axlabelfontsize, axlabelfontname,
     figtype, r, show, markerdot, dotsize, valphadot, colordot, dim, figname, legendpos,
@@ -606,7 +607,7 @@ PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in sam
 
 Parameters | Description
 ------------ | -------------
-`score` | t-SNE component scores (obtained from TSNE().fit_transfrom() function in sklearn.manifold)
+`score` | t-SNE component embeddings (obtained from TSNE().fit_transfrom() function in sklearn.manifold)
 `colorlist` | list of the categories to assign the color [list][default:None]
 `axlabelfontsize` | Font size for axis labels [float][default: 9]
 `axlabelfontname` | Font name for axis labels [string][default: 'Arial']
@@ -627,7 +628,6 @@ Returns:
 t-SNE 2D image (tsne_2d.png will be saved in same directory)
 
 <a href="https://reneshbedre.github.io/blog/tsne.html" target="_blank">Working Example</a>
--->
 
 
 ### References:
