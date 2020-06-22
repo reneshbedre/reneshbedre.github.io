@@ -1,4 +1,5 @@
 https://reneshbedre.github.io/blog/
+https://reneshbedre.github.io/blog/tsne.html
 https://reneshbedre.github.io/blog/filereaders.html
 https://reneshbedre.github.io/blog/gffgtf.html
 https://reneshbedre.github.io/blog/mlr.html
