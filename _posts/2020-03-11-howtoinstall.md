@@ -133,8 +133,11 @@ Inverted volcano plot image in same directory (involcano.png)
 
 ### MA plot
 
+latest update v0.8.6
+
 `bioinfokit.visuz.gene_exp.ma(table, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
-    axylabel, axlabelfontsize, axlabelfontname, axtickfontsize, axtickfontname, xlm, ylm)`
+    axylabel, axlabelfontsize, axtickfontsize, axtickfontname, xlm, ylm, fclines, fclinescolor, legendpos, legendanchor,
+    figname, legendlabels)`
 
 Parameters | Description
 ------------ | -------------
@@ -154,11 +157,17 @@ Parameters | Description
 `axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
 `axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
 `axlabelfontsize` | Font size for axis labels [float][default: 9]
-`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
 `axtickfontsize` | Font size for axis ticks [float][default: 9]
 `axtickfontname` | Font name for axis ticks [string][default: 'Arial']
 `xlm` | Range of ticks to plot on X-axis [float (left, right, interval)][default: None]
 `ylm` | Range of ticks to plot on Y-axis [float (bottom, top, interval)][default: None]
+`fclines`  | draw log fold change threshold lines as defines by `lfc`  [True or False][default:False]
+`fclinescolor`  | color of fclines  [string][default: '#2660a4']
+`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
+`legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
+`figname` | name of figure [string ][default:"ma"]
+`legendlabels` | legend label names. If you provide custom label names keep the same order of label names as default [list][default:['significant up', 'not significant', 'significant down']]
+
 
 Returns:
 
@@ -409,6 +418,7 @@ Output will be saved in same directory
 
 <a href="https://reneshbedre.github.io/blog/format.html" target="_blank">Working example</a>
 
+<!--
 ### One-way ANOVA
 
 `bioinfokit.stat.oanova(table, res, xfac, ph, phalpha)`
@@ -427,6 +437,8 @@ Returns:
 ANOVA summary, multiple pairwise comparisons, and assumption tests statistics
 
 <a href="https://reneshbedre.github.io/blog/oanova.html" target="_blank">Working example</a>
+-->
+
 
 ### FASTQ quality format detection
 
