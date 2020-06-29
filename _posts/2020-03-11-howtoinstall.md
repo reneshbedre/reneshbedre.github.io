@@ -15,6 +15,8 @@ bioinfokit can be installed using pip, easy_install and git.
 
 ## <span style="color:#33a8ff">How to install?</span>
 
+latest bioinfokit version: v0.8.6
+
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
 ```python
