@@ -22,7 +22,7 @@ tags:
    proteomics, etc.) and pinpoint genes with significant changes 
    
 ## <span style="color:#33a8ff">How to create Volcano plot in Python?</span>
-- We will use `bioinfokit v0.8.7` or later
+- We will use `bioinfokit v0.8.8` or later
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 - For generating a volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify 
   statistically significantly induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
@@ -239,7 +239,7 @@ can be provided.
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: July 01, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 02, 2020</i> </span>
 
 
 <p>

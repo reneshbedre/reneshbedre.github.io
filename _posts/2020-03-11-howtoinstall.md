@@ -15,7 +15,7 @@ bioinfokit can be installed using pip, easy_install and git.
 
 ## <span style="color:#33a8ff">How to install?</span>
 
-latest bioinfokit version: v0.8.7
+latest bioinfokit version: v0.8.8
 
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
@@ -59,7 +59,7 @@ python setup.py install
 ## <span style="color:#33a8ff">How to use bioinfokit?</span>
 ### Volcano plot
 
-latest update v0.8.7
+latest update v0.8.8
 
 `bioinfokit.visuz.gene_exp.volcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle, sign_line,
     dotsize, markerdot, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, axtickfontsize, axtickfontname,
@@ -108,7 +108,7 @@ Volcano plot image in same directory (volcano.png)
 
 ### Inverted Volcano plot
 
-latest update v0.8.7
+latest update v0.8.8
 
 `bioinfokit.visuz.gene_exp.involcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
     dotsize, markerdot, r, dim, show, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axtickfontsize, 
@@ -153,7 +153,7 @@ Inverted volcano plot image in same directory (involcano.png)
 
 ### MA plot
 
-latest update v0.8.7
+latest update v0.8.8
 
 `bioinfokit.visuz.gene_exp.ma(table, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
     axylabel, axlabelfontsize, axtickfontsize, axtickfontname, xlm, ylm, fclines, fclinescolor, legendpos, legendanchor,
