@@ -17,7 +17,7 @@ visualize, and interpret the biological data generated from genome-scale omics e
 
 ## <span style="color:#33a8ff">How to install?</span>
 
-bioinfokit is developed in Python 3 and has been tested with Python versions >= 3.6
+bioinfokit is developed in Python 3 and tested with Python versions >= 3.6
 
 bioinfokit requires
 - NumPy 
