@@ -2,7 +2,7 @@
 title: "bioinfokit documentation"
 date:   2020-03-11 02:15:18
 permalink: blog/howtoinstall.html
-author_profile: false
+author_profile: true
 toc: true
 toc_label: "Page Content"
 ---
@@ -11,9 +11,24 @@ toc_label: "Page Content"
 {% include  share.html %}
 </p>
 
-bioinfokit can be installed using pip, easy_install and git.
+## <span style="color:#33a8ff">What is bioinfokit?</span>
+The bioinfokit toolkit aimed to provide various easy-to-use functionalities to analyze,
+visualize, and interpret the biological data generated from genome-scale omics experiments.
 
 ## <span style="color:#33a8ff">How to install?</span>
+
+bioinfokit is developed in Python 3 and has been tested with Python versions >= 3.6
+
+bioinfokit requires
+- NumPy 
+- scikit-learn
+- seaborn
+- pandas
+- matplotlib
+- SciPy 
+- matplotlib_venn
+
+bioinfokit can be installed using pip, easy_install and git.
 
 latest bioinfokit version: v0.8.8
 
@@ -76,7 +91,7 @@ Parameters | Description
 `valpha` | Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]
 `geneid` | Name of a column having gene Ids. This is necessary for plotting gene label on the points [string][default: None]
 `genenames` | Tuple of gene Ids to label the points. The gene Ids must be present in the geneid column. If this option set to "deg" it will label all genes defined by lfc_thr and pv_thr [string, tuple, dict][default: None]
-`gfont` | Font size for genenames [float][default: 10.0]. gfont not compatible with gstyle=2.
+`gfont` | Font size for genenames [float][default: 8.0]. gfont not compatible with gstyle=2.
 `gstyle` | Style of the text for genenames. 1 for default text and 2 for box text [int][default: 1]
 `sign_line` | Show grid lines on plot with defined log fold change (`lfc_thr`) and P-value (`pv_thr`) threshold value [True or False][default:False]
 `dotsize`| The size of the dots in the plot [float][default: 8]
@@ -125,7 +140,7 @@ Parameters | Description
 `valpha` | Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]
 `geneid` | Name of a column having gene Ids. This is necessary for plotting gene label on the points [string][default: None]
 `genenames` | Tuple of gene Ids to label the points. The gene Ids must be present in the geneid column. If this option set to "deg" it will label all genes defined by lfc_thr and pv_thr [string, tuple, dict][default: None]
-`gfont` | Font size for genenames [float][default: 10.0]
+`gfont` | Font size for genenames [float][default: 8.0]. gfont not compatible with gstyle=2.
 `gstyle` | Style of the text for genenames. 1 for default text and 2 for box text [int][default: 1]
 `dotsize`| The size of the dots in the plot [float][default: 8]
 `markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
@@ -669,7 +684,6 @@ t-SNE 2D image (tsne_2d.png will be saved in same directory)
 - Fernando Pérez and Brian E. Granger. IPython: A System for Interactive Scientific Computing, Computing in Science & Engineering, 9, 21-29 (2007), DOI:10.1109/MCSE.2007.53 (publisher link)
 - Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. http://doi.org/10.5281/zenodo.3629446
 - Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research, 12, 2825-2830 (2011)
-- Wes McKinney. Data Structures for Stati
 
 ### bioinfokit cited by:
 - Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
