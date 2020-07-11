@@ -76,13 +76,13 @@ python setup.py install
 
 latest update v0.8.8
 
-`bioinfokit.visuz.gene_exp.volcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle, sign_line,
+`bioinfokit.visuz.gene_exp.volcano(df, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle, sign_line,
     dotsize, markerdot, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, axtickfontsize, axtickfontname,
     xlm, ylm, plotlegend, legendpos, legendanchor, figname, legendlabels)`
 
 Parameters | Description
 ------------ | -------------
-`table` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values columns
+`df` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values columns
 `lfc` | Name of a column having log or absolute fold change values [string][default:logFC]
 `pv` | Name of a column having P-values or adjusted P-values [string][default:p_values]
 `lfc_thr` | Log or absolute fold change cutoff for up and downregulated genes [float][default:1.0]
@@ -125,13 +125,13 @@ Volcano plot image in same directory (volcano.png)
 
 latest update v0.8.8
 
-`bioinfokit.visuz.gene_exp.involcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
+`bioinfokit.visuz.gene_exp.involcano(df, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
     dotsize, markerdot, r, dim, show, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axtickfontsize, 
     axtickfontname, plotlegend, legendpos, legendanchor, figname, legendlabels)`
 
 Parameters | Description
 ------------ | -------------
-`table` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values
+`df` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values
 `lfc` | Name of a column having log fold change values [default:logFC]
 `pv` | Name of a column having P-values or adjusted P-values [default:p_values]
 `lfc_thr` | Log fold change cutoff for up and downregulated genes [default:1]
@@ -170,13 +170,13 @@ Inverted volcano plot image in same directory (involcano.png)
 
 latest update v0.8.8
 
-`bioinfokit.visuz.gene_exp.ma(table, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
+`bioinfokit.visuz.gene_exp.ma(df, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
     axylabel, axlabelfontsize, axtickfontsize, axtickfontname, xlm, ylm, fclines, fclinescolor, legendpos, legendanchor,
     figname, legendlabels, plotlegend)`
 
 Parameters | Description
 ------------ | -------------
-`table` |Pandas dataframe  table having atleast gene IDs, log fold change, and normalized counts (control and treatment) columns
+`df` |Pandas dataframe  table having atleast gene IDs, log fold change, and normalized counts (control and treatment) columns
 `lfc` | Name of a column having log fold change values [default:logFC]
 `ct_count` | Name of a column having count values for control sample [default:value1]
 `st_count` | Name of a column having count values for treatment sample [default:value2]
