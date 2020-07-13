@@ -3,6 +3,7 @@ title: "Linear Regression in Python"
 date:   2020-03-23 02:15:18
 permalink: blog/linearreg.html
 author_profile: true
+classes: wide
 toc: true
 toc_label: "Page Content"
 tags:
@@ -249,6 +250,107 @@ From the plot,
 
 Check for <a href="https://reneshbedre.github.io/blog/mlr.html" target="_blank">How to perform multiple linear regression?</a>
 
+## Linear Regression with PyTorch
+
+Let's perform a LR with PyTorch with the same dataset
+
+```python
+>>> from bioinfokit.analys import stat, get_data
+>>> import torch as th
+>>> df = get_data('slr').data
+>>> df.head()
+   X1    Y
+0  25  670
+1  30  690
+2  18  635
+3  15  625
+4  20  640
+
+# convert to PyTorch tensor 
+# variable shape should be (samples, features)
+>>> X1 = th.tensor(df[['X1']].values, dtype=th.float32)
+>>> Y = th.tensor(df[['Y']].values, dtype=th.float32)
+
+# LR model using PyTorch
+>>> in_features = 1 # number of independent variable
+>>> out_features = 1 # dim of predicted variable
+>>> lr_model = th.nn.Linear(in_features, out_features)
+
+# define loss function (regression error)
+>>> mse_loss = th.nn.MSELoss()
+# optimize to minimize the loss function and find optimal LR parameters (Regression Coefficients)
+>>> optimizer = th.optim.SGD(lr_model.parameters(), lr=0.002)  
+# set number of iterations until you see the convergence in the loss function
+# when you see similar minimum values for a large number of ending iterations
+# it will give you the best values of LR parameters
+>>> n_iter = 20000
+>>> for i in range(n_iter):
+        # predict model with current LR parameters
+        y_pred = lr_model(X1)
+        # calculate loss function
+        step_loss = mse_loss(y_pred, Y)
+        
+        # Backward to find the derivatives of the loss function with respect to LR parameters
+        # make any stored gradients to zero
+        optimizer.zero_grad()
+        step_loss.backward()
+        # update with current step LR parameters 
+        optimizer.step()
+        
+        print ('i [{}], Loss: {:.2f}'.format(i, step_loss.item()))
+
+# see the last few iterations
+i [19986], Loss: 44.51
+i [19987], Loss: 44.51
+i [19988], Loss: 44.51
+i [19989], Loss: 44.51
+i [19990], Loss: 44.51
+i [19991], Loss: 44.51
+i [19992], Loss: 44.51
+i [19993], Loss: 44.51
+i [19994], Loss: 44.51
+i [19995], Loss: 44.51
+i [19996], Loss: 44.51
+i [19997], Loss: 44.51
+i [19998], Loss: 44.51
+i [19999], Loss: 44.51
+```
+
+Now, get the best LR parameters from this trained model, 
+
+```python
+# intercept (a)
+>>> lr_model.bias.item()
+568.7089233398438
+# slope (b)
+>>> lr_model.weight.item()
+3.7700467109680176
+```
+
+Generate regression plot,
+```python
+>>> from bioinfokit.visuz import stat
+# detach will not build a gradient computational graph (no backpropagation) 
+>>> y_pred = lr_model(X1).detach()
+>>> df['yhat']=y_pred.numpy()
+>>> stat.regplot(df=df, x='X1', y='Y', yhat='yhat')
+```
+
+<p align="center">
+<img src="/assets/posts/reg/reg_plot_pytorch.svg" width="600">
+</p>
+
+Now, let's predict the Y from some random X1,
+```python
+>>> X1_data = 28
+# predict Y value when X1 is 28
+>>> y_pred = lr_model(th.tensor([[X1_data]], dtype=th.float32)).detach()
+>>> y_pred.item()
+674.2701416015625
+# Y=674.27 when X1 is 28
+```
+
+
 <p>
 {% include  cite.html %}
 </p>
@@ -257,7 +359,7 @@ Check for <a href="https://reneshbedre.github.io/blog/mlr.html" target="_blank">
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: April 25, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 12, 2020</i> </span>
 
 <p>
 {% include  license.html %}
