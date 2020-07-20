@@ -1,5 +1,5 @@
 ---
-title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, and ComBat-Seq"
+title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, GeTMM, and ComBat-Seq"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
@@ -134,6 +134,54 @@ Notes:
           </p>
     - Now, double trim the upper and lower percentages of the data (trim M values by 30% and A values by 5%)
     - Get weighted mean of M after trimming and calculate normalization factor ( see Robinson et al., 2010 for details)
+- TMM is implemented in edgeR and performs better for between-samples comparisons
+- edgeR does not consider gene length for normalization as it assumes that the gene length would be constant 
+  between the samples
+
+TMM normalization using edgeR,
+
+```r
+# I am using R version 3.6.3 (2020-02-29) 
+# load library
+library(edgeR)
+# load sugarcane RNA-seq expression dataset (Published in Bedre et al., 2019)
+x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
+# delete last column (gene length column)
+x <- x[,-7]
+head(x)
+                      ctr1 ctr2 ctr3 trt1 trt2 trt3
+Sobic.001G000200.v3.1  338  324  246  291  202  168
+Sobic.001G000400.v3.1   49   21   53   16   16   11
+Sobic.001G000700.v3.1   39   49   30   46   52   25
+Sobic.001G000800.v3.1  530  530  499  499  386  264
+Sobic.001G001000.v3.1   12    3    4    3   10    7
+Sobic.001G001132.v3.1    4    2    2    3    4    1
+# comparing groups
+group <- factor(c('c','c', 'c', 't', 't', 't'))
+y <- DGEList(counts=x, group=group)
+# normalize for library size by cacluating scaling factor using TMM (default method)
+y <- calcNormFactors(y)
+# normalization factors for each library
+y$samples
+     group lib.size norm.factors
+ctr1     c  3357347    1.0290290
+ctr2     c  3185467    0.9918449
+ctr3     c  3292872    1.0479952
+trt1     t  3141934    0.9651681
+trt2     t  2720231    0.9819187
+trt3     t  1762881    0.9864858
+
+# count per million read (normalized count)
+norm_counts <- cpm(y)
+head(norm_counts)
+                            ctr1        ctr2        ctr3        trt1       trt2        trt3
+Sobic.001G000200.v3.1  97.834690 102.5482223  71.2854613  95.9605999  75.625815  96.6040717
+Sobic.001G000400.v3.1  14.183135   6.6466440  15.3582498   5.2761842   5.990164   6.3252666
+Sobic.001G000700.v3.1  11.288618  15.5088361   8.6933489  15.1690295  19.468032  14.3756059
+Sobic.001G000800.v3.1 153.409425 167.7486352 144.5993708 164.5509944 144.512696 151.8063984
+Sobic.001G001000.v3.1   3.473421   0.9495206   1.1591132   0.9892845   3.743852   4.0251697
+Sobic.001G001132.v3.1   1.157807   0.6330137   0.5795566   0.9892845   1.497541   0.5750242
+``` 
 
 
 **<span style="color:#060606"><i>DESeq</i> or <i>DESeq2</i> normalization (median-of-ratios method)</span>**
@@ -145,6 +193,9 @@ Notes:
   the size factor is calculated by first dividing the observed counts for each sample by its geometric mean. The size factor
   is then calculated as the median of this ratio for each sample. This size factor then used for normalizing raw
   count data for each sample.
+- <i>DESeq</i> or <i>DESeq2</i> does not consider gene length for normalization as it assumes that the gene length
+  would be constant between the samples.
+- <i>DESeq</i> or <i>DESeq2</i> performs better for between-samples comparisons  
 
 
 **<span style="color:#060606">SCnorm for single cell RNA-seq (scRNA-seq)</span>**
@@ -174,17 +225,66 @@ Notes:
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
 
+**<span style="color:#060606">GeTMM method</span>**
+- Smid et al., 2018 proposed a GeTMM (Gene length corrected TMM)  which works better for both between-samples and 
+  within-sample gene expression analysis
+- GeTMM is based on the TMM normalization but allows the gene length correction which lacks in TMM and <i>DESeq</i> or 
+  <i>DESeq2</i>
+- In GeTMM, calculate RPK for each gene from raw read count data which is then corrected by TMM normalization factor and
+  scaled to per million reads (See Smid et al., 2018 for detailed calculation) 
+  
+GeTMM normalization using edgeR,
+
+```r
+# I am using R version 3.6.3 (2020-02-29) 
+# load library
+library(edgeR)
+# load expression dataset (Published in Bedre et al., 2019)
+x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
+# calculate reads per Kb of gene length (corrected for gene length)
+rpk <- (x[,1:6]/x[,7])
+# delete last column (gene length column)
+x <- x[,-7]
+# comparing groups
+group <- factor(c('c','c', 'c', 't', 't', 't'))
+y <- DGEList(counts=rpk, group=group)
+# normalize for library size by cacluating scaling factor using TMM (default method)
+y <- calcNormFactors(y)
+# normalization factors for each library
+y$samples
+    group  lib.size norm.factors
+ctr1     c 1709.9624    1.0768814
+ctr2     c 1674.1908    0.9843628
+ctr3     c 1715.2323    1.0496274
+trt1     t 1638.5170    0.9841850
+trt2     t 1467.5495    0.9432723
+trt3     t  935.1252    0.9681173
+
+# count per million read (normalized count)
+norm_counts <- cpm(y)
+head(norm_counts)
+                      ctr1      ctr2      ctr3      trt1      trt2      trt3
+Sobic.001G000200 92.610154 99.193046 68.940330 91.046159 73.623746 93.628467
+Sobic.001G000400  5.579744  2.671972  6.172917  2.080487  2.423611  2.547814
+Sobic.001G000700 19.324115 27.128476 15.203816 26.026728 34.273857 25.196008
+Sobic.001G000800 74.410626 83.143686 71.656564 79.999334 72.089337 75.391042
+Sobic.001G001000  9.283029  2.593128  3.164935  2.650064 10.290420 11.014460
+Sobic.001G001132  7.464703  4.170392  3.817499  6.392939  9.929724  3.795852
+```          
 
 **<span style="color:#060606">References</span>**
 
- - Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B. Mapping and quantifying mammalian transcriptomes by RNA-Seq. Nature methods. 2008 Jul 1;5(7):621-8.
- - Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
- - Bullard JH, Purdom E, Hansen KD, Dudoit S. Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. BMC bioinformatics. 2010 Dec;11(1):94.
- - Robinson MD, Oshlack A. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology. 2010 Mar;11(3):R25.
- - Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
- - Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
- - Bacher R, Chu LF, Leng N, Gasch AP, Thomson JA, Stewart RM, Newton M, Kendziorski C. SCnorm: robust normalization of single-cell RNA-seq data. Nature methods. 2017 Jun;14(6):584.
- - Zhang, Y., Parmigiani, G., & Johnson, W. E. (2020). ComBat-Seq: batch effect adjustment for RNA-Seq count data. bioRxiv, 904730.
+- Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B. Mapping and quantifying mammalian transcriptomes by RNA-Seq. Nature methods. 2008 Jul 1;5(7):621-8.
+- Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
+- Bullard JH, Purdom E, Hansen KD, Dudoit S. Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. BMC bioinformatics. 2010 Dec;11(1):94.
+- Robinson MD, Oshlack A. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology. 2010 Mar;11(3):R25.
+- Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
+- Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
+- Bacher R, Chu LF, Leng N, Gasch AP, Thomson JA, Stewart RM, Newton M, Kendziorski C. SCnorm: robust normalization of single-cell RNA-seq data. Nature methods. 2017 Jun;14(6):584.
+- Zhang, Y., Parmigiani, G., & Johnson, W. E. (2020). ComBat-Seq: batch effect adjustment for RNA-Seq count data. bioRxiv, 904730.
+- Smid M, van den Braak RR, van de Werken HJ, van Riet J, van Galen A, de Weerd V, van der Vlugt-Daane M, Bril SI, Lalmahomed ZS, Kloosterman WP, Wilting SM. Gene length corrected trimmed mean of M-values (GeTMM) processing of RNA-seq data performs similarly in intersample analyses while improving intrasample comparisons. BMC bioinformatics. 2018 Dec;19(1):1-3.
+- Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.
+- Robinson MD, McCarthy DJ, Smyth GK. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010 Jan 1;26(1):139-40.
 
 **<span style="color:#33a8ff">How to cite?</span>**
 
@@ -195,7 +295,7 @@ https://reneshbedre.github.io/blog/expression_units.html
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: June 13, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 20, 2020</i> </span>
 
 <p>
 {% include  subscribe.html %}
