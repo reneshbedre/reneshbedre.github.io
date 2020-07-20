@@ -241,10 +241,9 @@ GeTMM normalization using edgeR,
 library(edgeR)
 # load expression dataset (Published in Bedre et al., 2019)
 x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
-# calculate reads per Kb of gene length (corrected for gene length)
-rpk <- (x[,1:6]/x[,7])
-# delete last column (gene length column)
-x <- x[,-7]
+# calculate reads per Kbp of gene length (corrected for gene length)
+# gene length is in bp in exppression dataset and converted to Kbp
+rpk <- ( (x[,1:6]*10^3 )/x[,7])
 # comparing groups
 group <- factor(c('c','c', 'c', 't', 't', 't'))
 y <- DGEList(counts=rpk, group=group)
@@ -253,23 +252,23 @@ y <- calcNormFactors(y)
 # normalization factors for each library
 y$samples
     group  lib.size norm.factors
-ctr1     c 1709.9624    1.0768814
-ctr2     c 1674.1908    0.9843628
-ctr3     c 1715.2323    1.0496274
-trt1     t 1638.5170    0.9841850
-trt2     t 1467.5495    0.9432723
-trt3     t  935.1252    0.9681173
+ctr1     c 1709962.4    1.0768821
+ctr2     c 1674190.8    0.9843634
+ctr3     c 1715232.3    1.0496310
+trt1     t 1638517.0    0.9841989
+trt2     t 1467549.5    0.9432728
+trt3     t  935125.2    0.9680985
 
 # count per million read (normalized count)
 norm_counts <- cpm(y)
 head(norm_counts)
                       ctr1      ctr2      ctr3      trt1      trt2      trt3
-Sobic.001G000200 92.610154 99.193046 68.940330 91.046159 73.623746 93.628467
-Sobic.001G000400  5.579744  2.671972  6.172917  2.080487  2.423611  2.547814
-Sobic.001G000700 19.324115 27.128476 15.203816 26.026728 34.273857 25.196008
-Sobic.001G000800 74.410626 83.143686 71.656564 79.999334 72.089337 75.391042
-Sobic.001G001000  9.283029  2.593128  3.164935  2.650064 10.290420 11.014460
-Sobic.001G001132  7.464703  4.170392  3.817499  6.392939  9.929724  3.795852
+Sobic.001G000200 92.610097 99.192986 68.940090 91.044874 73.623702 93.630285
+Sobic.001G000400  5.579741  2.671970  6.172896  2.080457  2.423609  2.547863
+Sobic.001G000700 19.324103 27.128459 15.203763 26.026360 34.273836 25.196497
+Sobic.001G000800 74.410581 83.143635 71.656315 79.998205 72.089293 75.392505
+Sobic.001G001000  9.283023  2.593127  3.164924  2.650027 10.290413 11.014674
+Sobic.001G001132  7.464699  4.170389  3.817485  6.392849  9.929718  3.795926
 ```          
 
 **<span style="color:#060606">References</span>**
