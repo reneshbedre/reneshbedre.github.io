@@ -143,26 +143,26 @@ TMM normalization using edgeR,
 ```r
 # I am using R version 3.6.3 (2020-02-29) 
 # load library
-library(edgeR)
+> library(edgeR)
 # load sugarcane RNA-seq expression dataset (Published in Bedre et al., 2019)
-x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
+> x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
 # delete last column (gene length column)
-x <- x[,-7]
-head(x)
-                      ctr1 ctr2 ctr3 trt1 trt2 trt3
-Sobic.001G000200.v3.1  338  324  246  291  202  168
-Sobic.001G000400.v3.1   49   21   53   16   16   11
-Sobic.001G000700.v3.1   39   49   30   46   52   25
-Sobic.001G000800.v3.1  530  530  499  499  386  264
-Sobic.001G001000.v3.1   12    3    4    3   10    7
-Sobic.001G001132.v3.1    4    2    2    3    4    1
+> x <- x[,-7]
+> head(x)
+                ctr1 ctr2 ctr3 trt1 trt2 trt3
+Sobic.001G000200  338  324  246  291  202  168
+Sobic.001G000400   49   21   53   16   16   11
+Sobic.001G000700   39   49   30   46   52   25
+Sobic.001G000800  530  530  499  499  386  264
+Sobic.001G001000   12    3    4    3   10    7
+Sobic.001G001132    4    2    2    3    4    1
 # comparing groups
-group <- factor(c('c','c', 'c', 't', 't', 't'))
-y <- DGEList(counts=x, group=group)
+> group <- factor(c('c','c', 'c', 't', 't', 't'))
+> y <- DGEList(counts=x, group=group)
 # normalize for library size by cacluating scaling factor using TMM (default method)
-y <- calcNormFactors(y)
+> y <- calcNormFactors(y)
 # normalization factors for each library
-y$samples
+> y$samples
      group lib.size norm.factors
 ctr1     c  3357347    1.0290290
 ctr2     c  3185467    0.9918449
@@ -172,15 +172,15 @@ trt2     t  2720231    0.9819187
 trt3     t  1762881    0.9864858
 
 # count per million read (normalized count)
-norm_counts <- cpm(y)
-head(norm_counts)
-                            ctr1        ctr2        ctr3        trt1       trt2        trt3
-Sobic.001G000200.v3.1  97.834690 102.5482223  71.2854613  95.9605999  75.625815  96.6040717
-Sobic.001G000400.v3.1  14.183135   6.6466440  15.3582498   5.2761842   5.990164   6.3252666
-Sobic.001G000700.v3.1  11.288618  15.5088361   8.6933489  15.1690295  19.468032  14.3756059
-Sobic.001G000800.v3.1 153.409425 167.7486352 144.5993708 164.5509944 144.512696 151.8063984
-Sobic.001G001000.v3.1   3.473421   0.9495206   1.1591132   0.9892845   3.743852   4.0251697
-Sobic.001G001132.v3.1   1.157807   0.6330137   0.5795566   0.9892845   1.497541   0.5750242
+> norm_counts <- cpm(y)
+> head(norm_counts)    
+                   ctr1        ctr2        ctr3        trt1       trt2        trt3
+Sobic.001G000200  97.860339 102.5561297  71.3023988  95.9799323  75.634827  96.6223700
+Sobic.001G000400  14.186854   6.6471566  15.3618989   5.2772471   5.990877   6.3264647
+Sobic.001G000700  11.291578  15.5100320   8.6954145  15.1720855  19.470352  14.3783289
+Sobic.001G000800 153.449643 167.7615701 144.6337277 164.5841451 144.529917 151.8351528
+Sobic.001G001000   3.474332   0.9495938   1.1593886   0.9894838   3.744298   4.0259321
+Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5751332
 ``` 
 
 
@@ -238,19 +238,19 @@ GeTMM normalization using edgeR,
 ```r
 # I am using R version 3.6.3 (2020-02-29) 
 # load library
-library(edgeR)
+> library(edgeR)
 # load expression dataset (Published in Bedre et al., 2019)
-x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
+> x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
 # calculate reads per Kbp of gene length (corrected for gene length)
 # gene length is in bp in exppression dataset and converted to Kbp
-rpk <- ( (x[,1:6]*10^3 )/x[,7])
+> rpk <- ( (x[,1:6]*10^3 )/x[,7])
 # comparing groups
-group <- factor(c('c','c', 'c', 't', 't', 't'))
-y <- DGEList(counts=rpk, group=group)
+> group <- factor(c('c','c', 'c', 't', 't', 't'))
+> y <- DGEList(counts=rpk, group=group)
 # normalize for library size by cacluating scaling factor using TMM (default method)
-y <- calcNormFactors(y)
+> y <- calcNormFactors(y)
 # normalization factors for each library
-y$samples
+> y$samples
     group  lib.size norm.factors
 ctr1     c 1709962.4    1.0768821
 ctr2     c 1674190.8    0.9843634
@@ -260,8 +260,8 @@ trt2     t 1467549.5    0.9432728
 trt3     t  935125.2    0.9680985
 
 # count per million read (normalized count)
-norm_counts <- cpm(y)
-head(norm_counts)
+> norm_counts <- cpm(y)
+> head(norm_counts)
                       ctr1      ctr2      ctr3      trt1      trt2      trt3
 Sobic.001G000200 92.610097 99.192986 68.940090 91.044874 73.623702 93.630285
 Sobic.001G000400  5.579741  2.671970  6.172896  2.080457  2.423609  2.547863
