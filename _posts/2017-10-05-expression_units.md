@@ -28,7 +28,7 @@ gene more the read count).
 
 ## <span style="color:#33a8ff"> Gene expression units and calculation </span> ##
 
- **<span style="color:#060606">RPM or CPM (Reads per million mapped reads or Counts per million mapped reads) </span>**
+### <span style="color:#060606">RPM or CPM (Reads per million mapped reads or Counts per million mapped reads) </span>
 
  <p align="center">
   \(  \text{RPM or CPM} = \frac{ \text{Number of reads mapped to gene}  \times 10^6}{\text{Total number of mapped reads}}  \)
@@ -53,8 +53,50 @@ Notes:
  - RPM does not consider the transcript length normalization.
  - RPM Suitable for sequencing protocols where reads are generated irrespective of gene length
 
+CPM normalization using `bioinfokit` (v0.8.9 or later),
 
-**<span style="color:#060606">RPKM (Reads per kilo base per million mapped reads)</span>**
+```python
+# I am using interactive python interpreter (Python 3.7.4)
+>>> from bioinfokit.analys import norm, get_data
+# load sugarcane RNA-seq expression dataset (Published in Bedre et al., 2019)
+>>> df = get_data('sc_exp').data
+>>> df.head()
+               gene  ctr1  ctr2  ctr3  trt1  trt2  trt3  length
+0  Sobic.001G000200   338   324   246   291   202   168  1982.0
+1  Sobic.001G000400    49    21    53    16    16    11  4769.0
+2  Sobic.001G000700    39    49    30    46    52    25  1096.0
+3  Sobic.001G000800   530   530   499   499   386   264  3868.0
+4  Sobic.001G001000    12     3     4     3    10     7   702.0
+
+# as this data as gene length column, we will drop length column
+>>> df = df.drop(['length'], axis=1)
+# make gene column as index column
+>>> df = df.set_index('gene')
+>>> df.head()
+                  ctr1  ctr2  ctr3  trt1  trt2  trt3
+gene
+Sobic.001G000200   338   324   246   291   202   168
+Sobic.001G000400    49    21    53    16    16    11
+Sobic.001G000700    39    49    30    46    52    25
+Sobic.001G000800   530   530   499   499   386   264
+Sobic.001G001000    12     3     4     3    10     7
+
+# now, normalize raw counts using CPM method 
+>>> nm = norm()
+>>> nm.cpm(df=df)
+# get CPM normalized dataframe
+>>> cpm_df = nm.cpm_norm
+>>> cpm_df.head()
+                        ctr1        ctr2        ctr3        trt1        trt2        trt3
+gene
+Sobic.001G000200  100.695004  101.731189   74.721094   92.633828   74.270713   95.314714
+Sobic.001G000400   14.597796    6.593688   16.098447    5.093269    5.882829    6.240844
+Sobic.001G000700   11.618654   15.385272    9.112329   14.643148   19.119193   14.183737
+Sobic.001G000800  157.894533  166.412129  151.568399  158.846324  141.923244  149.780266
+Sobic.001G001000    3.574971    0.941955    1.214977    0.954988    3.676768    3.971446
+```
+
+### <span style="color:#060606">RPKM (Reads per kilo base per million mapped reads)</span>
 
  <p align="center">
   \(  \text{RPKM} = \frac{ \text{Number of reads mapped to gene}   \times 10^3  \times 10^6 }{\text{Total number of mapped reads} \times \text{gene length in bp }}  \)
@@ -86,7 +128,7 @@ Notes:
  - RPKM/FPKM can be biased towards identifying the differentially expressed genes (Bullard et al., 2010)
 
 
-**<span style="color:#060606">TPM (Transcript per million)</span>**
+### <span style="color:#060606">TPM (Transcript per million)</span>
 
 <p align="center">
   \(  \text{TPM} = A \times \frac{1}{\sum(A)} \times 10^6 \)
@@ -112,7 +154,7 @@ Notes:
  - TPM is suitable for sequencing protocols where reads sequencing depends on gene length
 
 
-**<span style="color:#060606">TMM (Trimmed Mean of M-values)</span>**
+### <span style="color:#060606">TMM (Trimmed Mean of M-values)</span>
 - TMM is a between-sample normalization method in contrast to within-sample normalization methods (RPM, RPKM/FPKM, or TPM)
 - TMM normalization method assumes that most of the genes are not differentially expressed
 - TMM normalize the total RNA output among the samples and does not consider gene length or library size for normalization
@@ -184,7 +226,7 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
 ``` 
 
 
-**<span style="color:#060606"><i>DESeq</i> or <i>DESeq2</i> normalization (median-of-ratios method)</span>**
+### <span style="color:#060606"><i>DESeq</i> or <i>DESeq2</i> normalization (median-of-ratios method)</span>
 - The <i>DESeq</i> (and also <i>DESeq2</i>) normalization method is proposed by Anders and Huber, 2010 and is similar to TMM
 - <i>DESeq</i> normalization method  also assumes that most of the genes are not differentially expressed
 - The <i>DESeq</i> calculates size factors for each sample to compare the counts obtained from different samples with
@@ -198,7 +240,7 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
 - <i>DESeq</i> or <i>DESeq2</i> performs better for between-samples comparisons  
 
 
-**<span style="color:#060606">SCnorm for single cell RNA-seq (scRNA-seq)</span>**
+### <span style="color:#060606">SCnorm for single cell RNA-seq (scRNA-seq)</span>
 - The normalization units explained above works best for bulk RNA-seq and could be biased for scRNA-seq due to
   abundance of non-zero expression counts, variable count-depth relationship (dependence of gene expression on sequencing depth),
   and other unwanted technical variations
@@ -212,7 +254,7 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
 - <a href="https://bioconductor.org/packages/devel/bioc/html/SCnorm.html" target="_blank">SCnorm</a>
   is implemented in R package and is available on Bioconductor
 
-**<span style="color:#060606">ComBat-Seq method</span>**
+### <span style="color:#060606">ComBat-Seq method</span>
 - Zhang et al., 2020 proposed a ComBat-Seq (batch  effect  adjustment  method) approach to addresses the large variance of
   batch effects present in RNA-seq count data (the paper is still in preprint)
 - The benefit of ComBat-Seq is that it adjusts the batch effects for raw counts data and provide the output
@@ -225,7 +267,7 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
 
-**<span style="color:#060606">GeTMM method</span>**
+### <span style="color:#060606">GeTMM method</span>
 - Smid et al., 2018 proposed a GeTMM (Gene length corrected TMM)  which works better for both between-samples and 
   within-sample gene expression analysis
 - GeTMM is based on the TMM normalization but allows the gene length correction which lacks in TMM and <i>DESeq</i> or 
@@ -271,7 +313,7 @@ Sobic.001G001000  9.283023  2.593127  3.164924  2.650027 10.290413 11.014674
 Sobic.001G001132  7.464699  4.170389  3.817485  6.392849  9.929718  3.795926
 ```          
 
-**<span style="color:#060606">References</span>**
+## <span style="color:#060606">References</span>
 
 - Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B. Mapping and quantifying mammalian transcriptomes by RNA-Seq. Nature methods. 2008 Jul 1;5(7):621-8.
 - Wagner GP, Kin K, Lynch VJ. Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples. Theory in biosciences. 2012 Dec 1;131(4):281-5.
@@ -294,7 +336,7 @@ https://reneshbedre.github.io/blog/expression_units.html
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: July 20, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 28, 2020</i> </span>
 
 <p>
 {% include  subscribe.html %}

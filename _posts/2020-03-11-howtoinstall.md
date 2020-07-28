@@ -677,15 +677,37 @@ t-SNE 2D image (tsne_2d.png will be saved in same directory)
 
 <a href="https://reneshbedre.github.io/blog/tsne.html" target="_blank">Working Example</a>
 
+## Normalization
 
-### References:
+### RPM or CPM normalization
+
+Normalize raw gene expression counts into Reads per million mapped reads (RPM) or Counts per million mapped reads (CPM)
+
+`bioinfokit.analys.norm.cpm(df)`
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe containing raw gene expression values. Genes with missing expression values (NA) will be dropped.
+
+Returns:
+
+RPM or CPM normalized Pandas dataframe
+
+<a href="https://reneshbedre.github.io/blog/expression_units.html" target="_blank">Working Example</a>
+
+## How to cite bioinfokit?
+- Renesh Bedre.(2020, May 24). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.8). 
+  Zenodo. http://doi.org/10.5281/zenodo.3841708
+- Additionally check <a href='https://zenodo.org/record/3841708#.XyCfi-dOmUk' target='_blank'>Zenodo</a> to cite specific version of bioinfokit
+
+## References:
 - Travis E. Oliphant. A guide to NumPy, USA: Trelgol Publishing, (2006).
 - John D. Hunter. Matplotlib: A 2D Graphics Environment, Computing in Science & Engineering, 9, 90-95 (2007), DOI:10.1109/MCSE.2007.55 (publisher link)
 - Fernando Pérez and Brian E. Granger. IPython: A System for Interactive Scientific Computing, Computing in Science & Engineering, 9, 21-29 (2007), DOI:10.1109/MCSE.2007.53 (publisher link)
 - Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. http://doi.org/10.5281/zenodo.3629446
 - Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research, 12, 2825-2830 (2011)
 
-### bioinfokit cited by:
+## bioinfokit cited by:
 - Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
   bioRxiv 2020.04.23.057786; doi: https://doi.org/10.1101/2020.04.23.057786
 - Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform
@@ -702,7 +724,7 @@ t-SNE 2D image (tsne_2d.png will be saved in same directory)
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: May 14, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 28, 2020</i> </span>
 
 <p>
 {% include  license.html %}
