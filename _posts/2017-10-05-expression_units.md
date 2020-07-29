@@ -53,7 +53,7 @@ Notes:
  - RPM does not consider the transcript length normalization.
  - RPM Suitable for sequencing protocols where reads are generated irrespective of gene length
 
-CPM normalization using `bioinfokit` (v0.8.9 or later),
+RPM or CPM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.8.9 or later),
 
 ```python
 # I am using interactive python interpreter (Python 3.7.4)
@@ -68,7 +68,7 @@ CPM normalization using `bioinfokit` (v0.8.9 or later),
 3  Sobic.001G000800   530   530   499   499   386   264  3868.0
 4  Sobic.001G001000    12     3     4     3    10     7   702.0
 
-# as this data as gene length column, we will drop length column
+# as this data has gene length column, we will drop length column
 >>> df = df.drop(['length'], axis=1)
 # make gene column as index column
 >>> df = df.set_index('gene')
@@ -127,6 +127,46 @@ Notes:
  - Used in single-end RNA-seq experiments (FPKM for paired-end RNA-seq data)
  - RPKM/FPKM can be biased towards identifying the differentially expressed genes (Bullard et al., 2010)
 
+RPKM or FPKM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9 or later),
+
+```python
+# I am using interactive python interpreter (Python 3.7.4)
+>>> from bioinfokit.analys import norm, get_data
+# load sugarcane RNA-seq expression dataset (Published in Bedre et al., 2019)
+>>> df = get_data('sc_exp').data
+>>> df.head()
+               gene  ctr1  ctr2  ctr3  trt1  trt2  trt3  length
+0  Sobic.001G000200   338   324   246   291   202   168  1982.0
+1  Sobic.001G000400    49    21    53    16    16    11  4769.0
+2  Sobic.001G000700    39    49    30    46    52    25  1096.0
+3  Sobic.001G000800   530   530   499   499   386   264  3868.0
+4  Sobic.001G001000    12     3     4     3    10     7   702.0
+
+# make gene column as index column
+>>> df = df.set_index('gene')
+>>> df.head()
+                  ctr1  ctr2  ctr3  trt1  trt2  trt3  length
+gene
+Sobic.001G000200   338   324   246   291   202   168  1982.0
+Sobic.001G000400    49    21    53    16    16    11  4769.0
+Sobic.001G000700    39    49    30    46    52    25  1096.0
+Sobic.001G000800   530   530   499   499   386   264  3868.0
+Sobic.001G001000    12     3     4     3    10     7   702.0
+
+# now, normalize raw counts using RPKM method 
+>>> nm = norm()
+>>> nm.rpkm(df=df, gl='length')
+# get RPKM normalized dataframe
+>>> rpkm_df = nm.rpkm_norm
+>>> rpkm_df.head()
+                       ctr1       ctr2       ctr3       trt1       trt2       trt3
+gene
+Sobic.001G000200  50.804745  51.327542  37.699846  46.737552  37.472610  48.090169
+Sobic.001G000400   3.060976   1.382614   3.375644   1.067995   1.233556   1.308627
+Sobic.001G000700  10.600962  14.037657   8.314168  13.360537  17.444520  12.941366
+Sobic.001G000800  40.820717  43.022784  39.185212  41.066785  36.691635  38.722923
+Sobic.001G001000   5.092551   1.341817   1.730737   1.360382   5.237561   5.657331
+```
 
 ### <span style="color:#060606">TPM (Transcript per million)</span>
 

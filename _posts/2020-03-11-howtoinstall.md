@@ -691,13 +691,34 @@ Parameters | Description
 
 Returns:
 
-RPM or CPM normalized Pandas dataframe
+RPM or CPM normalized Pandas dataframe as class attributes (cpm_norm)
 
-<a href="https://reneshbedre.github.io/blog/expression_units.html" target="_blank">Working Example</a>
+<a href="https://reneshbedre.github.io/blog/expression_units.html#rpm-or-cpm-reads-per-million-mapped-reads-or-counts-per-million-mapped-reads-" target="_blank">Working Example</a>
+
+### RPKM or FPKM normalization
+
+Normalize raw gene expression counts into Reads per kilo base per million mapped reads (RPKM) or 
+Fragments per kilo base per million mapped reads (FPKM)
+
+`bioinfokit.analys.norm.rpkm(df, gl)`
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe containing raw gene expression values. Genes with missing expression or gene length values (NA) will be dropped.
+`gl` | Name of a column having gene length in bp [string][default: None]
+
+Returns:
+
+RPKM or FPKM normalized Pandas dataframe as class attributes (rpkm_norm)
+
+<a href="https://reneshbedre.github.io/blog/expression_units.html#rpkm-reads-per-kilo-base-per-million-mapped-reads" target="_blank">Working Example</a>
+
+
+
 
 ## How to cite bioinfokit?
-- Renesh Bedre.(2020, May 24). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.8). 
-  Zenodo. http://doi.org/10.5281/zenodo.3841708
+- Renesh Bedre. (2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). 
+  Zenodo. http://doi.org/10.5281/zenodo.3965241 
 - Additionally check <a href='https://zenodo.org/record/3841708#.XyCfi-dOmUk' target='_blank'>Zenodo</a> to cite specific version of bioinfokit
 
 ## References:
