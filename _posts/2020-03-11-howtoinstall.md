@@ -30,7 +30,7 @@ bioinfokit requires
 
 bioinfokit can be installed using pip, easy_install and git.
 
-latest bioinfokit version: v0.8.8
+latest bioinfokit version: v0.9
 
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
@@ -681,6 +681,8 @@ t-SNE 2D image (tsne_2d.png will be saved in same directory)
 
 ### RPM or CPM normalization
 
+`latest update v0.8.9`
+
 Normalize raw gene expression counts into Reads per million mapped reads (RPM) or Counts per million mapped reads (CPM)
 
 `bioinfokit.analys.norm.cpm(df)`
@@ -696,6 +698,8 @@ RPM or CPM normalized Pandas dataframe as class attributes (cpm_norm)
 <a href="https://reneshbedre.github.io/blog/expression_units.html#rpm-or-cpm-reads-per-million-mapped-reads-or-counts-per-million-mapped-reads-" target="_blank">Working Example</a>
 
 ### RPKM or FPKM normalization
+
+`latest update v0.9`
 
 Normalize raw gene expression counts into Reads per kilo base per million mapped reads (RPKM) or 
 Fragments per kilo base per million mapped reads (FPKM)
