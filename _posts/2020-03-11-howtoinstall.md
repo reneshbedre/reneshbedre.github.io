@@ -30,7 +30,7 @@ bioinfokit requires
 
 bioinfokit can be installed using pip, easy_install and git.
 
-latest bioinfokit version: v0.9
+latest bioinfokit version: v0.9.1
 
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
@@ -717,6 +717,25 @@ RPKM or FPKM normalized Pandas dataframe as class attributes (rpkm_norm)
 
 <a href="https://reneshbedre.github.io/blog/expression_units.html#rpkm-reads-per-kilo-base-per-million-mapped-reads" target="_blank">Working Example</a>
 
+### TPM normalization
+
+`latest update v0.9.1`
+
+Normalize raw gene expression counts into Transcript per million (TPM) 
+
+`bioinfokit.analys.norm.tpm(df, gl)`
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe containing raw gene expression values. Genes with missing expression or gene length values (NA) will be dropped.
+`gl` | Name of a column having gene length in bp [string][default: None]
+
+Returns:
+
+TPM normalized Pandas dataframe as class attributes (tpm_norm)
+
+<a href="https://reneshbedre.github.io/blog/expression_units.html#tpm-transcript-per-million" target="_blank">Working Example</a>
+
 
 
 
@@ -749,7 +768,7 @@ RPKM or FPKM normalized Pandas dataframe as class attributes (rpkm_norm)
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: July 28, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 30, 2020</i> </span>
 
 <p>
 {% include  license.html %}

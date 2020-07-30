@@ -53,7 +53,7 @@ Notes:
  - RPM does not consider the transcript length normalization.
  - RPM Suitable for sequencing protocols where reads are generated irrespective of gene length
 
-RPM or CPM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.8.9 or later),
+RPM or CPM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9.1 or later),
 
 ```python
 # I am using interactive python interpreter (Python 3.7.4)
@@ -127,7 +127,7 @@ Notes:
  - Used in single-end RNA-seq experiments (FPKM for paired-end RNA-seq data)
  - RPKM/FPKM can be biased towards identifying the differentially expressed genes (Bullard et al., 2010)
 
-RPKM or FPKM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9 or later),
+RPKM or FPKM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9.1 or later),
 
 ```python
 # I am using interactive python interpreter (Python 3.7.4)
@@ -153,7 +153,8 @@ Sobic.001G000700    39    49    30    46    52    25  1096.0
 Sobic.001G000800   530   530   499   499   386   264  3868.0
 Sobic.001G001000    12     3     4     3    10     7   702.0
 
-# now, normalize raw counts using RPKM method 
+# now, normalize raw counts using RPKM method
+# gene length must be in bp
 >>> nm = norm()
 >>> nm.rpkm(df=df, gl='length')
 # get RPKM normalized dataframe
@@ -193,6 +194,47 @@ Notes:
  - TPM proposed as an alternative to RPKM due to inaccuracy in RPKM measurement (Wagner et al., 2012)
  - TPM is suitable for sequencing protocols where reads sequencing depends on gene length
 
+TPM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9.1 or later),
+
+```python
+# I am using interactive python interpreter (Python 3.7.4)
+>>> from bioinfokit.analys import norm, get_data
+# load sugarcane RNA-seq expression dataset (Published in Bedre et al., 2019)
+>>> df = get_data('sc_exp').data
+>>> df.head()
+               gene  ctr1  ctr2  ctr3  trt1  trt2  trt3  length
+0  Sobic.001G000200   338   324   246   291   202   168  1982.0
+1  Sobic.001G000400    49    21    53    16    16    11  4769.0
+2  Sobic.001G000700    39    49    30    46    52    25  1096.0
+3  Sobic.001G000800   530   530   499   499   386   264  3868.0
+4  Sobic.001G001000    12     3     4     3    10     7   702.0
+
+# make gene column as index column
+>>> df = df.set_index('gene')
+>>> df.head()
+                  ctr1  ctr2  ctr3  trt1  trt2  trt3  length
+gene
+Sobic.001G000200   338   324   246   291   202   168  1982.0
+Sobic.001G000400    49    21    53    16    16    11  4769.0
+Sobic.001G000700    39    49    30    46    52    25  1096.0
+Sobic.001G000800   530   530   499   499   386   264  3868.0
+Sobic.001G001000    12     3     4     3    10     7   702.0
+
+# now, normalize raw counts using TPM method
+# gene length must be in bp
+>>> nm = norm()
+>>> nm.tpm(df=df, gl='length')
+# get TPM normalized dataframe
+>>> tpm_df = nm.tpm_norm
+>>> tpm_df.head()
+                       ctr1       ctr2       ctr3       trt1       trt2       trt3
+gene
+Sobic.001G000200  99.730156  97.641941  72.361658  89.606265  69.447237  90.643338
+Sobic.001G000400   6.008723   2.630189   6.479263   2.047584   2.286125   2.466582
+Sobic.001G000700  20.809781  26.704261  15.958341  25.615115  32.329578  24.392691
+Sobic.001G000800  80.131423  81.843548  75.212691  78.734145  67.999871  72.987371
+Sobic.001G001000   9.996721   2.552579   3.322002   2.608154   9.706667  10.663289
+```
 
 ### <span style="color:#060606">TMM (Trimmed Mean of M-values)</span>
 - TMM is a between-sample normalization method in contrast to within-sample normalization methods (RPM, RPKM/FPKM, or TPM)
@@ -379,7 +421,7 @@ https://reneshbedre.github.io/blog/expression_units.html
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: July 28, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: July 30, 2020</i> </span>
 
 <p>
 {% include  subscribe.html %}
