@@ -265,43 +265,7 @@ Correlation matrix plot image in same directory (corr_mat.png)
 
 <a href="https://reneshbedre.github.io/blog/corr.html" target="_blank">Working example</a>
 
-### Manhatten plot
 
-`latest update v0.9.2`
-
-`bioinfokit.visuz.marker.mhat(df, chr, pv, color, dim, r, ar, gwas_sign_line, gwasp, dotsize, markeridcol, markernames, 
-    gfont, valpha, show, figtype, axxlabel, axylabel, axlabelfontsize, ylm, gstyle, figname)`
-
-Parameters | Description
------------- | -------------
-`df` |Pandas dataframe object with atleast SNP, chromosome, and P-values columns
-`chr` | Name of a column having chromosome numbers [string][default:None]
-`pv` | Name of a column having P-values. Must be numeric column [string][default:None]
-`color` | List the name of the colors to be plotted. It can accept two alternate colors or the number colors equal to chromosome number. If nothing (None) provided, it will randomly assign the color to each chromosome [list][default:None]
-`gwas_sign_line` |Plot statistical significant threshold line defined by option `gwasp` [bool (True or False)][default: False]
-`gwasp` |  Statistical significant threshold to identify significant SNPs [float][default: 5E-08]
-`dotsize`| The size of the dots in the plot [float][default: 8]
-`markeridcol` | Name of a column having SNPs. This is necessary for plotting SNP names on the plot [string][default: None]
-`markernames` | The list of the SNPs to display on the plot. These SNP should be present in SNP column. Additionally, it also accepts the dict of SNPs and its associated gene name. If this option set to True, it will label all SNPs with P-value significant score defined by `gwasp` [string, list, tuple, dict][default: True]
-`gfont` | Font size for SNP names to display on the plot [float][default: 8]. gfont not compatible with gstyle=2.
-`valpha` | Transparency of points on plot [float (between 0 and 1)][default: 1.0]
-`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
-`r` | Figure resolution in dpi [int][default: 300]
-`ar` | Rotation of X-axis labels [float][default: 90]
-`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
-`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
-`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
-`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
-`axlabelfontsize` | Font size for axis labels [float][default: 9]
-`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
-`gstyle` | Style of the text for markernames. 1 for default text and 2 for box text [int][default: 1]
-`figname` | name of figure [string][default:"manhatten"]
-
-Returns:
-
-Manhatten plot image in same directory (manhatten.png)
-
-<a href="https://reneshbedre.github.io/blog/manhat.html" target="_blank">Working example</a>
 
 ### Bar-dot plot
 
@@ -344,37 +308,7 @@ Bar-dot plot image in same directory (bardot.png)
 
 <a href="https://reneshbedre.github.io/blog/bardot.html" target="_blank">Working Example</a>
 
-### Merge VCF files
 
-`bioinfokit.analys.marker.mergevcf(file)`
-
-Parameters | Description
------------- | -------------
-`file` | Multiple vcf files separated by comma
-
-Returns:
-
-Merged VCF file (merge_vcf.vcf)
-
-<a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
-
-### Split VCF file
-
-`bioinfokit.analys.marker.splitvcf(file)`
-
-Split single VCF file containing variants for all chromosomes into individual file containing variants for each chromosome
-
-Parameters | Description
------------- | -------------
- `file` | VCF file to split
- `id` | chromosome id column in VCF file [string][default='#CHROM']
-
-
-Returns:
-
-VCF files for each chromosome
-
-<a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
 
 
 ### Sequencing coverage
@@ -737,6 +671,79 @@ Returns:
 TPM normalized Pandas dataframe as class attributes (tpm_norm)
 
 <a href="https://reneshbedre.github.io/blog/expression_units.html#tpm-transcript-per-million" target="_blank">Working Example</a>
+
+
+## Variant analysis
+
+### Manhatten plot
+
+`latest update v0.9.2`
+
+`bioinfokit.visuz.marker.mhat(df, chr, pv, color, dim, r, ar, gwas_sign_line, gwasp, dotsize, markeridcol, markernames, 
+    gfont, valpha, show, figtype, axxlabel, axylabel, axlabelfontsize, ylm, gstyle, figname)`
+
+Parameters | Description
+------------ | -------------
+`df` |Pandas dataframe object with atleast SNP, chromosome, and P-values columns
+`chr` | Name of a column having chromosome numbers [string][default:None]
+`pv` | Name of a column having P-values. Must be numeric column [string][default:None]
+`color` | List the name of the colors to be plotted. It can accept two alternate colors or the number colors equal to chromosome number. If nothing (None) provided, it will randomly assign the color to each chromosome [list][default:None]
+`gwas_sign_line` |Plot statistical significant threshold line defined by option `gwasp` [bool (True or False)][default: False]
+`gwasp` |  Statistical significant threshold to identify significant SNPs [float][default: 5E-08]
+`dotsize`| The size of the dots in the plot [float][default: 8]
+`markeridcol` | Name of a column having SNPs. This is necessary for plotting SNP names on the plot [string][default: None]
+`markernames` | The list of the SNPs to display on the plot. These SNP should be present in SNP column. Additionally, it also accepts the dict of SNPs and its associated gene name. If this option set to True, it will label all SNPs with P-value significant score defined by `gwasp` [string, list, tuple, dict][default: True]
+`gfont` | Font size for SNP names to display on the plot [float][default: 8]. gfont not compatible with gstyle=2.
+`valpha` | Transparency of points on plot [float (between 0 and 1)][default: 1.0]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
+`r` | Figure resolution in dpi [int][default: 300]
+`ar` | Rotation of X-axis labels [float][default: 90]
+`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
+`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
+`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
+`axlabelfontsize` | Font size for axis labels [float][default: 9]
+`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
+`gstyle` | Style of the text for markernames. 1 for default text and 2 for box text [int][default: 1]
+`figname` | name of figure [string][default:"manhatten"]
+
+Returns:
+
+Manhatten plot image in same directory (manhatten.png)
+
+<a href="https://reneshbedre.github.io/blog/manhat.html" target="_blank">Working example</a>
+
+### Merge VCF files
+
+`bioinfokit.analys.marker.mergevcf(file)`
+
+Parameters | Description
+------------ | -------------
+`file` | Multiple vcf files separated by comma
+
+Returns:
+
+Merged VCF file (merge_vcf.vcf)
+
+<a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
+
+### Split VCF file
+
+`bioinfokit.analys.marker.splitvcf(file)`
+
+Split single VCF file containing variants for all chromosomes into individual file containing variants for each chromosome
+
+Parameters | Description
+------------ | -------------
+ `file` | VCF file to split
+ `id` | chromosome id column in VCF file [string][default='#CHROM']
+
+
+Returns:
+
+VCF files for each chromosome
+
+<a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
 
 
 
