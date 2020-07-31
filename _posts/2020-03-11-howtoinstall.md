@@ -30,7 +30,7 @@ bioinfokit requires
 
 bioinfokit can be installed using pip, easy_install and git.
 
-latest bioinfokit version: v0.9.1
+latest bioinfokit version: v0.9.2
 
 Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)
 
