@@ -64,7 +64,7 @@ cd bioinfokit
 python setup.py install
 ```
 
-### Check version of bioinfokit
+### Check the version of bioinfokit
 ```python
 >>> import bioinfokit
 >>> bioinfokit.__version__
@@ -72,6 +72,9 @@ python setup.py install
 ```
 
 ## <span style="color:#33a8ff">How to use bioinfokit?</span>
+
+## Gene expression analysis
+
 ### Volcano plot
 
 latest update v0.8.8
@@ -243,256 +246,7 @@ heatmap plot (heatmap.png, heatmap_clus.png)
 
 <a href="https://reneshbedre.github.io/blog/hmap.html" target="_blank">Working example</a>
 
-### Correlation matrix plot
-
-`bioinfokit.visuz.stat.corr_mat(table, corm, cmap, r, dim, show, figtype, axtickfontsize, axtickfontname)`
-
-Parameters | Description
------------- | -------------
-`table` | Dataframe object with numerical variables (columns) to find correlation. Ideally, you should have three or more variables. Dataframe should not have identifier column.
-`corm` | Correlation method [pearson,kendall,spearman] [default:pearson]
-`cmap` | Color Palette for heatmap [string][default: 'seismic']. More colormaps are available at https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
-`r` | Figure resolution in dpi [int][default: 300]. Not compatible with `show`= True
-`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 5)]  
-`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
-`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
-`axtickfontsize` | Font size for axis ticks [float][default: 7]
-`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
-
-Returns:
-
-Correlation matrix plot image in same directory (corr_mat.png)
-
-<a href="https://reneshbedre.github.io/blog/corr.html" target="_blank">Working example</a>
-
-
-
-### Bar-dot plot
-
-`latest update v0.8.5`
-
-`bioinfokit.visuz.stat.bardot(df, colorbar, colordot, bw, dim, r, ar, hbsize, errorbar, dotsize, markerdot, valphabar, 
-    valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, ylm, axtickfontsize, axtickfontname,
-    yerrlw, yerrcw)`
-
-Parameters | Description
------------- | -------------
-`df` |Pandas dataframe object
-`colorbar` | Color of bar graph [string or list][default:"#bbcfff"]
-`colordot` | Color of dots on bar [string or list][default:"#ee8972"]
-`bw` |Width of bar [float][default: 0.4]
-`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
-`r` | Figure resolution in dpi [int][default: 300]
-`ar` | Rotation of X-axis labels [float][default: 0]
-`hbsize` | Horizontal bar size for standard error bars [float][default: 4]
-`errorbar` |  Draw standard error bars [bool (True or False)][default: True]
-`dotsize`| The size of the dots in the plot [float][default: 6]
-`markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
-`valphabar` | Transparency of bars on plot [float (between 0 and 1)][default: 1]
-`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
-`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
-`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
-`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
-`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
-`axlabelfontsize` | Font size for axis labels [float][default: 9]
-`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
-`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
-`axtickfontsize` | Font size for axis ticks [float][default: 9]
-`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
-`yerrlw` | Error bar line width [float][default: None]
-`yerrcw` | Error bar cap width [float][default: None]
-
-Returns:
-
-Bar-dot plot image in same directory (bardot.png)
-
-<a href="https://reneshbedre.github.io/blog/bardot.html" target="_blank">Working Example</a>
-
-
-
-
-### Sequencing coverage
-
-`bioinfokit.analys.seqcov(file, gs)`
-
-Parameters | Description
------------- | -------------
-`file` | FASTQ file
-`gs` | Genome size in Mbp
-
-Returns:
-
-Sequencing coverage of the given FASTQ file
-
-<a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Working example</a>
-
-### Reverse complement of DNA sequence
-
-`bioinfokit.analys.rev_com(sequence)`
-
-Parameters | Description
------------- | -------------
-`seq` | DNA sequence to perform reverse complement
-`file` | DNA sequence in a fasta file
-
-Returns:
-
-Reverse complement of original DNA sequence
-
-<a href="https://reneshbedre.github.io/blog/revcom.html" target="_blank">Working example</a>
-
-### Two sample and Welch's t-test
-`bioinfokit.analys.stat.ttsam(table, xfac, res, evar, alpha)`
-
-Parameters | Description
------------- | -------------
-`table` | Pandas dataframe. It should be stacked table with independent (xfac) and dependent (res) variable columns.
-`xfac` | Independent group column name with two levels [string][default: None]
-`res` | Response variable column name [string][default: None]
-`evar` | t-test with equal variance [bool (True or False)][default: True]
-`alpha` | Confidence level [float][default: 0.05]
-
-Returns:
-
-summary output and group boxplot (ttsam_boxplot.png)
-
-<a href="https://reneshbedre.github.io/blog/ttest.html" target="_blank">Working example</a>
-
-### Chi-square test for independence
-
-`bioinfokit.analys.stat.chisq(table)`
-
-Parameters | Description
------------- | -------------
-`table` | Pandas dataframe. It should be contingency table.
-
-Returns:
-
-summary output and variable mosaic plot (mosaic.png)
-
-<a href="https://reneshbedre.github.io/blog/chisq.html" target="_blank">Working example</a>
-
-### File format conversions
-
-`bioinfokit.analys.format`
-
-Function | Parameters | Description
-------------|---------- | -------------
-`bioinfokit.analys.format.fqtofa(file)` | `FASTQ file` | Convert FASTQ file into FASTA format
-`bioinfokit.analys.format.hmmtocsv(file)` | `HMM file` | Convert HMM text output (from HMMER tool) to CSV format
-`bioinfokit.analys.format.tabtocsv(file)` | `TAB file` | Convert TAB file to CSV format
-`bioinfokit.analys.format.csvtotab(file)` | `CSV file` | Convert CSV file to TAB format
-
-
-Returns:
-
-Output will be saved in same directory
-
-<a href="https://reneshbedre.github.io/blog/format.html" target="_blank">Working example</a>
-
-<!--
-### One-way ANOVA
-
-`bioinfokit.stat.oanova(table, res, xfac, ph, phalpha)`
-
-Parameters | Description
------------- | -------------
-`table` | Pandas dataframe in stacked table format
-`res` | Response variable (dependent variable) [string][default: None]
-`xfac` | Treatments or groups or factors (independent variable) [string][default: None]
-`ph` | perform pairwise comparisons with Tukey HSD test [bool (True or False)] [default: False]
-`phalpha` |significance level Tukey HSD test [float (0 to 1)][default: 0.05]
-
-
-Returns:
-
-ANOVA summary, multiple pairwise comparisons, and assumption tests statistics
-
-<a href="https://reneshbedre.github.io/blog/oanova.html" target="_blank">Working example</a>
--->
-
-
-### FASTQ quality format detection
-
-`bioinfokit.analys.format.fq_qual_var(file)`
-
-Parameters | Description
------------- | -------------
-`file` |FASTQ file to detect quality format [deafult: None]
-
-Returns:
-
-Quality format encoding name for FASTQ file (Supports only Sanger, Illumina 1.8+ and Illumina  1.3/1.4)
-
-<a href="https://reneshbedre.github.io/blog/fqqualfmt.html" target="_blank">Working Example</a>
-
-### Linear regression analysis
-
-`bioinfokit.visuz.stat.lin_reg(df, x, y)`
-
-Parameters | Description
------------- | -------------
-`df` |Pandas dataframe object
-`x` | Name of column having independent X variables [list][default:None]
-`y` | Name of column having dependent Y variables [list][default:None]
-
-Returns:
-
-Regression analysis summary
-
-<a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
-
-### Regression plot
-
-`bioinfokit.visuz.stat.regplot(df, x, y, yhat, dim, colordot, colorline, r, ar, dotsize, markerdot, linewidth, 
-    valphaline, valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, xlm, ylm, axtickfontsize,
-    axtickfontname)`
-
-Parameters | Description
------------- | -------------
-`df` | Pandas dataframe object
-`x` | Name of column having independent X variables [string][default:None]
-`y` | Name of column having dependent Y variables [string][default:None]
-`yhat` |Name of column having predicted response of Y variable (y_hat) from regression [string][default:None]
-`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
-`r` | Figure resolution in dpi [int][default: 300]
-`ar` | Rotation of X-axis labels [float][default: 0]
-`dotsize`| The size of the dots in the plot [float][default: 6]
-`markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
-`valphaline` | Transparency of regression line on plot [float (between 0 and 1)][default: 1]
-`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
-`linewidth` | Width of regression line [float][default: 1]
-`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
-`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
-`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
-`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
-`axlabelfontsize` | Font size for axis labels [float][default: 9]
-`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
-`xlm` | Range of ticks to plot on X-axis [float tuple (bottom, top, interval)][default: None]
-`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
-`axtickfontsize` | Font size for axis ticks [float][default: 9]
-`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
-
-Returns:
-
-Regression plot image in same directory (reg_plot.png)
-
-<a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
-
-### GFF3 to GTF file format conversion
-
-`bioinfokit.analys.gff.gff_to_gtf(file)`
-
-Parameters | Description
------------- | -------------
-`file` | GFF3 genome annotation file
-
-Returns:
-
-GTF format genome annotation file (file.gtf will be saved in same directory)
-
-<a href="https://reneshbedre.github.io/blog/gffgtf.html" target="_blank">Working Example</a>
-
+## Clustering analysis
 ### Scree plot
 
 `bioinfokit.visuz.cluster.screeplot(obj, axlabelfontsize, axlabelfontname, axxlabel, axylabel,
@@ -713,6 +467,27 @@ Manhatten plot image in same directory (manhatten.png)
 
 <a href="https://reneshbedre.github.io/blog/manhat.html" target="_blank">Working example</a>
 
+### Variant annotation 
+
+`latest update v0.9`
+
+Assign genetic features and function to the variants in VCF file
+
+`bioinfokit.analys.marker.vcf_anot(file, id, gff_file, anot_attr)`
+
+Parameters | Description
+------------ | -------------
+`file` | VCF file
+`id` | chromosome id column in VCF file [string][default='#CHROM']
+`gff_file` | GFF3 genome annotation file
+`anot_attr` | Gene function tag in attributes field of GFF3 file
+
+Returns:
+
+VCF file with annotation (annotated vcf file will be saved in same directory)
+
+<a href="https://reneshbedre.github.io/blog/vcfanot.html" target="_blank">Working Example</a>
+
 ### Merge VCF files
 
 `bioinfokit.analys.marker.mergevcf(file)`
@@ -745,7 +520,254 @@ VCF files for each chromosome
 
 <a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
 
+## High-throughput sequence analysis
 
+### FASTQ quality format detection
+
+`bioinfokit.analys.format.fq_qual_var(file)`
+
+Parameters | Description
+------------ | -------------
+`file` |FASTQ file to detect quality format [deafult: None]
+
+Returns:
+
+Quality format encoding name for FASTQ file (Supports only Sanger, Illumina 1.8+ and Illumina  1.3/1.4)
+
+<a href="https://reneshbedre.github.io/blog/fqqualfmt.html" target="_blank">Working Example</a>
+
+### Sequencing coverage
+
+`bioinfokit.analys.seqcov(file, gs)`
+
+Parameters | Description
+------------ | -------------
+`file` | FASTQ file
+`gs` | Genome size in Mbp
+
+Returns:
+
+Sequencing coverage of the given FASTQ file
+
+<a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Working example</a>
+
+### Reverse complement of DNA sequence
+
+`bioinfokit.analys.rev_com(sequence)`
+
+Parameters | Description
+------------ | -------------
+`seq` | DNA sequence to perform reverse complement
+`file` | DNA sequence in a fasta file
+
+Returns:
+
+Reverse complement of original DNA sequence
+
+<a href="https://reneshbedre.github.io/blog/revcom.html" target="_blank">Working example</a>
+
+### File format conversions
+
+`bioinfokit.analys.format`
+
+Function | Parameters | Description
+------------|---------- | -------------
+`bioinfokit.analys.format.fqtofa(file)` | `FASTQ file` | Convert FASTQ file into FASTA format
+`bioinfokit.analys.format.hmmtocsv(file)` | `HMM file` | Convert HMM text output (from HMMER tool) to CSV format
+`bioinfokit.analys.format.tabtocsv(file)` | `TAB file` | Convert TAB file to CSV format
+`bioinfokit.analys.format.csvtotab(file)` | `CSV file` | Convert CSV file to TAB format
+
+
+Returns:
+
+Output will be saved in same directory
+
+<a href="https://reneshbedre.github.io/blog/format.html" target="_blank">Working example</a>
+
+### GFF3 to GTF file format conversion
+
+`bioinfokit.analys.gff.gff_to_gtf(file)`
+
+Parameters | Description
+------------ | -------------
+`file` | GFF3 genome annotation file
+
+Returns:
+
+GTF format genome annotation file (file.gtf will be saved in same directory)
+
+<a href="https://reneshbedre.github.io/blog/gffgtf.html" target="_blank">Working Example</a>
+
+## Statistical analysis
+
+### Correlation matrix plot
+
+`bioinfokit.visuz.stat.corr_mat(table, corm, cmap, r, dim, show, figtype, axtickfontsize, axtickfontname)`
+
+Parameters | Description
+------------ | -------------
+`table` | Dataframe object with numerical variables (columns) to find correlation. Ideally, you should have three or more variables. Dataframe should not have identifier column.
+`corm` | Correlation method [pearson,kendall,spearman] [default:pearson]
+`cmap` | Color Palette for heatmap [string][default: 'seismic']. More colormaps are available at https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html
+`r` | Figure resolution in dpi [int][default: 300]. Not compatible with `show`= True
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 5)]  
+`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
+`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`axtickfontsize` | Font size for axis ticks [float][default: 7]
+`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
+
+Returns:
+
+Correlation matrix plot image in same directory (corr_mat.png)
+
+<a href="https://reneshbedre.github.io/blog/corr.html" target="_blank">Working example</a>
+
+
+### Bar-dot plot
+
+`latest update v0.8.5`
+
+`bioinfokit.visuz.stat.bardot(df, colorbar, colordot, bw, dim, r, ar, hbsize, errorbar, dotsize, markerdot, valphabar, 
+    valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, ylm, axtickfontsize, axtickfontname,
+    yerrlw, yerrcw)`
+
+Parameters | Description
+------------ | -------------
+`df` |Pandas dataframe object
+`colorbar` | Color of bar graph [string or list][default:"#bbcfff"]
+`colordot` | Color of dots on bar [string or list][default:"#ee8972"]
+`bw` |Width of bar [float][default: 0.4]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
+`r` | Figure resolution in dpi [int][default: 300]
+`ar` | Rotation of X-axis labels [float][default: 0]
+`hbsize` | Horizontal bar size for standard error bars [float][default: 4]
+`errorbar` |  Draw standard error bars [bool (True or False)][default: True]
+`dotsize`| The size of the dots in the plot [float][default: 6]
+`markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
+`valphabar` | Transparency of bars on plot [float (between 0 and 1)][default: 1]
+`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
+`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
+`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
+`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
+`axlabelfontsize` | Font size for axis labels [float][default: 9]
+`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
+`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
+`axtickfontsize` | Font size for axis ticks [float][default: 9]
+`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
+`yerrlw` | Error bar line width [float][default: None]
+`yerrcw` | Error bar cap width [float][default: None]
+
+Returns:
+
+Bar-dot plot image in same directory (bardot.png)
+
+<a href="https://reneshbedre.github.io/blog/bardot.html" target="_blank">Working Example</a>
+
+### Two sample and Welch's t-test
+`bioinfokit.analys.stat.ttsam(table, xfac, res, evar, alpha)`
+
+Parameters | Description
+------------ | -------------
+`table` | Pandas dataframe. It should be stacked table with independent (xfac) and dependent (res) variable columns.
+`xfac` | Independent group column name with two levels [string][default: None]
+`res` | Response variable column name [string][default: None]
+`evar` | t-test with equal variance [bool (True or False)][default: True]
+`alpha` | Confidence level [float][default: 0.05]
+
+Returns:
+
+summary output and group boxplot (ttsam_boxplot.png)
+
+<a href="https://reneshbedre.github.io/blog/ttest.html" target="_blank">Working example</a>
+
+### Chi-square test for independence
+
+`bioinfokit.analys.stat.chisq(table)`
+
+Parameters | Description
+------------ | -------------
+`table` | Pandas dataframe. It should be contingency table.
+
+Returns:
+
+summary output and variable mosaic plot (mosaic.png)
+
+<a href="https://reneshbedre.github.io/blog/chisq.html" target="_blank">Working example</a>
+
+<!--
+### One-way ANOVA
+
+`bioinfokit.stat.oanova(table, res, xfac, ph, phalpha)`
+
+Parameters | Description
+------------ | -------------
+`table` | Pandas dataframe in stacked table format
+`res` | Response variable (dependent variable) [string][default: None]
+`xfac` | Treatments or groups or factors (independent variable) [string][default: None]
+`ph` | perform pairwise comparisons with Tukey HSD test [bool (True or False)] [default: False]
+`phalpha` |significance level Tukey HSD test [float (0 to 1)][default: 0.05]
+
+
+Returns:
+
+ANOVA summary, multiple pairwise comparisons, and assumption tests statistics
+
+<a href="https://reneshbedre.github.io/blog/oanova.html" target="_blank">Working example</a>
+-->
+
+### Linear regression analysis
+
+`bioinfokit.visuz.stat.lin_reg(df, x, y)`
+
+Parameters | Description
+------------ | -------------
+`df` |Pandas dataframe object
+`x` | Name of column having independent X variables [list][default:None]
+`y` | Name of column having dependent Y variables [list][default:None]
+
+Returns:
+
+Regression analysis summary
+
+<a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
+
+### Regression plot
+
+`bioinfokit.visuz.stat.regplot(df, x, y, yhat, dim, colordot, colorline, r, ar, dotsize, markerdot, linewidth, 
+    valphaline, valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, xlm, ylm, axtickfontsize,
+    axtickfontname)`
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe object
+`x` | Name of column having independent X variables [string][default:None]
+`y` | Name of column having dependent Y variables [string][default:None]
+`yhat` |Name of column having predicted response of Y variable (y_hat) from regression [string][default:None]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
+`r` | Figure resolution in dpi [int][default: 300]
+`ar` | Rotation of X-axis labels [float][default: 0]
+`dotsize`| The size of the dots in the plot [float][default: 6]
+`markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
+`valphaline` | Transparency of regression line on plot [float (between 0 and 1)][default: 1]
+`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
+`linewidth` | Width of regression line [float][default: 1]
+`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
+`show`  | Show the figure on console instead of saving in current folder [True or False][default:False]
+`axxlabel` | Label for X-axis. If you provide this option, default label will be replaced [string][default: None]
+`axylabel` | Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]
+`axlabelfontsize` | Font size for axis labels [float][default: 9]
+`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
+`xlm` | Range of ticks to plot on X-axis [float tuple (bottom, top, interval)][default: None]
+`ylm` | Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]
+`axtickfontsize` | Font size for axis ticks [float][default: 9]
+`axtickfontname` | Font name for axis ticks [string][default: 'Arial']
+
+Returns:
+
+Regression plot image in same directory (reg_plot.png)
+
+<a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
 
 
 ## How to cite bioinfokit?
