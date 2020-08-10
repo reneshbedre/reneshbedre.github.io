@@ -19,7 +19,6 @@ https://reneshbedre.github.io/blog/ttest.html
 https://reneshbedre.github.io/blog/venn.html
 https://reneshbedre.github.io/blog/hmap.html
 https://reneshbedre.github.io/blog/seqcov.html
-https://reneshbedre.github.io/blog/mplib.html
 https://reneshbedre.github.io/blog/revcom.html
 https://reneshbedre.github.io/blog/mergevcf.html
 https://reneshbedre.github.io/blog/corr.html
@@ -31,7 +30,6 @@ https://reneshbedre.github.io/blog/anova.html
 https://reneshbedre.github.io/blog/pca_3d.html
 https://reneshbedre.github.io/blog/ecuador_workshop.html
 https://reneshbedre.github.io/blog/expression_units.html
-https://reneshbedre.github.io/blog/bioseqio.html
 https://reneshbedre.github.io/news/
 https://reneshbedre.github.io/pub/
 https://reneshbedre.github.io/res/
