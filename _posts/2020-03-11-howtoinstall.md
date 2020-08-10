@@ -71,6 +71,14 @@ python setup.py install
 '0.4'
 ```
 
+### Download statistics
+
+Weekly | Monthly | Total
+------------ | -------------|
+[![Downloads](https://pepy.tech/badge/bioinfokit/week)](https://pepy.tech/project/bioinfokit/week) |[![Downloads](https://pepy.tech/badge/bioinfokit/month)](https://pepy.tech/project/bioinfokit/month)|[![Downloads](https://pepy.tech/badge/bioinfokit)](https://pepy.tech/project/bioinfokit)
+
+
+
 ## <span style="color:#33a8ff">How to use bioinfokit?</span>
 
 ## Gene expression analysis
