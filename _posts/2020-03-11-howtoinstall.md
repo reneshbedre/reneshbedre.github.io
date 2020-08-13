@@ -492,13 +492,17 @@ Parameters | Description
 
 Returns:
 
-VCF file with annotation (annotated vcf file will be saved in same directory)
+Tab-delimited text file with annotation (annotated text file will be saved in same directory)
 
 <a href="https://reneshbedre.github.io/blog/vcfanot.html" target="_blank">Working Example</a>
 
-### Merge VCF files
+###  Concatenate VCF files
 
-`bioinfokit.analys.marker.mergevcf(file)`
+`latest update v0.9.4`
+
+Concatenate multiple VCF files into single VCF file (for example, VCF files for each chromosomes)
+
+`bioinfokit.analys.marker.concatvcf(file)`
 
 Parameters | Description
 ------------ | -------------
@@ -506,7 +510,7 @@ Parameters | Description
 
 Returns:
 
-Merged VCF file (merge_vcf.vcf)
+Concatenated VCF file (concat_vcf.vcf)
 
 <a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a>
 
@@ -689,17 +693,21 @@ summary output and group boxplot (ttsam_boxplot.png)
 
 <a href="https://reneshbedre.github.io/blog/ttest.html" target="_blank">Working example</a>
 
-### Chi-square test for independence
+### Chi-square test 
 
-`bioinfokit.analys.stat.chisq(table)`
+`latest update v0.9.4`
+
+`bioinfokit.analys.stat.chisq(df, p)`
 
 Parameters | Description
 ------------ | -------------
-`table` | Pandas dataframe. It should be contingency table.
+`df` | Pandas dataframe. It should be one or two-dimensional contingency table. 
+`p` | Theoretical expected probabilities for each group. It must be non-negative and sum to 1. If p is provide Goodness of Fit test will be performed [list or tuple][default: None] 
+
 
 Returns:
 
-summary output and variable mosaic plot (mosaic.png)
+Summary and expected counts as class attributes (summary and expected_df)
 
 <a href="https://reneshbedre.github.io/blog/chisq.html" target="_blank">Working example</a>
 
@@ -807,7 +815,7 @@ Regression plot image in same directory (reg_plot.png)
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: July 30, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: August 13, 2020</i> </span>
 
 <p>
 {% include  license.html %}
