@@ -38,6 +38,9 @@ Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank
 # install
 pip install bioinfokit
 
+# upgrade to latest version
+pip install bioinfokit --upgrade
+
 # uninstall 
 pip uninstall bioinfokit
 ```
@@ -500,7 +503,7 @@ Tab-delimited text file with annotation (annotated text file will be saved in sa
 
 `latest update v0.9.4`
 
-Concatenate multiple VCF files into single VCF file (for example, VCF files for each chromosomes)
+Concatenate multiple VCF files into single VCF file (for example, VCF files for each chromosome)
 
 `bioinfokit.analys.marker.concatvcf(file)`
 
