@@ -698,7 +698,7 @@ summary output and group boxplot (ttsam_boxplot.png)
 
 ### Chi-square test 
 
-`latest update v0.9.4`
+`latest update v0.9.5`
 
 `bioinfokit.analys.stat.chisq(df, p)`
 
