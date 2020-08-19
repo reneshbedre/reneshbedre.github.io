@@ -322,6 +322,8 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
   would be constant between the samples.
 - <i>DESeq</i> or <i>DESeq2</i> performs better for between-samples comparisons  
 
+ <i>DESeq2</i> normalization,
+ 
 ```r
 # I am using R version 4.0.2 (2020-06-22)
 # load library
