@@ -125,7 +125,8 @@ Notes:
  - RPKM considers the gene length for normalization
  - RPKM is suitable for sequencing protocols where reads sequencing depends on gene length
  - Used in single-end RNA-seq experiments (FPKM for paired-end RNA-seq data)
- - RPKM/FPKM can be biased towards identifying the differentially expressed genes (Bullard et al., 2010)
+ - RPKM/FPKM can be biased towards identifying the differentially expressed genes as the total normalized counts for 
+   each sample will be different (Bullard et al., 2010)
 
 RPKM or FPKM normalization using <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>`bioinfokit`</a> (v0.9.1 or later),
 
@@ -321,6 +322,52 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
   would be constant between the samples.
 - <i>DESeq</i> or <i>DESeq2</i> performs better for between-samples comparisons  
 
+```r
+# I am using R version 4.0.2 (2020-06-22)
+# load library
+> library(DESeq2)
+# load sugarcane RNA-seq expression dataset and sample information table (Published in Bedre et al., 2019)
+> x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
+> cond <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/condition.csv",row.names="sample")
+> cond$condition <- factor(cond$condition)
+# keep only required columns present in sample information table
+> x <- x[, rownames(cond)]
+> head(x)
+                 ctr1 ctr2 ctr3 trt1 trt2 trt3
+Sobic.001G000200  338  324  246  291  202  168
+Sobic.001G000400   49   21   53   16   16   11
+Sobic.001G000700   39   49   30   46   52   25
+Sobic.001G000800  530  530  499  499  386  264
+Sobic.001G001000   12    3    4    3   10    7
+Sobic.001G001132    4    2    2    3    4    1
+
+# get dds
+> dds <- DESeqDataSetFromMatrix(countData = x, colData = cond, design = ~ condition)
+> dds <- estimateSizeFactors(dds)
+# DESeq2 normalization counts
+> y = counts(dds, normalized = TRUE)
+> head(y)
+                       ctr1       ctr2       ctr3       trt1       trt2
+Sobic.001G000200 272.483741 290.412982 199.133348 272.915069 211.917896
+Sobic.001G000400  39.502081  18.823064  42.902713  15.005640  16.785576
+Sobic.001G000700  31.440432  43.920482  24.284555  43.141214  54.553122
+Sobic.001G000800 427.267404 475.058273 403.933092 467.988384 404.952020
+Sobic.001G001000   9.673979   2.689009   3.237941   2.813557  10.490985
+Sobic.001G001132   3.224660   1.792673   1.618970   2.813557   4.196394
+                       trt3
+Sobic.001G000200 271.037655
+Sobic.001G000400  17.746513
+Sobic.001G000700  40.332984
+Sobic.001G000800 425.916314
+Sobic.001G001000  11.293236
+Sobic.001G001132   1.613319
+
+# get size factors
+> sizeFactors(dds)
+     ctr1      ctr2      ctr3      trt1      trt2      trt3
+1.2404410 1.1156526 1.2353531 1.0662658 0.9531993 0.6198401
+
+``` 
 
 ### <span style="color:#060606">SCnorm for single cell RNA-seq (scRNA-seq)</span>
 - The normalization units explained above works best for bulk RNA-seq and could be biased for scRNA-seq due to
@@ -421,7 +468,7 @@ https://reneshbedre.github.io/blog/expression_units.html
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: July 30, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: August 19, 2020</i> </span>
 
 <p>
 {% include  subscribe.html %}
