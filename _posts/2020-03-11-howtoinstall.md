@@ -92,7 +92,7 @@ latest update v0.8.8
 
 `bioinfokit.visuz.gene_exp.volcano(df, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle, sign_line,
     dotsize, markerdot, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, axtickfontsize, axtickfontname,
-    xlm, ylm, plotlegend, legendpos, legendanchor, figname, legendlabels)`
+    xlm, ylm, plotlegend, legendpos, legendanchor, figname, legendlabels, ar)`
 
 Parameters | Description
 ------------ | -------------
@@ -127,6 +127,7 @@ Parameters | Description
 `legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
 `figname` | name of figure [string ][default:"ma"]
 `legendlabels` | legend label names. If you provide custom label names keep the same order of label names as default [list][default:['significant up', 'not significant', 'significant down']]
+`ar` | Rotation of X and Y-axis ticks labels [float][default: 90]
 
 
 Returns:
@@ -139,13 +140,13 @@ Volcano plot image in same directory (volcano.png)
 
 latest update v0.8.8
 
-`bioinfokit.visuz.gene_exp.involcano(df, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
-    dotsize, markerdot, r, dim, show, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axtickfontsize, 
-    axtickfontname, plotlegend, legendpos, legendanchor, figname, legendlabels)`
+`bioinfokit.visuz.gene_exp.involcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
+    dotsize, markerdot, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axtickfontsize, 
+    axtickfontname, plotlegend, legendpos, legendanchor, figname, legendlabels, ar)`
 
 Parameters | Description
 ------------ | -------------
-`df` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values
+`table` |Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values
 `lfc` | Name of a column having log fold change values [default:logFC]
 `pv` | Name of a column having P-values or adjusted P-values [default:p_values]
 `lfc_thr` | Log fold change cutoff for up and downregulated genes [default:1]
@@ -154,7 +155,7 @@ Parameters | Description
 `valpha` | Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]
 `geneid` | Name of a column having gene Ids. This is necessary for plotting gene label on the points [string][default: None]
 `genenames` | Tuple of gene Ids to label the points. The gene Ids must be present in the geneid column. If this option set to "deg" it will label all genes defined by lfc_thr and pv_thr [string, tuple, dict][default: None]
-`gfont` | Font size for genenames [float][default: 8.0]. gfont not compatible with gstyle=2.
+`gfont` | Font size for genenames [float][default: 10.0]
 `gstyle` | Style of the text for genenames. 1 for default text and 2 for box text [int][default: 1]
 `dotsize`| The size of the dots in the plot [float][default: 8]
 `markerdot` | Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
@@ -172,8 +173,7 @@ Parameters | Description
 `legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
 `figname` | name of figure [string ][default:"involcano"]
 `legendlabels` | legend label names. If you provide custom label names keep the same order of label names as default [list][default:['significant up', 'not significant', 'significant down']]
-
-
+`ar` | Rotation of X and Y-axis ticks labels [float][default: 90]
 
 Returns:
 
@@ -186,7 +186,7 @@ latest update v0.8.8
 
 `bioinfokit.visuz.gene_exp.ma(df, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
     axylabel, axlabelfontsize, axtickfontsize, axtickfontname, xlm, ylm, fclines, fclinescolor, legendpos, legendanchor,
-    figname, legendlabels, plotlegend)`
+    figname, legendlabels, plotlegend, ar)`
 
 Parameters | Description
 ------------ | -------------
@@ -217,6 +217,7 @@ Parameters | Description
 `legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
 `figname` | name of figure [string ][default:"ma"]
 `legendlabels` | legend label names. If you provide custom label names keep the same order of label names as default [list][default:['significant up', 'not significant', 'significant down']]
+`ar` | Rotation of X and Y-axis ticks labels [float][default: 90]
 
 
 Returns:
