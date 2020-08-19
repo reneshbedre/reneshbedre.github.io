@@ -326,11 +326,11 @@ Sobic.001G001132   1.158111   0.6330625   0.5796943   0.9894838   1.497719   0.5
 # I am using R version 4.0.2 (2020-06-22)
 # load library
 > library(DESeq2)
-# load sugarcane RNA-seq expression dataset and sample information table (Published in Bedre et al., 2019)
+# load sugarcane RNA-seq expression dataset and sample information table 
 > x <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/df_sc.csv",row.names="gene")
 > cond <- read.csv("https://reneshbedre.github.io/assets/posts/gexp/condition.csv",row.names="sample")
 > cond$condition <- factor(cond$condition)
-# keep only required columns present in sample information table
+# keep only required columns present in the sample information table
 > x <- x[, rownames(cond)]
 > head(x)
                  ctr1 ctr2 ctr3 trt1 trt2 trt3
