@@ -681,7 +681,7 @@ Bar-dot plot image in same directory (bardot.png)
 <a href="https://reneshbedre.github.io/blog/bardot.html" target="_blank">Working Example</a>
 
 
-### t-test (one sample and Two sample (independent and paired t-tests)
+### One sample and two sample (independent and paired) t-tests
 
 `latest update v0.9.6`
 
