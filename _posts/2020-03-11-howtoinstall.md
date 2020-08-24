@@ -71,7 +71,7 @@ python setup.py install
 ```python
 >>> import bioinfokit
 >>> bioinfokit.__version__
-'0.4'
+'0.9.6'
 ```
 
 ### Download statistics
