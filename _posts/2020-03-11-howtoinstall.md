@@ -614,6 +614,22 @@ GTF format genome annotation file (file.gtf will be saved in same directory)
 
 <a href="https://reneshbedre.github.io/blog/gffgtf.html" target="_blank">Working Example</a>
 
+### Bioinformatics file readers and processing (FASTA, FASTQ, and VCF)
+
+Function | Parameters | Description
+------------|---------- | -------------
+`bioinfokit.analys.fasta.fasta_reader(file)` | `FASTA file` | FASTA file reader
+`bioinfokit.analys.fastq.fastq_reader(file)` | `FASTQ file` | FASTQ file reader
+`bioinfokit.analys.marker.vcfreader(file)` | `VCF file` | VCF file reader
+
+Returns:
+
+File generator object (can be iterated only once) that can be parsed for the record
+
+<a href="https://reneshbedre.github.io/blog/filereaders.html" target="_blank">Description and working example</a>
+
+
+
 ## Biostatistical analysis
 
 ### Correlation matrix plot
