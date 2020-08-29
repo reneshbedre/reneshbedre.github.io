@@ -35,6 +35,7 @@ tags:
 - Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data associated with
   different conditions of fungal stress in cotton which is published in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
 
+### load dataset
 ```python
 # you can use interactive python console, jupyter or python code
 # I am using interactive python console (Python 3.7.4)
@@ -54,13 +55,17 @@ tags:
 4  2.35701  0.452589 -1.910680  12.984239  10.019605 -2.939020
 # variables A to F denotes multiple conditions associated with fungal stress
 # Read full paper https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025
+```
 
-# standardize dataset with (mean=0, variance=1) scale
-# standardization is necessary as it removes the biases in the original variables. For example,
-# when the data for each variable is collected on different units. The standardized variables 
-# will be unitless and have a similar variance. 
-# At some cases, the dataset needs not to be standardized as the original variation in dataset
-# is important (Gewers et al., 2018)
+### Standardization
+- Standardization dataset with (mean=0, variance=1) scale is necessary as it removes the biases in the original variables
+  For example, when the data for each variable is collected on different units. 
+- The standardized variables will be unitless and have a similar variance. 
+- Standardization is a advisable method for data transformation when the variables in original datatset have measured 
+  on significantly different scale.
+- At some cases, the dataset needs not to be standardized as the original variation in dataset is important (Gewers et al., 2018)
+
+```python
 # this is an optional step
 >>> df_st =  StandardScaler().fit_transform(df)  
 # see few rows of standardized dataset
@@ -71,8 +76,11 @@ tags:
 2  0.603329  0.494693 -0.176385  2.896569  3.133729  0.109563
 3 -0.032825  0.413423  0.449383  2.497462  1.629707 -1.171850
 4  0.021968 -0.411444 -0.445350  3.764964  2.965869 -1.160617
+```
 
-# perform PCA
+### perform PCA
+
+```python
 >>> pca_out = PCA().fit(df_st)
 
 # get the component variance
