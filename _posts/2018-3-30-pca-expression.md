@@ -25,8 +25,8 @@ tags:
 - For example, when datasets contain 10 variables (10D), it is arduous to visualize them at the same time
   (you may have to do 45 pairwise comparisons to interpret dataset effectively). PCA transforms them into a new set of
   variables (PCs) with top PCs having the highest variation. PCs are ordered which means that the first few PCs
-  (generally first 3 PCs) contribute most of the variance present in the the original high-dimensional dataset. These top first 2 or 3 PCs can be plotted
-  easily and summarize and the features of all original 10 variables.
+  (generally first 3 PCs but can be more) contribute most of the variance present in the the original high-dimensional 
+  dataset. These top first 2 or 3 PCs can be plotted easily and summarize and the features of all original 10 variables.
 
 
 ## <span style="color:#33a8ff">Perform PCA in Python</span>
@@ -77,7 +77,7 @@ tags:
 4  0.021968 -0.411444 -0.445350  3.764964  2.965869 -1.160617
 ```
 
-### perform PCA
+### Perform PCA
 
 ```python
 >>> pca_out = PCA().fit(df_st)
@@ -122,22 +122,36 @@ Generated correlation matrix plot for loadings,
 <img src="/assets/posts/pca/loading_corr.svg" width="600">
 </p>
 
+### Principal component (PC) retention
+- As the number of PCs is equal to the number of original variables, We should keep only the PCs which explain the most variance 
+  (70-95%) to make the interpretation easier. More the PCs you include that explains most variation in the original 
+  data, better will be the PCA model. This is highly subjective and based on the user interpretation 
+  (Cangelosi et al., 2007). 
+- The eigenvalues for PCs can help to retain the number of PCs. Generally, PCs with eigenvalues > 1 contributes greater 
+  variance and should be retained for further analysis.
+- Scree plot (for elbow test) is another graphical technique useful in PCs retention. We should keep the PCs where 
+  there is a sharp change in the slope of the line connecting adjacent PCs. 
+  
+        
 ```python
 # get eigenvalues (from PC1 to PC6)  
-# generally, PCs with eigenvalues > 1 contributes greater variance and helps to retain the
-# PCs for the analysis 
 >>> pca_out.explained_variance_
 array([1.78994905, 1.65136965, 1.39299071, 1.15924943, 0.0086743 ,
        0.00684401])
-
 # get scree plot (for scree or elbow test)
-# scree plot is useful to determine how many components need to considered for 
-# visualizing the data
-# generally, keep up to first 3 PCs which cumulatively explains the most variance
 >>> from bioinfokit.visuz import cluster
 >>> cluster.screeplot(obj=[pc_list, pca_out.explained_variance_ratio_])
 # Scree plot will be saved in the same directory with name screeplot.png
+```
 
+Generated Scree plot,
+<p align="center">
+<img src="/assets/posts/pca/screeplot.svg" width="600">
+</p>
+
+### PCA loadings plots
+
+```python
 # get PCA loadings plots (2D and 3D)
 # 2D
 >>> cluster.pcaplot(x=loadings[0], y=loadings[1], labels=df.columns.values, 
@@ -150,11 +164,6 @@ array([1.78994905, 1.65136965, 1.39299071, 1.15924943, 0.0086743 ,
     var3=round(pca_out.explained_variance_ratio_[2]*100, 2))
 ```
 
-Generated Scree plot,
-<p align="center">
-<img src="/assets/posts/pca/screeplot.svg" width="600">
-</p>
-
 Generated 2D PCA loadings plot (2 PCs) plot,
 <p align="center">
 <img src="/assets/posts/pca/pcaplot_2d.svg" width="600">
@@ -165,7 +174,7 @@ Generated 3D PCA loadings plot (3 PCs) plot,
 <img src="/assets/posts/pca/pcaplot_3d.svg" width="600">
 </p>
 
-## <span style="color:#33a8ff">PCA biplot</span>
+### PCA biplot
 - In biplot, the PC loadings and scores are plotted in a single figure
 - biplots are useful to visualize the relationships between variables and observations
 
@@ -199,14 +208,16 @@ figure size, resolution, figure format, and other many parameters for scree plot
 Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' target='_blank'>usage</a>
 
 ## <span style="color:#33a8ff">PCA interpretation</span>
-- The first three PCs (3D) contribute  ~81% of the total variation in the dataset  and have eigenvalues > 1, and thus provides a
-  good approximation of the variation present in the original 6D dataset (see the cumulative proportion of variance and scree plot). The cut-off of
-  cumulative 70% variation is common to retain the PCs for analysis (Jolliffe et al., 2016). Even though the first four PCs contribute  ~99%
-  and have eigenvalues > 1, it will be difficult to visualize them at once and needs to perform pairwise visualization.
-- From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster (gene expression response in D and E
-  conditions are highly similar). Similarly, A and B are highly associated and forms another cluster (gene expression response in A and B
-  conditions are highly similar but different from other clusters). If the variables are highly associated, the angle
-  between the variable vectors should be as small as possible in the biplot.
+- The first three PCs (3D) contribute  ~81% of the total variation in the dataset  and have eigenvalues > 1, and thus 
+  provides a good approximation of the variation present in the original 6D dataset (see the cumulative proportion of 
+  variance and scree plot). The cut-off of cumulative 70% variation is common to retain the PCs for analysis 
+  (Jolliffe et al., 2016). Even though the first four PCs contribute  ~99% and have eigenvalues > 1, it will be 
+  difficult to visualize them at once and needs to perform pairwise visualization.
+- From the biplot and loadings plot, we can see the variables D and E are highly associated and forms cluster (gene 
+  expression response in D and E conditions are highly similar). Similarly, A and B are highly associated and forms 
+  another cluster (gene expression response in A and B conditions are highly similar but different from other clusters). 
+  If the variables are highly associated, the angle between the variable vectors should be as small as possible in the 
+  biplot.
 - The length of PCs in biplot refers to the amount of variance contributed by the PCs. The longer the length of PC, the higher the
   variance contributed and well represented in space.
 
@@ -223,6 +234,8 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   identifies candidate gene signatures in response to aflatoxin producing fungus Aspergillus flavus. PLoS One. 2015;10(9).
 - Kirkwood RN, Brandon SC, de Souza Moreira B, Deluzio KJ. Searching for stability as we age: the PCA-Biplot approach. International
   Journal of Statistics in Medical Research. 2013 Oct 1;2(4):255.
+- Cangelosi R, Goriely A. Component retention in principal component analysis with application to cDNA microarray data. 
+  Biology direct. 2007 Dec 1;2(1):2.  
 
 <!--
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
