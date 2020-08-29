@@ -37,7 +37,6 @@ tags:
 
 ### load dataset
 ```python
-# you can use interactive python console, jupyter or python code
 # I am using interactive python console (Python 3.7.4)
 >>> from sklearn.decomposition import PCA
 >>> from sklearn.preprocessing import StandardScaler
@@ -58,12 +57,12 @@ tags:
 ```
 
 ### Standardization
-- Standardization dataset with (mean=0, variance=1) scale is necessary as it removes the biases in the original variables
-  For example, when the data for each variable is collected on different units. 
-- The standardized variables will be unitless and have a similar variance. 
-- Standardization is a advisable method for data transformation when the variables in original datatset have measured 
-  on significantly different scale.
-- At some cases, the dataset needs not to be standardized as the original variation in dataset is important (Gewers et al., 2018)
+- Standardization dataset with (mean=0, variance=1) scale is necessary as it removes the biases in the original 
+  variables. For example, when the data for each variable is collected on different units.
+- The standardized variables will be unitless and have a similar variance.
+- Standardization is an advisable method for data transformation when the variables in the original dataset have been 
+  measured on a significantly different scale.
+- At some cases, the dataset needs not to be standardized as the original variation in the dataset is important (Gewers et al., 2018)
 
 ```python
 # this is an optional step
