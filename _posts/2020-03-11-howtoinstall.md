@@ -543,6 +543,29 @@ VCF files for each chromosome
 
 ## High-throughput sequence analysis
 
+### FASTQ batch downloads from SRA database
+
+latest update v0.9.7
+
+`bioinfokit.analys.fastq.sra_bd(file, t, other_opts)`
+
+FASTQ files will be downloaded using `fasterq-dump`. Make sure you have the latest version of the NCBI SRA toolkit 
+(version 2.10.8) is installed and binaries are added to the system path
+
+Parameters | Description
+------------ | -------------
+`file` | List of SRA accessions for batch download. All accession must be separated by a newline in the file. 
+`t` | Number of threads for parallel run [int][default=4]
+`other_opts` | Provide other relevant options for `fasterq-dump` [str][default=None] <br> Provide the options as a space-separated string. You can get a detailed option for `fasterq-dump` using the `-help` option. 
+
+Returns:
+
+FASTQ files for each SRA accession in the current directory unless specified by `other_opts`
+
+<a href="https://reneshbedre.github.io/blog/fqutil.html" target="_blank">Description and working example</a>
+
+
+
 ### FASTQ quality format detection
 
 `bioinfokit.analys.format.fq_qual_var(file)`
@@ -559,7 +582,9 @@ Quality format encoding name for FASTQ file (Supports only Sanger, Illumina 1.8+
 
 ### Sequencing coverage
 
-`bioinfokit.analys.seqcov(file, gs)`
+latest update v0.9.7
+
+`bioinfokit.analys.fastq.seqcov(file, gs)`
 
 Parameters | Description
 ------------ | -------------
@@ -570,7 +595,8 @@ Returns:
 
 Sequencing coverage of the given FASTQ file
 
-<a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Working example</a>
+<a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Description and Working example</a>
+
 
 ### Reverse complement of DNA sequence
 
