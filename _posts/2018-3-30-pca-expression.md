@@ -30,7 +30,7 @@ tags:
 
 
 ## <span style="color:#33a8ff">Perform PCA in Python</span>
-- we will use sklearn, seaborn, and bioinfokit (v0.8.2 or later) packages for PCA and visualization
+- we will use sklearn, seaborn, and bioinfokit (v0.9.8 or later) packages for PCA and visualization
 - Check [bioinfokit documentation]({{"/blog/howtoinstall.html" | absolute_url }}) for installation and documentation
 - Download [dataset]({{"/assets/posts/pca/cot_pca.csv" | absolute_url }}) for PCA (a subset of gene expression data associated with
   different conditions of fungal stress in cotton which is published in <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138025">Bedre et al., 2015</a>)
@@ -488,7 +488,7 @@ loaded via a namespace (and not attached):
 {% include  share.html %}
 </p>
 
-<span style="color:#9e9696"><i> Last updated: June 03, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: September 26, 2020</i> </span>
 
 <p>
 {% include  license.html %}

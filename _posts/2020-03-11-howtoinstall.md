@@ -266,8 +266,10 @@ heatmap plot (heatmap.png, heatmap_clus.png)
 ## Clustering analysis
 ### Scree plot
 
+`latest update v0.9.8`
+
 `bioinfokit.visuz.cluster.screeplot(obj, axlabelfontsize, axlabelfontname, axxlabel, axylabel,
-    figtype, r, show)`
+    figtype, r, show, dim)`
 
 Parameters | Description
 ------------ | -------------
@@ -279,6 +281,8 @@ Parameters | Description
 `figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
 `r` | Figure resolution in dpi [int][default: 300]
 `show` | Show the figure on console instead of saving in current folder [True or False][default:False]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
+
 
 Returns:
 
@@ -288,8 +292,10 @@ Scree plot image (screeplot.png will be saved in same directory)
 
 ###  Principal component analysis (PCA) loadings plots
 
+`latest update v0.9.8`
+
 `bioinfokit.visuz.cluster.pcaplot(x, y, z, labels, var1, var2, var3, axlabelfontsize, axlabelfontname,
-    figtype, r, show)`
+    figtype, r, show, plotlabels, dim)`
 
 Parameters | Description
 ------------ | -------------
@@ -305,6 +311,8 @@ Parameters | Description
 `figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
 `r` | Figure resolution in dpi [int][default: 300]
 `show` | Show the figure on console instead of saving in current folder [True or False][default:False]
+`plotlabels` | Plot labels as defined by labels parameter [True or False][default:True]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
 
 Returns:
 
@@ -314,11 +322,11 @@ PCA loadings plot 2D and 3D image (pcaplot_2d.png and pcaplot_3d.png will be sav
 
 ### Principal component analysis (PCA)  biplots
 
-`latest update v0.8.4`
+`latest update v0.9.8`
 
 `bioinfokit.visuz.cluster.biplot(cscore, loadings, labels, var1, var2, var3, axlabelfontsize, axlabelfontname,
     figtype, r, show, markerdot, dotsize, valphadot, colordot, arrowcolor, valphaarrow, arrowlinestyle, arrowlinewidth,
-    centerlines, datapoints, legendpos, colorlist)`
+    centerlines, colorlist, legendpos, datapoints, dim)`
 
 Parameters | Description
 ------------ | -------------
@@ -342,9 +350,10 @@ Parameters | Description
 `arrowlinestyle` | line style of the arrow. check more styles at https://matplotlib.org/3.1.0/gallery/lines_bars_and_markers/linestyles.html [string][default: '-']
 `arrowlinewidth`| line width of the arrow [float][default: 1.0]
 `centerlines`| draw center lines at x=0 and y=0 for 2D plot [bool (True or False)][default: True]
-`datapoints`| plot data points on graph [bool (True or False)][default: True]
-`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
 `colorlist` | list of the categories to assign the color [list][default:None]
+`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
+`datapoints`| plot data points on graph [bool (True or False)][default: True]
+`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
 
 Returns:
 
@@ -633,11 +642,14 @@ Output will be saved in same directory
 
 ### GFF3 to GTF file format conversion
 
-`bioinfokit.analys.gff.gff_to_gtf(file)`
+`latest update v0.9.8`
+
+`bioinfokit.analys.gff.gff_to_gtf(file, mrna_feature_name)`
 
 Parameters | Description
 ------------ | -------------
 `file` | GFF3 genome annotation file
+`mrna_feature_name` | Name of the feature (column 3 of GFF3 file) of protein coding mRNA if other than 'mRNA' or 'transcript'
 
 Returns:
 
