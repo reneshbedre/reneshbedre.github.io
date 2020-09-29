@@ -609,7 +609,9 @@ Sequencing coverage of the given FASTQ file
 
 ### Reverse complement of DNA sequence
 
-`bioinfokit.analys.rev_com(sequence)`
+`latest update v0.9.8`
+
+`bioinfokit.analys.fasta.rev_com(sequence)`
 
 Parameters | Description
 ------------ | -------------
@@ -671,7 +673,31 @@ File generator object (can be iterated only once) that can be parsed for the rec
 
 <a href="https://reneshbedre.github.io/blog/filereaders.html" target="_blank">Description and working example</a>
 
+### Extract subsequence from FASTA files
 
+latest update v0.9.8
+
+`bioinfokit.analys.fasta.ext_subseq(file, id, st, end, strand)`
+
+Extract the subsequence of specified region from FASTA file
+
+Parameters | Description
+------------ | -------------
+`file` | FASTA file [file]
+`id` | The ID of sequence from FASTA file to extract the subsequence [string]
+`st` | Start integer coordinate of subsequnece [int] 
+`end` | End integer coordinate of subsequnece [int]
+`strand` | Strand of the sequence ['plus' or 'minus'][default: 'plus']  
+
+<!--
+`out_file` | Write subsequence to file instead of stdout [file][default: None]  
+-->
+
+Returns:
+
+Subsequence to stdout 
+
+<!-- <a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Description and Working example</a>-->
 
 ## Biostatistical analysis
 
