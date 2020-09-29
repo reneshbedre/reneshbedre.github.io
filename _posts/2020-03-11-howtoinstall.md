@@ -679,7 +679,8 @@ latest update v0.9.8
 
 `bioinfokit.analys.fasta.ext_subseq(file, id, st, end, strand)`
 
-Extract the subsequence of specified region from FASTA file
+Extract the subsequence of specified region from FASTA file. If the target subsequence region is on minus strand. the
+reverse complementary of subsequence will be printed.
 
 Parameters | Description
 ------------ | -------------
@@ -687,7 +688,7 @@ Parameters | Description
 `id` | The ID of sequence from FASTA file to extract the subsequence [string]
 `st` | Start integer coordinate of subsequnece [int] 
 `end` | End integer coordinate of subsequnece [int]
-`strand` | Strand of the sequence ['plus' or 'minus'][default: 'plus']  
+`strand` | Strand of the subsequence ['plus' or 'minus'][default: 'plus']  
 
 <!--
 `out_file` | Write subsequence to file instead of stdout [file][default: None]  
