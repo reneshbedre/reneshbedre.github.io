@@ -883,6 +883,34 @@ Regression plot image in same directory (reg_plot.png)
 <a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a>
 
 
+### Tukey HSD test
+
+`latest update v0.9.9`
+
+`bioinfokit.analys.stat.tukey_hsd(df, res_var, xfac_var, anova_xfac_var, phalpha)`
+
+It performs multiple pairwise comparisons of treatment groups using Tukey's HSD (Honestly Significant Difference) test 
+to check if group means are significantly different from each other. It uses the Tukey-Kramer approach if the sample sizes
+are unequal among the groups.
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe with the variables mentioned in the `res_var`, `xfac_var` and `anova_xfac_var` options. It should not have missing data. The missing data will be omitted.
+`res_var` | Name of a column having response variable [string][default: None]
+`xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
+`anova_xfac_var` | Names of a column having factors or groups for ANOVA analysis. In case of one-way ANOVA, `xfac_var` and `anova_xfac_var` should be similar  [string or list][default: None]
+`phalpha` | Significance level [float][default: 0.05]
+
+Returns:
+
+Attribute | Description
+------------ | -------------
+`tukey_summary` | Pairwise comparisons of group by Tukey HSD test 
+`data_summary` | Data summary 
+
+<a href="https://reneshbedre.github.io/blog/anova.html" target="_blank">Description and Working example</a>
+
+
 ## How to cite bioinfokit?
 - Renesh Bedre. (2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). 
   Zenodo. http://doi.org/10.5281/zenodo.3965241 
@@ -894,14 +922,16 @@ Regression plot image in same directory (reg_plot.png)
 - Fernando Pérez and Brian E. Granger. IPython: A System for Interactive Scientific Computing, Computing in Science & Engineering, 9, 21-29 (2007), DOI:10.1109/MCSE.2007.53 (publisher link)
 - Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. http://doi.org/10.5281/zenodo.3629446
 - Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research, 12, 2825-2830 (2011)
+- David C. Howell. Multiple Comparisons With Unequal Sample Sizes. https://www.uvm.edu/~statdhtx/StatPages/MultipleComparisons/unequal_ns_and_mult_comp.html
 
+<!--
 ## bioinfokit cited by:
 - Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
   bioRxiv 2020.04.23.057786; doi: https://doi.org/10.1101/2020.04.23.057786
 - Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform
   Effects on Regeneration by Pulmonary Basal Cells as Evaluated by Single-Cell RNA Sequencing. Cell Reports. 2020 Mar
   24;30(12):4250-65.
-
+-->
 
 <p>
 {% include  cite.html %}
@@ -912,7 +942,7 @@ Regression plot image in same directory (reg_plot.png)
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: August 13, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: October 04, 2020</i> </span>
 
 <p>
 {% include  license.html %}
