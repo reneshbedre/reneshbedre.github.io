@@ -720,6 +720,7 @@ Parameters | Description
 `alpha` | Significance level [float][default: 0.05]
 
 Returns:
+
 Attribute | Description
 ------------ | -------------
 df_enrich | Enriched gene families with p < 0.05
@@ -739,6 +740,7 @@ Parameters | Description
 `species` | Plant species ID to check for allowed ID type. All plant species ID provided [here](https://github.com/reneshbedre/reneshbedre.github.io/blob/master/assets/posts/genfam/genfam_species_id.md)
 
 Returns:
+
 Allowed ID types for GenFam
 
 <a href="https://reneshbedre.github.io/blog/genfam.html" target="_blank">Description and working example</a>
