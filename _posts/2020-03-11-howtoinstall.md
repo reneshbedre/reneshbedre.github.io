@@ -644,14 +644,14 @@ Output will be saved in same directory
 
 ### GFF3 to GTF file format conversion
 
-`latest update v0.9.8`
+`latest update v1.0.1`
 
-`bioinfokit.analys.gff.gff_to_gtf(file, mrna_feature_name)`
+`bioinfokit.analys.gff.gff_to_gtf(file, trn_feature_name)`
 
 Parameters | Description
 ------------ | -------------
 `file` | GFF3 genome annotation file
-`mrna_feature_name` | Name of the feature (column 3 of GFF3 file) of protein coding mRNA if other than 'mRNA' or 'transcript'
+`trn_feature_name` | Name of the feature (column 3 of GFF3 file) of RNA transcripts if other than 'mRNA' or 'transcript'
 
 Returns:
 
@@ -930,9 +930,9 @@ Regression plot image in same directory (reg_plot.png)
 
 ### Tukey HSD test
 
-`latest update v0.9.9`
+`latest update v1.0.1`
 
-`bioinfokit.analys.stat.tukey_hsd(df, res_var, xfac_var, anova_xfac_var, phalpha)`
+`bioinfokit.analys.stat.tukey_hsd(df, res_var, xfac_var, anova_model, phalpha, ss_typ)`
 
 It performs multiple pairwise comparisons of treatment groups using Tukey's HSD (Honestly Significant Difference) test 
 to check if group means are significantly different from each other. It uses the Tukey-Kramer approach if the sample sizes
@@ -940,18 +940,18 @@ are unequal among the groups.
 
 Parameters | Description
 ------------ | -------------
-`df` | Pandas dataframe with the variables mentioned in the `res_var`, `xfac_var` and `anova_xfac_var` options. It should not have missing data. The missing data will be omitted.
+`df` | Pandas dataframe with the variables mentioned in the `res_var`, `xfac_var` and `anova_model` options. It should not have missing data. The missing data will be omitted.
 `res_var` | Name of a column having response variable [string][default: None]
 `xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
-`anova_xfac_var` | Names of a column having factors or groups for ANOVA analysis. In case of one-way ANOVA, `xfac_var` and `anova_xfac_var` should be similar  [string or list][default: None]
+`anova_model` | ANOVA model (calculated using statsmodels `ols` function) [string][default: None]
 `phalpha` | Significance level [float][default: 0.05]
+`ss_typ` | Type of sum of square to perform ANOVA [int][default: 2]
 
 Returns:
 
 Attribute | Description
 ------------ | -------------
-`tukey_summary` | Pairwise comparisons of group by Tukey HSD test 
-`data_summary` | Data summary 
+`tukey_summary` | Pairwise comparisons for main and interaction effects by Tukey HSD test 
 
 <a href="https://reneshbedre.github.io/blog/anova.html" target="_blank">Description and Working example</a>
 
