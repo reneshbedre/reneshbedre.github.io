@@ -83,7 +83,7 @@ python setup.py install
 
 Weekly | Monthly | Total
 ------------ | -------------|
-[![Downloads](https://pepy.tech/badge/bioinfokit/week)](https://pepy.tech/project/bioinfokit/week) |[![Downloads](https://pepy.tech/badge/bioinfokit/month)](https://pepy.tech/project/bioinfokit/month)|[![Downloads](https://pepy.tech/badge/bioinfokit)](https://pepy.tech/project/bioinfokit)
+[![Downloads](https://static.pepy.tech/personalized-badge/bioinfokit?period=week&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/bioinfokit)|[![Downloads](https://static.pepy.tech/personalized-badge/bioinfokit?period=month&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/bioinfokit)|[![Downloads](https://static.pepy.tech/personalized-badge/bioinfokit?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/bioinfokit)
 
 
 
