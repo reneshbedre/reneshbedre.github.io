@@ -698,6 +698,24 @@ Returns:
 
 Subsequence to stdout 
 
+### Extract sequences from FASTA file
+
+latest update v1.0.2
+
+`bioinfokit.analys.fasta.extract_seq(file, id)`
+
+Extract the sequences from FASTA file based on the list of sequence IDs provided from other file
+
+Parameters | Description
+------------ | -------------
+`file` | FASTA file [file] 
+`id` | List of sequence IDs separated by new line [file]
+
+Returns:
+
+Sequences extracted from FASTA file based on the given IDs provided in id file. Output FASTA file will be saved as 
+output.fasta in current working directory.
+
 ## Functional enrichment analysis
 
 ### Gene family enrichment analysis (GenFam) 
@@ -987,7 +1005,7 @@ Attribute | Description
 </p>
 
 
-<span style="color:#9e9696"><i> Last updated: October 04, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: October 26, 2020</i> </span>
 
 <p>
 {% include  license.html %}
