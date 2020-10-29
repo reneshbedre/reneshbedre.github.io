@@ -1,0 +1,20 @@
+I"�<ul class="toc__menu">
+  <li><a href="#-chi-square-χ2-test-for-independence-pearson-chi-square-test"> Chi-square (χ2) test for independence (Pearson Chi-square test)</a>
+    <ul>
+      <li><a href="#hypotheses">Hypotheses</a></li>
+      <li><a href="#assumptions">Assumptions</a></li>
+      <li><a href="#perform-a-chi-square-test-for-independence">Perform a chi-square test for independence</a></li>
+      <li><a href="#interpretation">Interpretation</a></li>
+    </ul>
+  </li>
+  <li><a href="#-chi-square-χ2-goodness-of-fit-test-"> Chi-square (χ2) Goodness of Fit test </a>
+    <ul>
+      <li><a href="#hypotheses-1">Hypotheses</a></li>
+      <li><a href="#assumptions-1">Assumptions</a></li>
+      <li><a href="#perform-a-goodness-of-fit-test-python">Perform a Goodness of Fit test Python</a></li>
+      <li><a href="#interpretation-1">Interpretation</a></li>
+      <li><a href="#-references-"> References </a></li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,363 @@
+I"CM<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/gffgtf.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<h2 id="what-is-gff3-file-format"><span style="color:#33a8ff">What is GFF3 file format?</span></h2>
+<ul>
+  <li>GFF3 (Generic Feature Format Version 3) file format represents the genomic features in a simple text-based tab-delimited file</li>
+  <li>GFF3 file has nine fields (seqid, source, feature, start, end, score, strand, phase, and attributes)</li>
+  <li>The lines which starts with ‘##’ provides the meta-information of the file and ‘#’ represents the human-readable 
+comments</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>seqid</td>
+      <td>Chromosome or scaffold identifier for a given feature type (gene, mRNA, exon, CDS, or UTR)</td>
+    </tr>
+    <tr>
+      <td>source</td>
+      <td>name of the source from where the feature is generated. It can be name of software or databases.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>Type of the feature (e.g. gene, mRNA or transcript, exon, CDS, or UTR)</td>
+    </tr>
+    <tr>
+      <td>start</td>
+      <td>1-based start integer coordinate of given feature type</td>
+    </tr>
+    <tr>
+      <td>end</td>
+      <td>1-based end integer coordinate of given feature type</td>
+    </tr>
+    <tr>
+      <td>score</td>
+      <td>score of the feature type</td>
+    </tr>
+    <tr>
+      <td>strand</td>
+      <td>plus (+) or minus (-) strand of the feature type</td>
+    </tr>
+    <tr>
+      <td>phase</td>
+      <td>phase indicates the first base of the codon relative to the 5’ end in CDS feature. If phase=0, the codon begin at the first base of CDS nucleotide; if phase=1 the codon begin at the second base of CDS nucleotide; if phase=2 the codon begin at the third base of CDS nucleotide. Phase is required for all CDS features.</td>
+    </tr>
+    <tr>
+      <td>attributes</td>
+      <td>feature annotation in the format of tag=value (tag e.g. ID, Parent, Name etc.). Multiple annotation are separated by ‘;’. It is not necessary to quote the values.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Representation of genomic features of plant <i>Arabidopsis thaliana</i> in GFF3 format (only one gene has shown) downloaded from
+<a href="https://phytozome.jgi.doe.gov/pz/portal.html">Phytozome</a> database</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##gff-version 3
+##annot-version TAIR10
+Chr1	phytozomev10	gene	3631	5899	.	+	.	ID=AT1G01010.TAIR10;Name=AT1G01010
+Chr1	phytozomev10	mRNA	3631	5899	.	+	.	ID=AT1G01010.1.TAIR10;Name=AT1G01010.1;pacid=19656964;longest=1;Parent=AT1G01010.TAIR10
+Chr1	phytozomev10	five_prime_UTR	3631	3759	.	+	.	ID=AT1G01010.1.TAIR10.five_prime_UTR.1;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	3760	3913	.	+	0	ID=AT1G01010.1.TAIR10.CDS.1;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	3996	4276	.	+	2	ID=AT1G01010.1.TAIR10.CDS.2;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	4486	4605	.	+	0	ID=AT1G01010.1.TAIR10.CDS.3;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	4706	5095	.	+	0	ID=AT1G01010.1.TAIR10.CDS.4;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	5174	5326	.	+	0	ID=AT1G01010.1.TAIR10.CDS.5;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	CDS	5439	5630	.	+	0	ID=AT1G01010.1.TAIR10.CDS.6;Parent=AT1G01010.1.TAIR10;pacid=19656964
+Chr1	phytozomev10	three_prime_UTR	5631	5899	.	+	.	ID=AT1G01010.1.TAIR10.three_prime_UTR.1;Parent=AT1G01010.1.TAIR10;pacid=19656964
+</code></pre></div></div>
+
+<p><a href="http://localhost:4000/assets/posts/gffgtf/Athaliana_167_TAIR10.gene_chr1.gff3">Download <i>Arabidopsis thaliana</i> GFF3 file</a> for all genomic
+features of Chr 1 in GFF3 format</p>
+
+<h2 id="what-is-gtf-file-format"><span style="color:#33a8ff">What is GTF file format?</span></h2>
+<ul>
+  <li>GTF (Gene Transfer Format) file format is similar in structure as in GFF2 format</li>
+  <li>As GFF3, GTF also represents the genomic features in a simple text-based tab-delimited file</li>
+  <li>GTF has similar field information as described above for GFF3 with some changes in the attributes field</li>
+  <li>GTF requires CDS, start_codon, and stop_codon in the feature field. UTR (five_prime_UTR and three_prime_UTR), inter (intergenic region), and exon feature types are optional.</li>
+  <li>In the attribute field, gene_id and transcript_id tags are required for each feature type</li>
+  <li>In the attribute field, the text values of each tag must be double-quoted, which is not necessary for GFF3</li>
+</ul>
+
+<p>Representation of genomic features of plant <i>Arabidopsis thaliana</i> in GTF format (only one gene has shown) downloaded from
+<a href="https://plants.ensembl.org/index.html">Ensembl Plants</a> database</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!genome-build TAIR10
+#!genome-version TAIR10
+#!genome-date 2008-04
+#!genome-build-accession GCA_000001735.1
+#!genebuild-last-updated 2010-09
+1	araport11	gene	3631	5899	.	+	.	gene_id "AT1G01010"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding";
+1	araport11	transcript	3631	5899	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding";
+1	araport11	exon	3631	3913	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon1";
+1	araport11	CDS	3760	3913	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	start_codon	3760	3762	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding";
+1	araport11	exon	3996	4276	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "2"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon2";
+1	araport11	CDS	3996	4276	.	+	2	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "2"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	exon	4486	4605	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "3"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon3";
+1	araport11	CDS	4486	4605	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "3"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	exon	4706	5095	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "4"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon4";
+1	araport11	CDS	4706	5095	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "4"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	exon	5174	5326	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "5"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon5";
+1	araport11	CDS	5174	5326	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "5"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	exon	5439	5899	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "6"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; exon_id "AT1G01010.1.exon6";
+1	araport11	CDS	5439	5627	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "6"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding"; protein_id "AT1G01010.1";
+1	araport11	stop_codon	5628	5630	.	+	0	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; exon_number "6"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding";
+1	araport11	five_prime_utr	3631	3759	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding";
+1	araport11	three_prime_utr	5631	5899	.	+	.	gene_id "AT1G01010"; transcript_id "AT1G01010.1"; gene_name "NAC001"; gene_source "araport11"; gene_biotype "protein_coding"; transcript_source "araport11"; transcript_biotype "protein_coding";
+</code></pre></div></div>
+
+<!-- [Download <i>Arabidopsis thaliana</i> GTF file](http://localhost:4000/assets/posts/gffgtf/Athaliana_TAIR10.gene_chr1.gtf) for all genomic
+features of Chr 1 in GTF format (file size more than git minimum quota)-->
+
+<h2 id="convert-gff3-to-gtf-file-format"><span style="color:#33a8ff">Convert GFF3 to GTF file format</span></h2>
+<ul>
+  <li>We will use <code class="language-plaintext highlighter-rouge">bioinfokit v0.9.8</code> or later</li>
+  <li>Check <a href="http://localhost:4000/blog/howtoinstall.html">How to install bioinfokit</a> for latest version.</li>
+  <li>Download <a href="http://localhost:4000/assets/posts/gffgtf/Athaliana_167_TAIR10.gene_chr1.gff3">dataset</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python interpreter, jupyter notebook, google colab, spyder or python code
+# I am using interactive python interpreter (Python 3.8.2)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">gff</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">gff</span><span class="p">.</span><span class="n">gff_to_gtf</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">"Athaliana_167_TAIR10.gene_chr1.gff3"</span><span class="p">)</span>
+<span class="c1"># converted gtf file will be saved in same directory (Athaliana_167_TAIR10.gene_chr1.gtf)
+</span>
+<span class="c1"># Note: if mRNA feature type (column 3) is defined by other names than 'mRNA' or 'transcript' in your GFF3 file, you
+# can use the option mrna_feature_name to pass that feature name to gff_to_gtf
+# see here https://reneshbedre.github.io/blog/howtoinstall.html#gff3-to-gtf-file-format-conversion
+</span></code></pre></div></div>
+
+<h2 id="references"><span style="color:#33a8ff">References</span></h2>
+<ul>
+  <li>https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md</li>
+  <li>https://mblab.wustl.edu/GTF22.html</li>
+  <li>https://useast.ensembl.org/info/website/upload/gff.html</li>
+</ul>
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre.(2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). Zenodo.
+<a href="http://doi.org/10.5281/zenodo.3965241" target="_blank">http://doi.org/10.5281/zenodo.3965241</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/gffgtf.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/gffgtf.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: September 26, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

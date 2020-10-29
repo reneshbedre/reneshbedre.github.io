@@ -1,0 +1,298 @@
+I"”B<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/fqutil.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/fqutil.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/fqutil.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/fqutil.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/fqutil.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/fqutil.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<h2 id="what-is-ncbi-sequence-read-archive-sra-toolkit"><span style="color:#33a8ff">What is NCBI Sequence Read Archive (SRA) Toolkit?</span></h2>
+<ul>
+  <li>NCBI SRA toolkit is a set of utilities to download, view and search large volume of high-throughput sequencing data 
+from NCBI SRA database at faster speed</li>
+</ul>
+
+<h2 id="applications"><span style="color:#33a8ff">Applications</span></h2>
+<ul>
+  <li>Effectively download the large volume of high-throughput sequencing data (eg. FASTQ, SAM)</li>
+  <li>Convert SRA file into other biological file format (eg. FASTA, ABI, SAM, QSEQ, SFF)</li>
+  <li>Retrieve small subset of large files (eg. sequences, alignment)</li>
+  <li>Search within SRA files and fetch specific sequences</li>
+</ul>
+
+<!--
+ - Allow to use Aspera client `ascp` for much faster download (Aspera client should have installed)
+-->
+
+<h2 id="-download-and-install-ncbi-sra-toolkit-"><span style="color:#33a8ff"> Download and install NCBI SRA toolkit </span></h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># I am using Ubuntu Linux 20.04.1 LTS</span>
+<span class="c"># download latest version of compiled binaries of NCBI SRA toolkit </span>
+<span class="c"># (June 29, 2020, version 2.10.8) for Ubuntu Linux</span>
+<span class="c"># Compiled binaries for other OS visit: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software</span>
+<span class="nv">$ </span>wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.8/sratoolkit.2.10.8-ubuntu64.tar.gz
+
+<span class="c"># extract tar.gz file </span>
+<span class="nv">$ </span><span class="nb">tar</span> <span class="nt">-zxvf</span> sratoolkit.2.10.8-ubuntu64.tar.gz
+
+<span class="c"># add binaries to path using export path or editing ~/.bashrc file</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/ren/software/sratoolkit.2.10.8-ubuntu64/bin
+<span class="c"># Now SRA binaries added to path and ready to use</span>
+</code></pre></div></div>
+
+<h3 id="download-sra-datasets-using-ncbi-sra-toolkit">Download SRA datasets using NCBI SRA toolkit</h3>
+
+<p>Note: Current SRA toolkit version 2.10.8 does not support Aspera client (ascp). Even though <code class="language-plaintext highlighter-rouge">ascp</code> can run with older
+versions, it will download the data by <code class="language-plaintext highlighter-rouge">https</code> mode and not by <code class="language-plaintext highlighter-rouge">FASP</code> mode.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># download file: prefetch will download and save SRA file related to SRR accession in </span>
+<span class="c"># the current directory under newly created SRA accession directory</span>
+<span class="nv">$ </span>prefetch  SRR5790106  <span class="c"># for a single file</span>
+<span class="nv">$ </span>prefetch  SRR5790106 SRR5790104  <span class="c"># multiple files</span>
+
+<span class="c"># convert to FASTQ: fastq-dump will convert SRR5790106.sra to SRR5790106.fastq</span>
+<span class="nv">$ </span>fastq-dump  SRR5790106  <span class="c"># single file</span>
+<span class="nv">$ </span>fastq-dump  SRR5790106  SRR5790104 <span class="c"># multiple files</span>
+
+<span class="c"># now you can also replace fastq-dump with fasterq-dump which is much faster </span>
+<span class="c"># and efficient for large datasets</span>
+<span class="c"># by default it will use 6 threads (-e option)</span>
+<span class="nv">$ </span>fasterq-dump  SRR5790106  <span class="c"># single file</span>
+<span class="nv">$ </span>fasterq-dump  SRR5790106  SRR5790104 <span class="c"># multiple files</span>
+
+<span class="c"># for paired-end data use --split-files (fastq-dump) and -S or --split-files (fasterq-dump) option</span>
+<span class="nv">$ </span>fastq-dump <span class="nt">--split-files</span> SRR8296149
+<span class="nv">$ </span>fasterq-dump <span class="nt">-S</span> SRR8296149
+
+<span class="c"># download alignment files (SAM)</span>
+<span class="c"># make sure corresponding accession has alignment file at SRA database</span>
+<span class="nv">$ </span>sam-dump <span class="nt">--output-file</span> SRR1236468.sam SRR1236468
+</code></pre></div></div>
+<p>NOTE: With <code class="language-plaintext highlighter-rouge">fastq-dump</code> and <code class="language-plaintext highlighter-rouge">fasterq-dump</code>, <code class="language-plaintext highlighter-rouge">prefetch</code> step is unncessary and you can directly 
+download sequence data in FASTQ format</p>
+
+<h3 id="batch-download-sra-datasets">Batch download SRA datasets</h3>
+
+<ul>
+  <li>Sometimes, we need to download hundreds or thousands of FASTQ files from the SRA database and it would be inconvenient 
+to directly use the SRA toolkit for batch download</li>
+  <li>I have added a wrapper script for <code class="language-plaintext highlighter-rouge">fasterq-dump</code> in <code class="language-plaintext highlighter-rouge">bioinfokit</code> (v0.9.7 or later) for easy download
+of a large number of FASTQ files from the SRA database</li>
+  <li>Check <a href="http://localhost:4000/blog/howtoinstall.html">bioinfokit documentation</a> for installation and documentation</li>
+  <li>Download test <a href="/assets/posts/fqutil/sra_accessions.txt">SRA accession file</a> containing accessions for both 
+single and paired-end FASTQ datasets</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># I am using interactive python interpreter (Python 3.8.5)
+# tested on Linux and Mac. It may not work on Windows
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">fastq</span>
+
+<span class="c1"># batch download fastq files
+# make sure you have installed the latest version of NCBI SRA toolkit (version 2.10.8) and added binaries in the 
+# system path
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">fastq</span><span class="p">.</span><span class="n">sra_bd</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">'sra_accessions.txt'</span><span class="p">)</span>
+
+<span class="c1"># increase number of threads
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">fastq</span><span class="p">.</span><span class="n">sra_bd</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">'sra_accessions.txt'</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># use fasterq-dump customized options, you can see more options for fasterq-dump as
+# fasterq-dump -help
+</span><span class="n">fastq</span><span class="p">.</span><span class="n">sra_bd</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">'sra_accessions.txt'</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">other_opts</span><span class="o">=</span><span class="s">'--outdir temp --skip-technical'</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="validation-of-downloaded-sra-data-integrity">Validation of downloaded SRA data integrity</h3>
+
+<p>It is essential to check the integrity and checksum of SRA datasets to ensure successful download</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># download FASTQ file</span>
+<span class="nv">$ </span>prefetch SRR5790104
+<span class="c"># fastq-dump  SRR5790104  </span>
+
+<span class="c"># check integrity of downloaded SRR5790106.fastq file</span>
+<span class="c"># output from vdb-validate should report 'ok' and 'consistent' for all parameters</span>
+<span class="c"># Note: make sure you have .sra (not .cache) file for corresponding accession in </span>
+<span class="c"># sra accession directory</span>
+<span class="nv">$ </span>vdb-validate SRR5790104
+2020-08-31T22:46:27 vdb-validate.2.10.8 info: Table <span class="s1">'SRR5790104.sra'</span> metadata: md5 ok
+2020-08-31T22:46:27 vdb-validate.2.10.8 info: Column <span class="s1">'ALTREAD'</span>: checksums ok
+2020-08-31T22:46:29 vdb-validate.2.10.8 info: Column <span class="s1">'QUALITY'</span>: checksums ok
+2020-08-31T22:46:30 vdb-validate.2.10.8 info: Column <span class="s1">'READ'</span>: checksums ok
+2020-08-31T22:46:30 vdb-validate.2.10.8 info: Column <span class="s1">'X'</span>: checksums ok
+2020-08-31T22:46:30 vdb-validate.2.10.8 info: Column <span class="s1">'Y'</span>: checksums ok
+2020-08-31T22:46:30 vdb-validate.2.10.8 info: Table <span class="s1">'SRR5790104.sra'</span> is consistent
+</code></pre></div></div>
+
+<h3 id="customized-download-of-sra-datasets">Customized download of SRA datasets</h3>
+
+<p>You can use SRA tools for customized output of large SRA datasets without downloading complete datasets 
+(NOTE: some options are not available in <code class="language-plaintext highlighter-rouge">fasterq-dump</code>)</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># print first 10 reads from single-end FASTQ file</span>
+<span class="c"># -Z option will print output on screen (STDOUT)</span>
+<span class="nv">$ </span>fastq-dump <span class="nt">-X</span> 10 <span class="nt">-Z</span> SRR5790106
+
+<span class="c"># save FASTQ file to specififed directory</span>
+<span class="nv">$ </span>fastq-dump <span class="nt">-O</span> temp SRR5790106
+<span class="nv">$ </span>fasterq-dump <span class="nt">-O</span> temp SRR5790106
+
+<span class="c"># compress FASTQ file gzip or bzip2</span>
+<span class="nv">$ </span>fastq-dump <span class="nt">-O</span> temp SRR5790106
+<span class="nv">$ </span>fastq-dump <span class="nt">--gzip</span> SRR5790106  
+<span class="nv">$ </span>fastq-dump <span class="nt">--bzip2</span> SRR5790106
+
+<span class="c"># Multithreading </span>
+<span class="nv">$ </span>fasterq-dump <span class="nt">-e</span> 10 SRR5790106  
+</code></pre></div></div>
+
+<h3 id="convert-sra-data-into-other-biological-formats">Convert SRA data into other biological formats</h3>
+
+<p>SRA tools allow you to convert SRA files into FASTA, ABI, Illumina native (QSEQ), and SFF format</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># convert to FASTA</span>
+<span class="nv">$ </span>fastq-dump <span class="nt">--fasta</span> SRR5790106  
+
+<span class="c"># convert to ABI (CSFASTA and QVAL)</span>
+<span class="nv">$ </span>abi-dump  SRR5790106  
+
+<span class="c"># convert to QSEQ </span>
+<span class="c"># SRA database should have alignment information submitted for corresponding accession </span>
+<span class="nv">$ </span>illumina-dump <span class="nt">--qseq</span> 2 SRR1236472 <span class="c"># 2 for paired-end and 1 for single-end</span>
+
+<span class="c"># convert to SFF </span>
+<span class="c"># SFF is a binary file format related to 454 high-throughput sequencing</span>
+<span class="nv">$ </span>sff-dump SRR996630
+</code></pre></div></div>
+
+<h3 id="search-within-sra-files">Search within SRA files</h3>
+
+<p>You can search specific sequences or subset of sequences in SRA files</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># search within SRA files</span>
+<span class="c"># output will be sequence read IDs </span>
+<span class="nv">$ </span>sra-search  GATGCCGCGCC SRR5790104
+</code></pre></div></div>
+
+<p>NOTE: For every SRA tools, you can check all options by providing <code class="language-plaintext highlighter-rouge">-h</code> parameter 
+(eg. <code class="language-plaintext highlighter-rouge">fasterq-dump  -h</code>)</p>
+
+<!--
+**<span style="color:#33a8ff">How to cite?</span>**
+
+Bedre, R. (2018, October 22). How to use NCBI SRA Toolkit effectively?  
+https://reneshbedre.github.io/blog/fqutil.html.
+-->
+<p><span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
+<b>reneshbe@gmail.com</b></span></p>
+
+<p><span style="color:#9e9696"><i> Last updated: September 18, 2020</i> </span></p>
+
+<p>
+<!-- Begin Mailchimp Signup Form -->
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

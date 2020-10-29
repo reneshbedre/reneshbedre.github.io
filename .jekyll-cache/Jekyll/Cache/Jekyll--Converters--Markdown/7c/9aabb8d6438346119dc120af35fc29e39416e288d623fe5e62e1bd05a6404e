@@ -1,0 +1,15 @@
+I"d<ul class="toc__menu">
+  <li><a href="#multiple-linear-regression-mlr">Multiple Linear Regression (MLR)?</a></li>
+  <li><a href="#multiple-linear-regression-in-python">Multiple Linear Regression in Python</a>
+    <ul>
+      <li><a href="#interpretation">Interpretation</a></li>
+      <li><a href="#check-multiple-linear-regression-mlr-assumptions">Check Multiple Linear Regression (MLR) Assumptions</a></li>
+    </ul>
+  </li>
+  <li><a href="#multiple-linear-regression-with-pytorch">Multiple linear regression with PyTorch</a>
+    <ul>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

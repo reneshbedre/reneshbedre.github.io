@@ -1,0 +1,23 @@
+I"'<ul class="toc__menu">
+  <li><a href="#what-is-linear-regression-lr">What is Linear Regression (LR)?</a></li>
+  <li><a href="#types-of-linear-regression-lr">Types of Linear Regression (LR)?</a></li>
+  <li><a href="#linear-regression-lr-assumptions">Linear Regression (LR) Assumptions</a></li>
+  <li><a href="#linear-regression-lr-outputs">Linear Regression (LR) Outputs</a>
+    <ul>
+      <li><a href="#correlation-coefficient-r">Correlation coefficient (r)</a></li>
+      <li><a href="#coefficient-of-determination-r-squared">Coefficient of determination (r-squared)</a></li>
+      <li><a href="#residuals-regression-error">Residuals (regression error)</a></li>
+      <li><a href="#root-mean-square-error-rmse">Root Mean Square Error (RMSE)</a></li>
+    </ul>
+  </li>
+  <li><a href="#linear-regression-lr-in-python">Linear Regression (LR) in Python</a>
+    <ul>
+      <li><a href="#perform-linear-regression-lr">Perform Linear Regression (LR)</a></li>
+      <li><a href="#interpretation">Interpretation</a></li>
+      <li><a href="#linear-regression-lr-plot">Linear Regression (LR) plot</a></li>
+      <li><a href="#check-linear-regression-lr-assumptions">Check Linear Regression (LR) Assumptions</a></li>
+    </ul>
+  </li>
+  <li><a href="#linear-regression-with-pytorch">Linear Regression with PyTorch</a></li>
+</ul>
+:ET
