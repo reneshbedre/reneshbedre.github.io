@@ -1,0 +1,423 @@
+I"̆<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/volcano.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<h2 id="what-is-volcano-plot"><span style="color:#33a8ff">What is Volcano plot?</span></h2>
+<ul>
+  <li>2-dimensional (2D) scatter plot having a shape like a volcano</li>
+  <li>Used to visualize and identify statistically significant gene expression changes from two different conditions 
+(eg. normal vs. treated) in terms of log fold change (X-axis) and P-value (Y-axis)</li>
+</ul>
+
+<h2 id="applications"><span style="color:#33a8ff">Applications</span></h2>
+<ul>
+  <li>Easy to visualize the expression of thousands of genes obtained from omics research (eg. Transcriptomics, genomics, 
+proteomics, etc.) and pinpoint genes with significant changes</li>
+</ul>
+
+<h2 id="how-to-create-volcano-plot-in-python"><span style="color:#33a8ff">How to create Volcano plot in Python?</span></h2>
+<ul>
+  <li>We will use <code class="language-plaintext highlighter-rouge">bioinfokit v0.8.8</code> or later</li>
+  <li>Check <a href="http://localhost:4000/blog/howtoinstall.html">bioinfokit documentation</a> for installation and documentation</li>
+  <li>For generating a volcano plot, I have used gene expression data published in Bedre et al. 2016 to identify 
+statistically significantly induced or downregulated genes in response to salt stress in <i>Spartina alterniflora</i> 
+(<a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-3017-3">Read paper</a>). Here’s you can 
+download gene expression dataset used for generating volcano plot: 
+<a href="http://localhost:4000/assets/posts/volcano/testvolcano.csv">dataset</a></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python interpreter, jupyter notebook, spyder or python code
+# I am using interactive python interpreter (Python 3.7)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit</span> <span class="kn">import</span> <span class="n">analys</span><span class="p">,</span> <span class="n">visuz</span>
+<span class="c1"># load dataset as pandas dataframe
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span> <span class="o">=</span> <span class="n">analys</span><span class="p">.</span><span class="n">get_data</span><span class="p">(</span><span class="s">'volcano'</span><span class="p">).</span><span class="n">data</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+          <span class="n">GeneNames</span>  <span class="n">value1</span>  <span class="n">value2</span>    <span class="n">log2FC</span>       <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="mi">0</span>  <span class="n">LOC_Os09g01000</span><span class="p">.</span><span class="mi">1</span>    <span class="mi">8862</span>   <span class="mi">32767</span> <span class="o">-</span><span class="mf">1.886539</span>  <span class="mf">1.250000e-55</span>
+<span class="mi">1</span>  <span class="n">LOC_Os12g42876</span><span class="p">.</span><span class="mi">1</span>    <span class="mi">1099</span>     <span class="mi">117</span>  <span class="mf">3.231611</span>  <span class="mf">1.050000e-55</span>
+<span class="mi">2</span>  <span class="n">LOC_Os12g42884</span><span class="p">.</span><span class="mi">2</span>     <span class="mi">797</span>      <span class="mi">88</span>  <span class="mf">3.179004</span>  <span class="mf">2.590000e-54</span>
+<span class="mi">3</span>  <span class="n">LOC_Os03g16920</span><span class="p">.</span><span class="mi">1</span>     <span class="mi">274</span>       <span class="mi">7</span>  <span class="mf">5.290677</span>  <span class="mf">4.690000e-54</span>
+<span class="mi">4</span>  <span class="n">LOC_Os05g47540</span><span class="p">.</span><span class="mi">4</span>     <span class="mi">308</span>      <span class="mi">18</span>  <span class="mf">4.096862</span>  <span class="mf">2.190000e-54</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">)</span>
+<span class="c1"># plot will be saved in same directory (volcano.png)
+# set parameter show=True, if you want view the image instead of saving
+</span></code></pre></div></div>
+
+<p>Generated volcano plot by above code (green: upregulated and red: downregulated genes),</p>
+
+<p align="center">
+<img src="/assets/posts/volcano/vol1.svg" width="600" />
+</p>
+
+<p>Add legend to the plot and adjust the legend position,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">plotlegend</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">legendpos</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">,</span> 
+    <span class="n">legendanchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.46</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol1_2.svg" width="600" />
+</p>
+
+<p>Change color of volcano plot</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change colormap
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/volcano/vol2.svg" width="600" />
+</p>
+
+<p>Change log fold change and P-value threshold,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">lfc_thr</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pv_thr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">),</span> <span class="n">plotlegend</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">legendpos</span><span class="o">=</span><span class="s">'upper right'</span><span class="p">,</span> 
+    <span class="n">legendanchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.46</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol2_1.svg" width="600" />
+</p>
+
+<p>Change transparency of volcano plot</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">),</span> 
+    <span class="n">valpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/volcano/vol3.svg" width="600" />
+</p>
+
+<p>Change the shape of the points</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add star shape
+# check more shapes at https://matplotlib.org/3.1.1/api/markers_api.html
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">),</span> 
+    <span class="n">markerdot</span><span class="o">=</span><span class="s">'*'</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol3_1.svg" width="600" />
+</p>
+
+<p>Change the shape and size of the points</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">'log2FC'</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">'p-value'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">),</span> 
+    <span class="n">markerdot</span><span class="o">=</span><span class="s">'*'</span><span class="p">,</span> <span class="n">dotsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol3_2.svg" width="600" />
+</p>
+
+<p>Add gene labels (text style) to the points,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+# default simple text will be added
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span>
+    <span class="n">genenames</span><span class="o">=</span><span class="p">(</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">)</span> <span class="p">)</span>
+<span class="c1"># if you want to label all DEGs defined lfc_thr and pv_thr, set genenames='deg' 
+</span></code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol4.svg" width="600" />
+</p>
+
+<p>Add gene labels (box style) to the points,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span>
+    <span class="n">genenames</span><span class="o">=</span><span class="p">(</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">),</span> <span class="n">gstyle</span><span class="o">=</span><span class="mi">2</span> <span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol5.svg" width="600" />
+</p>
+
+<p>Add gene names instead of gene Ids,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+# as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span> 
+    <span class="n">genenames</span><span class="o">=</span><span class="p">({</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">:</span><span class="s">"EP"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">:</span><span class="s">"CPuORF25"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">:</span><span class="s">"GDH"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">:</span><span class="s">"G3PD"</span><span class="p">}),</span>
+    <span class="n">gstyle</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/volcano/vol6.svg" width="600" />
+</p>
+
+<p>Add threshold lines,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span> 
+    <span class="n">genenames</span><span class="o">=</span><span class="p">({</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">:</span><span class="s">"EP"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">:</span><span class="s">"CPuORF25"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">:</span><span class="s">"GDH"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">:</span><span class="s">"G3PD"</span><span class="p">}),</span>
+    <span class="n">gstyle</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol6_1.svg" width="600" />
+</p>
+
+<p>Change X and Y range ticks, font size and name for tick labels</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">volcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span> 
+    <span class="n">genenames</span><span class="o">=</span><span class="p">({</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">:</span><span class="s">"EP"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">:</span><span class="s">"CPuORF25"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">:</span><span class="s">"GDH"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">:</span><span class="s">"G3PD"</span><span class="p">}),</span>
+    <span class="n">gstyle</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sign_line</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">xlm</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">ylm</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">figtype</span><span class="o">=</span><span class="s">'svg'</span><span class="p">,</span> <span class="n">axtickfontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">axtickfontname</span><span class="o">=</span><span class="s">'Verdana'</span><span class="p">)</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/vol7.svg" width="600" />
+</p>
+
+<p>In addition to these parameters, the parameters for figure type (<code class="language-plaintext highlighter-rouge">figtype</code>), X and Y axis ticks range (<code class="language-plaintext highlighter-rouge">xlm</code>, <code class="language-plaintext highlighter-rouge">ylm</code>), axis labels (<code class="language-plaintext highlighter-rouge">axxlabel</code>, <code class="language-plaintext highlighter-rouge">axylabel</code>),<br />
+axis labels font size  (<code class="language-plaintext highlighter-rouge">axlabelfontsize</code>), and axis tick labels font size and name (<code class="language-plaintext highlighter-rouge">axtickfontsize</code>, <code class="language-plaintext highlighter-rouge">axtickfontname</code>)
+can be provided.</p>
+
+<p>To create a inverted volcano plot,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python console, jupyter or python code
+# I am using interactive python console
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit</span> <span class="kn">import</span> <span class="n">visuz</span>
+<span class="c1"># here you can change default parameters. 
+# Read documentation at https://github.com/reneshbedre/bioinfokit
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">involcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Generated inverted volcano plot by adding above code,</p>
+
+<p align="center">
+<img src="/assets/posts/volcano/involcano1.svg" width="600" />
+</p>
+
+<p>Change color inverted volcano plot</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># change colormap
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">involcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">"#00239CFF"</span><span class="p">,</span> <span class="s">"grey"</span><span class="p">,</span> <span class="s">"#E10600FF"</span><span class="p">))</span>
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/posts/volcano/involcano2.svg" width="600" />
+</p>
+
+<p>Add gene names instead of gene Ids,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># add gene customized labels
+# note: here you need to provide column name of gene Ids (geneid parameter)
+# as the dataset only have geneids, you need to provide tuple of gene Id and corresponding gene names
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">visuz</span><span class="p">.</span><span class="n">gene_exp</span><span class="p">.</span><span class="n">involcano</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">lfc</span><span class="o">=</span><span class="s">"log2FC"</span><span class="p">,</span> <span class="n">pv</span><span class="o">=</span><span class="s">"p-value"</span><span class="p">,</span> <span class="n">geneid</span><span class="o">=</span><span class="s">"GeneNames"</span><span class="p">,</span> 
+    <span class="n">genenames</span><span class="o">=</span><span class="p">({</span><span class="s">"LOC_Os09g01000.1"</span><span class="p">:</span><span class="s">"EP"</span><span class="p">,</span> <span class="s">"LOC_Os01g50030.1"</span><span class="p">:</span><span class="s">"CPuORF25"</span><span class="p">,</span> <span class="s">"LOC_Os06g40940.3"</span><span class="p">:</span><span class="s">"GDH"</span><span class="p">,</span> <span class="s">"LOC_Os03g03720.1"</span><span class="p">:</span><span class="s">"G3PD"</span><span class="p">}),</span> 
+    <span class="n">gstyle</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/volcano/involcano3.svg" width="600" />
+</p>
+
+<p>In addition to these parameters, the parameters for figure type (<code class="language-plaintext highlighter-rouge">figtype</code>), axis labels (<code class="language-plaintext highlighter-rouge">axxlabel</code>, <code class="language-plaintext highlighter-rouge">axylabel</code>), axis labels
+font size (<code class="language-plaintext highlighter-rouge">axlabelfontsize</code>), and axis tick labels font size and name (<code class="language-plaintext highlighter-rouge">axtickfontsize</code>,  <code class="language-plaintext highlighter-rouge">axtickfontname</code>)
+can be provided.</p>
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre.(2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). Zenodo.
+<a href="http://doi.org/10.5281/zenodo.3965241" target="_blank">http://doi.org/10.5281/zenodo.3965241</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/volcano.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/volcano.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: July 02, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

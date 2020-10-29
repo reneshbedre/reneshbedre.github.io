@@ -1,0 +1,494 @@
+I"w—<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/htseqqc.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<h2 id="what-is-htseqqc"><span style="color:#33a8ff">What is HTSeqQC?</span></h2>
+<ul>
+  <li>HTSeqQC is an automated quality control analysis tool for a single and paired-end high-throughput sequencing data 
+(HTS) generated from Illumina sequencing platforms.</li>
+  <li>HTSeqQC can be used to filter and/or trim sequence reads for low-quality sequences, adapter or primer contamination,
+and uncalled bases (N) to obtain high-quality data for downstream bioinformatics analysis</li>
+</ul>
+
+<h2 id="htseqqc-features"><span style="color:#33a8ff">HTSeqQC Features</span></h2>
+<ul>
+  <li>Simultaneously filter and/or trim reads for adapter or primer contamination, uncalled bases (N), and low-quality reads</li>
+  <li>Supports single and paired-end reads</li>
+  <li>Analyze multiple samples simultaneously</li>
+  <li>Parallel computation for accelerating the speed of analysis</li>
+  <li>Visualization and statistics</li>
+  <li>Docker image is available</li>
+  <li>Available on CyVerse Discovery Environment (DE)</li>
+  <li>No dependency on an external open-source tool</li>
+</ul>
+
+<h2 id="getting-started"><span style="color:#33a8ff">Getting Started</span></h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>HTSeqQC requires</p>
+<ul>
+  <li>Python 3 (tested on 3.6 and 3.7)</li>
+  <li>NumPy</li>
+  <li>pysam</li>
+  <li>termcolor</li>
+  <li>datetime</li>
+  <li>matplotlib</li>
+</ul>
+
+<h3 id="installing">Installing</h3>
+<p>Install using <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">git</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># download and install HTSeqQC v1.0
+</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">reneshbedre</span><span class="o">/</span><span class="n">HTSeqQC</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">HTSeqQC</span>
+<span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h3 id="how-to-use">How to use</h3>
+<p>Print help message to see all required and optional parameters,</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">filter</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">h</span> 
+
+<span class="n">usage</span><span class="p">:</span> <span class="nb">filter</span><span class="p">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="n">INPUT_FILES_1</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span> <span class="n">INPUT_FILES_2</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">QUAL_FMT</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">-</span><span class="n">e</span> <span class="n">N_CONT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">ADPT_SEQS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">MIN_SIZE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">ADPT_MATCH</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">QUAL_THRESH</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">TRIM_OPT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">WIND_SIZE</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="n">MIN_LEN_FILT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span> <span class="n">CPU</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">m</span> <span class="n">OUT_FMT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VIS_OPT</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span>
+
+<span class="n">Quality</span> <span class="n">control</span> <span class="n">analysis</span> <span class="n">of</span> <span class="n">single</span> <span class="ow">and</span> <span class="n">paired</span><span class="o">-</span><span class="n">end</span> <span class="n">sequence</span> <span class="n">data</span>
+
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="nb">exit</span>
+  <span class="o">-</span><span class="n">a</span> <span class="n">INPUT_FILES_1</span><span class="p">,</span> <span class="o">--</span><span class="n">p1</span> <span class="n">INPUT_FILES_1</span>
+                        <span class="n">Single</span> <span class="n">end</span> <span class="nb">input</span> <span class="n">files</span> <span class="ow">or</span> <span class="n">left</span> <span class="n">files</span> <span class="k">for</span> <span class="n">paired</span><span class="o">-</span><span class="n">end</span>
+                        <span class="n">data</span> <span class="p">(.</span><span class="n">fastq</span><span class="p">,</span> <span class="p">.</span><span class="n">fq</span><span class="p">).</span> <span class="n">Multiple</span> <span class="n">sample</span> <span class="n">files</span> <span class="n">must</span> <span class="n">be</span>
+                        <span class="n">separated</span> <span class="n">by</span> <span class="n">comma</span> <span class="ow">or</span> <span class="n">space</span>
+  <span class="o">-</span><span class="n">b</span> <span class="n">INPUT_FILES_2</span><span class="p">,</span> <span class="o">--</span><span class="n">p2</span> <span class="n">INPUT_FILES_2</span>
+                        <span class="n">Right</span> <span class="n">files</span> <span class="k">for</span> <span class="n">paired</span><span class="o">-</span><span class="n">end</span> <span class="n">data</span> <span class="p">(.</span><span class="n">fastq</span><span class="p">,</span> <span class="p">.</span><span class="n">fq</span><span class="p">).</span>
+                        <span class="n">Multiple</span> <span class="n">files</span> <span class="n">must</span> <span class="n">be</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">comma</span> <span class="ow">or</span> <span class="n">space</span>
+  <span class="o">-</span><span class="n">c</span> <span class="n">QUAL_FMT</span><span class="p">,</span> <span class="o">--</span><span class="n">qfmt</span> <span class="n">QUAL_FMT</span>
+                        <span class="n">Quality</span> <span class="n">value</span> <span class="nb">format</span> <span class="p">[</span><span class="mi">1</span><span class="o">=</span> <span class="n">Illumina</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mi">2</span><span class="o">=</span> <span class="n">Illumina</span>
+                        <span class="mf">1.3</span><span class="p">,</span><span class="mi">3</span><span class="o">=</span> <span class="n">Sanger</span><span class="p">].</span> <span class="n">If</span> <span class="n">quality</span> <span class="nb">format</span> <span class="ow">not</span> <span class="n">provided</span><span class="p">,</span> <span class="n">it</span>
+                        <span class="n">will</span> <span class="n">automatically</span> <span class="n">detect</span> <span class="n">based</span> <span class="n">on</span> <span class="n">sequence</span> <span class="n">data</span>
+  <span class="o">-</span><span class="n">e</span> <span class="n">N_CONT</span><span class="p">,</span> <span class="o">--</span><span class="n">nb</span> <span class="n">N_CONT</span>
+                        <span class="n">Filter</span> <span class="n">the</span> <span class="n">reads</span> <span class="n">containing</span> <span class="n">given</span> <span class="o">%</span> <span class="n">of</span> <span class="n">uncalled</span> <span class="n">bases</span>
+                        <span class="p">(</span><span class="n">N</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">f</span> <span class="n">ADPT_SEQS</span><span class="p">,</span> <span class="o">--</span><span class="n">adp</span> <span class="n">ADPT_SEQS</span>
+                        <span class="n">Trim</span> <span class="n">the</span> <span class="n">adapter</span> <span class="ow">and</span> <span class="n">truncate</span> <span class="n">the</span> <span class="n">read</span> <span class="n">sequence</span>
+                        <span class="p">(</span><span class="n">multiple</span> <span class="n">adapter</span> <span class="n">sequences</span> <span class="n">must</span> <span class="n">be</span> <span class="n">separated</span> <span class="n">by</span>
+                        <span class="n">comma</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">d</span> <span class="n">MIN_SIZE</span><span class="p">,</span> <span class="o">--</span><span class="n">msz</span> <span class="n">MIN_SIZE</span>
+                        <span class="n">Filter</span> <span class="n">the</span> <span class="n">reads</span> <span class="n">which</span> <span class="n">are</span> <span class="n">lesser</span> <span class="n">than</span> <span class="n">minimum</span> <span class="n">size</span>
+  <span class="o">-</span><span class="n">g</span> <span class="n">ADPT_MATCH</span><span class="p">,</span> <span class="o">--</span><span class="n">per</span> <span class="n">ADPT_MATCH</span>
+                        <span class="n">Truncate</span> <span class="n">the</span> <span class="n">read</span> <span class="n">sequence</span> <span class="k">if</span> <span class="n">it</span> <span class="n">matches</span> <span class="n">to</span> <span class="n">adapter</span>
+                        <span class="n">sequence</span> <span class="n">equal</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">than</span> <span class="n">given</span> <span class="n">percent</span> <span class="p">(</span><span class="mf">0.0</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+                        <span class="p">[</span><span class="n">default</span><span class="o">=</span><span class="mf">0.9</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">i</span> <span class="n">QUAL_THRESH</span><span class="p">,</span> <span class="o">--</span><span class="n">qthr</span> <span class="n">QUAL_THRESH</span>
+                        <span class="n">Filter</span> <span class="n">the</span> <span class="n">read</span> <span class="n">sequence</span> <span class="k">if</span> <span class="n">average</span> <span class="n">quality</span> <span class="n">of</span> <span class="n">bases</span>
+                        <span class="ow">in</span> <span class="n">reads</span> <span class="ow">is</span> <span class="n">lower</span> <span class="n">than</span> <span class="n">threshold</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">40</span><span class="p">)</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">n</span> <span class="n">TRIM_OPT</span><span class="p">,</span> <span class="o">--</span><span class="n">trim</span> <span class="n">TRIM_OPT</span>
+                        <span class="n">If</span> <span class="n">trim</span> <span class="n">option</span> <span class="nb">set</span> <span class="n">to</span> <span class="bp">True</span><span class="p">,</span> <span class="n">the</span> <span class="n">reads</span> <span class="k">with</span> <span class="n">low</span> <span class="n">quality</span>
+                        <span class="p">(</span><span class="k">as</span> <span class="n">defined</span> <span class="n">by</span> <span class="n">option</span> <span class="o">--</span><span class="n">qthr</span><span class="p">)</span> <span class="n">will</span> <span class="n">be</span> <span class="n">trimmed</span> <span class="n">instead</span>
+                        <span class="n">of</span> <span class="n">discarding</span> <span class="p">[</span><span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">]</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="bp">False</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">p</span> <span class="n">WIND_SIZE</span><span class="p">,</span> <span class="o">--</span><span class="n">wsz</span> <span class="n">WIND_SIZE</span>
+                        <span class="n">The</span> <span class="n">window</span> <span class="n">size</span> <span class="k">for</span> <span class="n">trimming</span> <span class="p">(</span><span class="mi">5</span><span class="o">-&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="n">the</span> <span class="n">reads</span><span class="p">.</span> <span class="n">This</span>
+                        <span class="n">option</span> <span class="n">should</span> <span class="n">always</span> <span class="nb">set</span> <span class="n">when</span> <span class="o">-</span><span class="n">trim</span> <span class="n">option</span> <span class="ow">is</span> <span class="n">defined</span>
+                        <span class="p">[</span><span class="n">default</span><span class="p">:</span> <span class="mi">5</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">r</span> <span class="n">MIN_LEN_FILT</span><span class="p">,</span> <span class="o">--</span><span class="n">mlk</span> <span class="n">MIN_LEN_FILT</span>
+                        <span class="n">Minimum</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">reads</span> <span class="n">to</span> <span class="n">retain</span> <span class="n">after</span> <span class="n">trimming</span>
+  <span class="o">-</span><span class="n">q</span> <span class="n">CPU</span><span class="p">,</span> <span class="o">--</span><span class="n">cpu</span> <span class="n">CPU</span>     <span class="n">Number</span> <span class="n">of</span> <span class="n">CPU</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">m</span> <span class="n">OUT_FMT</span><span class="p">,</span> <span class="o">--</span><span class="n">ofmt</span> <span class="n">OUT_FMT</span>
+                        <span class="n">Output</span> <span class="nb">file</span> <span class="nb">format</span> <span class="p">(</span><span class="n">fastq</span><span class="o">/</span><span class="n">fasta</span><span class="p">)</span> <span class="p">[</span><span class="n">default</span><span class="p">:</span><span class="n">fastq</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">v</span> <span class="n">VIS_OPT</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">vis</span> <span class="n">VIS_OPT</span>
+                        <span class="n">No</span> <span class="n">figures</span> <span class="n">will</span> <span class="n">be</span> <span class="n">produced</span> <span class="p">[</span><span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">]</span>
+                        <span class="p">[</span><span class="n">default</span><span class="p">:</span><span class="bp">False</span><span class="p">]</span>
+  <span class="o">--</span><span class="n">version</span>             <span class="n">show</span> <span class="n">program</span><span class="s">'s version number and exit
+</span></code></pre></div></div>
+
+<h3 id="htseqqc-analysis-commands-and-output">HTSeqQC Analysis commands and output</h3>
+
+<p>Download the <a href="https://drive.google.com/file/d/1PkpYqzSqroNsme0rVa8GKMR-EWhDzt3Y/view?usp=sharing" target="_blank">test paired-end dataset</a>
+(Published in <a href="https://www.scirp.org/journal/paperinformation.aspx?paperid=93866" target="_blank">Kandel et al., 2019</a>)</p>
+
+<p>Run HTSeqQC on paired-end sequence data,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># once successfully downloaded, use HTSeqQC for quality filtering
+# with default command and --cpu 6
+</span><span class="nb">filter</span><span class="p">.</span><span class="n">py</span> <span class="o">--</span><span class="n">cpu</span> <span class="mi">18</span> <span class="o">--</span><span class="n">p1</span> <span class="mi">1</span><span class="n">_S1_L001_R1_001</span><span class="p">.</span><span class="n">fastq</span> <span class="o">--</span><span class="n">p2</span> <span class="mi">1</span><span class="n">_S1_L001_R2_001</span><span class="p">.</span><span class="n">fastq</span>
+<span class="c1"># verbose output while program running
+# [2020-03-30 21:49:59.738239] The fastq quality format is not provided therefore detecting the fastq variant...
+# [2020-03-30 21:50:00.677720] The fastq quality format is illumina 1.8+
+# [2020-03-30 21:50:01.618438] Preparing the data for analysis...
+# [2020-03-30 21:50:16.445633] Started Filtering of the reads data...
+# [2020-03-30 21:54:22.070608] Finished filtering of data successfully...
+# [2020-03-30 21:54:22.071288] Output saved in /scratch/user/ren_net/software/HTSeqQC/test/1_S1_L001_R1_001_filtering_out
+</span></code></pre></div></div>
+
+<p>Once the quality control analysis is completed, HTSeqQC generates following files for quality evaluations
+in the folder <code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_filtering_out</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Files</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Statistics.txt</code></td>
+      <td>Detailed statistics of quality control evaluations for provided parameters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_Clean.fastq</code></td>
+      <td>Cleaned sequence data in FASTQ format (left file for paired-end data)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_Clean.fastq</code></td>
+      <td>Cleaned sequence data in FASTQ format (right file for paired-end data)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_Qualdist.png</code></td>
+      <td>Comparative sequence PHRED quality distribution for raw and cleaned data (for left file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_Qualdist.png</code></td>
+      <td>Comparative sequence PHRED quality distribution for raw and cleaned data (for right file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_GCdist.png</code></td>
+      <td>Comparative percentage GC content distribution for raw and cleaned data (for left file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_GCdist.png</code></td>
+      <td>Comparative percentage GC content distribution for raw and cleaned data (for right file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_QualGroup.png</code></td>
+      <td>Group-wise sequence PHRED quality distribution for cleaned data (for left file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_QualGroup.png</code></td>
+      <td>Group-wise for sequence PHRED quality distribution for cleaned data (for right file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_Basedist.png</code></td>
+      <td>Nucleotide base content for raw and cleaned data (for left file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_Basedist.png</code></td>
+      <td>Nucleotide base content for raw and cleaned data (for right file)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Command.log</code></td>
+      <td>Commands used for the HTSeqQC analysis</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Detailed statistics of quality control evaluations (<code class="language-plaintext highlighter-rouge">Statistics.txt</code>),</p>
+<p align="center">
+<img src="/assets/posts/htseqqc/stat.PNG" width="600" />
+</p>
+
+<p>Comparative sequence PHRED quality distribution for raw and cleaned data (<code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_Qualdist.png</code> and
+<code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_Qualdist.png</code>),</p>
+<p align="center">
+<img src="/assets/posts/htseqqc/1_S1_L001_R1_001_Qualdist.png" width="450" />
+<img src="/assets/posts/htseqqc/1_S1_L001_R2_001_Qualdist.png" width="450" />
+</p>
+
+<p>Comparative percentage GC content distribution for raw and cleaned data (<code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_GCdist.png</code> and
+<code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_GCdist.png</code>),</p>
+<p align="center">
+<img src="/assets/posts/htseqqc/1_S1_L001_R1_001_GCdist.png" width="450" />
+<img src="/assets/posts/htseqqc/1_S1_L001_R2_001_GCdist.png" width="450" />
+</p>
+
+<p>Group-wise sequence PHRED quality distribution for cleaned data (<code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_QualGroup.png</code> and
+<code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_QualGroup.png</code>),</p>
+<p align="center">
+<img src="/assets/posts/htseqqc/1_S1_L001_R1_001_QualGroup.png" width="450" />
+<img src="/assets/posts/htseqqc/1_S1_L001_R2_001_QualGroup.png" width="450" />
+</p>
+
+<p>Nucleotide base content for raw and cleaned data (<code class="language-plaintext highlighter-rouge">1_S1_L001_R1_001_Basedist.png</code> and
+<code class="language-plaintext highlighter-rouge">1_S1_L001_R2_001_Basedist.png</code>),</p>
+<p align="center">
+<img src="/assets/posts/htseqqc/1_S1_L001_R1_001_Basedist.png" width="450" />
+<img src="/assets/posts/htseqqc/1_S1_L001_R2_001_Basedist.png" width="450" />
+</p>
+
+<p>Run HTSeqQC by changing the parameters for different quality thresholds, adapters, and uncalled bases content.
+All parameters can be checked using <code class="language-plaintext highlighter-rouge">filter.py -h</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># for paired end data with quality threshold, adapter sequences, and uncalled based parameters 
+</span><span class="nb">filter</span><span class="p">.</span><span class="n">py</span> <span class="o">--</span><span class="n">cpu</span> <span class="mi">18</span> <span class="o">--</span><span class="n">qthr</span> <span class="mi">25</span> <span class="o">--</span><span class="n">nb</span> <span class="mi">5</span> <span class="o">--</span><span class="n">adp</span> <span class="n">AGATCGGAAGAGCACACGTCTGAACTCCAGTCA</span><span class="p">,</span><span class="n">AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT</span> 
+    <span class="o">--</span><span class="n">p1</span> <span class="mi">1</span><span class="n">_S1_L001_R1_001</span><span class="p">.</span><span class="n">fastq</span> <span class="o">--</span><span class="n">p2</span> <span class="mi">1</span><span class="n">_S1_L001_R2_001</span><span class="p">.</span><span class="n">fastq</span>
+</code></pre></div></div>
+
+<p>Run HTSeqQC for multiple files simultaneously</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># for paired end data with default parameter and multiple samples
+</span><span class="nb">filter</span><span class="p">.</span><span class="n">py</span> <span class="o">--</span><span class="n">cpu</span> <span class="mi">18</span> <span class="o">--</span><span class="n">p1</span> <span class="mi">1</span><span class="n">_S1_L001_R1_001</span><span class="p">.</span><span class="n">fastq</span><span class="p">,</span><span class="mi">2</span><span class="n">_S1_L001_R1_001</span><span class="p">.</span><span class="n">fastq</span><span class="p">,</span><span class="mi">3</span><span class="n">_S1_L001_R1_001</span><span class="p">.</span><span class="n">fastq</span> 
+    <span class="o">--</span><span class="n">p2</span> <span class="mi">1</span><span class="n">_S1_L001_R2_001</span><span class="p">.</span><span class="n">fastq</span><span class="p">,</span><span class="mi">2</span><span class="n">_S1_L001_R2_001</span><span class="p">.</span><span class="n">fastq</span><span class="p">,</span><span class="mi">3</span><span class="n">_S1_L001_R2_001</span><span class="p">.</span><span class="n">fastq</span>
+    
+<span class="c1"># Note: 2 and 3 files are not provided with datatsets. These are provided in commands
+# for illustration purpose only
+</span></code></pre></div></div>
+
+<p>Similarly, HTSeqQC can be used for running single-end datasets (just exclude <code class="language-plaintext highlighter-rouge">--p2</code> parameter)</p>
+
+<h3 id="run-htseqqc-using-nextflow">Run HTSeqQC using Nextflow</h3>
+
+<ul>
+  <li><a href="https://www.nextflow.io/">Nextflow</a> can also be used to run HTSeqQC
+analysis. HTSeqQC package also comes with Netxflow template (<code class="language-plaintext highlighter-rouge">nextflow_template.nf</code>) for running the analysis</li>
+  <li>If you have not installed Nextflow, you can install it as <code class="language-plaintext highlighter-rouge">curl -s https://get.nextflow.io | bash</code>. Nextflow works best
+with <code class="language-plaintext highlighter-rouge">java</code> version between 8 to 12. You can check the current <code class="language-plaintext highlighter-rouge">java</code> version as <code class="language-plaintext highlighter-rouge">java -version</code></li>
+  <li>HTSeqQC can be used to run multiples files by providing each file name explicitly in the command line.
+Nextflow can automate this process by providing file patterns and thus avoiding providing each file
+name to HTSeqQC.</li>
+  <li>You can also run nextflow with distributed computing (run on several computing nodes) on high-performance
+computers (using <code class="language-plaintext highlighter-rouge">mpirun</code>)</li>
+  <li>For example, if you have three paired-end files (total 6 <code class="language-plaintext highlighter-rouge">FASTQ</code> files) with filename ending pattern of <code class="language-plaintext highlighter-rouge">R1_001.fastq</code>
+<code class="language-plaintext highlighter-rouge">R2_001.fastq</code>  (check above HTSeqQC for multiple files commands), then you can edit the
+nextflow template like below,</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nb">input</span> <span class="n">data</span> <span class="n">directory</span> <span class="n">path</span>
+<span class="n">DATAP</span> <span class="o">=</span> <span class="s">"/scratch/user/ren_net/software/HTSeqQC/test"</span>
+<span class="o">//</span> <span class="nb">input</span> <span class="nb">file</span> <span class="n">extension</span>
+<span class="n">FileExtension</span><span class="o">=</span><span class="s">"fastq"</span>
+<span class="o">//</span> <span class="n">Check</span> <span class="n">paired</span> <span class="n">end</span> <span class="n">files</span> <span class="p">(</span><span class="k">for</span> <span class="n">single</span> <span class="n">end</span> <span class="n">files</span> <span class="n">remove</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">//</span> <span class="n">first</span> <span class="n">should</span> <span class="n">check</span> <span class="n">the</span> <span class="nb">file</span> <span class="n">name</span> <span class="n">structure</span> <span class="n">before</span> <span class="n">using</span>
+<span class="n">allReads</span><span class="o">=</span><span class="s">"${DATAP}/*_{R1_001.fastq,R2_001.fastq}.${FileExtension}"</span>
+
+
+<span class="n">log</span><span class="p">.</span><span class="n">info</span> <span class="s">"""</span><span class="se">\
+</span><span class="s">         HTSeqQC Quality Filtering
+         =============================
+         reads : ${DATAP}
+         """</span>
+         <span class="p">.</span><span class="n">stripIndent</span><span class="p">()</span>
+
+
+<span class="o">//</span> <span class="k">for</span> <span class="n">paired</span> <span class="n">end</span> <span class="n">reads</span>
+<span class="n">Channel</span>
+    <span class="p">.</span><span class="n">fromFilePairs</span><span class="p">(</span><span class="n">allReads</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">ifEmpty</span> <span class="p">{</span> <span class="n">error</span> <span class="s">"Cannot find any reads matching: ${DATAP}"</span> <span class="p">}</span>
+    <span class="p">.</span><span class="nb">set</span> <span class="p">{</span> <span class="n">read_pairs</span> <span class="p">}</span>
+
+
+<span class="o">//</span> <span class="nb">filter</span> <span class="n">data</span>
+<span class="n">process</span> <span class="n">filterData</span> <span class="p">{</span>
+    <span class="n">tag</span> <span class="s">"$pair_id"</span>
+
+    <span class="nb">input</span><span class="p">:</span>
+    <span class="nb">set</span> <span class="n">pair_id</span><span class="p">,</span> <span class="nb">file</span><span class="p">(</span><span class="n">reads</span><span class="p">)</span> <span class="k">from</span> <span class="n">read_pairs</span>
+
+    <span class="n">script</span><span class="p">:</span>
+    <span class="s">"""
+    # you can change HTSeqQC parameter here
+    filter.py --cpu 18 --p1 ${reads[0]} --p2 ${reads[1]}
+    """</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Once you edit the nextflow template file, run it as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./nextflow  nextflow_template.nf
+</code></pre></div></div>
+
+<p>Once nextflow run is completed, you can see the output files in the <code class="language-plaintext highlighter-rouge">work</code> directory generated
+in the same directory</p>
+
+<h3 id="run-htseqqc-as-gui-using-cyverse">Run HTSeqQC as GUI using CyVerse</h3>
+
+<p>Check detailed documentation  <a href="https://cyverse-htseqqc-cyverse-tutorial.readthedocs-hosted.com/en/latest/" target="_blank">here</a></p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/htseqqc.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/htseqqc.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p>How to cite:</p>
+<ul>
+  <li>Bedre R, Rajasekaran K, Mangu VR, Timm LE, Bhatnagar D, Baisakh N. Genome-wide transcriptome analysis of cotton
+(<i>Gossypium hirsutum L.</i>) identifies candidate gene signatures in response to aflatoxin producing fungus
+ <i>Aspergillus flavus</i>. PLoS One. 2015;10(9).</li>
+  <li>Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing
+landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.</li>
+  <li>Renesh Bedre. HTSeqQC: Quality control analysis for high-throughput sequencing data (HTS). https://reneshbedre.github.io/blog/htseqqc.html</li>
+</ul>
+
+<p><span style="color:#9e9696"><i> Last updated: April 8, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

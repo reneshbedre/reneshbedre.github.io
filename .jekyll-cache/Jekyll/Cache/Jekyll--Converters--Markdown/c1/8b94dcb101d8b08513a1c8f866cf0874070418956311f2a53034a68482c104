@@ -1,0 +1,294 @@
+I"0µ<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/vcfanot.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<ul>
+  <li>The Variant Call Format (VCF) file produced by variant calling software (e.g. GATK, FreeBayes, BCFtools) contains the
+information for polymorphic loci present in the sample or population.</li>
+  <li>These genetic variants reported in VCF files generally lack the important variant annotation information such as
+genomic region-based annotation (CDS, introns, intergenic, etc.), associated genes, and their functions, etc.</li>
+  <li>Therefore, I have added the <code class="language-plaintext highlighter-rouge">vcf_anot</code> function in <code class="language-plaintext highlighter-rouge">bioinfokit</code> to add the variant annotation for variant 
+location in the genome, associated genes, and gene functions. Currently, <code class="language-plaintext highlighter-rouge">vcf_anot</code> does not predict the variant
+effect on amino acid changes.</li>
+</ul>
+
+<p>First, letâ€™s check variant calls in test VCF file without adding annotation</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">##fileformat=VCFv4.2																																																																																																																																																																																																																																																																																																																																										
+##filedate=20190219																																																																																																																																																																																																																																																																																																																																										
+##source="beagle.21Jan17.6cc.jar (version 4.1)"																																																																																																																																																																																																																																																																																																																																										
+##INFO=&lt;ID=AF,Number=A,Type=Float,Description="Estimated ALT Allele Frequencies"&gt;																																																																																																																																																																																																																																																																																																																																										
+##INFO=&lt;ID=AR2,Number=1,Type=Float,Description="Allelic R-Squared: estimated squared correlation between most probable REF dose and true REF dose"&gt;																																																																																																																																																																																																																																																																																																																																										
+##INFO=&lt;ID=DR2,Number=1,Type=Float,Description="Dosage R-Squared: estimated squared correlation between estimated REF dose [P(RA) + 2*P(RR)] and true REF dose"&gt;																																																																																																																																																																																																																																																																																																																																										
+##INFO=&lt;ID=IMP,Number=0,Type=Flag,Description="Imputed marker"&gt;																																																																																																																																																																																																																																																																																																																																										
+##FORMAT=&lt;ID=GT,Number=1,Type=String,Description="Genotype"&gt;																																																																																																																																																																																																																																																																																																																																										
+##FORMAT=&lt;ID=DS,Number=A,Type=Float,Description="estimated ALT dose [P(RA) + P(AA)]"&gt;																																																																																																																																																																																																																																																																																																																																										
+##FORMAT=&lt;ID=GP,Number=G,Type=Float,Description="Estimated Genotype Probability"&gt;																																																																																																																																																																																																																																																																																																																																										
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	100_S85	101_S86																																																																																																																																																																																																																																																																																																																																
+</span><span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157586</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.94</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.92</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.93</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.98</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.98</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157587</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.46</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.95</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.94</span><span class="p">,</span><span class="mi">0</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157604</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.47</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.96</span><span class="p">:</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">0</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157617</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">C</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.94</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.94</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157620</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.48</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.97</span><span class="p">:</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.96</span><span class="p">,</span><span class="mi">0</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157622</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.94</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.94</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157626</span>	<span class="p">.</span>	<span class="n">C</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.86</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.89</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.17</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.06</span><span class="p">:</span><span class="mf">0.94</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mi">0</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157627</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.95</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.95</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157650</span>	<span class="p">.</span>	<span class="n">C</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.81</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.95</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.95</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>		
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">10737602</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.81</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.85</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.79</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.92</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.92</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>																																																																																																																																																																																																																																																																																																																																
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">10905876</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.86</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.87</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.21</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.09</span><span class="p">:</span><span class="mf">0.91</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mi">0</span>																																																																																																																																																																																																																																																																																																																																		
+</code></pre></div></div>
+
+<h2 id="how-to-add-annotation-to-variants-snpsindels-in-vcf-file-"><span style="color:#33a8ff">How to add annotation to variants (SNPs/InDels) in VCF file? </span></h2>
+<ul>
+  <li>We will use <code class="language-plaintext highlighter-rouge">bioinfokit v0.9.4</code> or later</li>
+  <li>Check <a href="http://localhost:4000/blog/howtoinstall.html">bioinfokit documentation</a> for installation and documentation</li>
+  <li>Download test <a href="http://localhost:4000/assets/posts/vcf_anot/SL3.0ch00_imputed.vcf">genotype data in VCF format</a> from tomato GBS study
+(<a href="https://www.scirp.org/journal/paperinformation.aspx?paperid=93866" target="_blank">Kandel et al., 2019</a>).
+For test analysis purposes, I have only used two genotypes presented in the test VCF file instead of all genotypes.</li>
+  <li>Download test <a href="http://localhost:4000/assets/posts/vcf_anot/itag30_chr0.gff3">tomato gff3 file</a> for adding an annotation to the variants</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># I am using interactive python interpreter (Python 3.8.2)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">marker</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">marker</span><span class="p">.</span><span class="n">vcf_anot</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">'SL3.0ch00_imputed.vcf'</span><span class="p">,</span> <span class="n">gff_file</span><span class="o">=</span><span class="s">'itag30_chr0.gff3'</span><span class="p">,</span> <span class="n">anot_attr</span><span class="o">=</span><span class="s">'Note'</span><span class="p">)</span>
+<span class="c1"># annotated file will be saved in the same directory (SL3.0ch00_imputed_anot.txt)
+</span></code></pre></div></div>
+
+<p>Annotated output file <a href="http://localhost:4000/assets/vcf_anot/SL3.0ch00_imputed_anot.txt">SL3.0ch00_imputed_anot</a> 
+will have additional columns including genomic region, and transcript IDs and name for variants in CDS or exon or UTR regions</p>
+
+<p>Now check variant calls in annotated text file,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	100_S85	101_S86	genomic region	transcript ID	transcript name	strand
+</span><span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157586</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.94</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.92</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="mf">0.93</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.98</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.98</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157587</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.46</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.95</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.94</span><span class="p">,</span><span class="mi">0</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157604</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.47</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.96</span><span class="p">:</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.95</span><span class="p">,</span><span class="mi">0</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157617</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">C</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.94</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.94</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157620</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.91</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.93</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.48</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.97</span><span class="p">:</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.96</span><span class="p">,</span><span class="mi">0</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157622</span>	<span class="p">.</span>	<span class="n">G</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.94</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.94</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157626</span>	<span class="p">.</span>	<span class="n">C</span>	<span class="n">T</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.86</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.89</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.17</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.06</span><span class="p">:</span><span class="mf">0.94</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mi">0</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157627</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.95</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.82</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.95</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.95</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">2157650</span>	<span class="p">.</span>	<span class="n">C</span>	<span class="n">A</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.96</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.81</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.95</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.95</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.99</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.99</span>	<span class="n">Intergenic</span>	<span class="bp">None</span>	<span class="bp">None</span>	<span class="bp">None</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">10737602</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.81</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.85</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.79</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mf">1.92</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.08</span><span class="p">,</span><span class="mf">0.92</span>	<span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>	<span class="n">CDS</span>	<span class="n">mRNA</span><span class="p">:</span><span class="n">Solyc00g102000</span><span class="p">.</span><span class="mf">2.1</span>	<span class="n">LOW</span> <span class="n">QUALITY</span><span class="p">:</span><span class="n">Unknown</span> <span class="n">protein</span> <span class="p">(</span><span class="n">AHRD</span> <span class="n">V3</span><span class="p">.</span><span class="mi">3</span> <span class="p">)</span>	<span class="o">+</span>
+<span class="n">SL3</span><span class="p">.</span><span class="mi">0</span><span class="n">ch00</span>	<span class="mi">10905876</span>	<span class="p">.</span>	<span class="n">A</span>	<span class="n">G</span>	<span class="p">.</span>	<span class="n">PASS</span>	<span class="n">AR2</span><span class="o">=</span><span class="mf">0.86</span><span class="p">;</span><span class="n">DR2</span><span class="o">=</span><span class="mf">0.87</span><span class="p">;</span><span class="n">AF</span><span class="o">=</span><span class="mf">0.21</span>	<span class="n">GT</span><span class="p">:</span><span class="n">DS</span><span class="p">:</span><span class="n">GP</span>	<span class="p">.</span><span class="o">/</span><span class="p">.</span>	<span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.09</span><span class="p">:</span><span class="mf">0.91</span><span class="p">,</span><span class="mf">0.09</span><span class="p">,</span><span class="mi">0</span>	<span class="n">CDS</span>	<span class="n">mRNA</span><span class="p">:</span><span class="n">Solyc00g020540</span><span class="p">.</span><span class="mf">2.1</span>	<span class="n">Aminotransferase</span><span class="o">-</span><span class="n">like</span> <span class="n">protein</span> <span class="p">(</span><span class="n">AHRD</span> <span class="n">V3</span><span class="p">.</span><span class="mi">3</span> <span class="o">*-*</span> <span class="n">Q6EQM2_ORYSJ</span><span class="p">)</span>	<span class="o">+</span>
+</code></pre></div></div>
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre.(2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). Zenodo.
+<a href="http://doi.org/10.5281/zenodo.3965241" target="_blank">http://doi.org/10.5281/zenodo.3965241</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/vcfanot.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/vcfanot.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: August 13, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

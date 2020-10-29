@@ -1,0 +1,340 @@
+I"�7<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/fqqualfmt.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+<p><strong><span style="color:#33a8ff">What FASTQ Sequence Quality Format?</span></strong></p>
+<ul>
+  <li>FASTQ file (Sanger format) is a text file which represents  a DNA/RNA sequence information in four lines, including
+sequence identifier (starts with @), DNA/RNA sequence (Nucleotide bases: A, T, G, C or Uncalled base: N),
+the sequence separator (usually + sign), and the sequence PHRED quality score encoded as ASCII
+characters (for space-efficient encoding)</li>
+  <li>The quality scores are generated in binary base call (BCL) files from Illumina sequencing platforms, which are then
+later converted to FASTQ files using <code class="language-plaintext highlighter-rouge">bcl2fastq</code> tool</li>
+</ul>
+
+<p align="center">
+<img src="/assets/posts/fqformat/figure.png" width="600" />
+<p align="center">FASTQ sequence record for four sequences with quality encoding on fourth <br />line of each record (Awika et al., 2019)</p>
+</p>
+
+<ul>
+  <li>
+    <p> The PHRED quality score \( Q_{PHRED} \) of an individual nucleotide base represents the error probability \( P_{e} \) of a given nucleotide base call is incorrect and it is
+given as,</p>
+
+    <p align="center">
+\( Q_{PHRED} = -10 \log_{10}(P_{e}) \)
+  <br /><br />
+\( P_{e} = 10^{-Q_{PHRED}/10} \)
+
+</p>
+  </li>
+</ul>
+
+<p> For example, if the \( Q_{PHRED} \) is 30, the \( P_{e} \) of a given base call will be 0.001.
+It means that there will be a 0.1 % chance that the given base call is wrong (99.9 % accuracy). The higher the quality score, the lesser the error in nucleotide base calling.</p>
+
+<ul>
+  <li>FASTQ quality score encoding formats</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format (type)</th>
+      <th>ASCII range</th>
+      <th>Q range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sanger (PHRED)</td>
+      <td>33 to 126</td>
+      <td>0 to 93 (typically 0 to 40)</td>
+    </tr>
+    <tr>
+      <td>Solexa/Illumina 1.2 or before (Solexa)</td>
+      <td>59 to 126</td>
+      <td>-5 to 62 (typically -5 to 40)</td>
+    </tr>
+    <tr>
+      <td>Illumina 1.3 and 1.4 (PHRED)</td>
+      <td>64 to 126</td>
+      <td>0 to 62 (typically 0 to 40)</td>
+    </tr>
+    <tr>
+      <td>Illumina 1.5 to 1.7 (PHRED)</td>
+      <td>64 to 126</td>
+      <td>0 to 62 (typically 3 to 40)</td>
+    </tr>
+    <tr>
+      <td>Illumina 1.8 and later (PHRED)</td>
+      <td>33 to 126</td>
+      <td>0 to 93 (typically 0 to 41)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Notes:</p>
+<ul>
+  <li>Illumina 1.8 and later uses the same format as Sanger</li>
+  <li>In Illumina 1.5 to 1.7, 0 and 1 quality scores are unused, while 2 (ASCII “B”) denotes Read Segment Quality Indicator and involved in read trimming</li>
+</ul>
+
+<p><strong><span style="color:#33a8ff">How to identify FASTQ Sequence Quality Format?</span></strong></p>
+
+<p>We will use <code class="language-plaintext highlighter-rouge">bioinfokit v0.4</code> or later for checking the FASTQ Sequence Quality Format.</p>
+
+<p>Check <a href="http://localhost:4000/blog/howtoinstall.html">How to install bioinfokit</a> for the latest version. After 
+installation, You can check the version using <code class="language-plaintext highlighter-rouge">bioinfokit.__version__</code></p>
+
+<p>After installing <code class="language-plaintext highlighter-rouge">bioinfokit v0.4</code> or later, it can be used for detecting the FASTQ sequence quality format</p>
+
+<p>I have used the subset of FASTQ <a href="http://localhost:4000/assets/posts/fqformat/fq_18.fastq">dataset</a> published in  <a href="https://www.nature.com/articles/s41598-019-45184-1">Bedre et al., 2019</a> for the analysis</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># you can use interactive python interpreter, jupyter notebook, spyder or python code
+# I am using interactive python interpreter (Python 3.7)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">bioinfokit</span> <span class="kn">import</span> <span class="n">analys</span><span class="p">,</span> <span class="n">help</span>
+<span class="c1"># Read documentation at https://github.com/reneshbedre/bioinfokit or
+# get help message
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">.</span><span class="nb">format</span><span class="p">.</span><span class="n">fq_qual_var</span><span class="p">()</span>
+
+<span class="c1"># some examples
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">analys</span><span class="p">.</span><span class="nb">format</span><span class="p">.</span><span class="n">fq_qual_var</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">"fq_18.fastq"</span><span class="p">)</span>
+<span class="c1"># output
+# The fastq quality format is illumina 1.8+ (Offset +33)
+</span>
+<span class="c1"># download dataset https://reneshbedre.github.io/assets/posts/fqformat/fq_sanger.fastq
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">analys</span><span class="p">.</span><span class="nb">format</span><span class="p">.</span><span class="n">fq_qual_var</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s">"fq_sanger.fastq"</span><span class="p">)</span>
+<span class="c1"># output
+# The fastq quality format is Sanger (Offset +33)
+</span></code></pre></div></div>
+
+<p>References:</p>
+<ul>
+  <li>Cock PJ, Fields CJ, Goto N, Heuer ML, Rice PM. The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic acids research. 2010 Apr 1;38(6):1767-71.</li>
+  <li>Awika HO, Bedre R, Yeom J, Marconi TG, Enciso J, Mandadi KK, Jung J, Avila CA. Developing growth-associated molecular markers via high-throughput phenotyping in spinach. The Plant Genome. 2019 Nov 1;12(3).</li>
+  <li>Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.</li>
+  <li>https://en.wikipedia.org/wiki/FASTQ_format</li>
+</ul>
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre.(2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). Zenodo.
+<a href="http://doi.org/10.5281/zenodo.3965241" target="_blank">http://doi.org/10.5281/zenodo.3965241</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/fqqualfmt.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/fqqualfmt.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: March 11, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET
