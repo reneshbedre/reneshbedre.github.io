@@ -720,6 +720,7 @@ Parameters | Description
 `alpha` | Significance level [float][default: 0.05]
 
 Returns:
+
 Attribute | Description
 ------------ | -------------
 df_enrich | Enriched gene families with p < 0.05
