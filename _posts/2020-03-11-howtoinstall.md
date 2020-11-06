@@ -709,7 +709,7 @@ Extract the sequences from FASTA file based on the list of sequence IDs provided
 Parameters | Description
 ------------ | -------------
 `file` | FASTA file [file] 
-`id` | List of sequence IDs separated by new line [file]
+`id` | List of sequence IDs separated by new line [file] or Pandas series
 
 Returns:
 
@@ -972,6 +972,56 @@ Attribute | Description
 `tukey_summary` | Pairwise comparisons for main and interaction effects by Tukey HSD test 
 
 <a href="https://reneshbedre.github.io/blog/anova.html" target="_blank">Description and Working example</a>
+
+### Bartlett's test
+
+`latest update v1.0.3`
+
+`bioinfokit.analys.stat.bartlett(df, xfac_var, res_var)`
+
+It performs bartlett's test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.bartlett.html
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in stacked format. It should not have missing data. The missing data will be omitted.
+`res_var` | Name of a column having response variable [string][default: None]
+`xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
+
+Returns:
+
+Attribute | Description
+------------ | -------------
+`bartlett_summary` | Pandas dataframe containing bartlett's test statistics, degree of freedom, and <i>p</i> value
+
+
+<a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a>
+
+
+### Levene's test
+
+`latest update v1.0.3`
+
+`bioinfokit.analys.stat.levene(df, xfac_var, res_var)`
+
+It performs levene's test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
+
+Parameters | Description
+------------ | -------------
+`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in stacked format. It should not have missing data. The missing data will be omitted.
+`res_var` | Name of a column having response variable [string][default: None]
+`xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
+`center` | Choice for the levene test [string (`median`, `mean`, `trimmed`)] [default: `median`] <br> <strong><em>median</em></strong>: Brown-Forsythe Levene-type test <br> <strong><em>mean</em></strong>: original levene's test <br> <strong><em>trimmed</em></strong>: Brown-Forsythe Levene-type test 
+
+Returns:
+
+Attribute | Description
+------------ | -------------
+`levene_summary` | Pandas dataframe containing levene's test statistics, degree of freedom, and <i>p</i> value
+
+
+<a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a>
 
 
 ## How to cite bioinfokit?
