@@ -361,37 +361,6 @@ PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in sam
 
 <a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a>
 
-### t-SNE plot
-
-`latest update v0.8.5`
-
-`bioinfokit.visuz.cluster.tsneplot(score, colorlist, axlabelfontsize, axlabelfontname,
-    figtype, r, show, markerdot, dotsize, valphadot, colordot, dim, figname, legendpos,
-    legendanchor)`
-
-Parameters | Description
------------- | -------------
-`score` | t-SNE component embeddings (obtained from TSNE().fit_transfrom() function in sklearn.manifold)
-`colorlist` | list of the categories to assign the color [list][default:None]
-`axlabelfontsize` | Font size for axis labels [float][default: 9]
-`axlabelfontname` | Font name for axis labels [string][default: 'Arial']
-`figtype` | Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:'png']
-`r` | Figure resolution in dpi [int][default: 300]
-`show` | Show the figure on console instead of saving in current folder [True or False][default:False]
-`markerdot` | Shape of the dot on plot. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: "o"]
-`dotsize`| The size of the dots in the plot [float][default: 6]
-`valphadot` | Transparency of dots on plot [float (between 0 and 1)][default: 1]
-`colordot` | Color of dots on plot [string or list ][default:"#4a4e4d"]
-`legendpos` | position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:"best"]
-`legendanchor` | position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]
-`dim` | Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]
-`figname` | name of figure [string ][default:"tsne_2d"]
-
-Returns:
-
-t-SNE 2D image (tsne_2d.png will be saved in same directory)
-
-<a href="https://reneshbedre.github.io/blog/tsne.html" target="_blank">Working Example</a>
 
 ## Normalization
 
@@ -979,20 +948,20 @@ Attribute | Description
 
 `bioinfokit.analys.stat.bartlett(df, xfac_var, res_var)`
 
-It performs bartlett's test to check the homogeneity of variances among the treatment groups. It accepts the input 
-table in stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.bartlett.html
+It performs Bartlett's test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in a stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.bartlett.html
 
 Parameters | Description
 ------------ | -------------
-`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in stacked format. It should not have missing data. The missing data will be omitted.
-`res_var` | Name of a column having response variable [string][default: None]
-`xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
+`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in a stacked format. It should not have missing data. The missing data will be omitted.
+`res_var` | Name of a column having response variable [string][default: `None`]
+`xfac_var` | Name of a column having treatment groups (independent variables) [string or list][default: `None`]
 
 Returns:
 
 Attribute | Description
 ------------ | -------------
-`bartlett_summary` | Pandas dataframe containing bartlett's test statistics, degree of freedom, and <i>p</i> value
+`bartlett_summary` | Pandas dataframe containing Bartlett's test statistics, degree of freedom, and <i>p</i> value
 
 
 <a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a>
@@ -1004,21 +973,21 @@ Attribute | Description
 
 `bioinfokit.analys.stat.levene(df, xfac_var, res_var)`
 
-It performs levene's test to check the homogeneity of variances among the treatment groups. It accepts the input 
-table in stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
+It performs Levene's test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in a stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
 
 Parameters | Description
 ------------ | -------------
-`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in stacked format. It should not have missing data. The missing data will be omitted.
-`res_var` | Name of a column having response variable [string][default: None]
-`xfac_var` | Name of a column having factor or group for pairwise comparison [string][default: None]
-`center` | Choice for the levene test [string (`median`, `mean`, `trimmed`)] [default: `median`] <br> <strong><em>median</em></strong>: Brown-Forsythe Levene-type test <br> <strong><em>mean</em></strong>: original levene's test <br> <strong><em>trimmed</em></strong>: Brown-Forsythe Levene-type test 
+`df` | Pandas dataframe containing response (`res_var`) and independent variables (`xfac_var`) in a stacked format. It should not have missing data. The missing data will be omitted.
+`res_var` | Name of a column having response variable [string][default: `None`]
+`xfac_var` | Name of a column having treatment groups (independent variables) [string or list][default: `None`]
+`center` | Choice for the Levene's test [string (`median`, `mean`, `trimmed`)] [default: `median`] <br> <strong><em>median</em></strong>: Brown-Forsythe Levene-type test <br> <strong><em>mean</em></strong>: original Levene's test <br> <strong><em>trimmed</em></strong>: Brown-Forsythe Levene-type test 
 
 Returns:
 
 Attribute | Description
 ------------ | -------------
-`levene_summary` | Pandas dataframe containing levene's test statistics, degree of freedom, and <i>p</i> value
+`levene_summary` | Pandas dataframe containing Levene's test statistics, degree of freedom, and <i>p</i> value
 
 
 <a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a>
@@ -1033,10 +1002,21 @@ Attribute | Description
 - Travis E. Oliphant. A guide to NumPy, USA: Trelgol Publishing, (2006).
 - John D. Hunter. Matplotlib: A 2D Graphics Environment, Computing in Science & Engineering, 9, 90-95 (2007), DOI:10.1109/MCSE.2007.55 (publisher link)
 - Fernando Pérez and Brian E. Granger. IPython: A System for Interactive Scientific Computing, Computing in Science & Engineering, 9, 21-29 (2007), DOI:10.1109/MCSE.2007.53 (publisher link)
-- Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. http://doi.org/10.5281/zenodo.3629446
-- Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research, 12, 2825-2830 (2011)
+- Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. 
+  (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. 
+  http://doi.org/10.5281/zenodo.3629446
+- Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, 
+  Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, 
+  Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine 
+  Learning Research, 12, 2825-2830 (2011)
 - David C. Howell. Multiple Comparisons With Unequal Sample Sizes. https://www.uvm.edu/~statdhtx/StatPages/MultipleComparisons/unequal_ns_and_mult_comp.html
-
+- Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt Haberland, Tyler Reddy, David Cournapeau, Evgeni Burovski, 
+  Pearu Peterson, Warren Weckesser, Jonathan Bright, Stéfan J. van der Walt, Matthew Brett, Joshua Wilson, K. Jarrod 
+  Millman, Nikolay Mayorov, Andrew R. J. Nelson, Eric Jones, Robert Kern, Eric Larson, CJ Carey, İlhan Polat, Yu 
+  Feng, Eric W. Moore, Jake VanderPlas, Denis Laxalde, Josef Perktold, Robert Cimrman, Ian Henriksen, E.A. Quintero, 
+  Charles R Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 
+  Contributors. (2020) SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. Nature Methods, 17(3), 
+  261-272.  
 <!--
 ## bioinfokit cited by:
 - Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
