@@ -108,3 +108,4 @@ venv.bak/
 vendor/cache/ruby/2.5.0/
 
 _site/
+.jekyll-cache/

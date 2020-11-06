@@ -1,4 +1,4 @@
-I"<�<p>
+I"��<p>
 <!--
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -95,20 +95,20 @@
 
 <p>Note: In ANOVA, group, factors, and independent variables are similar terms</p>
 
-<p><strong><span style="color:#33a8ff">ANOVA Hypotheses</span></strong></p>
+<h3 id="anova-hypotheses">ANOVA Hypotheses</h3>
 <ul>
   <li><i>Null hypotheses</i>: Groups means are equal (no variation in means of groups)</li>
   <li><i>Alternative hypotheses</i>: At least, one group mean is different from other groups</li>
 </ul>
 
-<p><strong><span style="color:#33a8ff">ANOVA Assumptions</span></strong></p>
+<h3 id="anova-assumptions">ANOVA Assumptions</h3>
 <ul>
   <li>Residuals (experimental error) are normally distributed (Shapiro-Wilks Test)</li>
   <li>Homogeneity of variances (variances are equal between treatment groups) (Levene or Bartlett Test)</li>
   <li>Observations are sampled independently from each other</li>
 </ul>
 
-<p><strong><span style="color:#33a8ff">How ANOVA works?</span></strong></p>
+<h3 id="how-anova-works">How ANOVA works?</h3>
 <ul>
   <li>Check sample sizes: equal number of observation in each group</li>
   <li>Calculate Mean Square for each group (MS) (SS of group/level-1);
@@ -117,7 +117,7 @@ level-1 is a degree of freedom (df) for a group</li>
   <li>Calculate F-value (MS of group/MSE)</li>
 </ul>
 
-<p><strong><span style="color:#33a8ff">One-way (one factor) ANOVA with Python</span></strong></p>
+<h2 id="one-way-one-factor-anova-with-python"><span style="color:#33a8ff">One-way (one factor) ANOVA with Python</span></h2>
 
 <p>Example data for one-way ANOVA analysis tutorial, <a href="http://localhost:4000/assets/posts/anova/onewayanova.txt">dataset</a></p>
 
@@ -207,11 +207,22 @@ one-way ANOVA method is suitable for analysis.</p>
 <span class="n">C</span><span class="p">(</span><span class="n">treatments</span><span class="p">)</span>  <span class="mf">3010.95</span>   <span class="mf">3.0</span>  <span class="mf">17.49281</span>  <span class="mf">0.000026</span>
 <span class="n">Residual</span>        <span class="mf">918.00</span>  <span class="mf">16.0</span>       <span class="n">NaN</span>       <span class="n">NaN</span>
 
+<span class="c1"># ANOVA table using bioinfokit v1.0.3 or later (it uses wrapper script for anova_lm)
+</span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
+<span class="n">res</span><span class="p">.</span><span class="n">anova_stat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value ~ C(treatments)'</span><span class="p">)</span>
+<span class="n">res</span><span class="p">.</span><span class="n">anova_summary</span>
+<span class="c1"># output
+</span>                 <span class="n">df</span>   <span class="n">sum_sq</span>   <span class="n">mean_sq</span>         <span class="n">F</span>    <span class="n">PR</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>
+<span class="n">C</span><span class="p">(</span><span class="n">treatments</span><span class="p">)</span>   <span class="mf">3.0</span>  <span class="mf">3010.95</span>  <span class="mf">1003.650</span>  <span class="mf">17.49281</span>  <span class="mf">0.000026</span>
+<span class="n">Residual</span>       <span class="mf">16.0</span>   <span class="mf">918.00</span>    <span class="mf">57.375</span>       <span class="n">NaN</span>       <span class="n">NaN</span>
+
 <span class="c1"># note: if the data is balanced (equal sample size for each group), Type 1, 2, and 3 sums of squares
 # (typ parameter) will produce similar results.
 </span></code></pre></div></div>
 
-<p><b>Interpretation</b>: The P-value obtained from ANOVA analysis is significant (P&lt;0.05), and therefore, we conclude 
+<h3 id="interpretation">Interpretation</h3>
+<p>The <i>p</i> value obtained from ANOVA analysis is significant (<i>p</i> &lt; 0.05), and therefore, we conclude 
 that there are significant differences among treatments.</p>
 
 <p style="background-color: #ddf3f5; padding: 20px;"><b>Note</b>:  If you have unbalanced (unequal sample size for each
@@ -220,12 +231,12 @@ that there are significant differences among treatments.</p>
 
 <p>From ANOVA analysis, we know that treatment differences are statistically significant, but ANOVA does not tell which 
 treatments are significantly different from each other. To know the pairs of significant different treatments, we
-will perform multiple pairwise comparison (<b>Post-hoc comparison</b>) analysis using <b>Tukey HSD</b> test.</p>
+will perform multiple pairwise comparison (<b>Post-hoc comparison</b>) analysis using <b>Tukey’s HSD</b> test.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># we will use bioinfokit (v1.0.1 or later) for performing tukey HSD test
 # check documentation here https://reneshbedre.github.io/blog/howtoinstall.html
 </span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span>
-<span class="c1"># perform multiple pairwise comparison (Tukey HSD)
+<span class="c1"># perform multiple pairwise comparison (Tukey's HSD)
 # unequal sample size data, tukey_hsd uses Tukey-Kramer test
 </span><span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
 <span class="n">res</span><span class="p">.</span><span class="n">tukey_hsd</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="s">'treatments'</span><span class="p">,</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value ~ C(treatments)'</span><span class="p">)</span>
@@ -240,38 +251,56 @@ will perform multiple pairwise comparison (<b>Post-hoc comparison</b>) analysis 
 <span class="mi">5</span>      <span class="n">C</span>      <span class="n">D</span>  <span class="mf">28.8</span>  <span class="mf">15.092871</span>  <span class="mf">42.507129</span>  <span class="mf">8.501903</span>  <span class="mf">0.001000</span>
 </code></pre></div></div>
 
-<!--
-```python
-# load packages
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-# perform multiple pairwise comparison (Tukey HSD)
-m_comp = pairwise_tukeyhsd(endog=d_melt['value'], groups=d_melt['treatments'], alpha=0.05)
-print(m_comp)
+<p>Above results from Tukey’s HSD suggests that except A-C, all other pairwise comparisons for treatments rejects null 
+hypothesis (<i>p</i> &lt; 0.05) and indicates statistical significant differences.</p>
 
-Multiple Comparison of Means - Tukey HSD,FWER=0.05
-==============================================
-group1 group2 meandiff  lower    upper  reject
-----------------------------------------------
-  A      B      15.4    1.6929  29.1071  True 
-  A      C      1.6    -12.1071 15.3071 False 
-  A      D      30.4   16.6929  44.1071  True 
-  B      C     -13.8   -27.5071 -0.0929  True 
-  B      D      15.0    1.2929  28.7071  True 
-  C      D      28.8   15.0929  42.5071  True 
-----------------------------------------------
-```
--->
+<p style="background-color: #ddf3f5; padding: 20px;"><b>Note</b>:  Tukey's test is highly conservative. If you have a large number of comparisons 
+(say &gt; 10 or 20) to make using Tukey's test, there may be chances that you may not get 
+significant results for all or expected pairs. If you are interested in only specific or few comparisons and you 
+won't find significant differences using Tukey's test, you may split the data for specific comparisons or use the 
+<i>t</i>-test</p>
 
-<p>Above results from Tukey HSD suggests that except A-C, all other pairwise comparisons for treatments rejects null 
-hypothesis (P-tukey&lt;0.05) and indicates statistical significant differences.</p>
+<h3 id="test-anova-assumptions">Test ANOVA assumptions</h3>
 
-<!--
-**Use bioinfokit for performing [one-way ANOVA analysis](http://localhost:4000/blog/oanova.html) in Python**
--->
+<ul>
+  <li>ANOVA assumptions can be checked using test statistics (e.g. Shapiro-Wilk, Bartlett, levene test) and the visual 
+approaches such as residual plots (e.g. QQ-plots) and histograms.</li>
+  <li>The visual approaches perform better than statistical tests. For example, the Shapiro-Wilk test has low power for 
+small sample size data and deviates significantly from normality for large sample sizes.</li>
+</ul>
 
-<p><strong><span style="color:#33a8ff">Test ANOVA assumptions</span></strong></p>
+<p>Now, I will generate QQ-plot from standardized residuals (outliers can be easily detected from standardized residuals
+than normal residuals)</p>
 
-<p>The <b>Shapiro-Wilk test</b> can be used to check the <b> normal distribution of residuals </b>. <i>Null hypothesis</i>: 
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># QQ-plot
+</span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="c1"># res.anova_std_residuals are standardized residuals obtained from ANOVA (check above)
+</span><span class="n">sm</span><span class="p">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">anova_std_residuals</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s">'45'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Theoretical Quantiles"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Standardized Residuals"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># histogram
+</span><span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">anova_model_out</span><span class="p">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="s">'auto'</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s">'bar'</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s">'k'</span><span class="p">)</span> 
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Residuals"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Frequency'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p align="center">
+<img src="/assets/posts/anova/qq.svg" width="460" />
+
+<img src="/assets/posts/anova/hist.svg" width="460" />
+</p>
+
+<p>As the standardized residuals lie around the 45-degree line, it suggests that the residuals are approximately
+normally distributed</p>
+
+<p>In the histogram, the distribution looks approximately normal and suggests that residuals are approximately
+normally distributed</p>
+
+<p><b>Shapiro-Wilk test</b> can be used to check the <b> normal distribution of residuals</b>. <i>Null hypothesis</i>: 
 data is drawn from normal distribution.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load packages
@@ -281,7 +310,7 @@ data is drawn from normal distribution.</p>
 <span class="c1"># 0.9685019850730896 0.7229772806167603
 </span></code></pre></div></div>
 
-<p>As the P-value is non significant, we fail to reject null hypothesis and
+<p>As the <i>p</i> value is non significant, we fail to reject null hypothesis and
 conclude that data is drawn from normal distribution.</p>
 
 <p>As the data is drawn from normal distribution, use Bartlett’s test 
@@ -294,24 +323,37 @@ have equal variances.</p>
 <span class="n">w</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">bartlett</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">'A'</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s">'B'</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s">'C'</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s">'D'</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
 <span class="mf">5.687843565012841</span> <span class="mf">0.1278253399753447</span>
+
+<span class="c1"># if you have a stacked table, you can use bioinfokit v1.0.3 or later for the bartlett's test
+</span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span> 
+<span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
+<span class="n">res</span><span class="p">.</span><span class="n">bartlett</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="s">'treatments'</span><span class="p">)</span>
+<span class="n">res</span><span class="p">.</span><span class="n">bartlett_summary</span>
+<span class="c1"># output
+</span>                 <span class="n">Parameter</span>   <span class="n">Value</span>
+<span class="mi">0</span>      <span class="n">Test</span> <span class="n">statistics</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span>  <span class="mf">5.6878</span>
+<span class="mi">1</span>  <span class="n">Degrees</span> <span class="n">of</span> <span class="n">freedom</span> <span class="p">(</span><span class="n">Df</span><span class="p">)</span>  <span class="mf">3.0000</span>
+<span class="mi">2</span>                  <span class="n">p</span> <span class="n">value</span>  <span class="mf">0.1278</span>
 </code></pre></div></div>
-<p>As the P-value (0.12) is non significant, we fail to reject null 
+<p>As the <i>p</i> value (0.12) is non significant, we fail to reject null 
 hypothesis and conclude that treatments have equal variances.</p>
 
-<p><b>Levene test</b> can be used to check the Homogeneity of variances
+<p><b>Levene’s test</b> can be used to check the Homogeneity of variances
 when the data is not drawn from normal distribution.</p>
 
-<!--
-```python
-# load packages
-import scipy.stats as stats
-w, pvalue = stats.levene(d['A'], d['B'], d['C'], d['D'])
-print(w, pvalue)
-# 1.9219593192195938 0.16673281219949276
-```
--->
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># if you have a stacked table, you can use bioinfokit v1.0.3 or later for the Levene's test
+</span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span> 
+<span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
+<span class="n">res</span><span class="p">.</span><span class="n">levene</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="s">'treatments'</span><span class="p">)</span>
+<span class="n">res</span><span class="p">.</span><span class="n">levene_summary</span>
+<span class="c1"># output
+</span>                 <span class="n">Parameter</span>   <span class="n">Value</span>
+<span class="mi">0</span>      <span class="n">Test</span> <span class="n">statistics</span> <span class="p">(</span><span class="n">W</span><span class="p">)</span>  <span class="mf">1.9220</span>
+<span class="mi">1</span>  <span class="n">Degrees</span> <span class="n">of</span> <span class="n">freedom</span> <span class="p">(</span><span class="n">Df</span><span class="p">)</span>  <span class="mf">3.0000</span>
+<span class="mi">2</span>                  <span class="n">p</span> <span class="n">value</span>  <span class="mf">0.1667</span>
+</code></pre></div></div>
 
-<p><strong><span style="color:#33a8ff">Two-way (two factor) ANOVA with Python</span></strong></p>
+<h2 id="two-way-two-factor-anova-with-python"><span style="color:#33a8ff">Two-way (two factor) ANOVA with Python</span></h2>
 
 <p>Example data for two-way ANOVA analysis tutorial, <a href="http://localhost:4000/assets/posts/anova/twowayanova.txt">dataset</a></p>
 
@@ -366,21 +408,34 @@ you apply one-way ANOVA here, you can able to evaluate only one factor at a time
 <span class="n">C</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>              <span class="mf">278.925633</span>   <span class="mf">2.0</span>  <span class="mf">390.014868</span>  <span class="mf">4.006243e-25</span>
 <span class="n">C</span><span class="p">(</span><span class="n">Genotype</span><span class="p">):</span><span class="n">C</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>   <span class="mf">17.122967</span>  <span class="mf">10.0</span>    <span class="mf">4.788525</span>  <span class="mf">2.230094e-04</span>
 <span class="n">Residual</span>               <span class="mf">12.873000</span>  <span class="mf">36.0</span>         <span class="n">NaN</span>           <span class="n">NaN</span>
+
+<span class="c1"># ANOVA table using bioinfokit v1.0.3 or later (it uses wrapper script for anova_lm)
+</span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
+<span class="n">res</span><span class="p">.</span><span class="n">anova_stat</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value~C(Genotype)+C(years)+C(Genotype):C(years)'</span><span class="p">)</span>
+<span class="n">res</span><span class="p">.</span><span class="n">anova_summary</span>
+<span class="c1"># output
+</span>                        <span class="n">df</span>      <span class="n">sum_sq</span>     <span class="n">mean_sq</span>           <span class="n">F</span>        <span class="n">PR</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>
+<span class="n">C</span><span class="p">(</span><span class="n">Genotype</span><span class="p">)</span>            <span class="mf">5.0</span>   <span class="mf">58.551733</span>   <span class="mf">11.710347</span>   <span class="mf">32.748581</span>  <span class="mf">1.931655e-12</span>
+<span class="n">C</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>               <span class="mf">2.0</span>  <span class="mf">278.925633</span>  <span class="mf">139.462817</span>  <span class="mf">390.014868</span>  <span class="mf">4.006243e-25</span>
+<span class="n">C</span><span class="p">(</span><span class="n">Genotype</span><span class="p">):</span><span class="n">C</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>  <span class="mf">10.0</span>   <span class="mf">17.122967</span>    <span class="mf">1.712297</span>    <span class="mf">4.788525</span>  <span class="mf">2.230094e-04</span>
+<span class="n">Residual</span>              <span class="mf">36.0</span>   <span class="mf">12.873000</span>    <span class="mf">0.357583</span>         <span class="n">NaN</span>           <span class="n">NaN</span>
 </code></pre></div></div>
 
-<p><b>Interpretation</b>: The P-value obtained from ANOVA analysis for genotype, years, and interaction are statistically 
-significant (P&lt;0.05). We conclude that type of genotype significantly affects the yield outcome, time (years) 
+<h3 id="interpretation-1">Interpretation</h3>
+<p>The <i>p</i> value obtained from ANOVA analysis for genotype, years, and interaction are statistically 
+significant (<i>p</i>&lt;0.05). We conclude that type of genotype significantly affects the yield outcome, time (years) 
 significantly affects the yield outcome, and interaction of both genotype and time (years) significantly affects the 
 yield outcome.</p>
 
-<p style="background-color: #ddf3f5; padding: 20px;"><b>Note</b>: If you have unbalanced (unequal sample size for each group) data, you can perform similar steps as described
-for two-way ANOVA with the balanced design but set `typ=3`. Type 3 sums of squares (SS) is recommended for an unbalanced
-design for multifactorial ANOVA.</p>
+<p style="background-color: #ddf3f5; padding: 20px;"><b>Note</b>: If you have unbalanced (unequal sample size for each group) data, you can perform similar 
+steps as described for two-way ANOVA with the balanced design but set `typ=3`. Type 3 sums of squares (SS) is 
+recommended for an unbalanced design for multifactorial ANOVA.</p>
 
 <p>Now, we know that genotype and time (years) differences are statistically significant, but ANOVA does not tell which 
 genotype and time (years) are significantly different from each other. To know the pairs of significant different 
 genotype and time (years), perform multiple pairwise comparison (<b>Post-hoc comparison</b>) analysis using 
-<b>Tukey HSD</b> test.</p>
+<b>Tukey’s HSD</b> test.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># we will use bioinfokit (v1.0.1 or later) for performing tukey HSD test
 # check documentation here https://reneshbedre.github.io/blog/howtoinstall.html
@@ -389,7 +444,7 @@ genotype and time (years), perform multiple pairwise comparison (<b>Post-hoc com
 # unequal sample size data, tukey_hsd uses Tukey-Kramer test
 </span><span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
 <span class="c1"># for main effect Genotype
-</span><span class="n">res</span><span class="p">.</span><span class="n">tukey_hsd</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="s">'Genotype'</span><span class="p">,</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value ~ C(Genotype) + C(years) + C(Genotype):C(years)'</span><span class="p">)</span>
+</span><span class="n">res</span><span class="p">.</span><span class="n">tukey_hsd</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="s">'Genotype'</span><span class="p">,</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value~C(Genotype)+C(years)+C(Genotype):C(years)'</span><span class="p">)</span>
 <span class="n">res</span><span class="p">.</span><span class="n">tukey_summary</span>
 <span class="c1"># output
 </span>   <span class="n">group1</span> <span class="n">group2</span>      <span class="n">Diff</span>     <span class="n">Lower</span>     <span class="n">Upper</span>    <span class="n">q</span><span class="o">-</span><span class="n">value</span>   <span class="n">p</span><span class="o">-</span><span class="n">value</span>
@@ -422,23 +477,73 @@ genotype and time (years), perform multiple pairwise comparison (<b>Post-hoc com
 </span><span class="n">res</span><span class="p">.</span><span class="n">tukey_hsd</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="p">[</span><span class="s">'Genotype'</span><span class="p">,</span><span class="s">'years'</span><span class="p">],</span> <span class="n">anova_model</span><span class="o">=</span><span class="s">'value ~ C(Genotype) + C(years) + C(Genotype):C(years)'</span><span class="p">)</span>
 <span class="n">res</span><span class="p">.</span><span class="n">tukey_summary</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
 <span class="c1"># output
-</span>        <span class="n">group1</span>       <span class="n">group2</span>  <span class="n">Diff</span>     <span class="n">Lower</span>     <span class="n">Upper</span>   <span class="n">q</span><span class="o">-</span><span class="n">value</span>   <span class="n">p</span><span class="o">-</span><span class="n">value</span>
-<span class="mi">0</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>  <span class="mf">1.94</span>  <span class="mf">0.108861</span>  <span class="mf">3.771139</span>  <span class="mf">5.619190</span>  <span class="mf">0.028673</span>
-<span class="mi">1</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>  <span class="mf">2.32</span>  <span class="mf">0.488861</span>  <span class="mf">4.151139</span>  <span class="mf">6.719856</span>  <span class="mf">0.003465</span>
-<span class="mi">2</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>  <span class="mf">2.07</span>  <span class="mf">0.238861</span>  <span class="mf">3.901139</span>  <span class="mf">5.995734</span>  <span class="mf">0.014276</span>
-<span class="mi">3</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>  <span class="mf">0.34</span> <span class="o">-</span><span class="mf">1.491139</span>  <span class="mf">2.171139</span>  <span class="mf">0.984807</span>  <span class="mf">0.900000</span>
-<span class="mi">4</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>  <span class="p">(</span><span class="mi">1</span><span class="n">_year</span><span class="p">,</span> <span class="n">F</span><span class="p">)</span>  <span class="mf">2.88</span>  <span class="mf">1.048861</span>  <span class="mf">4.711139</span>  <span class="mf">8.341890</span>  <span class="mf">0.001000</span>
+</span>        <span class="n">group1</span>       <span class="n">group2</span>  <span class="n">Diff</span>     <span class="n">Lower</span>     <span class="n">Upper</span>    <span class="n">q</span><span class="o">-</span><span class="n">value</span>   <span class="n">p</span><span class="o">-</span><span class="n">value</span>
+<span class="mi">0</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="n">_year</span><span class="p">)</span>  <span class="mf">2.38</span>  <span class="mf">0.548861</span>  <span class="mf">4.211139</span>   <span class="mf">6.893646</span>  <span class="mf">0.002439</span>
+<span class="mi">1</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="n">_year</span><span class="p">)</span>  <span class="mf">4.75</span>  <span class="mf">2.918861</span>  <span class="mf">6.581139</span>  <span class="mf">13.758326</span>  <span class="mf">0.001000</span>
+<span class="mi">2</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="mf">1.94</span>  <span class="mf">0.108861</span>  <span class="mf">3.771139</span>   <span class="mf">5.619190</span>  <span class="mf">0.028673</span>
+<span class="mi">3</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="n">_year</span><span class="p">)</span>  <span class="mf">4.41</span>  <span class="mf">2.578861</span>  <span class="mf">6.241139</span>  <span class="mf">12.773520</span>  <span class="mf">0.001000</span>
+<span class="mi">4</span>  <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="n">_year</span><span class="p">)</span>  <span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">3</span><span class="n">_year</span><span class="p">)</span>  <span class="mf">6.90</span>  <span class="mf">5.068861</span>  <span class="mf">8.731139</span>  <span class="mf">19.985779</span>  <span class="mf">0.001000</span>
 </code></pre></div></div>
 
-<p>Similar to one-way ANOVA, you can use <b>Levene</b> and <b>Shapiro-Wilk test</b> to validate the assumptions for
-homogeneity of variances and normal distribution of residuals.</p>
+<h3 id="test-anova-assumptions-1">Test ANOVA assumptions</h3>
 
-<p><strong><span style="color:#33a8ff">Additional Notes</span></strong></p>
-<ul>
-  <li>three factor designs can be analyzed in a similar way to two-way ANOVA</li>
-</ul>
+<p>Similar to one-way ANOVA, you can use visual approaches, <b>Bartlett’s</b> or <b>Levene’s</b> and <b>Shapiro-Wilk test</b> 
+to validate the assumptions for homogeneity of variances and normal distribution of residuals.</p>
 
-<p><strong><span style="color:#060606">References</span></strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># QQ-plot
+</span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="n">sm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="c1"># res.anova_std_residuals are standardized residuals obtained from two-way ANOVA (check above)
+</span><span class="n">sm</span><span class="p">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">anova_std_residuals</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s">'45'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Theoretical Quantiles"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Standardized Residuals"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># histogram
+</span><span class="n">plt</span><span class="p">.</span><span class="n">hist</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">anova_model_out</span><span class="p">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="s">'auto'</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s">'bar'</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s">'k'</span><span class="p">)</span> 
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"Residuals"</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Frequency'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Shapiro-Wilk test
+</span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="n">stats</span>
+<span class="n">w</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">anova_model_out</span><span class="p">.</span><span class="n">resid</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
+<span class="mf">0.8978844881057739</span> <span class="mf">0.00023986754240468144</span>
+</code></pre></div></div>
+
+<p>Even though we rejected the Shapiro-Wilk test statistics (<i>p</i> &lt; 0.05), we should further look for the residual 
+plots and histograms. In the residual plot, standardized residuals lie around the 45-degree line, it suggests that 
+the residuals are approximately normally distributed. Besides, the histogram shows the approximately normal distribution of residuals.</p>
+
+<p style="background-color: #ddf3f5; padding: 20px;"><b>Note</b>:  The ANOVA model is remarkably robust to the violation of normality assumption, which means 
+that it will have a non-significant effect on Type I error rate and <i>p</i> values will remain reliable as long as 
+there are no outliers</p>
+
+<p align="center">
+<img src="/assets/posts/anova/qq_two.svg" width="460" />
+
+<img src="/assets/posts/anova/hist_two.svg" width="460" />
+</p>
+
+<p>We will use Levene’s test to check the assumption of homogeneity of variances,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># if you have  astacked table, you can use bioinfokit v1.0.3 or later for the levene's test
+</span><span class="kn">from</span> <span class="nn">bioinfokit.analys</span> <span class="kn">import</span> <span class="n">stat</span> 
+<span class="n">res</span> <span class="o">=</span> <span class="n">stat</span><span class="p">()</span>
+<span class="n">res</span><span class="p">.</span><span class="n">levene</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">d_melt</span><span class="p">,</span> <span class="n">res_var</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">xfac_var</span><span class="o">=</span><span class="p">[</span><span class="s">'Genotype'</span><span class="p">,</span> <span class="s">'years'</span><span class="p">])</span>
+<span class="n">res</span><span class="p">.</span><span class="n">levene_summary</span>
+<span class="c1"># output
+</span>                 <span class="n">Parameter</span>    <span class="n">Value</span>
+<span class="mi">0</span>      <span class="n">Test</span> <span class="n">statistics</span> <span class="p">(</span><span class="n">W</span><span class="p">)</span>   <span class="mf">1.6849</span>
+<span class="mi">1</span>  <span class="n">Degrees</span> <span class="n">of</span> <span class="n">freedom</span> <span class="p">(</span><span class="n">Df</span><span class="p">)</span>  <span class="mf">17.0000</span>
+<span class="mi">2</span>                  <span class="n">p</span> <span class="n">value</span>   <span class="mf">0.0927</span>
+</code></pre></div></div>
+
+<p>As the <i>p</i> value (0.09) is non-significant, we fail to reject the null hypothesis and conclude that treatments 
+have equal variances.</p>
+
+<h2 id="references"><span style="color:#060606">References</span></h2>
 <ul>
   <li>Seabold, Skipper, and Josef Perktold. “statsmodels: Econometric and statistical modeling with python.” 
 Proceedings of the 9th Python in Science Conference. 2010.</li>
@@ -448,6 +553,9 @@ Mar;17(3):261-72.</li>
   <li>Mangiafico, S.S. 2015. An R Companion for the Handbook of Biological Statistics, version 1.3.2.</li>
   <li>Vallat, R. (2018). Pingouin: statistics in Python. Journal of Open Source Software, 3(31), 1026, 
 https://doi.org/10.21105/joss.01026</li>
+  <li>Knief U, Forstmeier W. Violating the normality assumption may be the lesser of two evils. bioRxiv. 2018 Jan 1:498931.</li>
+  <li>Kozak M, Piepho HP. What’s normal anyway? Residual plots are more telling than significance tests when checking 
+ANOVA assumptions. Journal of Agronomy and Crop Science. 2018 Feb;204(1):86-98.</li>
 </ul>
 
 <!--
@@ -460,7 +568,7 @@ https://reneshbedre.github.io/blog/anova.html
 <p><span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span></p>
 
-<p><span style="color:#9e9696"><i> Last updated: October 24, 2020</i> </span></p>
+<p><span style="color:#9e9696"><i> Last updated: November 05, 2020</i> </span></p>
 
 <p>
 <!-- Begin Mailchimp Signup Form -->

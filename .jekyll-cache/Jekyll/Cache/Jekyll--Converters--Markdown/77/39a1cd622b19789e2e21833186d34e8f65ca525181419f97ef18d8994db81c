@@ -1,4 +1,4 @@
-I"#�<p>
+I"��<p>
 <!--
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -1644,7 +1644,7 @@ reverse complementary of subsequence will be printed.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">id</code></td>
-      <td>List of sequence IDs separated by new line [file]</td>
+      <td>List of sequence IDs separated by new line [file] or Pandas series</td>
     </tr>
   </tbody>
 </table>
@@ -2248,6 +2248,112 @@ are unequal among the groups.</p>
 </table>
 
 <p><a href="https://reneshbedre.github.io/blog/anova.html" target="_blank">Description and Working example</a></p>
+
+<h3 id="bartletts-test">Bartlett’s test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.3</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.bartlett(df, xfac_var, res_var)</code></p>
+
+<p>It performs bartlett’s test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in a stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.bartlett.html</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing response (<code class="language-plaintext highlighter-rouge">res_var</code>) and independent variables (<code class="language-plaintext highlighter-rouge">xfac_var</code>) in a stacked format. It should not have missing data. The missing data will be omitted.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res_var</code></td>
+      <td>Name of a column having response variable [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac_var</code></td>
+      <td>Name of a column having factor or group for pairwise comparison [string][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bartlett_summary</code></td>
+      <td>Pandas dataframe containing bartlett’s test statistics, degree of freedom, and <i>p</i> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a></p>
+
+<h3 id="levenes-test">Levene’s test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.3</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.levene(df, xfac_var, res_var)</code></p>
+
+<p>It performs levene’s test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing response (<code class="language-plaintext highlighter-rouge">res_var</code>) and independent variables (<code class="language-plaintext highlighter-rouge">xfac_var</code>) in stacked format. It should not have missing data. The missing data will be omitted.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res_var</code></td>
+      <td>Name of a column having response variable [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac_var</code></td>
+      <td>Name of a column having factor or group for pairwise comparison [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">center</code></td>
+      <td>Choice for the levene test [string (<code class="language-plaintext highlighter-rouge">median</code>, <code class="language-plaintext highlighter-rouge">mean</code>, <code class="language-plaintext highlighter-rouge">trimmed</code>)] [default: <code class="language-plaintext highlighter-rouge">median</code>] <br /> <strong><em>median</em></strong>: Brown-Forsythe Levene-type test <br /> <strong><em>mean</em></strong>: original levene’s test <br /> <strong><em>trimmed</em></strong>: Brown-Forsythe Levene-type test</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">levene_summary</code></td>
+      <td>Pandas dataframe containing levene’s test statistics, degree of freedom, and <i>p</i> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a></p>
 
 <h2 id="how-to-cite-bioinfokit">How to cite bioinfokit?</h2>
 <ul>

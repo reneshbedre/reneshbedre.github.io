@@ -1,0 +1,2518 @@
+I"��<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/howtoinstall.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<h2 id="what-is-bioinfokit"><span style="color:#33a8ff">What is bioinfokit?</span></h2>
+<p>The bioinfokit toolkit aimed to provide various easy-to-use functionalities to analyze,
+visualize, and interpret the biological data generated from genome-scale omics experiments.</p>
+
+<h2 id="how-to-install"><span style="color:#33a8ff">How to install?</span></h2>
+
+<p>bioinfokit is developed in Python 3 and tested with Python versions &gt;= 3.6</p>
+
+<p>bioinfokit requires</p>
+<ul>
+  <li>NumPy</li>
+  <li>scikit-learn</li>
+  <li>seaborn</li>
+  <li>pandas</li>
+  <li>matplotlib</li>
+  <li>SciPy</li>
+  <li>matplotlib_venn</li>
+</ul>
+
+<p>bioinfokit can be installed using pip, easy_install and git.</p>
+
+<p>latest bioinfokit version: <a href="https://badge.fury.io/py/bioinfokit"><img src="https://badge.fury.io/py/bioinfokit.svg" alt="PyPI version" /></a>  <a href="https://anaconda.org/bioconda/bioinfokit"><img src="https://anaconda.org/bioconda/bioinfokit/badges/version.svg" alt="Anaconda-Server Badge" /></a>  <a href="https://travis-ci.org/reneshbedre/bioinfokit"><img src="https://travis-ci.org/reneshbedre/bioinfokit.svg?branch=master" alt="Build Status" /></a></p>
+
+<p>Install using <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">pip</a> for Python 3 (easiest way)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install
+</span><span class="n">pip</span> <span class="n">install</span> <span class="n">bioinfokit</span>
+
+<span class="c1"># upgrade to latest version
+</span><span class="n">pip</span> <span class="n">install</span> <span class="n">bioinfokit</span> <span class="o">--</span><span class="n">upgrade</span>
+
+<span class="c1"># uninstall 
+</span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">bioinfokit</span>
+</code></pre></div></div>
+
+<p>Install using <a href="https://setuptools.readthedocs.io/en/latest/easy_install.html" target="_blank">easy_install</a> for Python 3 (easiest way)</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install latest version
+</span><span class="n">easy_install</span> <span class="n">bioinfokit</span>
+
+<span class="c1"># specific version
+</span><span class="n">easy_install</span> <span class="n">bioinfokit</span><span class="o">==</span><span class="mf">0.3</span>
+
+<span class="c1"># uninstall 
+</span><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">bioinfokit</span>
+</code></pre></div></div>
+
+<p>Install using <a href="https://docs.conda.io/en/latest/" target="_blank">conda</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">bioconda</span> <span class="n">bioinfokit</span>
+</code></pre></div></div>
+
+<p>Install using <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">git</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># download and install bioinfokit (Tested on Linux, Mac, Windows) 
+</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">reneshbedre</span><span class="o">/</span><span class="n">bioinfokit</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">bioinfokit</span>
+<span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h3 id="check-the-version-of-bioinfokit">Check the version of bioinfokit</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">bioinfokit</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bioinfokit</span><span class="p">.</span><span class="n">__version__</span>
+<span class="s">'0.9.6'</span>
+</code></pre></div></div>
+
+<h3 id="download-statistics">Download statistics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weekly</th>
+      <th>Monthly</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://pepy.tech/project/bioinfokit"><img src="https://static.pepy.tech/personalized-badge/bioinfokit?period=week&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=Downloads" alt="Downloads" /></a></td>
+      <td><a href="https://pepy.tech/project/bioinfokit"><img src="https://static.pepy.tech/personalized-badge/bioinfokit?period=month&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=Downloads" alt="Downloads" /></a></td>
+      <td><a href="https://pepy.tech/project/bioinfokit"><img src="https://static.pepy.tech/personalized-badge/bioinfokit?period=total&amp;units=international_system&amp;left_color=black&amp;right_color=orange&amp;left_text=Downloads" alt="Downloads" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="how-to-use-bioinfokit"><span style="color:#33a8ff">How to use bioinfokit?</span></h2>
+
+<h2 id="gene-expression-analysis">Gene expression analysis</h2>
+
+<h3 id="volcano-plot">Volcano plot</h3>
+
+<p>latest update v0.8.8</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.gene_exp.volcano(df, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, dim, r, ar, 
+    dotsize, markerdot, sign_line, gstyle, show, figtype, axtickfontsize, axtickfontname, axlabelfontsize, 
+    axlabelfontname, axxlabel, axylabel, xlm, ylm, plotlegend, legendpos, figname, legendanchor, legendlabels)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values columns</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc</code></td>
+      <td>Name of a column having log or absolute fold change values [string][default:logFC]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pv</code></td>
+      <td>Name of a column having P-values or adjusted P-values [string][default:p_values]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc_thr</code></td>
+      <td>Log or absolute fold change cutoff for up and downregulated genes [float][default:1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pv_thr</code></td>
+      <td>P-values or adjusted P-values cutoff for up and downregulated genes [float][default:0.05]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td>Tuple of three colors [tuple or list][default: color=(“green”, “grey”, “red”)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valpha</code></td>
+      <td>Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">geneid</code></td>
+      <td>Name of a column having gene Ids. This is necessary for plotting gene label on the points [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">genenames</code></td>
+      <td>Tuple of gene Ids to label the points. The gene Ids must be present in the geneid column. If this option set to “deg” it will label all genes defined by lfc_thr and pv_thr [string, tuple, dict][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gfont</code></td>
+      <td>Font size for genenames [float][default: 10.0]. gfont not compatible with gstyle=2.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (5, 5)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]. Not compatible with <code class="language-plaintext highlighter-rouge">show</code>= True</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X and Y-axis ticks labels [float][default: 90]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 8]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sign_line</code></td>
+      <td>Show grid lines on plot with defined log fold change (<code class="language-plaintext highlighter-rouge">lfc_thr</code>) and P-value (<code class="language-plaintext highlighter-rouge">pv_thr</code>) threshold value [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gstyle</code></td>
+      <td>Style of the text for genenames. 1 for default text and 2 for box text [int][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xlm</code></td>
+      <td>Range of ticks to plot on X-axis [float (left, right, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylm</code></td>
+      <td>Range of ticks to plot on Y-axis [float (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plotlegend</code></td>
+      <td>plot legend on volcano plot  [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendpos</code></td>
+      <td>position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:”best”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string ][default:”ma”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendanchor</code></td>
+      <td>position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendlabels</code></td>
+      <td>legend label names. If you provide custom label names keep the same order of label names as default [list][default:[‘significant up’, ‘not significant’, ‘significant down’]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Volcano plot image in same directory (volcano.png)
+<a href="https://reneshbedre.github.io/blog/volcano.html" target="_blank">Working example</a></p>
+
+<h3 id="inverted-volcano-plot">Inverted Volcano plot</h3>
+
+<p>latest update v0.8.8</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.gene_exp.involcano(table, lfc, pv, lfc_thr, pv_thr, color, valpha, geneid, genenames, gfont, gstyle,
+    dotsize, markerdot, r, dim, show, figtype, axxlabel, axylabel, axlabelfontsize, axtickfontsize, 
+    axtickfontname, plotlegend, legendpos, legendanchor, figname, legendlabels, ar)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">table</code></td>
+      <td>Pandas dataframe table having atleast gene IDs, log fold change, P-values or adjusted P-values</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc</code></td>
+      <td>Name of a column having log fold change values [default:logFC]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pv</code></td>
+      <td>Name of a column having P-values or adjusted P-values [default:p_values]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc_thr</code></td>
+      <td>Log fold change cutoff for up and downregulated genes [default:1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pv_thr</code></td>
+      <td>P-values or adjusted P-values cutoff for up and downregulated genes [default:0.05]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td>Tuple of three colors [tuple or list][default: color=(“green”, “grey”, “red”)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valpha</code></td>
+      <td>Transparency of points on volcano plot [float (between 0 and 1)][default: 1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">geneid</code></td>
+      <td>Name of a column having gene Ids. This is necessary for plotting gene label on the points [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">genenames</code></td>
+      <td>Tuple of gene Ids to label the points. The gene Ids must be present in the geneid column. If this option set to “deg” it will label all genes defined by lfc_thr and pv_thr [string, tuple, dict][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gfont</code></td>
+      <td>Font size for genenames [float][default: 10.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gstyle</code></td>
+      <td>Style of the text for genenames. 1 for default text and 2 for box text [int][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 8]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (5, 5)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]. Not compatible with <code class="language-plaintext highlighter-rouge">show</code>= True</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plotlegend</code></td>
+      <td>plot legend on inverted volcano plot  [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendpos</code></td>
+      <td>position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:”best”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendanchor</code></td>
+      <td>position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string ][default:”involcano”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendlabels</code></td>
+      <td>legend label names. If you provide custom label names keep the same order of label names as default [list][default:[‘significant up’, ‘not significant’, ‘significant down’]]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X and Y-axis ticks labels [float][default: 90]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Inverted volcano plot image in same directory (involcano.png)
+<a href="https://reneshbedre.github.io/blog/volcano.html" target="_blank">Working example</a></p>
+
+<h3 id="ma-plot">MA plot</h3>
+
+<p>latest update v0.8.8</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.gene_exp.ma(df, lfc, ct_count, st_count, lfc_thr, color, dim, dotsize, show, r, valpha, figtype, axxlabel,
+    axylabel, axlabelfontsize, axtickfontsize, axtickfontname, xlm, ylm, fclines, fclinescolor, legendpos, legendanchor,
+    figname, legendlabels, plotlegend, ar)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe  table having atleast gene IDs, log fold change, and normalized counts (control and treatment) columns</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc</code></td>
+      <td>Name of a column having log fold change values [default:logFC]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ct_count</code></td>
+      <td>Name of a column having count values for control sample [default:value1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">st_count</code></td>
+      <td>Name of a column having count values for treatment sample [default:value2]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lfc_thr</code></td>
+      <td>Log fold change cutoff for up and downregulated genes [default:1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td>Tuple of three colors [tuple or list][default: (“green”, “grey”, “red”)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 8]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valpha</code></td>
+      <td>Transparency of points on plot [float (between 0 and 1)][default: 1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (5, 5)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]. Not compatible with <code class="language-plaintext highlighter-rouge">show</code>= True</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xlm</code></td>
+      <td>Range of ticks to plot on X-axis [float (left, right, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylm</code></td>
+      <td>Range of ticks to plot on Y-axis [float (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fclines</code></td>
+      <td>draw log fold change threshold lines as defines by <code class="language-plaintext highlighter-rouge">lfc</code>  [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fclinescolor</code></td>
+      <td>color of fclines  [string][default: ‘#2660a4’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plotlegend</code></td>
+      <td>plot legend on MA plot  [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendpos</code></td>
+      <td>position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:”best”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendanchor</code></td>
+      <td>position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string ][default:”ma”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendlabels</code></td>
+      <td>legend label names. If you provide custom label names keep the same order of label names as default [list][default:[‘significant up’, ‘not significant’, ‘significant down’]]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X and Y-axis ticks labels [float][default: 90]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>MA plot image in same directory (ma.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/ma.html" target="_blank">Working example</a></p>
+
+<h3 id="heatmap">Heatmap</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.8.4</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.gene_exp.hmap(table, cmap='seismic', scale=True, dim=(6, 8), rowclus=True, colclus=True, zscore=None, 
+    xlabel=True, ylabel=True, tickfont=(12, 12), show, r, figtype, figname)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>CSV delimited data file. It should not have NA or missing values</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cmap</code></td>
+      <td>Color Palette for heatmap [string][default: ‘seismic’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scale</code></td>
+      <td>Draw a color key with heatmap [boolean (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>heatmap figure size [tuple of two floats (width, height) in inches][default: (6, 8)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rowclus</code></td>
+      <td>Draw hierarchical clustering for rows  [boolean (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colclus</code></td>
+      <td>Draw hierarchical clustering for columns [boolean (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">zscore</code></td>
+      <td>Z-score standardization of row (0) or column (1). It works when clus is True. [None, 0, 1][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xlabel</code></td>
+      <td>Plot X-label [boolean (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylabel</code></td>
+      <td>Plot Y-label [boolean (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tickfont</code></td>
+      <td>Fontsize for X and Y-axis tick labels [tuple of two floats][default: (14, 14)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]. Not compatible with <code class="language-plaintext highlighter-rouge">show</code>= True</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string ][default:”heatmap”]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>heatmap plot (heatmap.png, heatmap_clus.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/hmap.html" target="_blank">Working example</a></p>
+
+<h2 id="clustering-analysis">Clustering analysis</h2>
+<h3 id="scree-plot">Scree plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.8</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.cluster.screeplot(obj, axlabelfontsize, axlabelfontname, axxlabel, axylabel,
+    figtype, r, show, dim)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">obj</code></td>
+      <td>list of component name and component variance</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Scree plot image (screeplot.png will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a></p>
+
+<h3 id="principal-component-analysis-pca-loadings-plots">Principal component analysis (PCA) loadings plots</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.8</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.cluster.pcaplot(x, y, z, labels, var1, var2, var3, axlabelfontsize, axlabelfontname,
+    figtype, r, show, plotlabels, dim)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x</code></td>
+      <td>loadings (correlation coefficient) for principal component 1 (PC1)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">y</code></td>
+      <td>loadings (correlation coefficient) for principal component 2 (PC2)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">z</code></td>
+      <td>loadings (correlation coefficient) for principal component 3 (PC2)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">labels</code></td>
+      <td>original variables labels from dataframe used for PCA</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var1</code></td>
+      <td>Proportion of PC1 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var2</code></td>
+      <td>Proportion of PC2 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var3</code></td>
+      <td>Proportion of PC3 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plotlabels</code></td>
+      <td>Plot labels as defined by labels parameter [True or False][default:True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>PCA loadings plot 2D and 3D image (pcaplot_2d.png and pcaplot_3d.png will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a></p>
+
+<h3 id="principal-component-analysis-pca--biplots">Principal component analysis (PCA)  biplots</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.8</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.cluster.biplot(cscore, loadings, labels, var1, var2, var3, axlabelfontsize, axlabelfontname,
+    figtype, r, show, markerdot, dotsize, valphadot, colordot, arrowcolor, valphaarrow, arrowlinestyle, arrowlinewidth,
+    centerlines, colorlist, legendpos, datapoints, dim)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cscore</code></td>
+      <td>principal component scores (obtained from PCA().fit_transfrom() function in sklearn.decomposition)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">loadings</code></td>
+      <td>loadings (correlation coefficient) for principal components</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">labels</code></td>
+      <td>original variables labels from dataframe used for PCA</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var1</code></td>
+      <td>Proportion of PC1 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var2</code></td>
+      <td>Proportion of PC2 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var3</code></td>
+      <td>Proportion of PC3 variance [float (0 to 1)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot on plot. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 6]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphadot</code></td>
+      <td>Transparency of dots on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colordot</code></td>
+      <td>Color of dots on plot [string or list ][default:”#4a4e4d”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">arrowcolor</code></td>
+      <td>Color of the arrow [string ][default:”#fe8a71”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphaarrow</code></td>
+      <td>Transparency of the arrow [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">arrowlinestyle</code></td>
+      <td>line style of the arrow. check more styles at https://matplotlib.org/3.1.0/gallery/lines_bars_and_markers/linestyles.html [string][default: ‘-‘]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">arrowlinewidth</code></td>
+      <td>line width of the arrow [float][default: 1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">centerlines</code></td>
+      <td>draw center lines at x=0 and y=0 for 2D plot [bool (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colorlist</code></td>
+      <td>list of the categories to assign the color [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendpos</code></td>
+      <td>position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:”best”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">datapoints</code></td>
+      <td>plot data points on graph [bool (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>PCA biplot 2D and 3D image (biplot_2d.png and biplot_3d.png will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/pca_3d.html" target="_blank">Working Example</a></p>
+
+<h3 id="t-sne-plot">t-SNE plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.8.5</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.cluster.tsneplot(score, colorlist, axlabelfontsize, axlabelfontname,
+    figtype, r, show, markerdot, dotsize, valphadot, colordot, dim, figname, legendpos,
+    legendanchor)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">score</code></td>
+      <td>t-SNE component embeddings (obtained from TSNE().fit_transfrom() function in sklearn.manifold)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colorlist</code></td>
+      <td>list of the categories to assign the color [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot on plot. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 6]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphadot</code></td>
+      <td>Transparency of dots on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colordot</code></td>
+      <td>Color of dots on plot [string or list ][default:”#4a4e4d”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendpos</code></td>
+      <td>position of the legend on plot. For more options see loc parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [string ][default:”best”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">legendanchor</code></td>
+      <td>position of the legend outside of the plot. For more options see bbox_to_anchor parameter at https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html  [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string ][default:”tsne_2d”]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>t-SNE 2D image (tsne_2d.png will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/tsne.html" target="_blank">Working Example</a></p>
+
+<h2 id="normalization">Normalization</h2>
+
+<h3 id="rpm-or-cpm-normalization">RPM or CPM normalization</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.8.9</code></p>
+
+<p>Normalize raw gene expression counts into Reads per million mapped reads (RPM) or Counts per million mapped reads (CPM)</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.norm.cpm(df)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing raw gene expression values. Genes with missing expression values (NA) will be dropped.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>RPM or CPM normalized Pandas dataframe as class attributes (cpm_norm)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/expression_units.html#rpm-or-cpm-reads-per-million-mapped-reads-or-counts-per-million-mapped-reads-" target="_blank">Working Example</a></p>
+
+<h3 id="rpkm-or-fpkm-normalization">RPKM or FPKM normalization</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9</code></p>
+
+<p>Normalize raw gene expression counts into Reads per kilo base per million mapped reads (RPKM) or 
+Fragments per kilo base per million mapped reads (FPKM)</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.norm.rpkm(df, gl)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing raw gene expression values. Genes with missing expression or gene length values (NA) will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gl</code></td>
+      <td>Name of a column having gene length in bp [string][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>RPKM or FPKM normalized Pandas dataframe as class attributes (rpkm_norm)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/expression_units.html#rpkm-reads-per-kilo-base-per-million-mapped-reads" target="_blank">Working Example</a></p>
+
+<h3 id="tpm-normalization">TPM normalization</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.1</code></p>
+
+<p>Normalize raw gene expression counts into Transcript per million (TPM)</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.norm.tpm(df, gl)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing raw gene expression values. Genes with missing expression or gene length values (NA) will be dropped.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gl</code></td>
+      <td>Name of a column having gene length in bp [string][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>TPM normalized Pandas dataframe as class attributes (tpm_norm)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/expression_units.html#tpm-transcript-per-million" target="_blank">Working Example</a></p>
+
+<h2 id="variant-analysis">Variant analysis</h2>
+
+<h3 id="manhatten-plot">Manhatten plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.2</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.marker.mhat(df, chr, pv, color, dim, r, ar, gwas_sign_line, gwasp, dotsize, markeridcol, markernames, 
+    gfont, valpha, show, figtype, axxlabel, axylabel, axlabelfontsize, ylm, gstyle, figname)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe object with atleast SNP, chromosome, and P-values columns</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">chr</code></td>
+      <td>Name of a column having chromosome numbers [string][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pv</code></td>
+      <td>Name of a column having P-values. Must be numeric column [string][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">color</code></td>
+      <td>List the name of the colors to be plotted. It can accept two alternate colors or the number colors equal to chromosome number. If nothing (None) provided, it will randomly assign the color to each chromosome [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gwas_sign_line</code></td>
+      <td>Plot statistical significant threshold line defined by option <code class="language-plaintext highlighter-rouge">gwasp</code> [bool (True or False)][default: False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gwasp</code></td>
+      <td>Statistical significant threshold to identify significant SNPs [float][default: 5E-08]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 8]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markeridcol</code></td>
+      <td>Name of a column having SNPs. This is necessary for plotting SNP names on the plot [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markernames</code></td>
+      <td>The list of the SNPs to display on the plot. These SNP should be present in SNP column. Additionally, it also accepts the dict of SNPs and its associated gene name. If this option set to True, it will label all SNPs with P-value significant score defined by <code class="language-plaintext highlighter-rouge">gwasp</code> [string, list, tuple, dict][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gfont</code></td>
+      <td>Font size for SNP names to display on the plot [float][default: 8]. gfont not compatible with gstyle=2.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valpha</code></td>
+      <td>Transparency of points on plot [float (between 0 and 1)][default: 1.0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X-axis labels [float][default: 90]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylm</code></td>
+      <td>Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gstyle</code></td>
+      <td>Style of the text for markernames. 1 for default text and 2 for box text [int][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figname</code></td>
+      <td>name of figure [string][default:”manhatten”]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Manhatten plot image in same directory (manhatten.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/manhat.html" target="_blank">Working example</a></p>
+
+<h3 id="variant-annotation">Variant annotation</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.3</code></p>
+
+<p>Assign genetic features and function to the variants in VCF file</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.marker.vcf_anot(file, id, gff_file, anot_attr)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>VCF file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>chromosome id column in VCF file [string][default=’#CHROM’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gff_file</code></td>
+      <td>GFF3 genome annotation file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">anot_attr</code></td>
+      <td>Gene function tag in attributes field of GFF3 file</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Tab-delimited text file with annotation (annotated text file will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/vcfanot.html" target="_blank">Working Example</a></p>
+
+<h3 id="concatenate-vcf-files">Concatenate VCF files</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.4</code></p>
+
+<p>Concatenate multiple VCF files into single VCF file (for example, VCF files for each chromosome)</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.marker.concatvcf(file)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>Multiple vcf files separated by comma</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Concatenated VCF file (concat_vcf.vcf)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a></p>
+
+<h3 id="split-vcf-file">Split VCF file</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.marker.splitvcf(file)</code></p>
+
+<p>Split single VCF file containing variants for all chromosomes into individual file containing variants for each chromosome</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>VCF file to split</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>chromosome id column in VCF file [string][default=’#CHROM’]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>VCF files for each chromosome</p>
+
+<p><a href="https://reneshbedre.github.io/blog/mergevcf.html" target="_blank">Working example</a></p>
+
+<h2 id="high-throughput-sequence-analysis">High-throughput sequence analysis</h2>
+
+<h3 id="fastq-batch-downloads-from-sra-database">FASTQ batch downloads from SRA database</h3>
+
+<p>latest update v0.9.7</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fastq.sra_bd(file, t, other_opts)</code></p>
+
+<p>FASTQ files will be downloaded using <code class="language-plaintext highlighter-rouge">fasterq-dump</code>. Make sure you have the latest version of the NCBI SRA toolkit 
+(version 2.10.8) is installed and binaries are added to the system path</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>List of SRA accessions for batch download. All accession must be separated by a newline in the file.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">t</code></td>
+      <td>Number of threads for parallel run [int][default=4]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">other_opts</code></td>
+      <td>Provide other relevant options for <code class="language-plaintext highlighter-rouge">fasterq-dump</code> [str][default=None] <br /> Provide the options as a space-separated string. You can get a detailed option for <code class="language-plaintext highlighter-rouge">fasterq-dump</code> using the <code class="language-plaintext highlighter-rouge">-help</code> option.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>FASTQ files for each SRA accession in the current directory unless specified by <code class="language-plaintext highlighter-rouge">other_opts</code></p>
+
+<p><a href="https://reneshbedre.github.io/blog/fqutil.html" target="_blank">Description and working example</a></p>
+
+<h3 id="fastq-quality-format-detection">FASTQ quality format detection</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format.fq_qual_var(file)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>FASTQ file to detect quality format [deafult: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Quality format encoding name for FASTQ file (Supports only Sanger, Illumina 1.8+ and Illumina  1.3/1.4)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/fqqualfmt.html" target="_blank">Working Example</a></p>
+
+<h3 id="sequencing-coverage">Sequencing coverage</h3>
+
+<p>latest update v0.9.7</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fastq.seqcov(file, gs)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>FASTQ file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gs</code></td>
+      <td>Genome size in Mbp</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Sequencing coverage of the given FASTQ file</p>
+
+<p><a href="https://reneshbedre.github.io/blog/seqcov.html" target="_blank">Description and Working example</a></p>
+
+<h3 id="reverse-complement-of-dna-sequence">Reverse complement of DNA sequence</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.8</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fasta.rev_com(sequence)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">seq</code></td>
+      <td>DNA sequence to perform reverse complement</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>DNA sequence in a fasta file</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Reverse complement of original DNA sequence</p>
+
+<p><a href="https://reneshbedre.github.io/blog/revcom.html" target="_blank">Working example</a></p>
+
+<h3 id="file-format-conversions">File format conversions</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format.fqtofa(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">FASTQ file</code></td>
+      <td>Convert FASTQ file into FASTA format</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format.hmmtocsv(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">HMM file</code></td>
+      <td>Convert HMM text output (from HMMER tool) to CSV format</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format.tabtocsv(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">TAB file</code></td>
+      <td>Convert TAB file to CSV format</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.format.csvtotab(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">CSV file</code></td>
+      <td>Convert CSV file to TAB format</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Output will be saved in same directory</p>
+
+<p><a href="https://reneshbedre.github.io/blog/format.html" target="_blank">Working example</a></p>
+
+<h3 id="gff3-to-gtf-file-format-conversion">GFF3 to GTF file format conversion</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.gff.gff_to_gtf(file, trn_feature_name)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>GFF3 genome annotation file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">trn_feature_name</code></td>
+      <td>Name of the feature (column 3 of GFF3 file) of RNA transcripts if other than ‘mRNA’ or ‘transcript’</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>GTF format genome annotation file (file.gtf will be saved in same directory)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/gffgtf.html" target="_blank">Working Example</a></p>
+
+<h3 id="bioinformatics-file-readers-and-processing-fasta-fastq-and-vcf">Bioinformatics file readers and processing (FASTA, FASTQ, and VCF)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fasta.fasta_reader(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">FASTA file</code></td>
+      <td>FASTA file reader</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fastq.fastq_reader(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">FASTQ file</code></td>
+      <td>FASTQ file reader</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bioinfokit.analys.marker.vcfreader(file)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">VCF file</code></td>
+      <td>VCF file reader</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>File generator object (can be iterated only once) that can be parsed for the record</p>
+
+<p><a href="https://reneshbedre.github.io/blog/filereaders.html" target="_blank">Description and working example</a></p>
+
+<h3 id="extract-subsequence-from-fasta-files">Extract subsequence from FASTA files</h3>
+
+<p>latest update v0.9.8</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fasta.ext_subseq(file, id, st, end, strand)</code></p>
+
+<p>Extract the subsequence of specified region from FASTA file. If the target subsequence region is on minus strand. the
+reverse complementary of subsequence will be printed.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>FASTA file [file]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>The ID of sequence from FASTA file to extract the subsequence [string]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">st</code></td>
+      <td>Start integer coordinate of subsequnece [int]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">end</code></td>
+      <td>End integer coordinate of subsequnece [int]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">strand</code></td>
+      <td>Strand of the subsequence [‘plus’ or ‘minus’][default: ‘plus’]</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+`out_file` | Write subsequence to file instead of stdout [file][default: None]  
+-->
+
+<p>Returns:</p>
+
+<p>Subsequence to stdout</p>
+
+<h3 id="extract-sequences-from-fasta-file">Extract sequences from FASTA file</h3>
+
+<p>latest update v1.0.2</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.fasta.extract_seq(file, id)</code></p>
+
+<p>Extract the sequences from FASTA file based on the list of sequence IDs provided from other file</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>FASTA file [file]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>List of sequence IDs separated by new line [file] or Pandas series</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Sequences extracted from FASTA file based on the given IDs provided in id file. Output FASTA file will be saved as 
+output.fasta in current working directory.</p>
+
+<h2 id="functional-enrichment-analysis">Functional enrichment analysis</h2>
+
+<h3 id="gene-family-enrichment-analysis-genfam">Gene family enrichment analysis (GenFam)</h3>
+
+<p>latest update v1.0.0</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.genfam.fam_enrich(id_file, species, id_type, stat_sign_test, multi_test_corr, min_map_ids, alpha)</code></p>
+
+<p>GenFam is a comprehensive classification and enrichment analysis tool for plant genomes. It provides a unique way to 
+characterize the large-scale gene datasets such as those from transcriptome analysis (read <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/pld3.191">GenFam</a> paper for more details)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id_file</code></td>
+      <td>Text file containing the list of gene IDs to analyze using GenFam. IDs must be separated by newline.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">species</code></td>
+      <td>Plant species ID for GenFam analysis. All plant species ID provided <a href="https://github.com/reneshbedre/reneshbedre.github.io/blob/master/assets/posts/genfam/genfam_species_id.md">here</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id_type</code></td>
+      <td>Plant species ID type  <br /> <strong><em>1</em></strong>: Phytozome locus ID <br /> <strong><em>2</em></strong>: Phytozome transcript ID <br /> <strong><em>3</em></strong>: Phytozome PAC ID <br /></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stat_sign_test</code></td>
+      <td>Statistical significance test for enrichment analysis [default=1]. <br /> <strong><em>1</em></strong>: Fisher exact test <br /> <strong><em>2</em></strong>: Hypergeometric distribution <br /> <strong><em>3</em></strong>: Binomial distribution <br /> <strong><em>4</em></strong>: Chi-squared distribution <br /></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">multi_test_corr</code></td>
+      <td>Multiple testing correction test [default=3]. <br /> <strong><em>1</em></strong>: Bonferroni <br /> <strong><em>2</em></strong>: Bonferroni-Holm <br /> <strong><em>3</em></strong>: Benjamini-Hochberg <br /></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_map_ids</code></td>
+      <td>Minimum number of gene IDs from the user list (<code class="language-plaintext highlighter-rouge">id_file</code>) must be mapped to the background database for performing GenFam analysis [default=5]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td>Significance level [float][default: 0.05]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>df_enrich</td>
+      <td>Enriched gene families with p &lt; 0.05</td>
+    </tr>
+    <tr>
+      <td>genfam_info</td>
+      <td>GenFam run information</td>
+    </tr>
+    <tr>
+      <td>Output files</td>
+      <td>Output figures and files from GenFam analysis <br /> <strong><em>genfam_enrich.png</em></strong>: GenFam figure for enriched gene families <br /> <strong><em>fam_enrich_out.txt</em></strong>: List of enriched gene families with mapped gene IDs, GO annotation, and detailed statistics <br /> <strong><em>fam_all_out.txt</em></strong>: List of all gene families with mapped gene IDs, GO annotation, and detailed statistics</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/genfam.html" target="_blank">Description and working example</a></p>
+
+<h3 id="check-allowed-id-types-for-plant-species-for-genfam">Check allowed ID types for plant species for GenFam</h3>
+
+<p>latest update v1.0.0</p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.genfam.check_allowed_ids(species)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">species</code></td>
+      <td>Plant species ID to check for allowed ID type. All plant species ID provided <a href="https://github.com/reneshbedre/reneshbedre.github.io/blob/master/assets/posts/genfam/genfam_species_id.md">here</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Allowed ID types for GenFam</p>
+
+<p><a href="https://reneshbedre.github.io/blog/genfam.html" target="_blank">Description and working example</a></p>
+
+<h2 id="biostatistical-analysis">Biostatistical analysis</h2>
+
+<h3 id="correlation-matrix-plot">Correlation matrix plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.stat.corr_mat(table, corm, cmap, r, dim, show, figtype, axtickfontsize, axtickfontname)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">table</code></td>
+      <td>Dataframe object with numerical variables (columns) to find correlation. Ideally, you should have three or more variables. Dataframe should not have identifier column.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">corm</code></td>
+      <td>Correlation method [pearson,kendall,spearman] [default:pearson]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cmap</code></td>
+      <td>Color Palette for heatmap [string][default: ‘seismic’]. More colormaps are available at https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]. Not compatible with <code class="language-plaintext highlighter-rouge">show</code>= True</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 5)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 7]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Correlation matrix plot image in same directory (corr_mat.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/corr.html" target="_blank">Working example</a></p>
+
+<h3 id="bar-dot-plot">Bar-dot plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.8.5</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.stat.bardot(df, colorbar, colordot, bw, dim, r, ar, hbsize, errorbar, dotsize, markerdot, valphabar, 
+    valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, ylm, axtickfontsize, axtickfontname,
+    yerrlw, yerrcw)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe object</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colorbar</code></td>
+      <td>Color of bar graph [string or list][default:”#bbcfff”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">colordot</code></td>
+      <td>Color of dots on bar [string or list][default:”#ee8972”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bw</code></td>
+      <td>Width of bar [float][default: 0.4]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X-axis labels [float][default: 0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hbsize</code></td>
+      <td>Horizontal bar size for standard error bars [float][default: 4]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">errorbar</code></td>
+      <td>Draw standard error bars [bool (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 6]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphabar</code></td>
+      <td>Transparency of bars on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphadot</code></td>
+      <td>Transparency of dots on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylm</code></td>
+      <td>Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">yerrlw</code></td>
+      <td>Error bar line width [float][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">yerrcw</code></td>
+      <td>Error bar cap width [float][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Bar-dot plot image in same directory (bardot.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/bardot.html" target="_blank">Working Example</a></p>
+
+<h3 id="one-sample-and-two-sample-independent-and-paired-t-tests">One sample and two sample (independent and paired) t-tests</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.6</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.ttest(df, xfac, res, evar, alpha, test_type, mu)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe for appropriate t-test. <br /> <b>One sample</b>: It should have atleast dependent (res) variable <br /> <b>Two sample independent</b>: It should have independent (xfac) and dependent (res) variables <br /> <b>Two sample paired</b>: It should have two dependent (res) variables</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac</code></td>
+      <td>Independent group column name with two levels [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res</code></td>
+      <td>Dependent variable column name [string or list or tuple][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">evar</code></td>
+      <td>t-test with equal variance [bool (True or False)][default: True]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td>Significance level for confidence interval (CI). If alpha=0.05, then 95% CI will be calculated  [float][default: 0.05]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">test_type</code></td>
+      <td>Type of t-test [int (1,2,3)][default: None]. <br /> <strong><em>1</em></strong>: One sample t-test <br /> <strong><em>2</em></strong>: Two sample independent t-test <br /> <strong><em>3</em></strong>: Two sample paired t-test</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mu</code></td>
+      <td>Population or known mean for the one sample t-test [float][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Summary output as class attribute (summary)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/ttest.html" target="_blank">Description and Working example</a></p>
+
+<h3 id="chi-square-test">Chi-square test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v0.9.5</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.chisq(df, p)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe. It should be one or two-dimensional contingency table.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">p</code></td>
+      <td>Theoretical expected probabilities for each group. It must be non-negative and sum to 1. If p is provide Goodness of Fit test will be performed [list or tuple][default: None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Summary and expected counts as class attributes (summary and expected_df)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/chisq.html" target="_blank">Working example</a></p>
+
+<!--
+### One-way ANOVA
+
+`bioinfokit.stat.oanova(table, res, xfac, ph, phalpha)`
+
+Parameters | Description
+------------ | -------------
+`table` | Pandas dataframe in stacked table format
+`res` | Response variable (dependent variable) [string][default: None]
+`xfac` | Treatments or groups or factors (independent variable) [string][default: None]
+`ph` | perform pairwise comparisons with Tukey HSD test [bool (True or False)] [default: False]
+`phalpha` |significance level Tukey HSD test [float (0 to 1)][default: 0.05]
+
+
+Returns:
+
+ANOVA summary, multiple pairwise comparisons, and assumption tests statistics
+
+<a href="https://reneshbedre.github.io/blog/oanova.html" target="_blank">Working example</a>
+-->
+
+<h3 id="linear-regression-analysis">Linear regression analysis</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.stat.lin_reg(df, x, y)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe object</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x</code></td>
+      <td>Name of column having independent X variables [list][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">y</code></td>
+      <td>Name of column having dependent Y variables [list][default:None]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Regression analysis summary</p>
+
+<p><a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a></p>
+
+<h3 id="regression-plot">Regression plot</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.visuz.stat.regplot(df, x, y, yhat, dim, colordot, colorline, r, ar, dotsize, markerdot, linewidth, 
+    valphaline, valphadot, show, figtype, axxlabel, axylabel, axlabelfontsize, axlabelfontname, xlm, ylm, axtickfontsize,
+    axtickfontname)</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe object</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">x</code></td>
+      <td>Name of column having independent X variables [string][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">y</code></td>
+      <td>Name of column having dependent Y variables [string][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">yhat</code></td>
+      <td>Name of column having predicted response of Y variable (y_hat) from regression [string][default:None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dim</code></td>
+      <td>Figure size [tuple of two floats (width, height) in inches][default: (6, 4)]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">r</code></td>
+      <td>Figure resolution in dpi [int][default: 300]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ar</code></td>
+      <td>Rotation of X-axis labels [float][default: 0]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dotsize</code></td>
+      <td>The size of the dots in the plot [float][default: 6]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markerdot</code></td>
+      <td>Shape of the dot marker. See more options at  https://matplotlib.org/3.1.1/api/markers_api.html [string][default: “o”]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphaline</code></td>
+      <td>Transparency of regression line on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">valphadot</code></td>
+      <td>Transparency of dots on plot [float (between 0 and 1)][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">linewidth</code></td>
+      <td>Width of regression line [float][default: 1]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">figtype</code></td>
+      <td>Format of figure to save. Supported format are eps, pdf, pgf, png, ps, raw, rgba, svg, svgz [string][default:’png’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">show</code></td>
+      <td>Show the figure on console instead of saving in current folder [True or False][default:False]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axxlabel</code></td>
+      <td>Label for X-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axylabel</code></td>
+      <td>Label for Y-axis. If you provide this option, default label will be replaced [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontsize</code></td>
+      <td>Font size for axis labels [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axlabelfontname</code></td>
+      <td>Font name for axis labels [string][default: ‘Arial’]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xlm</code></td>
+      <td>Range of ticks to plot on X-axis [float tuple (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ylm</code></td>
+      <td>Range of ticks to plot on Y-axis [float tuple (bottom, top, interval)][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontsize</code></td>
+      <td>Font size for axis ticks [float][default: 9]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axtickfontname</code></td>
+      <td>Font name for axis ticks [string][default: ‘Arial’]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<p>Regression plot image in same directory (reg_plot.png)</p>
+
+<p><a href="https://reneshbedre.github.io/blog/linearreg.html" target="_blank">Working Example</a></p>
+
+<h3 id="tukey-hsd-test">Tukey HSD test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.tukey_hsd(df, res_var, xfac_var, anova_model, phalpha, ss_typ)</code></p>
+
+<p>It performs multiple pairwise comparisons of treatment groups using Tukey’s HSD (Honestly Significant Difference) test 
+to check if group means are significantly different from each other. It uses the Tukey-Kramer approach if the sample sizes
+are unequal among the groups.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe with the variables mentioned in the <code class="language-plaintext highlighter-rouge">res_var</code>, <code class="language-plaintext highlighter-rouge">xfac_var</code> and <code class="language-plaintext highlighter-rouge">anova_model</code> options. It should not have missing data. The missing data will be omitted.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res_var</code></td>
+      <td>Name of a column having response variable [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac_var</code></td>
+      <td>Name of a column having factor or group for pairwise comparison [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">anova_model</code></td>
+      <td>ANOVA model (calculated using statsmodels <code class="language-plaintext highlighter-rouge">ols</code> function) [string][default: None]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">phalpha</code></td>
+      <td>Significance level [float][default: 0.05]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ss_typ</code></td>
+      <td>Type of sum of square to perform ANOVA [int][default: 2]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tukey_summary</code></td>
+      <td>Pairwise comparisons for main and interaction effects by Tukey HSD test</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/anova.html" target="_blank">Description and Working example</a></p>
+
+<h3 id="bartletts-test">Bartlett’s test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.3</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.bartlett(df, xfac_var, res_var)</code></p>
+
+<p>It performs Bartlett’s test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in a stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.bartlett.html</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing response (<code class="language-plaintext highlighter-rouge">res_var</code>) and independent variables (<code class="language-plaintext highlighter-rouge">xfac_var</code>) in a stacked format. It should not have missing data. The missing data will be omitted.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res_var</code></td>
+      <td>Name of a column having response variable [string][default: <code class="language-plaintext highlighter-rouge">None</code>]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac_var</code></td>
+      <td>Name of a column having treatment groups (independent variables) [string or list][default: <code class="language-plaintext highlighter-rouge">None</code>]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bartlett_summary</code></td>
+      <td>Pandas dataframe containing Bartlett’s test statistics, degree of freedom, and <i>p</i> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a></p>
+
+<h3 id="levenes-test">Levene’s test</h3>
+
+<p><code class="language-plaintext highlighter-rouge">latest update v1.0.3</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">bioinfokit.analys.stat.levene(df, xfac_var, res_var)</code></p>
+
+<p>It performs Levene’s test to check the homogeneity of variances among the treatment groups. It accepts the input 
+table in a stacked format. More details https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">df</code></td>
+      <td>Pandas dataframe containing response (<code class="language-plaintext highlighter-rouge">res_var</code>) and independent variables (<code class="language-plaintext highlighter-rouge">xfac_var</code>) in a stacked format. It should not have missing data. The missing data will be omitted.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">res_var</code></td>
+      <td>Name of a column having response variable [string][default: <code class="language-plaintext highlighter-rouge">None</code>]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xfac_var</code></td>
+      <td>Name of a column having treatment groups (independent variables) [string or list][default: <code class="language-plaintext highlighter-rouge">None</code>]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">center</code></td>
+      <td>Choice for the Levene’s test [string (<code class="language-plaintext highlighter-rouge">median</code>, <code class="language-plaintext highlighter-rouge">mean</code>, <code class="language-plaintext highlighter-rouge">trimmed</code>)] [default: <code class="language-plaintext highlighter-rouge">median</code>] <br /> <strong><em>median</em></strong>: Brown-Forsythe Levene-type test <br /> <strong><em>mean</em></strong>: original Levene’s test <br /> <strong><em>trimmed</em></strong>: Brown-Forsythe Levene-type test</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">levene_summary</code></td>
+      <td>Pandas dataframe containing Levene’s test statistics, degree of freedom, and <i>p</i> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://reneshbedre.github.io/blog/anova.html#test-anova-assumptions" target="_blank">Description and Working example</a></p>
+
+<h2 id="how-to-cite-bioinfokit">How to cite bioinfokit?</h2>
+<ul>
+  <li>Renesh Bedre. (2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). 
+Zenodo. http://doi.org/10.5281/zenodo.3965241</li>
+  <li>Additionally check <a href="https://zenodo.org/record/3841708#.XyCfi-dOmUk" target="_blank">Zenodo</a> to cite specific version of bioinfokit</li>
+</ul>
+
+<h2 id="references">References:</h2>
+<ul>
+  <li>Travis E. Oliphant. A guide to NumPy, USA: Trelgol Publishing, (2006).</li>
+  <li>John D. Hunter. Matplotlib: A 2D Graphics Environment, Computing in Science &amp; Engineering, 9, 90-95 (2007), DOI:10.1109/MCSE.2007.55 (publisher link)</li>
+  <li>Fernando Pérez and Brian E. Granger. IPython: A System for Interactive Scientific Computing, Computing in Science &amp; Engineering, 9, 21-29 (2007), DOI:10.1109/MCSE.2007.53 (publisher link)</li>
+  <li>Michael Waskom, Olga Botvinnik, Joel Ostblom, Saulius Lukauskas, Paul Hobson, MaozGelbart, … Constantine Evans. (2020, January 24). mwaskom/seaborn: v0.10.0 (January 2020) (Version v0.10.0). Zenodo. http://doi.org/10.5281/zenodo.3629446</li>
+  <li>Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, Édouard Duchesnay. Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research, 12, 2825-2830 (2011)</li>
+  <li>David C. Howell. Multiple Comparisons With Unequal Sample Sizes. https://www.uvm.edu/~statdhtx/StatPages/MultipleComparisons/unequal_ns_and_mult_comp.html</li>
+</ul>
+
+<!--
+## bioinfokit cited by:
+- Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
+  bioRxiv 2020.04.23.057786; doi: https://doi.org/10.1101/2020.04.23.057786
+- Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform
+  Effects on Regeneration by Pulmonary Basal Cells as Evaluated by Single-Cell RNA Sequencing. Cell Reports. 2020 Mar
+  24;30(12):4250-65.
+-->
+
+<p>
+<strong style="color:#33a8ff">How to cite?</strong>
+<br />
+Renesh Bedre.(2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). Zenodo.
+<a href="http://doi.org/10.5281/zenodo.3965241" target="_blank">http://doi.org/10.5281/zenodo.3965241</a>
+<br /><br />
+<span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at
+<b>reneshbe@gmail.com</b></span>
+
+
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+
+<!--
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://github.us10.list-manage.com/subscribe/post?u=1c0202ed60d33515742eec50a&amp;id=b17e2351b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe for new articles</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+-->
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!--
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c0202ed60d33515742eec50a_b17e2351b6" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+-->
+
+<!--End mc_embed_signup-->
+</p>
+
+<p>
+<!--
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style>
+    .share-box a {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px #777;
+  box-shadow: 0 0 1px #777;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-decoration: none; }
+  .share-box a:hover {
+    text-decoration: none;
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+
+.f {
+  color: #3b5998; }
+  .f:hover {
+    color: #fff;
+    background-color: #3b5998; }
+
+.t {
+  color: #4099FF; }
+  .t:hover {
+    color: #fff;
+    background-color: #4099FF; }
+
+.g {
+  color: #d34836; }
+  .g:hover {
+    color: #fff;
+    background-color: #d34836; }
+
+.r {
+  color: #ff5700; }
+  .r:hover {
+    color: #fff;
+    background-color: #ff5700; }
+
+.l {
+  color: #0077b5; }
+  .l:hover {
+    color: #fff;
+    background-color: #0077b5; }
+
+.e {
+  color: #444444; }
+  .e:hover {
+    color: #fff;
+    background-color: #444444; }
+</style>
+
+<div class="share-box">
+<a class="f" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-facebook-f"></i></a>
+
+<a class="t" href="https://twitter.com/intent/tweet?text=&url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fab fa-twitter"></i></a>
+
+  <a class="g" href="https://plus.google.com/share?url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-google-plus-square"></i></a>
+
+
+<a class="r" href="http://www.reddit.com/submit?url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-reddit"></i></a>
+
+<a class="l" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/howtoinstall.html" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" ><i class="fab fa-linkedin-in"></i></a>
+
+<a class="e" href="mailto:?subject=&amp;body=Check out this site http://localhost:4000/blog/howtoinstall.html"><i class="fas fa-envelope-square"></i></a>
+-->
+
+  <!--
+    <a href="https://twitter.com/renbedre?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @renbedre</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+-->
+
+<!--
+</div>
+
+-->
+
+</p>
+
+<p><span style="color:#9e9696"><i> Last updated: October 26, 2020</i> </span></p>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+</p>
+:ET

@@ -1,4 +1,4 @@
-I"z<ul class="toc__menu">
+I"�<ul class="toc__menu">
   <li><a href="#what-is-bioinfokit">What is bioinfokit?</a></li>
   <li><a href="#how-to-install">How to install?</a>
     <ul>
@@ -66,6 +66,8 @@
       <li><a href="#linear-regression-analysis">Linear regression analysis</a></li>
       <li><a href="#regression-plot">Regression plot</a></li>
       <li><a href="#tukey-hsd-test">Tukey HSD test</a></li>
+      <li><a href="#bartletts-test">Bartlett’s test</a></li>
+      <li><a href="#levenes-test">Levene’s test</a></li>
     </ul>
   </li>
   <li><a href="#how-to-cite-bioinfokit">How to cite bioinfokit?</a></li>
