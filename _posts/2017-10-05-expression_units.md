@@ -393,8 +393,8 @@ Sobic.001G001132   1.613319
   above (e.g. RPKM, TPM, TMM)
 - The resulting batch adjusted integer counts can be directly used with <i>DESeq2</i> which accepts only integer count 
   data for differential gene expression analysis
-- ComBat-Seq takes input as a raw un-normalized data (e.g. obtained from featureCounts or HTSeq) as input and 
-  addresses the batch effects using a negative binomial regression model
+- ComBat-Seq takes input as a raw un-normalized data (e.g. obtained from featureCounts, HTSeq or expected counts 
+  from RSEM) as input and  addresses the batch effects using a negative binomial regression model
 - Briefly, ComBat-Seq adjust the count data by comparing the quantiles of the  empirical distributions of data to the
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
