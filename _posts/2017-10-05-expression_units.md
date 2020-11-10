@@ -395,7 +395,7 @@ Sobic.001G001132   1.613319
   data for differential gene expression analysis
 - ComBat-Seq takes input as a raw un-normalized data (e.g. obtained from featureCounts or HTSeq) as input and  
   addresses the batch effects using a negative binomial regression model. As ComBat-Seq uses edgeR, the expected counts
-  counts from RSEM can also work, but raw un-normalized counts are preferred by edgeR.
+  from RSEM can also work, but raw un-normalized counts are preferred by edgeR.
 - Briefly, ComBat-Seq adjust the count data by comparing the quantiles of the  empirical distributions of data to the
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
