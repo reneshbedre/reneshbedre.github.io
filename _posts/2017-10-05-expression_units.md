@@ -377,7 +377,7 @@ Sobic.001G001132   1.613319
   and other unwanted technical variations
 - Bacher et al., 2017 proposed a SCnorm, a robust and accurate between-sample normalization unit for scRNA-seq
 - Steps involved in SCnorm normalization;
-  - SCnorm requires the raw expression counts (not-normalized), which can be obtained from RSEM or HTSeq
+  - SCnorm requires the estimates of expression counts, which can be obtained from RSEM, featureCounts or HTSeq
   - Genes with low expression counts are filtered out (keep the genes with atleast 10 non-zero expression counts)
   - estimate the count-depth relationship using quantile regression
   - Cluster genes into groups with similar count-depth relationship
@@ -389,11 +389,12 @@ Sobic.001G001132   1.613319
 - Zhang et al., 2020 proposed a ComBat-Seq (batch  effect  adjustment  method) approach to addresses the large variance of
   batch effects present in RNA-seq count data (the paper is still in preprint)
 - The benefit of ComBat-Seq is that it adjusts the batch effects for raw counts data and provide the output
-  as integer counts in contrast to other normalization methods which can produce fraction count values as described above (e.g. RPKM, TPM, TMM)
-- The resulting batch adjusted integer counts can be directly used with <i>DESeq2</i> which accepts only integer count data
-  for differential gene expression analysis
-- ComBat-Seq takes input as a raw un-normalized data as input and addresses the batch effects using
-  a negative binomial regression model
+  as integer counts in contrast to other normalization methods which can produce fraction count values as described 
+  above (e.g. RPKM, TPM, TMM)
+- The resulting batch adjusted integer counts can be directly used with <i>DESeq2</i> which accepts only integer count 
+  data for differential gene expression analysis
+- ComBat-Seq takes input as a raw un-normalized data (e.g. obtained from featureCounts or HTSeq) as input and 
+  addresses the batch effects using a negative binomial regression model
 - Briefly, ComBat-Seq adjust the count data by comparing the quantiles of the  empirical distributions of data to the
   expected distribution without batch effects in the data
 - <a href="https://github.com/zhangyuqing/ComBat-seq" target="_blank">ComBat-Seq</a> is available in R
@@ -470,7 +471,7 @@ https://reneshbedre.github.io/blog/expression_units.html
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
-<span style="color:#9e9696"><i> Last updated: August 19, 2020</i> </span>
+<span style="color:#9e9696"><i> Last updated: November 09, 2020</i> </span>
 
 <p>
 {% include  subscribe.html %}
