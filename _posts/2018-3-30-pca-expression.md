@@ -17,11 +17,12 @@ tags:
 
 ## <span style="color:#33a8ff">What is PCA?</span>
 
-- PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the variation in
-  high-dimensional interrelated dataset (dataset with a large number of variables)
-- PCA reduces the high-dimensional data to low-dimension by linearly transforming the old variable into a new set of variables called
-  principal component (PC) while retaining the most possible variation. The PCs are easy to visualize and summarise the features
-  of original high-dimensional datasets in low-dimensional space
+- PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the 
+  variation in high-dimensional interrelated dataset (dataset with a large number of variables)
+- PCA reduces the high-dimensional data to low-dimension by linearly transforming the old variable into a new set of 
+  variables called principal component (PC) while retaining the most possible variation. PCA preserves the global data 
+  structure by forming the well separated clusters, but can fail to preserve the similarities within the clusters. The 
+  PCs are easy to visualize and summarise the feature of original high-dimensional datasets in low-dimensional space.
 - For example, when datasets contain 10 variables (10D), it is arduous to visualize them at the same time
   (you may have to do 45 pairwise comparisons to interpret dataset effectively). PCA transforms them into a new set of
   variables (PCs) with top PCs having the highest variation. PCs are ordered which means that the first few PCs
@@ -218,8 +219,8 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   another cluster (gene expression response in A and B conditions are highly similar but different from other clusters). 
   If the variables are highly associated, the angle between the variable vectors should be as small as possible in the 
   biplot.
-- The length of PCs in biplot refers to the amount of variance contributed by the PCs. The longer the length of PC, the higher the
-  variance contributed and well represented in space.
+- The length of PCs in biplot refers to the amount of variance contributed by the PCs. The longer the length of PC, 
+  the higher the variance contributed and well represented in space.
 
 
 ## <span style="color:#33a8ff">References</span>
@@ -236,6 +237,7 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
   Journal of Statistics in Medical Research. 2013 Oct 1;2(4):255.
 - Cangelosi R, Goriely A. Component retention in principal component analysis with application to cDNA microarray data. 
   Biology direct. 2007 Dec 1;2(1):2.  
+- Vallejos CA. Exploring a world of a thousand dimensions. Nature Biotechnology. 2019 Dec;37(12):1423-4.  
 
 <!--
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
