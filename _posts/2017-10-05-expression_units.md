@@ -387,10 +387,11 @@ Sobic.001G001132   1.613319
 
 ### <span style="color:#060606">ComBat-Seq method</span>
 - Zhang et al., 2020 proposed a ComBat-Seq (batch  effect  adjustment  method) approach to addresses the large variance of
-  batch effects present in RNA-seq count data (the paper is still in preprint)
-- The benefit of ComBat-Seq is that it adjusts the batch effects for raw counts data and provide the output
-  as integer counts in contrast to other normalization methods which can produce fraction count values as described 
-  above (e.g. RPKM, TPM, TMM)
+  batch effects present in RNA-seq count data 
+- The benefit of ComBat-Seq is that it adjusts the batch effects (technical variations in the samples such as 
+  differences in sequencing instrument for processing samples) for raw counts data and provide the output as integer 
+  counts in contrast to other normalization methods which can produce fraction count values as described above 
+  (e.g. RPKM, TPM, TMM)
 - The resulting batch adjusted integer counts can be directly used with <i>DESeq2</i> which accepts only integer count 
   data for differential gene expression analysis
 - ComBat-Seq takes input as a raw un-normalized data (e.g. obtained from featureCounts or HTSeq) as input and  
@@ -455,7 +456,7 @@ Sobic.001G001132  7.464699  4.170389  3.817485  6.392849  9.929718  3.795926
 - Anders S, Huber W. Differential expression analysis for sequence count data. Nature Precedings. 2010 Apr 30:1-.
 - Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome biology. 2014 Dec 1;15(12):550.
 - Bacher R, Chu LF, Leng N, Gasch AP, Thomson JA, Stewart RM, Newton M, Kendziorski C. SCnorm: robust normalization of single-cell RNA-seq data. Nature methods. 2017 Jun;14(6):584.
-- Zhang, Y., Parmigiani, G., & Johnson, W. E. (2020). ComBat-Seq: batch effect adjustment for RNA-Seq count data. bioRxiv, 904730.
+- Zhang Y, Parmigiani G, Johnson WE. ComBat-Seq: batch effect adjustment for RNA-Seq count data. bioRxiv. 2020 Jan 1.
 - Smid M, van den Braak RR, van de Werken HJ, van Riet J, van Galen A, de Weerd V, van der Vlugt-Daane M, Bril SI, Lalmahomed ZS, Kloosterman WP, Wilting SM. Gene length corrected trimmed mean of M-values (GeTMM) processing of RNA-seq data performs similarly in intersample analyses while improving intrasample comparisons. BMC bioinformatics. 2018 Dec;19(1):1-3.
 - Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.
 - Robinson MD, McCarthy DJ, Smyth GK. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010 Jan 1;26(1):139-40.
