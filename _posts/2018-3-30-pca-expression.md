@@ -19,8 +19,8 @@ tags:
 
 - PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the 
   variation in high-dimensional interrelated dataset (dataset with a large number of variables)
-- PCA reduces the high-dimensional data to low-dimension by linearly transforming the old variable into a new set of 
-  variables called principal component (PC) while retaining the most possible variation. 
+- PCA reduces the high-dimensional interrelated data to low-dimension by linearly transforming the old variable into a 
+  new set of uncorrelated variables called principal component (PC) while retaining the most possible variation. 
 - The PCs are easy to visualize and summarise the feature of original high-dimensional datasets in low-dimensional space.  
 - PCA preserves the global data structure by forming well-separated clusters but can fail to preserve the 
   similarities within the clusters. 
