@@ -20,9 +20,10 @@ tags:
 - PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the 
   variation in high-dimensional interrelated dataset (dataset with a large number of variables)
 - PCA reduces the high-dimensional data to low-dimension by linearly transforming the old variable into a new set of 
-  variables called principal component (PC) while retaining the most possible variation. PCA preserves the global data 
-  structure by forming the well separated clusters, but can fail to preserve the similarities within the clusters. The 
-  PCs are easy to visualize and summarise the feature of original high-dimensional datasets in low-dimensional space.
+  variables called principal component (PC) while retaining the most possible variation. 
+- The PCs are easy to visualize and summarise the feature of original high-dimensional datasets in low-dimensional space.  
+- PCA preserves the global data structure by forming well-separated clusters but can fail to preserve the 
+  similarities within the clusters. 
 - For example, when datasets contain 10 variables (10D), it is arduous to visualize them at the same time
   (you may have to do 45 pairwise comparisons to interpret dataset effectively). PCA transforms them into a new set of
   variables (PCs) with top PCs having the highest variation. PCs are ordered which means that the first few PCs
@@ -95,6 +96,7 @@ array([0.2978742 , 0.57268672, 0.80450114, 0.99741752, 0.99886105,
        1.        ])
        
 # get component loadings (correlation coefficient between original variables and the component) 
+# the squared loadings within the PCs always sums to 1
 >>> loadings = pca_out.components_
 >>> num_pc = pca_out.n_features_
 >>> pc_list = ["PC"+str(i) for i in list(range(1, num_pc+1))]
