@@ -113,6 +113,9 @@ D         0.370318  0.611485 -0.308295  0.054973 -0.007642  0.625159
 E         0.568491  0.300118 -0.011775 -0.484115  0.009382 -0.593425
 F         0.208090 -0.400426  0.370440 -0.634234 -0.010111  0.506732
 
+# positive and negative values in component loadings reflects the positive and negative correlation of the variables
+# with then PCs. 
+
 # get correlation matrix plot for loadings
 >>> import seaborn as sns
 >>> import matplotlib.pyplot as plt
