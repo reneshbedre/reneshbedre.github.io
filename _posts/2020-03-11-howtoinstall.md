@@ -994,7 +994,7 @@ Attribute | Description
 
 
 ## How to cite bioinfokit?
-- Renesh Bedre. (2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit (Version v0.9). 
+- Renesh Bedre. (2020, July 29). reneshbedre/bioinfokit: Bioinformatics data analysis and visualization toolkit. 
   Zenodo. http://doi.org/10.5281/zenodo.3965241 
 - Additionally check <a href='https://zenodo.org/record/3841708#.XyCfi-dOmUk' target='_blank'>Zenodo</a> to cite specific version of bioinfokit
 
@@ -1017,14 +1017,18 @@ Attribute | Description
   Charles R Harris, Anne M. Archibald, Antônio H. Ribeiro, Fabian Pedregosa, Paul van Mulbregt, and SciPy 1.0 
   Contributors. (2020) SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. Nature Methods, 17(3), 
   261-272.  
-<!--
+
 ## bioinfokit cited by:
+- Liang L, Darbandi SF, Pochareddy S, Gulden FO, Gilson MC, Sheppard BK, Sahagun A, An JY, Werling DM, Rubenstein JL, Sestan N. Developmental dynamics of voltage-gated sodium channel isoform expression in the human and mouse neocortex. bioRxiv. 2020 Jan 1.
+- Irigoyen S, Ramasamy M, Pant S, Niraula P, Bedre R, Gurung M, Rossi D, Laughlin C, Gorman Z, Achor D, Levy A. Plant hairy roots enable high throughput identification of antimicrobials against Candidatus Liberibacter spp. Nature Communications. 2020 Nov 16;11(1):1-4.
+- Lu J, Wilfred P, Korbie D, Trau M. Regulation of Canonical Oncogenic Signaling Pathways in Cancer via DNA Methylation. Cancers. 2020 Nov;12(11):3199.
 - Jennifer Gribble, Andrea J. Pruijssers, Maria L. Agostini, Jordan Anderson-Daniels, James D. Chappell, Xiaotao Lu, Laura J. Stevens, Andrew L. Routh, Mark R. Denison
   bioRxiv 2020.04.23.057786; doi: https://doi.org/10.1101/2020.04.23.057786
+- Aarts J, Bijma P, Xia S, Textor J, de Vries A. A GWAS about the wingsize of Nasonia Vitripennis.
 - Greaney AM, Adams TS, Raredon MS, Gubbins E, Schupp JC, Engler AJ, Ghaedi M, Yuan Y, Kaminski N, Niklason LE. Platform
   Effects on Regeneration by Pulmonary Basal Cells as Evaluated by Single-Cell RNA Sequencing. Cell Reports. 2020 Mar
   24;30(12):4250-65.
--->
+
 
 <p>
 {% include  cite.html %}
