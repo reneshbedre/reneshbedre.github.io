@@ -6,6 +6,10 @@ permalink: blog/expression_units.html
 classes: wide
 ---
 
+This page has been moved <a href='https://www.reneshbedre.com/blog/expression_units.html' target='_blank'>here</a>
+
+
+<!-- 1
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 <p>
@@ -33,21 +37,24 @@ gene more the read count).
  <p align="center">
   \(  \text{RPM or CPM} = \frac{ \text{Number of reads mapped to gene}  \times 10^6}{\text{Total number of mapped reads}}  \)
   </p>
+1 -->
 
 <!--
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;RPM&space;=&space;\frac{Number&space;\&space;of&space;\&space;reads&space;\&space;mapped&space;\&space;to&space;\&space;gene&space;\times&space;10^6}{Total&space;\&space;number&space;\&space;of&space;\&space;mapped&space;\&space;reads}" />
 -->
 
+<!-- 1
 For example, You have sequenced one library with 5 million(M) reads. Among them, total 4 M matched to the genome sequence and 5000 reads matched to a given gene.
 
  <p align="center">
   \(  \text{RPM or CPM} = \frac{ 5000 \times 10^6}{4 \times 10^6} = 1250 \)
   </p>
-
+1 -->
 <!--
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;\large&space;RPM&space;=&space;\frac{5000&space;\times&space;10^6}{4&space;\times&space;10^6}&space;=&space;1250" />
 -->
 
+<!-- 1
 Notes:
 
  - RPM does not consider the transcript length normalization.
@@ -101,11 +108,12 @@ Sobic.001G001000    3.574971    0.941955    1.214977    0.954988    3.676768    
  <p align="center">
   \(  \text{RPKM} = \frac{ \text{Number of reads mapped to gene}   \times 10^3  \times 10^6 }{\text{Total number of mapped reads} \times \text{gene length in bp }}  \)
   </p>
-
+1 -->
 <!--
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;RPKM&space;=&space;\frac{Number&space;\&space;of&space;\&space;reads&space;\&space;mapped&space;\&space;to&space;\&space;gene&space;\times&space;10^3&space;\times&space;10^6}{Total&space;\&space;number&space;\&space;of&space;\&space;mapped&space;\&space;reads&space;\times&space;gene&space;\&space;length&space;\&space;in&space;\&space;bp}" />
 -->
 
+<!-- 1
  <p>Here, \( 10^3 \) normalizes for gene length and 10^6 for sequencing depth factor.</p>
 
 FPKM (Fragments per kilo base per million mapped reads) is analogous to RPKM and used especially in paired-end RNA-seq experiments. In paired-end RNA-seq experiments,  
@@ -116,10 +124,12 @@ For example, You have sequenced one library with 5 M reads. Among them, total 4 
   <p align="center">
   \(  \text{RPKM} = \frac{ 5000 \times 10^3 \times 10^6}{4 \times 10^6 \times 2000} = 625 \)
      </p>
-
+1 -->
 <!--
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;RPKM&space;=&space;\frac{5000&space;\times&space;10^3&space;\times&space;10^6}{4&space;\times&space;10^6&space;\times&space;2000}&space;=&space;625" />
 -->
+
+<!-- 1
 Notes:
 
  - RPKM considers the gene length for normalization
@@ -177,6 +187,7 @@ Sobic.001G001000   5.092551   1.341817   1.730737   1.360382   5.237561   5.6573
     <br><br>
     \(  \text{Where A} =  \frac{\text{total reads mapped to gene} \times 10^3}{\text{gene length in bp}} \)
   </p>
+1 -->
 
 <!--
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;TPM&space;=&space;\frac{Number&space;\&space;of&space;\&space;reads&space;\&space;mapped&space;\&space;to&space;\&space;gene&space;\times&space;read&space;\&space;length&space;\times&space;10^6}{Total&space;\&space;number&space;\&space;of&space;\&space;transcripts&space;\&space;sampled&space;\times&space;gene&space;\&space;length&space;\&space;in&space;\&space;bp}" />
@@ -189,6 +200,8 @@ with a length of 2000 bp. There were 10K transcripts were sampled from a genome 
 
  <img src="https://latex.codecogs.com/gif.latex?\bg_green&space;TPM&space;=&space;\frac{5000&space;\times&space;100&space;\times&space;10^6}{10000&space;\times&space;2000}&space;=&space;25000" />
 -->
+
+<!-- 1
 Notes:
 
  - TPM considers the gene length for normalization
@@ -461,6 +474,7 @@ Sobic.001G001132  7.464699  4.170389  3.817485  6.392849  9.929718  3.795926
 - Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.
 - Robinson MD, McCarthy DJ, Smyth GK. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010 Jan 1;26(1):139-40.
 
+1 -->
 
 <!--
 
@@ -470,11 +484,14 @@ Bedre, R.  (2017, May 05) .Gene expression units explained: RPM, RPKM, FPKM, TPM
 https://reneshbedre.github.io/blog/expression_units.html
 -->
 
+<!-- 1
+
 <span style="color:#9e9696">If you have any questions, comments or recommendations, please email me at 
 <b>reneshbe@gmail.com</b></span>
 
 <span style="color:#9e9696"><i> Last updated: November 09, 2020</i> </span>
-
+ 
+1 -->
 <p>
 {% include  subscribe.html %}
 </p>
