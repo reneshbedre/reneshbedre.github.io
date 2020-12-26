@@ -12,9 +12,6 @@ This page has been moved <a href='https://www.reneshbedre.com/blog/expression_un
 <!-- 1
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
-<p>
-{% include  share.html %}
-</p>
 
 - In RNA-seq gene expression data analysis, we come across various expression units such as RPM, RPKM, FPKM, TPM, TMM, and raw reads counts.
 - Most of the times it's difficult to understand the basic underlying  methodology to calculate these units from mapped sequence data.
