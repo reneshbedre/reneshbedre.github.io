@@ -11,10 +11,14 @@ tags:
   - Dimensionality reduction
 ---
 
+This page has been moved <a href='https://www.reneshbedre.com/blog/pca_3d.html' target='_blank'>here</a>
+
+
 <p>
 {% include  share.html %}
 </p>
 
+<!-- 1
 ## <span style="color:#33a8ff">What is PCA?</span>
 
 - PCA is a classical multivariate (unsupervised machine learning) statistical method that used to interpret the 
@@ -243,6 +247,7 @@ Check detailed <a href='https://reneshbedre.github.io/blog/howtoinstall.html' ta
 - Cangelosi R, Goriely A. Component retention in principal component analysis with application to cDNA microarray data. 
   Biology direct. 2007 Dec 1;2(1):2.  
 - Vallejos CA. Exploring a world of a thousand dimensions. Nature Biotechnology. 2019 Dec;37(12):1423-4.  
+1 -->
 
 <!--
 Transcriptomics  experiments such as RNA-seq allows researchers to study large numbers of genes across multiple treatment
@@ -495,7 +500,9 @@ loaded via a namespace (and not attached):
 {% include  share.html %}
 </p>
 
+<!-- 1
 <span style="color:#9e9696"><i> Last updated: September 26, 2020</i> </span>
+1 -->
 
 <p>
 {% include  license.html %}
