@@ -12,6 +12,10 @@ tags:
 {% include  share.html %}
 </p>
 
+This page has been moved <a href='https://www.reneshbedre.com/blog/volcano.html' target='_blank'>here</a>
+
+
+<!-- 1
 ## <span style="color:#33a8ff">What is Volcano plot?</span>
  - 2-dimensional (2D) scatter plot having a shape like a volcano
  - Used to visualize and identify statistically significant gene expression changes from two different conditions 
@@ -230,6 +234,8 @@ In addition to these parameters, the parameters for figure type (`figtype`), axi
 font size (`axlabelfontsize`), and axis tick labels font size and name (`axtickfontsize`,  `axtickfontname`)
 can be provided.
 
+1 -->
+
 <p>
 {% include  cite.html %}
 </p>
@@ -238,9 +244,9 @@ can be provided.
 {% include  share.html %}
 </p>
 
-
+<!-- 1
 <span style="color:#9e9696"><i> Last updated: July 02, 2020</i> </span>
-
+1 -->
 
 <p>
 {% include  license.html %}
