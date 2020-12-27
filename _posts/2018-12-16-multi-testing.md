@@ -5,12 +5,14 @@ author_profile: true
 permalink: blog/mtest.html
 classes: wide
 ---
+
+This page has been moved <a href='https://www.reneshbedre.com/blog/mtest.html' target='_blank'>here</a>
+
+
+<!-- 1
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-  
-  <p>
-{% include  share.html %}
-</p>
+
 
 **<span style="color:#33a8ff">What is multiple testing problem?</span>**
 - In transcriptomics experiments, we analyze thousands of genes to identify significant differentially 
@@ -170,7 +172,7 @@ https://reneshbedre.github.io/blog/mtest.html
 <b>reneshbe@gmail.com</b></span>
 
 <span style="color:#9e9696"><i> Last updated: February 1, 2020</i> </span>
-
+ 1 -->
 
 <p>
 {% include  subscribe.html %}
