@@ -10,11 +10,14 @@ tags:
   - Supervised machine learning
   - Statistical bioinformatics
 ---
+
+This page has been moved <a href='https://www.reneshbedre.com/blog/linearreg.html' target='_blank'>here</a>
+
+
+<!-- 1
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
-<p>
-{% include  share.html %}
-</p>
+
 
 ## <span style="color:#33a8ff">What is Linear Regression (LR)?</span>
 - Linear regression (LR) models the relationship between the explanatory/independent/predictor/regressor/exogeneous (X) variable with that
@@ -351,6 +354,7 @@ Now, let's predict the Y from some random X1,
 # Y=674.27 when X1 is 28
 ```
 
+-->
 
 <p>
 {% include  cite.html %}
@@ -360,7 +364,9 @@ Now, let's predict the Y from some random X1,
 {% include  share.html %}
 </p>
 
+<!--
 <span style="color:#9e9696"><i> Last updated: July 12, 2020</i> </span>
+-->
 
 <p>
 {% include  license.html %}
