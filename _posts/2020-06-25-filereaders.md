@@ -9,9 +9,9 @@ tags:
   - Biological data handling
 ---
 
-<p>
-{% include  share.html %}
-</p>
+This page has been moved <a href='https://www.reneshbedre.com/blog/filereaders.html' target='_blank'>here</a>
+
+<!-- 1
 
 ## <span style="color:#33a8ff">Bioinformatics file readers</span>
 - We will discuss how to read and process common bioinformatics files
@@ -75,12 +75,16 @@ for record in vcf_iter:
     if marker_lines[0]=='SL4.0ch00' and int(marker_lines[1]>=764654) and int(marker_lines[1])<=1038399:
         print(marker_lines)
 ```
+ 
+-->
 
 <p>
 {% include  cite.html %}
 </p>
 
+<!--
 <span style="color:#9e9696"><i> Last updated: June 17, 2020</i> </span>
+-->
 
 <p>
 {% include  license.html %}
