@@ -6,9 +6,11 @@ author_profile: false
 toc: true
 toc_label: "Page Content"
 ---
-<p>
-{% include  share.html %}
-</p>
+
+This page has been moved <a href='https://www.reneshbedre.com/blog/format.html' target='_blank'>here</a>
+
+
+<!-- 1
 
 ## <span style="color:#33a8ff">File format conversions</span>
 - bioinfokit will help you to convert the file formats for variety of tasks
@@ -69,6 +71,7 @@ Download test [dataset]({{"/assets/posts/format/test_csv.csv" | absolute_url }})
 >>> analys.format.csvtotab(file="test_csv.csv")
 # output will ve saved in same directory (output.txt)
 ```  
+1 -->
 
 <p>
 {% include  cite.html %}
@@ -78,7 +81,9 @@ Download test [dataset]({{"/assets/posts/format/test_csv.csv" | absolute_url }})
 {% include  share.html %}
 </p>
     
+<!--
 <span style="color:#9e9696"><i> Last updated: May 24, 2020</i> </span>
+-->
 
 <p>
 {% include  license.html %}
