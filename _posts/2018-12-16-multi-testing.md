@@ -4,12 +4,13 @@ date:   2018-12-16 010:19:20
 author_profile: true
 permalink: blog/mtest.html
 classes: wide
+redirect_to:
+  - https://www.reneshbedre.com/blog/mtest.html
 ---
 
-This page has been moved <a href='https://www.reneshbedre.com/blog/mtest.html' target='_blank'>here</a>
 
 
-<!-- 1
+
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
@@ -172,7 +173,7 @@ https://reneshbedre.github.io/blog/mtest.html
 <b>reneshbe@gmail.com</b></span>
 
 <span style="color:#9e9696"><i> Last updated: February 1, 2020</i> </span>
- 1 -->
+
 
 <p>
 {% include  subscribe.html %}
