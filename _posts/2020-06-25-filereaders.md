@@ -4,14 +4,14 @@ date:   2020-06-17 06:18:08
 author_profile: true
 permalink: blog/filereaders.html
 classes: wide
+redirect_to:
+  - https://www.reneshbedre.com/blog/filereaders.html
 tags:
   - High-throughput sequence analysis
   - Biological data handling
 ---
 
-This page has been moved <a href='https://www.reneshbedre.com/blog/filereaders.html' target='_blank'>here</a>
 
-<!-- 1
 
 ## <span style="color:#33a8ff">Bioinformatics file readers</span>
 - We will discuss how to read and process common bioinformatics files
@@ -76,15 +76,15 @@ for record in vcf_iter:
         print(marker_lines)
 ```
  
--->
+
 
 <p>
 {% include  cite.html %}
 </p>
 
-<!--
+
 <span style="color:#9e9696"><i> Last updated: June 17, 2020</i> </span>
--->
+
 
 <p>
 {% include  license.html %}

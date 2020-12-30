@@ -4,15 +4,13 @@ date:   2020-03-05 02:15:18
 permalink: blog/fqqualfmt.html
 author_profile: false
 classes: wide
+redirect_to:
+  - https://www.reneshbedre.com/blog/fqqualfmt.html
 tags:
   - High-throughput sequence analysis
 ---
 
 
-This page has been moved <a href='https://www.reneshbedre.com/blog/fqqualfmt.html' target='_blank'>here</a>
-
-
-<!-- 1
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
@@ -95,7 +93,6 @@ References:
 - Awika HO, Bedre R, Yeom J, Marconi TG, Enciso J, Mandadi KK, Jung J, Avila CA. Developing growth-associated molecular markers via high-throughput phenotyping in spinach. The Plant Genome. 2019 Nov 1;12(3).
 - Bedre R, Irigoyen S, Schaker PD, Monteiro-Vitorello CB, Da Silva JA, Mandadi KK. Genome-wide alternative splicing landscapes modulated by biotrophic sugarcane smut pathogen. Scientific reports. 2019 Jun 20;9(1):1-2.
 - https://en.wikipedia.org/wiki/FASTQ_format
--->
 
 <p>
 {% include  cite.html %}
@@ -105,9 +102,7 @@ References:
 {% include  share.html %}
 </p>
 
-<!--
 <span style="color:#9e9696"><i> Last updated: March 11, 2020</i> </span>
--->
 
 <p>
 {% include  license.html %}
