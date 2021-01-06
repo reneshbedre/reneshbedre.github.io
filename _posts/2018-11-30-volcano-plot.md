@@ -4,7 +4,6 @@ date:   2018-11-30 02:15:18
 author_profile: true
 permalink: blog/volcano.html
 classes: wide
-canonical_url: "https://www.reneshbedre.com/blog/volcano.html"
 redirect_to:
   - https://www.reneshbedre.com/blog/volcano.html
 tags:
