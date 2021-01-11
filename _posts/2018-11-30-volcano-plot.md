@@ -1,11 +1,12 @@
 ---
+layout: redirected
+sitemap: false
 title: "Volcano plot in Python"
 date:   2018-11-30 02:15:18
 author_profile: true
 permalink: blog/volcano.html
 classes: wide
-redirect_to:
-  - https://www.reneshbedre.com/blog/volcano.html
+redirect_too: https://www.reneshbedre.com/blog/volcano.html
 tags:
   - Genomic visualization
   - Gene expression
