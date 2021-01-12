@@ -1,11 +1,12 @@
 ---
+layout: redirected
+sitemap: false
 title: "Gene expression units explained: RPM, RPKM, FPKM, TPM, <i>DESeq</i>, TMM, SCnorm, GeTMM, and ComBat-Seq"
 date:   2017-10-05
 author_profile: true
 permalink: blog/expression_units.html
 classes: wide
-redirect_to:
-  - https://www.reneshbedre.com/blog/expression_units.html
+redirect_too: https://www.reneshbedre.com/blog/expression_units.html
 ---
 
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
