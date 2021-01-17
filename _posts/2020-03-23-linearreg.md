@@ -1,4 +1,6 @@
 ---
+layout: redirected
+sitemap: false
 title: "Linear Regression in Python"
 date:   2020-03-23 02:15:18
 permalink: blog/linearreg.html
@@ -6,8 +8,7 @@ author_profile: true
 classes: wide
 toc: true
 toc_label: "Page Content"
-redirect_to:
-  - https://www.reneshbedre.com/blog/linearreg.html
+redirect_too: https://www.reneshbedre.com/blog/linear_regression.html
 tags:
   - Supervised machine learning
   - Statistical bioinformatics
