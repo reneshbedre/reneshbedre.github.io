@@ -8,7 +8,7 @@ author_profile: true
 classes: wide
 toc: true
 toc_label: "Page Content"
-redirect_too: https://www.reneshbedre.com/blog/linear_regression.html
+redirect_too: https://www.reneshbedre.com/blog/linear-regression.html
 tags:
   - Supervised machine learning
   - Statistical bioinformatics
