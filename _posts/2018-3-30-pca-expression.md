@@ -6,7 +6,7 @@ date:   2018-03-30 06:18:08
 author_profile: true
 permalink: blog/pca_3d.html
 classes: wide
-redirect_too: https://www.reneshbedre.com/blog/pca_3d.html
+redirect_too: https://www.reneshbedre.com/blog/principal-component-analysis.html
 tags:
   - Unsupervised machine learning
   - Clustering
