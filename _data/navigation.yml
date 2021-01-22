@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Bioinformatics Blog"
-    url: /blog/
+  # - title: "Bioinformatics Blog"
+  #  url: /blog/
   - title: "Publications"
     url: /pub/
   - title: "News"
