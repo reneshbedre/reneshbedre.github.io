@@ -10,4 +10,5 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem "jekyll-archives"
   gem 'jekyll-redirect-from'
+  gem "nokogiri", ">= 1.11.0"
 end
