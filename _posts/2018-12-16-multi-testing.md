@@ -1,14 +1,13 @@
 ---
+layout: redirected
+sitemap: false
 title: "Multiple testing problem in Bioinformatics"
 date:   2018-12-16 010:19:20
 author_profile: true
 permalink: blog/mtest.html
 classes: wide
-redirect_to:
-  - https://www.reneshbedre.com/blog/mtest.html
+redirect_too: https://www.reneshbedre.com/blog/multiple-hypothesis-testing-corrections.html
 ---
-
-
 
 
 <script type="text/javascript" async
