@@ -1,0 +1,16 @@
+patient	survival_time_days	event	treatment	age_years
+1	1	died	drug_2	75
+2	1	died	drug_2	79
+3	4	died	drug_2	85
+4	5	died	drug_2	76
+5	6	unknown	drug_2	66
+6	8	died	drug_1	75
+7	9	survived	drug_2	72
+8	9	died	drug_2	70
+9	12	died	drug_1	71
+10	15	unknown	drug_1	73
+11	22	died	drug_2	66
+12	25	survived	drug_1	73
+13	37	died	drug_1	68
+14	55	died	drug_1	59
+15	72	survived	drug_1	61
