@@ -1,0 +1,50 @@
+Gene,function
+B-CHI1,antifungal 
+CTL2-1,antifungal 
+B-CHI2,antifungal 
+CTL2-2,antifungal 
+CHIV1,antifungal 
+CHIA,antifungal 
+CHIV2,antifungal 
+BG3-1,antifungal 
+BG1,antifungal 
+BG3-2,antifungal 
+TPI,antifungal
+SPI,antifungal
+HRGP1,cell wall
+HRGP2,cell wall
+HRGP3,cell wall
+HRGP4,cell wall
+HRGP5,cell wall
+PAL2,phenylpropanoid pathway
+CHS1,phenylpropanoid pathway
+CHS3,phenylpropanoid pathway
+CHS2,phenylpropanoid pathway
+4CL3,phenylpropanoid pathway
+C4H,lignin biosynthesis
+CCR1,lignin biosynthesis
+HCT,lignin biosynthesis
+CCOAMT,lignin biosynthesis
+XTH32,cell wall
+CESA4,cell wall
+CESA8,cell wall
+CSLG2,cell wall
+CSLB03,cell wall
+CSLE1,cell wall
+CSLE2,cell wall
+UGE5,cell wall
+PME1,cell wall
+EXPA4,cell wall
+EXLB1,cell wall
+EXPB2,cell wall
+EXPA5,cell wall
+EXPA8,cell wall
+EXPA15,cell wall
+EXPA11,cell wall
+EXPB3,cell wall
+GT72B1,cell wall
+GT,cell wall
+GT18,cell wall
+LOX1,antifungal
+LOX2,antifungal
+LOX3,antifungal
