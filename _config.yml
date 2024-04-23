@@ -97,7 +97,7 @@ author:
   name             : "Renesh Bedre"
   avatar           : "/assets/images/me.png"
   bio              : "Bioinformatics Scientist"
-  location         : "Texas A&M University"
+  location         : "Thermo Fisher Scientific"
   email            : "reneshbe@gmail.com"
   links:
     - label: "Email"
@@ -121,9 +121,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - label: "CV"
-      icon: "ai ai-cv-square"
-      url: "/assets/cv/Bedre_CV_May12020.pdf"
+    # - label: "CV"
+    #  icon: "ai ai-cv-square"
+    # url: "/assets/cv/Bedre_CV_May12020.pdf"
 
 # Site Footer
 footer:
